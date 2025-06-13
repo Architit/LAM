@@ -1,10 +1,5 @@
-import sys
-from pathlib import Path
 import unittest
 from datetime import datetime
-
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
 
 from src.memory_time_manager import MemoryTimeManager
 

@@ -47,7 +47,7 @@ class MemoryTimeManager:
             raise ValueError("Unsupported interval format")
 
         results: List[Dict[str, Any]] = []
-        for mem in self.memory._memories:
+        for mem in self.memory.get_memories():
             base = None
             try:
                 parsed = self.time_sense.parse(mem.timestamp)

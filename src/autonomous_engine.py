@@ -22,11 +22,13 @@ class AutonomousEngine:
         comm_layer: CommunicationLayer,
         memory_time: MemoryTimeManager,
         ethics: EthicsSecurityModule,
+        endpoint: str = "https://example.com/api",
     ) -> None:
         self.event_manager = event_manager
         self.comm_layer = comm_layer
         self.memory_time = memory_time
         self.ethics = ethics
+        self.endpoint = endpoint
 
     async def evaluate_and_act(self) -> None:
         """Example proactive behaviour based on recent events."""
@@ -38,7 +40,7 @@ class AutonomousEngine:
         if not self.ethics.is_action_ethical(payload):
             return
         try:
-            self.comm_layer.autonomous_interaction("https://example.com/api", payload)
+            await self.comm_layer.autonomous_interaction(self.endpoint, payload)
             self.event_manager.emit_event("outgoing_message", payload)
         except Exception:
             # Communication errors are ignored for this demo
