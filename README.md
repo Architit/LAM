@@ -56,6 +56,14 @@ LAM — динамически развивающаяся система, кот
 Реализуй свои идеи в отдельной ветке.
 Открой pull request с детальным описанием и философской подоплёкой изменений.
 
+## Installation
+
+Run the following command to install LAM in editable mode along with its dependencies:
+
+```bash
+pip install -e .
+```
+
 
 💬 Contact and Community
 Мы открыты для диалога, обсуждений и совместного роста. Ты можешь связаться с нами через [контакты, указанные в профиле GitHub].

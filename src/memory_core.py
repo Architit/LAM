@@ -59,6 +59,10 @@ class MemoryCore:
 
         self.categories: Dict[str, List[str]] = {}
 
+    def get_memories(self) -> List[MemoryEntry]:
+        """Return list of all stored memories."""
+        return list(self._memories)
+
     # --------------------------- persistence ----------------------------
     def _save(self) -> None:
         with open(MEMORY_FILE, "w", encoding="utf-8") as fh:
@@ -86,6 +90,7 @@ class MemoryCore:
         """Add a new memory to storage."""
         memory_entry.setdefault("id", self._generate_id())
         memory_entry.setdefault("tags", self.generate_tags(memory_entry.get("content", "")))
+        memory_entry.setdefault("importance", 0.5)
         mem = MemoryEntry.from_dict(memory_entry)
         self.categorize(mem)
         self._memories.append(mem)

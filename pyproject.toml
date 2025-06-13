@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lam"
+version = "0.1.0"
+description = "Living Artificial Mind"
+authors = [{name = "LAM Team"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.8",
+    "requests>=2.32",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pylint",
+    "semgrep",
+    "autopep8",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
