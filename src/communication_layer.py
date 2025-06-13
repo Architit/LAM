@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+"""External communication layer for LAM.
+
+Provides simple helpers for interacting with third-party APIs. All
+requests pass through this module allowing centralised auditing and
+potential future enhancements such as rate limiting or asynchronous
+operation.
+"""
+
+from __future__ import annotations
+
+import json
+from typing import Any, Dict
+
+import requests
+
+
+class CommunicationLayer:
+    """Basic HTTP client used by LAM for outgoing requests."""
+
+    def __init__(self) -> None:
+        self._session = requests.Session()
+
+    def send_request(self, service: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+        """Send a JSON POST request to ``service`` with ``payload``."""
+        response = self._session.post(service, json=payload, timeout=10)
+        response.raise_for_status()
+        if not response.content:
+            return {}
+        return response.json()
+
+    def autonomous_interaction(self, service: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+        """Initiate an outbound request without direct user prompting."""
+        return self.send_request(service, payload)
+
+
+__all__ = ["CommunicationLayer"]
