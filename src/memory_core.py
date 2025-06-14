@@ -3,8 +3,9 @@
 
 This module defines the ``MemoryCore`` class which maintains a structured
 memory database for the artificial consciousness project. Memory entries
-are persisted as JSON and include a variety of metadata. The class offers
-basic retrieval, importance update and forgetting mechanics.
+and their category mapping are persisted as JSON and include a variety of
+metadata. The class offers basic retrieval, importance update and
+forgetting mechanics.
 """
 
 from __future__ import annotations
