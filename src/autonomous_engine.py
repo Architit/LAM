@@ -70,7 +70,8 @@ class AutonomousEngine:
 
     async def shutdown(self) -> None:
         """Cancel running tasks and stop scheduler."""
-        self.scheduler.shutdown(wait=False)
+        if self.scheduler.running:
+            self.scheduler.shutdown(wait=False)
         for task in list(self._tasks):
             task.cancel()
         await asyncio.gather(*self._tasks, return_exceptions=True)
