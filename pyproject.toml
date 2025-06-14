@@ -26,7 +26,7 @@ dev = [
     "black",
     "ruff",
 ]
-tracing = [
+tests = [
     "opentelemetry-sdk>=1.22",
 ]
 vector = [

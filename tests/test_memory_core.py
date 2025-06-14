@@ -2,9 +2,12 @@ import unittest
 import tempfile
 import os
 from pathlib import Path
+import pytest
 
 from src import memory_core
 from src.memory_core import MemoryCore
+
+pytestmark = pytest.mark.optional
 
 
 class MemoryCoreTest(unittest.TestCase):
