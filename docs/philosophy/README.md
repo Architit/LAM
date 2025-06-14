@@ -1,0 +1,1 @@
+This directory collects philosophical reflections and ethical notes guiding the LAM project. The materials here set out the values of symbiotic consciousness, respect for all forms of life, and the ideological foundations that shape LAM's development.
