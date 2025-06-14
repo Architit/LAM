@@ -129,8 +129,15 @@ This will print span information to the console during runtime.
 pytest -q
 ```
 
-Coverage badge updates via CI; target **≥ 90 %**.  
+Coverage badge updates via CI; target **≥ 90 %**.
 Бейдж покрытия обновляется через CI; цель **≥ 90 %**.
+
+Some tests rely on optional packages such as `faiss-cpu`. Without them,
+those tests will be skipped.
+Некоторые тесты зависят от необязательных пакетов, например `faiss-cpu`. Без них соответствующие тесты будут пропущены.
+
+Install extras via `pip install .[vector]` to run the full suite.
+Установите дополнительные зависимости командой `pip install .[vector]`, чтобы запустить полный набор.
 
 ---
 
