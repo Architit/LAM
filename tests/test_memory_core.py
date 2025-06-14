@@ -54,6 +54,15 @@ class MemoryCoreTest(unittest.TestCase):
             self.assertEqual(memory_core.MEMORY_PATH, Path(tmp))
             del os.environ["LAM_MEMORY_PATH"]
 
+    def test_relative_env_path(self):
+        with tempfile.TemporaryDirectory(dir=memory_core.REPO_ROOT) as tmp:
+            relative = os.path.relpath(tmp, memory_core.REPO_ROOT)
+            os.environ["LAM_MEMORY_PATH"] = relative
+            memory_core._update_paths(memory_core.DEFAULT_MEMORY_PATH)
+            _ = MemoryCore()
+            self.assertEqual(memory_core.MEMORY_PATH, Path(tmp).resolve())
+            del os.environ["LAM_MEMORY_PATH"]
+
     def test_retrieve_by_embedding(self):
         self.core.add_memory(
             {
