@@ -16,13 +16,32 @@ import aiohttp
 
 
 class CommunicationLayer:
-    """Basic HTTP client used by LAM for outgoing requests."""
+    """Basic HTTP client used by LAM for outgoing requests.
+
+    This class is designed to be used as an asynchronous context manager. A new
+    :class:`aiohttp.ClientSession` is created on entering the context and
+    properly closed on exit. This ensures that resources are correctly managed
+    by callers without requiring explicit ``close`` calls.
+    """
 
     def __init__(self) -> None:
+        self._session: aiohttp.ClientSession | None = None
+
+    async def __aenter__(self) -> "CommunicationLayer":
+        """Create the underlying HTTP session."""
         self._session = aiohttp.ClientSession()
+        return self
+
+    async def __aexit__(self, exc_type, exc, tb) -> None:
+        """Close the HTTP session on context exit."""
+        if self._session is not None:
+            await self._session.close()
+            self._session = None
 
     async def send_request(self, service: str, payload: Dict[str, Any]) -> Dict[str, Any]:
         """Send a JSON POST request to ``service`` with ``payload`` asynchronously."""
+        if self._session is None:
+            raise RuntimeError("CommunicationLayer is not initialised. Use 'async with'.")
         async with self._session.post(service, json=payload, timeout=10) as response:
             response.raise_for_status()
             text = await response.text()
@@ -36,7 +55,9 @@ class CommunicationLayer:
 
     async def close(self) -> None:
         """Close the underlying HTTP session."""
-        await self._session.close()
+        if self._session is not None:
+            await self._session.close()
+            self._session = None
 
 
 __all__ = ["CommunicationLayer"]
