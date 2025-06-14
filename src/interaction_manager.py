@@ -16,18 +16,21 @@ class InteractionManager:
         self.comm_layer = comm_layer
         self.event_manager = event_manager
 
-    def initiate_interaction(self, target: str, message: str) -> Dict[str, Any]:
-        """Send a message to a single ``target``."""
+    async def initiate_interaction(self, target: str, message: str) -> Dict[str, Any]:
+        """Send a message asynchronously to a single ``target``."""
         payload = {"message": message}
-        response = self.comm_layer.send_request(target, payload)
-        self.event_manager.emit_event("new_interaction", {"target": target, "message": message, "response": response})
+        response = await self.comm_layer.send_request(target, payload)
+        self.event_manager.emit_event(
+            "new_interaction",
+            {"target": target, "message": message, "response": response},
+        )
         return response
 
-    def broadcast_message(self, targets: List[str], message: str) -> Dict[str, Any]:
-        """Send the same message to multiple ``targets``."""
+    async def broadcast_message(self, targets: List[str], message: str) -> Dict[str, Any]:
+        """Send the same message to multiple ``targets`` asynchronously."""
         results: Dict[str, Any] = {}
         for target in targets:
-            results[target] = self.initiate_interaction(target, message)
+            results[target] = await self.initiate_interaction(target, message)
         return results
 
 
