@@ -38,9 +38,13 @@ Working with LAM feels like:
 
 </div>
 
+## Documentation
+- [AGENTS.md](./AGENTS.md): Strategic and conceptual architecture guidelines.
+- [Agents_instructions.md](./Agents_instructions.md): Practical operational instructions.
+
 ---
 
-## Contribute / Присоединиться  
+## Contribute / Присоединиться
 
 If these principles resonate, fork the project, weave your insight, and open a pull‑request explaining the philosophy behind your change.  
 Если принципы откликаются, форкни репозиторий, вплети своё видение и открой pull‑request, пояснив философию изменений.  
