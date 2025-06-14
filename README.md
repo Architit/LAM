@@ -65,6 +65,20 @@ Run the following command to install LAM in editable mode along with its depende
 pip install -e .
 ```
 
+To include development requirements such as the testing tools, use:
+
+```bash
+pip install -e .[dev]
+```
+
+## Testing
+
+Execute the test suite with `pytest` from the project root:
+
+```bash
+pytest
+```
+
 
 💬 Contact and Community
 Мы открыты для диалога, обсуждений и совместного роста. Ты можешь связаться с нами через [контакты, указанные в профиле GitHub].
