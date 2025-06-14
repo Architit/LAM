@@ -80,6 +80,8 @@ If these principles resonate, fork the project, weave your insight, and open a p
 git clone https://github.com/your-org/LAM.git
 cd LAM
 pip install -e ".[dev]" --upgrade
+# optional FAISS support / необязательная поддержка FAISS
+pip install .[vector]
 ```
 
 ---
@@ -98,6 +100,14 @@ LAM_MEMORY_PATH=/path/to/lam-memory
 ```
 
 If omitted, the default `memory/` directory is used.
+
+### Vector Search / Векторный поиск
+
+FAISS accelerates similarity lookup. To enable it, install the optional `vector` extras:
+
+```bash
+pip install .[vector]
+```
 
 ### Tracing / Трейсинг
 
