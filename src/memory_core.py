@@ -15,9 +15,17 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 import uuid
+import os
 
-# Path where memory data is stored
-MEMORY_PATH = Path("memory")
+# Path where memory data is stored. By default this is a ``memory`` directory
+# located next to this file. It can be overridden by the ``LAM_MEMORY_PATH``
+# environment variable which allows tests and applications to specify a custom
+# location.
+_env_path = os.getenv("LAM_MEMORY_PATH")
+if _env_path:
+    MEMORY_PATH = Path(_env_path).expanduser()
+else:
+    MEMORY_PATH = Path(__file__).resolve().parent / "memory"
 MEMORY_FILE = MEMORY_PATH / "memories.json"
 
 

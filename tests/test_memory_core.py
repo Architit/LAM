@@ -1,20 +1,22 @@
 import unittest
 import tempfile
-from pathlib import Path
+import os
+import importlib
 
-from src import memory_core
-from src.memory_core import MemoryCore
+import src.memory_core as memory_core
 
 
 class MemoryCoreTest(unittest.TestCase):
     def setUp(self):
         self.tmpdir = tempfile.TemporaryDirectory()
-        memory_core.MEMORY_PATH = Path(self.tmpdir.name)
-        memory_core.MEMORY_FILE = memory_core.MEMORY_PATH / "memories.json"
-        self.core = MemoryCore()
+        os.environ["LAM_MEMORY_PATH"] = self.tmpdir.name
+        importlib.reload(memory_core)
+        self.core = memory_core.MemoryCore()
 
     def tearDown(self):
         self.tmpdir.cleanup()
+        os.environ.pop("LAM_MEMORY_PATH", None)
+        importlib.reload(memory_core)
 
     def test_add_and_get(self):
         self.core.add_memory({"name": "test", "timestamp": "2025-01-01T00:00:00", "content": "hello"})
