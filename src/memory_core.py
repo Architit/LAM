@@ -23,6 +23,9 @@ from math import sqrt
 from opentelemetry import trace
 from .logging_utils import get_json_logger
 
+# Repository root resolved from this file's location
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 logger = get_json_logger(__name__)
 tracer = trace.get_tracer(__name__)
 
@@ -35,7 +38,7 @@ except Exception:  # pragma: no cover - optional dependency
     FAISS_AVAILABLE = False
 
 # Default path where memory data is stored relative to the repository root
-DEFAULT_MEMORY_PATH = Path(__file__).resolve().parent.parent / "memory"
+DEFAULT_MEMORY_PATH = REPO_ROOT / "memory"
 MEMORY_PATH = DEFAULT_MEMORY_PATH
 LOG_DIR = MEMORY_PATH / "logs"
 METADATA_DIR = MEMORY_PATH / "metadata"
@@ -62,7 +65,7 @@ def _load_memory_path() -> Path:
     """Return memory path from config or default."""
     base: Optional[str] = None
 
-    env_file = Path(".env")
+    env_file = REPO_ROOT / ".env"
     if env_file.exists():
         for line in env_file.read_text().splitlines():
             if "=" not in line or line.strip().startswith("#"):
@@ -75,13 +78,21 @@ def _load_memory_path() -> Path:
     base = os.getenv("LAM_MEMORY_PATH", base)
 
     if not base:
-        pyproject = Path(__file__).resolve().parent.parent / "pyproject.toml"
+        pyproject = REPO_ROOT / "pyproject.toml"
         if pyproject.exists():
             with open(pyproject, "rb") as fh:
                 data = tomllib.load(fh)
             base = data.get("tool", {}).get("lam", {}).get("memory_path")
 
-    return Path(base) if base else DEFAULT_MEMORY_PATH
+    if base:
+        path = Path(base).expanduser()
+        if not path.is_absolute():
+            path = (REPO_ROOT / path).resolve()
+        else:
+            path = path.resolve()
+        return path
+
+    return DEFAULT_MEMORY_PATH
 
 
 @dataclass
