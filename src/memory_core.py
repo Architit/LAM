@@ -18,6 +18,14 @@ from typing import Any, Dict, List, Optional
 import uuid
 import os
 import tomllib
+from math import sqrt
+
+try:
+    import faiss  # type: ignore
+    import numpy as np
+    FAISS_AVAILABLE = True
+except Exception:  # pragma: no cover - optional dependency
+    FAISS_AVAILABLE = False
 
 # Default path where memory data is stored relative to the repository root
 DEFAULT_MEMORY_PATH = Path(__file__).resolve().parent.parent / "memory"
@@ -81,6 +89,7 @@ class MemoryEntry:
     associations: List[str] = field(default_factory=list)
     tags: List[str] = field(default_factory=list)
     attributes: Dict[str, Any] = field(default_factory=dict)
+    embedding: List[float] = field(default_factory=list)
     last_access: str = field(
         default_factory=lambda: datetime.utcnow().isoformat()
     )
@@ -125,6 +134,10 @@ class MemoryCore:
             for mem in self._memories:
                 self.categorize(mem)
 
+        self._index = None
+        self._index_map: List[str] = []
+        self._build_index()
+
     def get_memories(self) -> List[MemoryEntry]:
         """Return list of all stored memories."""
         return list(self._memories)
@@ -158,6 +171,26 @@ class MemoryCore:
                 self.categories[tag] = []
             self.categories[tag].append(memory_entry.id)
 
+    def _build_index(self) -> None:
+        """(Re)build FAISS index from stored embeddings."""
+        if not FAISS_AVAILABLE:
+            self._index = None
+            self._index_map = []
+            return
+
+        embeddings = [m.embedding for m in self._memories if m.embedding]
+        if not embeddings:
+            self._index = None
+            self._index_map = []
+            return
+
+        dim = len(embeddings[0])
+        self._index = faiss.IndexFlatIP(dim)
+        xb = np.array(embeddings, dtype="float32")
+        faiss.normalize_L2(xb)
+        self._index.add(xb)
+        self._index_map = [m.id for m in self._memories if m.embedding]
+
     # --------------------------- main API ----------------------------
     def add_memory(self, memory_entry: Dict[str, Any]) -> None:
         """Add a new memory to storage."""
@@ -171,6 +204,7 @@ class MemoryCore:
         self.categorize(mem)
         self._memories.append(mem)
         self._save()
+        self._build_index()
 
     def retrieve_memory(
         self, criteria: Dict[str, Any]
@@ -195,6 +229,44 @@ class MemoryCore:
                 mem.access_count += 1
                 mem.last_access = datetime.utcnow().isoformat()
                 results.append(mem)
+        self._save()
+        return [m.to_dict() for m in results]
+
+    def retrieve_by_embedding(
+        self, embedding: List[float], k: int = 1
+    ) -> List[Dict[str, Any]]:
+        """Return ``k`` memories with closest embeddings using cosine similarity."""
+        if not FAISS_AVAILABLE or self._index is None:
+            # Fallback to manual cosine similarity
+            scored: List[tuple[float, MemoryEntry]] = []
+            norm_q = sqrt(sum(v * v for v in embedding)) or 1.0
+            for mem in self._memories:
+                if not mem.embedding:
+                    continue
+                dot = sum(a * b for a, b in zip(embedding, mem.embedding))
+                norm_m = sqrt(sum(v * v for v in mem.embedding)) or 1.0
+                score = dot / (norm_q * norm_m)
+                scored.append((score, mem))
+            scored.sort(key=lambda x: x[0], reverse=True)
+            top = [m for _, m in scored[:k] if _ >= 0]
+        else:
+            xq = np.array([embedding], dtype="float32")
+            faiss.normalize_L2(xq)
+            distances, indices = self._index.search(xq, k)
+            top = []
+            for idx in indices[0]:
+                if idx == -1:
+                    continue
+                mem_id = self._index_map[idx]
+                mem = next((m for m in self._memories if m.id == mem_id), None)
+                if mem:
+                    top.append(mem)
+
+        results: List[MemoryEntry] = []
+        for mem in top:
+            mem.access_count += 1
+            mem.last_access = datetime.utcnow().isoformat()
+            results.append(mem)
         self._save()
         return [m.to_dict() for m in results]
 
@@ -238,6 +310,7 @@ class MemoryCore:
             keep.append(mem)
         self._memories = keep
         self._save()
+        self._build_index()
 
     # --------------------------- ethics ----------------------------
     def integrity_check(self) -> bool:

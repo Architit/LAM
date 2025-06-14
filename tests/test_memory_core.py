@@ -53,3 +53,24 @@ class MemoryCoreTest(unittest.TestCase):
             core = MemoryCore()
             self.assertEqual(memory_core.MEMORY_PATH, Path(tmp))
             del os.environ["LAM_MEMORY_PATH"]
+
+    def test_retrieve_by_embedding(self):
+        self.core.add_memory(
+            {
+                "name": "emb1",
+                "timestamp": "2025-01-01T00:00:00",
+                "content": "A",
+                "embedding": [1.0, 0.0, 0.0],
+            }
+        )
+        self.core.add_memory(
+            {
+                "name": "emb2",
+                "timestamp": "2025-01-01T00:00:00",
+                "content": "B",
+                "embedding": [0.0, 1.0, 0.0],
+            }
+        )
+        results = self.core.retrieve_by_embedding([1.0, 0.0, 0.0])
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0]["name"], "emb1")
