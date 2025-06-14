@@ -19,8 +19,12 @@ import uuid
 
 # Path where memory data is stored relative to the repository root
 MEMORY_PATH = Path(__file__).resolve().parent.parent / "memory"
-MEMORY_FILE = MEMORY_PATH / "memories.json"
-CATEGORY_FILE = MEMORY_PATH / "categories.json"
+LOG_DIR = MEMORY_PATH / "logs"
+METADATA_DIR = MEMORY_PATH / "metadata"
+DATA_DIR = MEMORY_PATH / "data"
+MEMORY_FILE = DATA_DIR / "memory_items.json"
+CATEGORY_FILE = METADATA_DIR / "categories.json"
+ANCHOR_FILE = METADATA_DIR / "anchor_memory_phase.json"
 
 
 @dataclass
@@ -55,6 +59,9 @@ class MemoryCore:
 
     def __init__(self) -> None:
         MEMORY_PATH.mkdir(exist_ok=True)
+        LOG_DIR.mkdir(exist_ok=True)
+        METADATA_DIR.mkdir(exist_ok=True)
+        DATA_DIR.mkdir(exist_ok=True)
         if MEMORY_FILE.exists():
             with open(MEMORY_FILE, "r", encoding="utf-8") as fh:
                 self._memories: List[MemoryEntry] = [
