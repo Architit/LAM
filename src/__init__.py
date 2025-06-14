@@ -6,6 +6,7 @@ from .memory_time_manager import MemoryTimeManager
 from .ethics_security import EthicsSecurityModule
 from .interaction_manager import InteractionManager
 from .autonomous_engine import AutonomousEngine
+from .directory_utils import bfs_directory_names
 
 __all__ = [
     "MemoryCore",
@@ -19,4 +20,5 @@ __all__ = [
     "EthicsSecurityModule",
     "InteractionManager",
     "AutonomousEngine",
+    "bfs_directory_names",
 ]
