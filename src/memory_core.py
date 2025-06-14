@@ -20,9 +20,16 @@ import os
 import tomllib
 from math import sqrt
 
+from opentelemetry import trace
+from .logging_utils import get_json_logger
+
+logger = get_json_logger(__name__)
+tracer = trace.get_tracer(__name__)
+
 try:
     import faiss  # type: ignore
     import numpy as np
+
     FAISS_AVAILABLE = True
 except Exception:  # pragma: no cover - optional dependency
     FAISS_AVAILABLE = False
@@ -90,9 +97,7 @@ class MemoryEntry:
     tags: List[str] = field(default_factory=list)
     attributes: Dict[str, Any] = field(default_factory=dict)
     embedding: List[float] = field(default_factory=list)
-    last_access: str = field(
-        default_factory=lambda: datetime.utcnow().isoformat()
-    )
+    last_access: str = field(default_factory=lambda: datetime.utcnow().isoformat())
     access_count: int = 0
 
     def to_dict(self) -> Dict[str, Any]:
@@ -195,6 +200,8 @@ class MemoryCore:
     def add_memory(self, memory_entry: Dict[str, Any]) -> None:
         """Add a new memory to storage."""
         memory_entry.setdefault("id", self._generate_id())
+        with tracer.start_as_current_span("add_memory"):
+            logger.info("add_memory", extra={"entry": memory_entry["id"]})
         memory_entry.setdefault(
             "tags",
             self.generate_tags(memory_entry.get("content", "")),
@@ -206,11 +213,11 @@ class MemoryCore:
         self._save()
         self._build_index()
 
-    def retrieve_memory(
-        self, criteria: Dict[str, Any]
-    ) -> List[Dict[str, Any]]:
+    def retrieve_memory(self, criteria: Dict[str, Any]) -> List[Dict[str, Any]]:
         """Retrieve memories matching provided criteria."""
         results: List[MemoryEntry] = []
+        with tracer.start_as_current_span("retrieve_memory"):
+            logger.info("retrieve_memory", extra={"criteria": criteria})
         for mem in self._memories:
             match = True
             if "time_range" in criteria:
@@ -221,9 +228,7 @@ class MemoryCore:
                 if not set(criteria["tags"]).intersection(mem.tags):
                     match = False
             if "associations" in criteria:
-                if not set(criteria["associations"]).intersection(
-                    mem.associations
-                ):
+                if not set(criteria["associations"]).intersection(mem.associations):
                     match = False
             if match:
                 mem.access_count += 1
@@ -236,6 +241,8 @@ class MemoryCore:
         self, embedding: List[float], k: int = 1
     ) -> List[Dict[str, Any]]:
         """Return ``k`` memories with closest embeddings using cosine similarity."""
+        with tracer.start_as_current_span("retrieve_by_embedding"):
+            logger.info("retrieve_by_embedding", extra={"k": k})
         if not FAISS_AVAILABLE or self._index is None:
             # Fallback to manual cosine similarity
             scored: List[tuple[float, MemoryEntry]] = []

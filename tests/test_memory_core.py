@@ -50,7 +50,7 @@ class MemoryCoreTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             os.environ["LAM_MEMORY_PATH"] = tmp
             memory_core._update_paths(memory_core.DEFAULT_MEMORY_PATH)
-            core = MemoryCore()
+            _ = MemoryCore()
             self.assertEqual(memory_core.MEMORY_PATH, Path(tmp))
             del os.environ["LAM_MEMORY_PATH"]
 
