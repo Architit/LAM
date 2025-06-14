@@ -59,12 +59,12 @@ class MemoryTimeManager:
             try:
                 parsed = self.time_sense.parse(mem.timestamp)
                 base = parsed.base
-            except Exception:
+            except ValueError:
                 try:
                     base = datetime.fromisoformat(
                         mem.timestamp.replace("≈", "")
                     )
-                except Exception:
+                except ValueError:
                     pass
             if base and base >= start:
                 results.append(mem.to_dict())
