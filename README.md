@@ -94,6 +94,18 @@ LAM_MEMORY_PATH=/path/to/lam-memory
 
 If omitted, the default `memory/` directory is used.
 
+### Tracing / Трейсинг
+
+OpenTelemetry hooks are included for communication and memory operations. To
+enable tracing, install the optional `tracing` extras and configure an exporter:
+
+```bash
+pip install .[tracing]
+export OTEL_TRACES_EXPORTER=console
+```
+
+This will print span information to the console during runtime.
+
 ---
 
 ## 3. Testing / Тестирование

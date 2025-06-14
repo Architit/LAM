@@ -12,6 +12,12 @@ from __future__ import annotations
 from typing import Any, Dict
 
 import aiohttp
+from opentelemetry import trace
+
+from .logging_utils import get_json_logger
+
+logger = get_json_logger(__name__)
+tracer = trace.get_tracer(__name__)
 
 
 class CommunicationLayer:
@@ -53,20 +59,24 @@ class CommunicationLayer:
             raise RuntimeError(
                 "CommunicationLayer is not initialised. Use 'async with'."
             )
-        async with self._session.post(
-            service, json=payload, timeout=10
-        ) as response:
-            response.raise_for_status()
-            text = await response.text()
-            if not text:
-                return {}
-            return await response.json()
+        with tracer.start_as_current_span("send_request") as span:
+            span.set_attribute("service", service)
+            logger.info("http_request", extra={"service": service, "payload": payload})
+            async with self._session.post(
+                service, json=payload, timeout=10
+            ) as response:
+                response.raise_for_status()
+                text = await response.text()
+                if not text:
+                    return {}
+                return await response.json()
 
     async def autonomous_interaction(
         self, service: str, payload: Dict[str, Any]
     ) -> Dict[str, Any]:
         """Initiate an outbound request without direct user prompting."""
-        return await self.send_request(service, payload)
+        with tracer.start_as_current_span("autonomous_interaction"):
+            return await self.send_request(service, payload)
 
     async def close(self) -> None:
         """Close the underlying HTTP session."""

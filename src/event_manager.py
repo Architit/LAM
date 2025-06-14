@@ -12,6 +12,10 @@ import asyncio
 from collections import defaultdict
 from typing import Any, Awaitable, Callable, Dict, List, Tuple
 
+from .logging_utils import get_json_logger
+
+logger = get_json_logger(__name__)
+
 EventHandler = Callable[[Dict[str, Any]], Awaitable[None] | None]
 
 
@@ -20,30 +24,33 @@ class EventManager:
 
     def __init__(self) -> None:
         self._listeners: Dict[str, List[EventHandler]] = defaultdict(list)
-        self._queue: asyncio.Queue[
-            Tuple[str, Dict[str, Any]]
-        ] = asyncio.Queue()
+        self._queue: asyncio.Queue[Tuple[str, Dict[str, Any]]] = asyncio.Queue()
 
-    def register_listener(
-        self, event_type: str, handler: EventHandler
-    ) -> None:
+    def register_listener(self, event_type: str, handler: EventHandler) -> None:
         """Register a handler for a specific event type."""
         self._listeners[event_type].append(handler)
+        logger.info(
+            "listener_registered",
+            extra={"event_type": event_type, "total": len(self._listeners[event_type])},
+        )
 
     def emit_event(self, event_type: str, data: Dict[str, Any]) -> None:
         """Place a new event into the processing queue."""
+        logger.info("event_emitted", extra={"event_type": event_type, "data": data})
         self._queue.put_nowait((event_type, data))
 
     async def dispatch(self) -> None:
         """Process all events currently in the queue."""
         while not self._queue.empty():
             event_type, data = await self._queue.get()
+            logger.info("event_dispatch", extra={"event_type": event_type})
             for handler in self._listeners.get(event_type, []):
                 if asyncio.iscoroutinefunction(handler):
                     await handler(data)
                 else:
                     handler(data)
             self._queue.task_done()
+        logger.info("dispatch_done")
 
 
 __all__ = ["EventManager", "EventHandler"]

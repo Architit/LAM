@@ -11,6 +11,9 @@ from .communication_layer import CommunicationLayer
 from .event_manager import EventManager
 from .ethics_security import EthicsSecurityModule
 from .memory_time_manager import MemoryTimeManager
+from .logging_utils import get_json_logger
+
+logger = get_json_logger(__name__)
 
 
 class AutonomousEngine:
@@ -33,6 +36,7 @@ class AutonomousEngine:
     async def evaluate_and_act(self) -> None:
         """Example proactive behaviour based on recent events."""
         recent = self.memory_time.retrieve_recent_events("60m")
+        logger.info("evaluating", extra={"recent_count": len(recent)})
         if not recent:
             return
 
@@ -41,6 +45,7 @@ class AutonomousEngine:
             "content": "Recent activity detected",
         }
         if not self.ethics.is_action_ethical(payload):
+            logger.info("blocked_by_ethics", extra={"payload": payload})
             return
         try:
             await self.comm_layer.autonomous_interaction(
@@ -50,11 +55,14 @@ class AutonomousEngine:
             self.event_manager.emit_event("outgoing_message", payload)
         except (aiohttp.ClientError, RuntimeError) as exc:
             # Log communication issues instead of silently ignoring
-            self.event_manager.emit_event(
-                "communication_error", {"error": str(exc)}
+            logger.error(
+                "communication_error",
+                extra={"error": str(exc)},
             )
+            self.event_manager.emit_event("communication_error", {"error": str(exc)})
 
         await self.event_manager.dispatch()
+        logger.info("dispatch_complete")
 
 
 __all__ = ["AutonomousEngine"]
