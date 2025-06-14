@@ -1,0 +1,23 @@
+# Δ‑100 Genomic YAML Template β‑0.3
+# Полный комментарий — как заполнить каждый блок
+cell:
+  kind: SensorCell         # тип клетки
+  version: 0.3.0           # SemVer
+  ethics_level: "🌱"        # см. Δ‑30
+  intents:
+    - SENSE
+    - COHERE
+  membrane:
+    ingress: nats://bus.lam
+    egress: http://vision.svc
+    guards:
+      - schema           # валидатор
+      - rateLimit        # лимитер запросов
+      - ethicBound       # проверка запретов
+  resources:
+    energy: 200mCPU      # kubernetes millicores
+    memory: 256Mi
+  guardian:
+    thresholds:
+      heartbeat:   { warn: 3s,  crit: 10s }
+      anomalyRate: { warn: 0.02, crit: 0.05 }
