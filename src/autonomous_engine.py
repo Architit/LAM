@@ -3,9 +3,13 @@
 
 from __future__ import annotations
 
-from typing import Any, Dict
+from typing import Any, Dict, Set
 
 import aiohttp
+import asyncio
+import signal
+
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 from .communication_layer import CommunicationLayer
 from .event_manager import EventManager
@@ -32,6 +36,50 @@ class AutonomousEngine:
         self.memory_time = memory_time
         self.ethics = ethics
         self.endpoint = endpoint
+        self._shutdown_event = asyncio.Event()
+        self._tasks: Set[asyncio.Task] = set()
+        self.scheduler: AsyncIOScheduler | None = None
+
+    def _setup_signal_handlers(self) -> None:
+        """Register handlers for clean shutdown."""
+        loop = asyncio.get_running_loop()
+        for sig in (signal.SIGINT, signal.SIGTERM):
+            try:
+                loop.add_signal_handler(sig, self._shutdown_event.set)
+            except NotImplementedError:
+                # Windows may not support some signals
+                signal.signal(sig, lambda _s, _f: self._shutdown_event.set())
+
+    async def _schedule_evaluate(self) -> None:
+        task = asyncio.create_task(self.evaluate_and_act())
+        self._tasks.add(task)
+        try:
+            await task
+        finally:
+            self._tasks.discard(task)
+
+    async def start(self, interval: int = 60) -> None:
+        """Begin periodic evaluation loop until shutdown."""
+        self._setup_signal_handlers()
+        self.scheduler = AsyncIOScheduler(event_loop=asyncio.get_running_loop())
+        async with self.comm_layer:
+            self.scheduler.add_job(
+                self._schedule_evaluate,
+                "interval",
+                seconds=interval,
+            )
+            self.scheduler.start()
+            await self._shutdown_event.wait()
+            await self.shutdown()
+
+    async def shutdown(self) -> None:
+        """Cancel running tasks and stop scheduler."""
+        self._shutdown_event.set()
+        if self.scheduler and self.scheduler.running:
+            self.scheduler.shutdown(wait=False)
+        for task in list(self._tasks):
+            task.cancel()
+        await asyncio.gather(*self._tasks, return_exceptions=True)
 
     async def evaluate_and_act(self) -> None:
         """Example proactive behaviour based on recent events."""
