@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional
 
 
@@ -23,6 +23,7 @@ class ParsedTime:
     approx: bool = False
     tolerance: int = 0  # in minutes
     fuzzy: Optional[str] = None
+    duration: Optional[timedelta] = None
 
 
 class TimeSense:
@@ -34,6 +35,9 @@ class TimeSense:
         r"^Δ\[(\d{2})\.(\d{2})\.(\d{4}):(\d{2}):(\d{2})±(\d+)мин\]$"
     )
     FUZZY_RE = re.compile(r"^≈([а-яА-Яa-zA-Z/_]+)$")
+    DURATION_RE = re.compile(
+        r"^P(?:(?P<days>\d+)D)?(?:T(?:(?P<hours>\d+)H)?(?:(?P<minutes>\d+)M)?(?:(?P<seconds>\d+)S)?)?$"
+    )
 
     DEFAULT_APPROX_TOLERANCE = 60  # minutes
 
@@ -83,11 +87,19 @@ class TimeSense:
         if m:
             return ParsedTime(base=None, fuzzy=m.group(1))
 
+        m = self.DURATION_RE.match(timestamp)
+        if m:
+            delta = timedelta(
+                days=int(m.group("days") or 0),
+                hours=int(m.group("hours") or 0),
+                minutes=int(m.group("minutes") or 0),
+                seconds=int(m.group("seconds") or 0),
+            )
+            return ParsedTime(base=None, duration=delta)
+
         raise ValueError(f"Unrecognized timestamp format: {timestamp}")
 
-    def compare(
-        self, time_a: ParsedTime | str, time_b: ParsedTime | str
-    ) -> int:
+    def compare(self, time_a: ParsedTime | str, time_b: ParsedTime | str) -> int:
         """Compare two times considering tolerance."""
         if isinstance(time_a, str):
             time_a = self.parse(time_a)
@@ -137,6 +149,41 @@ class TimeSense:
         if 12 <= hour < 18:
             return "≈день"
         return "≈вечер"
+
+    def humanize(
+        self, value: datetime | timedelta, reference: datetime | None = None
+    ) -> str:
+        """Return human-friendly phrase for a time delta."""
+        if isinstance(value, datetime):
+            reference = reference or datetime.utcnow()
+            delta = value - reference
+        else:
+            delta = value
+
+        seconds = int(delta.total_seconds())
+        past = seconds < 0
+        seconds = abs(seconds)
+
+        if seconds < 60:
+            num = seconds
+            unit = "second"
+        elif seconds < 3600:
+            num = seconds // 60
+            unit = "minute"
+        elif seconds < 86400:
+            num = seconds // 3600
+            unit = "hour"
+        else:
+            num = seconds // 86400
+            unit = "day"
+
+        if num != 1:
+            unit += "s"
+
+        phrase = f"{num} {unit}"
+        if past:
+            return f"{phrase} ago"
+        return f"in {phrase}"
 
 
 __all__ = ["TimeSense", "ParsedTime"]
