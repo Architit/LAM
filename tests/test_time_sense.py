@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime
 
-from src.time_sense import TimeSense, ParsedTime
+from src.time_sense import TimeSense
 
 
 class TimeSenseTest(unittest.TestCase):

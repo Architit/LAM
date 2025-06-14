@@ -43,21 +43,41 @@ class TimeSense:
         m = self.EXACT_RE.match(timestamp)
         if m:
             dt = datetime(
-                int(m.group(3)), int(m.group(2)), int(m.group(1)), int(m.group(4)), int(m.group(5))
+                int(m.group(3)),
+                int(m.group(2)),
+                int(m.group(1)),
+                int(m.group(4)),
+                int(m.group(5)),
             )
             return ParsedTime(base=dt)
 
         m = self.APPROX_RE.match(timestamp)
         if m:
-            dt = datetime(int(m.group(3)), int(m.group(2)), int(m.group(1)), int(m.group(4)))
-            return ParsedTime(base=dt, approx=True, tolerance=self.DEFAULT_APPROX_TOLERANCE)
+            dt = datetime(
+                int(m.group(3)),
+                int(m.group(2)),
+                int(m.group(1)),
+                int(m.group(4)),
+            )
+            return ParsedTime(
+                base=dt,
+                approx=True,
+                tolerance=self.DEFAULT_APPROX_TOLERANCE,
+            )
 
         m = self.INTERVAL_RE.match(timestamp)
         if m:
             dt = datetime(
-                int(m.group(3)), int(m.group(2)), int(m.group(1)), int(m.group(4)), int(m.group(5))
+                int(m.group(3)),
+                int(m.group(2)),
+                int(m.group(1)),
+                int(m.group(4)),
+                int(m.group(5)),
             )
-            return ParsedTime(base=dt, tolerance=int(m.group(6)))
+            return ParsedTime(
+                base=dt,
+                tolerance=int(m.group(6)),
+            )
 
         m = self.FUZZY_RE.match(timestamp)
         if m:
@@ -65,7 +85,9 @@ class TimeSense:
 
         raise ValueError(f"Unrecognized timestamp format: {timestamp}")
 
-    def compare(self, time_a: ParsedTime | str, time_b: ParsedTime | str) -> int:
+    def compare(
+        self, time_a: ParsedTime | str, time_b: ParsedTime | str
+    ) -> int:
         """Compare two times considering tolerance."""
         if isinstance(time_a, str):
             time_a = self.parse(time_a)
@@ -84,7 +106,9 @@ class TimeSense:
             return 0
         return -1 if diff < 0 else 1
 
-    def interval_between(self, time_a: ParsedTime | str, time_b: ParsedTime | str) -> int:
+    def interval_between(
+        self, time_a: ParsedTime | str, time_b: ParsedTime | str
+    ) -> int:
         """Return interval in minutes between two times."""
         if isinstance(time_a, str):
             time_a = self.parse(time_a)
@@ -100,7 +124,8 @@ class TimeSense:
     def generate_fuzzy(self, exact_time: datetime | str) -> str:
         """Generate fuzzy time description from exact time."""
         if isinstance(exact_time, str):
-            exact_time = self.parse(exact_time).base  # type: ignore[assignment]
+            exact_base = self.parse(exact_time).base
+            exact_time = exact_base  # type: ignore[assignment]
         if exact_time is None:
             raise ValueError("Exact time required for fuzzy generation")
 

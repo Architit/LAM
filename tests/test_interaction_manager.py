@@ -6,7 +6,9 @@ from src.event_manager import EventManager
 
 
 class FakeComm:
-    async def send_request(self, service: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    async def send_request(
+        self, service: str, payload: Dict[str, Any]
+    ) -> Dict[str, Any]:
         return {"service": service, **payload}
 
 

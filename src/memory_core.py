@@ -34,7 +34,9 @@ class MemoryEntry:
     associations: List[str] = field(default_factory=list)
     tags: List[str] = field(default_factory=list)
     attributes: Dict[str, Any] = field(default_factory=dict)
-    last_access: str = field(default_factory=lambda: datetime.utcnow().isoformat())
+    last_access: str = field(
+        default_factory=lambda: datetime.utcnow().isoformat()
+    )
     access_count: int = 0
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,7 +75,12 @@ class MemoryCore:
     # --------------------------- persistence ----------------------------
     def _save(self) -> None:
         with open(MEMORY_FILE, "w", encoding="utf-8") as fh:
-            json.dump([m.to_dict() for m in self._memories], fh, ensure_ascii=False, indent=2)
+            json.dump(
+                [m.to_dict() for m in self._memories],
+                fh,
+                ensure_ascii=False,
+                indent=2,
+            )
         with open(CATEGORY_FILE, "w", encoding="utf-8") as fh:
             json.dump(self.categories, fh, ensure_ascii=False, indent=2)
 
@@ -98,14 +105,19 @@ class MemoryCore:
     def add_memory(self, memory_entry: Dict[str, Any]) -> None:
         """Add a new memory to storage."""
         memory_entry.setdefault("id", self._generate_id())
-        memory_entry.setdefault("tags", self.generate_tags(memory_entry.get("content", "")))
+        memory_entry.setdefault(
+            "tags",
+            self.generate_tags(memory_entry.get("content", "")),
+        )
         memory_entry.setdefault("importance", 0.5)
         mem = MemoryEntry.from_dict(memory_entry)
         self.categorize(mem)
         self._memories.append(mem)
         self._save()
 
-    def retrieve_memory(self, criteria: Dict[str, Any]) -> List[Dict[str, Any]]:
+    def retrieve_memory(
+        self, criteria: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
         """Retrieve memories matching provided criteria."""
         results: List[MemoryEntry] = []
         for mem in self._memories:
@@ -118,7 +130,9 @@ class MemoryCore:
                 if not set(criteria["tags"]).intersection(mem.tags):
                     match = False
             if "associations" in criteria:
-                if not set(criteria["associations"]).intersection(mem.associations):
+                if not set(criteria["associations"]).intersection(
+                    mem.associations
+                ):
                     match = False
             if match:
                 mem.access_count += 1
@@ -138,10 +152,18 @@ class MemoryCore:
             age_days = (now - ts).days
             decay = age_days / 365
             access_factor = min(mem.access_count / 10, 1)
-            mem.importance = max(0.0, min(1.0, mem.importance * (1 - decay) + access_factor * 0.1))
+            mem.importance = max(
+                0.0,
+                min(
+                    1.0,
+                    mem.importance * (1 - decay) + access_factor * 0.1,
+                ),
+            )
         self._save()
 
-    def forget(self, min_importance: float = 0.2, max_age: Optional[str] = None) -> None:
+    def forget(
+        self, min_importance: float = 0.2, max_age: Optional[str] = None
+    ) -> None:
         """Forget memories with low importance or exceeding max age."""
         now = datetime.utcnow()
         keep: List[MemoryEntry] = []
@@ -170,4 +192,3 @@ class MemoryCore:
 
 
 __all__ = ["MemoryCore", "MemoryEntry"]
-

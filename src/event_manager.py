@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import asyncio
 from collections import defaultdict
-from typing import Any, Awaitable, Callable, Coroutine, Dict, List, Tuple
+from typing import Any, Awaitable, Callable, Dict, List, Tuple
 
 EventHandler = Callable[[Dict[str, Any]], Awaitable[None] | None]
 
@@ -20,9 +20,13 @@ class EventManager:
 
     def __init__(self) -> None:
         self._listeners: Dict[str, List[EventHandler]] = defaultdict(list)
-        self._queue: asyncio.Queue[Tuple[str, Dict[str, Any]]] = asyncio.Queue()
+        self._queue: asyncio.Queue[
+            Tuple[str, Dict[str, Any]]
+        ] = asyncio.Queue()
 
-    def register_listener(self, event_type: str, handler: EventHandler) -> None:
+    def register_listener(
+        self, event_type: str, handler: EventHandler
+    ) -> None:
         """Register a handler for a specific event type."""
         self._listeners[event_type].append(handler)
 

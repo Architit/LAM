@@ -18,14 +18,26 @@ class MemoryCoreTest(unittest.TestCase):
         self.tmpdir.cleanup()
 
     def test_add_and_get(self):
-        self.core.add_memory({"name": "test", "timestamp": "2025-01-01T00:00:00", "content": "hello"})
+        self.core.add_memory(
+            {
+                "name": "test",
+                "timestamp": "2025-01-01T00:00:00",
+                "content": "hello",
+            }
+        )
         memories = self.core.get_memories()
         self.assertEqual(len(memories), 1)
         retrieved = self.core.retrieve_memory({})
         self.assertEqual(len(retrieved), 1)
 
     def test_categories_persist(self):
-        self.core.add_memory({"name": "cat", "timestamp": "2025-01-01T00:00:00", "content": "hello world"})
+        self.core.add_memory(
+            {
+                "name": "cat",
+                "timestamp": "2025-01-01T00:00:00",
+                "content": "hello world",
+            }
+        )
         categories_first = dict(self.core.categories)
         new_core = MemoryCore()
         self.assertEqual(new_core.categories, categories_first)
