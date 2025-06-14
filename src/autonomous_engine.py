@@ -3,9 +3,10 @@
 
 from __future__ import annotations
 
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 import aiohttp
+import asyncio
 
 from .communication_layer import CommunicationLayer
 from .event_manager import EventManager
@@ -26,12 +27,37 @@ class AutonomousEngine:
         memory_time: MemoryTimeManager,
         ethics: EthicsSecurityModule,
         endpoint: str = "https://example.com/api",
+        interval: float = 60.0,
     ) -> None:
         self.event_manager = event_manager
         self.comm_layer = comm_layer
         self.memory_time = memory_time
         self.ethics = ethics
         self.endpoint = endpoint
+        self.interval = interval
+        self._task: Optional[asyncio.Task] = None
+        self._shutdown_event = asyncio.Event()
+
+    async def _run(self) -> None:
+        """Internal scheduler loop."""
+        async with self.comm_layer:
+            while not self._shutdown_event.is_set():
+                await self.evaluate_and_act()
+                await asyncio.sleep(self.interval)
+
+    async def start(self) -> None:
+        """Begin the engine loop."""
+        if self._task is None or self._task.done():
+            self._shutdown_event.clear()
+            self._task = asyncio.create_task(self._run())
+
+    async def shutdown(self) -> None:
+        """Stop the engine loop and close resources."""
+        if self._task is None:
+            return
+        self._shutdown_event.set()
+        await self._task
+        self._task = None
 
     async def evaluate_and_act(self) -> None:
         """Example proactive behaviour based on recent events."""
