@@ -2,7 +2,7 @@
 # Agents Operational Instructions  
 # Инструкции по Работе Агентов  
 
-> *v2.0 – {date}*  
+> *v2.0 – 2025‑06‑14*
 
 ---  
 
@@ -118,5 +118,5 @@ Severity scale **0‑4** maps to *info, warn, minor, major, critical*.
 ## 10. История ревизий  
 | Version | Date | Notes EN | Примечания RU |
 |---------|------|----------|---------------|
-| 2.0 | {date} | Added taxonomy, mermaid lifecycle, autonomy matrix. | Добавлена таксономия, граф жизненного цикла, матрица автономии. |
+| 2.0 | 2025‑06‑14 | Added taxonomy, mermaid lifecycle, autonomy matrix. | Добавлена таксономия, граф жизненного цикла, матрица автономии. |
 | 1.0 | 2025‑06‑14 | Initial bilingual release. | Первый двуязычный релиз. |  
