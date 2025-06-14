@@ -5,6 +5,8 @@ from __future__ import annotations
 
 from typing import Any, Dict
 
+import aiohttp
+
 from .communication_layer import CommunicationLayer
 from .event_manager import EventManager
 from .ethics_security import EthicsSecurityModule
@@ -46,9 +48,11 @@ class AutonomousEngine:
                 payload,
             )
             self.event_manager.emit_event("outgoing_message", payload)
-        except Exception:
-            # Communication errors are ignored for this demo
-            pass
+        except (aiohttp.ClientError, RuntimeError) as exc:
+            # Log communication issues instead of silently ignoring
+            self.event_manager.emit_event(
+                "communication_error", {"error": str(exc)}
+            )
 
         await self.event_manager.dispatch()
 
