@@ -23,6 +23,8 @@ dev = [
     "pylint",
     "semgrep",
     "autopep8",
+    "black",
+    "ruff",
 ]
 tracing = [
     "opentelemetry-sdk>=1.22",
