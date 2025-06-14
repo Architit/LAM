@@ -19,6 +19,7 @@ import uuid
 # Path where memory data is stored
 MEMORY_PATH = Path("memory")
 MEMORY_FILE = MEMORY_PATH / "memories.json"
+CATEGORY_FILE = MEMORY_PATH / "categories.json"
 
 
 @dataclass
@@ -58,6 +59,12 @@ class MemoryCore:
             self._memories = []
 
         self.categories: Dict[str, List[str]] = {}
+        if CATEGORY_FILE.exists():
+            with open(CATEGORY_FILE, "r", encoding="utf-8") as fh:
+                self.categories = json.load(fh)
+        else:
+            for mem in self._memories:
+                self.categorize(mem)
 
     def get_memories(self) -> List[MemoryEntry]:
         """Return list of all stored memories."""
@@ -67,6 +74,8 @@ class MemoryCore:
     def _save(self) -> None:
         with open(MEMORY_FILE, "w", encoding="utf-8") as fh:
             json.dump([m.to_dict() for m in self._memories], fh, ensure_ascii=False, indent=2)
+        with open(CATEGORY_FILE, "w", encoding="utf-8") as fh:
+            json.dump(self.categories, fh, ensure_ascii=False, indent=2)
 
     # --------------------------- utilities ----------------------------
     def _generate_id(self) -> str:
