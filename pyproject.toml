@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "lam"
-version = "0.1.0"
+version = "0.1.1"
 description = "Living Artificial Mind"
 authors = [{name = "LAM Team"}]
 readme = "README.md"
@@ -14,6 +14,7 @@ dependencies = [
     "requests>=2.32",
     "openai>=1.14",
     "opentelemetry-api>=1.22",
+    "apscheduler>=3.10",
 ]
 
 [project.optional-dependencies]
