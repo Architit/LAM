@@ -1,4 +1,5 @@
 import asyncio
+import importlib.util
 import pytest
 
 
@@ -16,3 +17,23 @@ async def cleanup_tasks():
             await task
         except asyncio.CancelledError:
             pass
+
+
+def pytest_configure(config: pytest.Config) -> None:
+    config.addinivalue_line(
+        "markers",
+        "optional: test requires optional dependencies (opentelemetry-sdk)",
+    )
+
+
+def pytest_collection_modifyitems(config: pytest.Config, items: list[pytest.Item]) -> None:
+    try:
+        sdk_spec = importlib.util.find_spec("opentelemetry.sdk")
+    except ModuleNotFoundError:
+        sdk_spec = None
+
+    if sdk_spec is None:
+        skip = pytest.mark.skip(reason="opentelemetry-sdk not installed")
+        for item in items:
+            if "optional" in item.keywords:
+                item.add_marker(skip)

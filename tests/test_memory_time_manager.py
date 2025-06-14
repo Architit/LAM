@@ -3,9 +3,12 @@ import tempfile
 from datetime import datetime
 
 from pathlib import Path
+import pytest
 
 from src import memory_core
 from src.memory_time_manager import MemoryTimeManager
+
+pytestmark = pytest.mark.optional
 
 
 class MemoryTimeManagerTest(unittest.TestCase):

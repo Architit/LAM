@@ -112,10 +112,10 @@ pip install .[vector]
 ### Tracing / Трейсинг
 
 OpenTelemetry hooks are included for communication and memory operations. To
-enable tracing, install the optional `tracing` extras and configure an exporter:
+enable tracing, install the optional `tests` extras and configure an exporter:
 
 ```bash
-pip install .[tracing]
+pip install .[tests]
 export OTEL_TRACES_EXPORTER=console
 ```
 
@@ -132,12 +132,12 @@ pytest -q
 Coverage badge updates via CI; target **≥ 90 %**.
 Бейдж покрытия обновляется через CI; цель **≥ 90 %**.
 
-Some tests rely on optional packages such as `faiss-cpu`. Without them,
+Some tests rely on optional packages such as `faiss-cpu` and `opentelemetry-sdk`. Without them,
 those tests will be skipped.
-Некоторые тесты зависят от необязательных пакетов, например `faiss-cpu`. Без них соответствующие тесты будут пропущены.
+Некоторые тесты зависят от необязательных пакетов, например `faiss-cpu` и `opentelemetry-sdk`. Без них соответствующие тесты будут пропущены.
 
-Install extras via `pip install .[vector]` to run the full suite.
-Установите дополнительные зависимости командой `pip install .[vector]`, чтобы запустить полный набор.
+Install extras via `pip install .[vector,tests]` to run the full suite.
+Установите дополнительные зависимости командой `pip install .[vector,tests]`, чтобы запустить полный набор.
 
 ---
 

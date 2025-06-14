@@ -9,6 +9,8 @@ from src.event_manager import EventManager
 from src.ethics_security import EthicsSecurityModule
 from src.memory_time_manager import MemoryTimeManager
 
+pytestmark = pytest.mark.optional
+
 
 @pytest.mark.asyncio
 async def test_start_runs_with_comm_layer():

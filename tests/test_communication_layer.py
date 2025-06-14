@@ -4,6 +4,8 @@ import pytest
 
 from src.communication_layer import CommunicationLayer
 
+pytestmark = pytest.mark.optional
+
 
 @pytest.mark.asyncio
 async def test_send_request():
