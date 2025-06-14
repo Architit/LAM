@@ -14,7 +14,11 @@ from .time_sense import TimeSense
 class MemoryTimeManager:
     """Combine :class:`MemoryCore` with :class:`TimeSense`."""
 
-    def __init__(self, memory: Optional[MemoryCore] = None, time_sense: Optional[TimeSense] = None) -> None:
+    def __init__(
+        self,
+        memory: Optional[MemoryCore] = None,
+        time_sense: Optional[TimeSense] = None,
+    ) -> None:
         self.memory = memory or MemoryCore()
         self.time_sense = time_sense or TimeSense()
 
@@ -24,7 +28,10 @@ class MemoryTimeManager:
         entry = {
             "name": event_data.get("name", "event"),
             "timestamp": timestamp,
-            "content": json.dumps(event_data.get("content", {}), ensure_ascii=False),
+            "content": json.dumps(
+                event_data.get("content", {}),
+                ensure_ascii=False,
+            ),
             "importance": float(event_data.get("importance", 0.5)),
             "associations": event_data.get("associations", []),
             "tags": event_data.get("tags", []),
@@ -54,7 +61,9 @@ class MemoryTimeManager:
                 base = parsed.base
             except Exception:
                 try:
-                    base = datetime.fromisoformat(mem.timestamp.replace("≈", ""))
+                    base = datetime.fromisoformat(
+                        mem.timestamp.replace("≈", "")
+                    )
                 except Exception:
                     pass
             if base and base >= start:

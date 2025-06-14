@@ -1,4 +1,3 @@
-import asyncio
 import unittest
 
 from src.event_manager import EventManager

@@ -23,6 +23,10 @@ class CommunicationLayerTest(unittest.IsolatedAsyncioTestCase):
                 def raise_for_status(self):
                     pass
 
-            with patch.object(layer._session, "post", return_value=FakeResponse()):
+            with patch.object(
+                layer._session,
+                "post",
+                return_value=FakeResponse(),
+            ):
                 response = await layer.send_request("http://test", {"a": 1})
                 self.assertEqual(response, {"ok": True})

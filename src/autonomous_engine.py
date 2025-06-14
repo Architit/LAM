@@ -3,8 +3,6 @@
 
 from __future__ import annotations
 
-import asyncio
-from datetime import datetime
 from typing import Any, Dict
 
 from .communication_layer import CommunicationLayer
@@ -36,11 +34,17 @@ class AutonomousEngine:
         if not recent:
             return
 
-        payload: Dict[str, Any] = {"action": "notify", "content": "Recent activity detected"}
+        payload: Dict[str, Any] = {
+            "action": "notify",
+            "content": "Recent activity detected",
+        }
         if not self.ethics.is_action_ethical(payload):
             return
         try:
-            await self.comm_layer.autonomous_interaction(self.endpoint, payload)
+            await self.comm_layer.autonomous_interaction(
+                self.endpoint,
+                payload,
+            )
             self.event_manager.emit_event("outgoing_message", payload)
         except Exception:
             # Communication errors are ignored for this demo

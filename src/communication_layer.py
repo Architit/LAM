@@ -9,7 +9,6 @@ operation.
 
 from __future__ import annotations
 
-import json
 from typing import Any, Dict
 
 import aiohttp
@@ -46,18 +45,26 @@ class CommunicationLayer:
             await self._session.close()
             self._session = None
 
-    async def send_request(self, service: str, payload: Dict[str, Any]) -> Dict[str, Any]:
-        """Send a JSON POST request to ``service`` with ``payload`` asynchronously."""
+    async def send_request(
+        self, service: str, payload: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Send a JSON POST request to ``service`` with ``payload``."""
         if self._session is None:
-            raise RuntimeError("CommunicationLayer is not initialised. Use 'async with'.")
-        async with self._session.post(service, json=payload, timeout=10) as response:
+            raise RuntimeError(
+                "CommunicationLayer is not initialised. Use 'async with'."
+            )
+        async with self._session.post(
+            service, json=payload, timeout=10
+        ) as response:
             response.raise_for_status()
             text = await response.text()
             if not text:
                 return {}
             return await response.json()
 
-    async def autonomous_interaction(self, service: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    async def autonomous_interaction(
+        self, service: str, payload: Dict[str, Any]
+    ) -> Dict[str, Any]:
         """Initiate an outbound request without direct user prompting."""
         return await self.send_request(service, payload)
 

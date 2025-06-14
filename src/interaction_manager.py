@@ -13,11 +13,15 @@ from .event_manager import EventManager
 class InteractionManager:
     """High level interface for communications."""
 
-    def __init__(self, comm_layer: CommunicationLayer, event_manager: EventManager) -> None:
+    def __init__(
+        self, comm_layer: CommunicationLayer, event_manager: EventManager
+    ) -> None:
         self.comm_layer = comm_layer
         self.event_manager = event_manager
 
-    async def initiate_interaction(self, target: str, message: str) -> Dict[str, Any]:
+    async def initiate_interaction(
+        self, target: str, message: str
+    ) -> Dict[str, Any]:
         """Send a message asynchronously to a single ``target``."""
         payload = {"message": message}
         response = await self.comm_layer.send_request(target, payload)
@@ -27,7 +31,9 @@ class InteractionManager:
         )
         return response
 
-    async def broadcast_message(self, targets: List[str], message: str) -> Dict[str, Any]:
+    async def broadcast_message(
+        self, targets: List[str], message: str
+    ) -> Dict[str, Any]:
         """Send the same message to multiple ``targets`` asynchronously."""
         tasks = {
             target: asyncio.create_task(self.initiate_interaction(target, message))
