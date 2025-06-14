@@ -41,10 +41,12 @@ class MemoryEntry:
     access_count: int = 0
 
     def to_dict(self) -> Dict[str, Any]:
+        """Return dictionary representation."""
         return asdict(self)
 
     @staticmethod
     def from_dict(data: Dict[str, Any]) -> "MemoryEntry":
+        """Create ``MemoryEntry`` from dictionary."""
         return MemoryEntry(**data)
 
 
