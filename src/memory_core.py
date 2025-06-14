@@ -16,15 +16,57 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 import uuid
+import os
+import tomllib
 
-# Path where memory data is stored relative to the repository root
-MEMORY_PATH = Path(__file__).resolve().parent.parent / "memory"
+# Default path where memory data is stored relative to the repository root
+DEFAULT_MEMORY_PATH = Path(__file__).resolve().parent.parent / "memory"
+MEMORY_PATH = DEFAULT_MEMORY_PATH
 LOG_DIR = MEMORY_PATH / "logs"
 METADATA_DIR = MEMORY_PATH / "metadata"
 DATA_DIR = MEMORY_PATH / "data"
 MEMORY_FILE = DATA_DIR / "memory_items.json"
 CATEGORY_FILE = METADATA_DIR / "categories.json"
 ANCHOR_FILE = METADATA_DIR / "anchor_memory_phase.json"
+
+
+def _update_paths(base: Path) -> None:
+    """Update global path constants."""
+    global MEMORY_PATH, LOG_DIR, METADATA_DIR, DATA_DIR, MEMORY_FILE, CATEGORY_FILE, ANCHOR_FILE
+
+    MEMORY_PATH = base
+    LOG_DIR = MEMORY_PATH / "logs"
+    METADATA_DIR = MEMORY_PATH / "metadata"
+    DATA_DIR = MEMORY_PATH / "data"
+    MEMORY_FILE = DATA_DIR / "memory_items.json"
+    CATEGORY_FILE = METADATA_DIR / "categories.json"
+    ANCHOR_FILE = METADATA_DIR / "anchor_memory_phase.json"
+
+
+def _load_memory_path() -> Path:
+    """Return memory path from config or default."""
+    base: Optional[str] = None
+
+    env_file = Path(".env")
+    if env_file.exists():
+        for line in env_file.read_text().splitlines():
+            if "=" not in line or line.strip().startswith("#"):
+                continue
+            key, value = line.split("=", 1)
+            if key.strip() == "LAM_MEMORY_PATH":
+                base = value.strip()
+                break
+
+    base = os.getenv("LAM_MEMORY_PATH", base)
+
+    if not base:
+        pyproject = Path(__file__).resolve().parent.parent / "pyproject.toml"
+        if pyproject.exists():
+            with open(pyproject, "rb") as fh:
+                data = tomllib.load(fh)
+            base = data.get("tool", {}).get("lam", {}).get("memory_path")
+
+    return Path(base) if base else DEFAULT_MEMORY_PATH
 
 
 @dataclass
@@ -57,7 +99,12 @@ class MemoryEntry:
 class MemoryCore:
     """Memory management core."""
 
-    def __init__(self) -> None:
+    def __init__(self, memory_path: Optional[Path] | None = None) -> None:
+        if memory_path is None and MEMORY_PATH == DEFAULT_MEMORY_PATH:
+            memory_path = _load_memory_path()
+        if memory_path is not None:
+            _update_paths(Path(memory_path))
+
         MEMORY_PATH.mkdir(exist_ok=True)
         LOG_DIR.mkdir(exist_ok=True)
         METADATA_DIR.mkdir(exist_ok=True)
