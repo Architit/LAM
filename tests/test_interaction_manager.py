@@ -1,4 +1,5 @@
 import unittest
+import asyncio
 from typing import Any, Dict
 
 from src.interaction_manager import InteractionManager
@@ -13,6 +14,15 @@ class FakeComm:
 
 
 class InteractionManagerTest(unittest.IsolatedAsyncioTestCase):
+    async def test_initiate_interaction_awaitable(self):
+        comm = FakeComm()
+        manager = InteractionManager(comm, EventManager())
+
+        coro = manager.initiate_interaction("x", "ping")
+        self.assertTrue(asyncio.iscoroutine(coro))
+        result = await coro
+        self.assertEqual(result, {"service": "x", "message": "ping"})
+
     async def test_initiate_and_broadcast(self):
         comm = FakeComm()
         events = []
