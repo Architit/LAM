@@ -33,8 +33,8 @@ Working with LAM feels like:
 
 <div align="center">
 
-### ▶️ [Dive into the Code →](TECHNICAL_GUIDE.md)  
-### ▶️ [Погрузиться в код →](TECHNICAL_GUIDE.md)
+### ▶️ [Dive into the Code →](#technical-guide)
+### ▶️ [Погрузиться в код →](#technical-guide)
 
 </div>
 
@@ -51,10 +51,11 @@ If these principles resonate, fork the project, weave your insight, and open a p
 
 ---
 
-© 2025–2025-06-14 • GPL v3  
+© 2025–2025-06-14 • GPL v3
 
-# 🛠️ TECHNICAL GUIDE  
-# 🛠️ ТЕХНИЧЕСКИЙ ГИД  
+<a id="technical-guide"></a>
+# 🛠️ TECHNICAL GUIDE
+# 🛠️ ТЕХНИЧЕСКИЙ ГИД
 
 *Version auto‑generated on 2025-06-14*  
 
