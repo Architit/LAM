@@ -28,7 +28,15 @@ class CommunicationLayer:
         self._session: aiohttp.ClientSession | None = None
 
     async def __aenter__(self) -> "CommunicationLayer":
-        """Create the underlying HTTP session."""
+        """Create the underlying HTTP session.
+
+        Raises
+        ------
+        RuntimeError
+            If the communication layer is already initialised.
+        """
+        if self._session is not None:
+            raise RuntimeError("CommunicationLayer session already started")
         self._session = aiohttp.ClientSession()
         return self
 
