@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from typing import Any, Dict, List
+import asyncio
 
 from .communication_layer import CommunicationLayer
 from .event_manager import EventManager
@@ -28,10 +29,11 @@ class InteractionManager:
 
     async def broadcast_message(self, targets: List[str], message: str) -> Dict[str, Any]:
         """Send the same message to multiple ``targets`` asynchronously."""
-        results: Dict[str, Any] = {}
-        for target in targets:
-            results[target] = await self.initiate_interaction(target, message)
-        return results
+        tasks = {
+            target: asyncio.create_task(self.initiate_interaction(target, message))
+            for target in targets
+        }
+        return {t: await task for t, task in tasks.items()}
 
 
 __all__ = ["InteractionManager"]
