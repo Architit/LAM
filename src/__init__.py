@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+"""Top-level package for the Living Artificial Mind.
+
+This package exposes the primary interfaces used by LAM including
+``MemoryCore`` for memory management and ``InteractionManager`` for
+handling communications with users and agents.
+"""
+
 from .memory_core import MemoryCore, MemoryEntry
 from .time_sense import TimeSense, ParsedTime
 from .event_manager import EventManager, EventHandler
