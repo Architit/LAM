@@ -3,6 +3,8 @@ from unittest.mock import patch
 
 import pytest
 
+pytest.importorskip("opentelemetry")
+
 from src.autonomous_engine import AutonomousEngine
 from src.communication_layer import CommunicationLayer
 from src.event_manager import EventManager

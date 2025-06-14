@@ -2,6 +2,8 @@ from unittest.mock import patch
 
 import pytest
 
+pytest.importorskip("opentelemetry")
+
 from src.communication_layer import CommunicationLayer
 
 pytestmark = pytest.mark.optional
