@@ -5,6 +5,8 @@ from datetime import datetime
 from pathlib import Path
 import pytest
 
+pytest.importorskip("opentelemetry")
+
 from src import memory_core
 from src.memory_time_manager import MemoryTimeManager
 
