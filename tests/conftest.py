@@ -1,9 +1,11 @@
 import asyncio
+import pytest_asyncio
 import importlib.util
 import pytest
+import aiohttp
 
 
-@pytest.fixture(autouse=True)
+@pytest_asyncio.fixture(autouse=True)
 async def cleanup_tasks():
     """Wait briefly then cancel pending asyncio tasks after each test."""
     yield
@@ -26,7 +28,9 @@ def pytest_configure(config: pytest.Config) -> None:
     )
 
 
-def pytest_collection_modifyitems(config: pytest.Config, items: list[pytest.Item]) -> None:
+def pytest_collection_modifyitems(
+    config: pytest.Config, items: list[pytest.Item]
+) -> None:
     try:
         sdk_spec = importlib.util.find_spec("opentelemetry.sdk")
     except ModuleNotFoundError:
@@ -37,3 +41,27 @@ def pytest_collection_modifyitems(config: pytest.Config, items: list[pytest.Item
         for item in items:
             if "optional" in item.keywords:
                 item.add_marker(skip)
+
+
+@pytest_asyncio.fixture()
+async def http_client():
+    """Yield a session and base url for an aiohttp app."""
+    clients = []
+
+    async def factory(
+        app: "aiohttp.web.Application",
+    ) -> tuple["aiohttp.ClientSession", str]:
+        runner = aiohttp.web.AppRunner(app)
+        await runner.setup()
+        site = aiohttp.web.TCPSite(runner, "127.0.0.1", 0)
+        await site.start()
+        port = site._server.sockets[0].getsockname()[1]
+        session = aiohttp.ClientSession()
+        clients.append((runner, session))
+        return session, f"http://127.0.0.1:{port}"
+
+    yield factory
+
+    for runner, session in clients:
+        await session.close()
+        await runner.cleanup()
