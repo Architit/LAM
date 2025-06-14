@@ -1,3 +1,5 @@
+"""Helper utilities for emitting structured JSON logs."""
+
 import json
 import logging
 from typing import Any, Dict
@@ -7,6 +9,8 @@ class JsonFormatter(logging.Formatter):
     """Format log records as JSON strings."""
 
     def format(self, record: logging.LogRecord) -> str:  # type: ignore[override]
+        """Return the given ``record`` formatted as a JSON string."""
+
         data: Dict[str, Any] = {
             "level": record.levelname,
             "time": self.formatTime(record, self.datefmt),
