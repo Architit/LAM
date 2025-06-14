@@ -10,8 +10,11 @@ class MemoryCoreTest(unittest.TestCase):
     def setUp(self):
         self.tmpdir = tempfile.TemporaryDirectory()
         memory_core.MEMORY_PATH = Path(self.tmpdir.name)
-        memory_core.MEMORY_FILE = memory_core.MEMORY_PATH / "memories.json"
-        memory_core.CATEGORY_FILE = memory_core.MEMORY_PATH / "categories.json"
+        memory_core.LOG_DIR = memory_core.MEMORY_PATH / "logs"
+        memory_core.METADATA_DIR = memory_core.MEMORY_PATH / "metadata"
+        memory_core.DATA_DIR = memory_core.MEMORY_PATH / "data"
+        memory_core.MEMORY_FILE = memory_core.DATA_DIR / "memory_items.json"
+        memory_core.CATEGORY_FILE = memory_core.METADATA_DIR / "categories.json"
         self.core = MemoryCore()
 
     def tearDown(self):
