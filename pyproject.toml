@@ -24,3 +24,6 @@ dev = [
 
 [tool.hatch.build.targets.wheel]
 packages = ["src"]
+
+[tool.lam]
+memory_path = "memory"

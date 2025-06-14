@@ -1,5 +1,6 @@
 import unittest
 import tempfile
+import os
 from pathlib import Path
 
 from src import memory_core
@@ -44,3 +45,11 @@ class MemoryCoreTest(unittest.TestCase):
         categories_first = dict(self.core.categories)
         new_core = MemoryCore()
         self.assertEqual(new_core.categories, categories_first)
+
+    def test_env_override(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            os.environ["LAM_MEMORY_PATH"] = tmp
+            memory_core._update_paths(memory_core.DEFAULT_MEMORY_PATH)
+            core = MemoryCore()
+            self.assertEqual(memory_core.MEMORY_PATH, Path(tmp))
+            del os.environ["LAM_MEMORY_PATH"]

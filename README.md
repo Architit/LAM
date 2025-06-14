@@ -67,7 +67,7 @@ If these principles resonate, fork the project, weave your insight, and open a p
 
 ---
 
-## 2. Installation / Установка  
+## 2. Installation / Установка
 
 > **Requires Python ≥ 3.10**
 
@@ -76,6 +76,23 @@ git clone https://github.com/your-org/LAM.git
 cd LAM
 pip install -e ".[dev]" --upgrade
 ```
+
+---
+
+## Configuration / Конфигурация
+
+Paths used by `MemoryCore` can be overridden via `pyproject.toml` or a `.env` file.
+
+```toml
+[tool.lam]
+memory_path = "/path/to/lam-memory"
+```
+
+```
+LAM_MEMORY_PATH=/path/to/lam-memory
+```
+
+If omitted, the default `memory/` directory is used.
 
 ---
 
