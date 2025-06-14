@@ -17,8 +17,8 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 import uuid
 
-# Path where memory data is stored
-MEMORY_PATH = Path("memory")
+# Path where memory data is stored relative to the repository root
+MEMORY_PATH = Path(__file__).resolve().parent.parent / "memory"
 MEMORY_FILE = MEMORY_PATH / "memories.json"
 CATEGORY_FILE = MEMORY_PATH / "categories.json"
 
