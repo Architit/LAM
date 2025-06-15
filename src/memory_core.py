@@ -133,10 +133,10 @@ class MemoryCore:
         self.category_file: Path = paths["category_file"]
         self.anchor_file: Path = paths["anchor_file"]
 
-        self.base_path.mkdir(exist_ok=True)
-        self.log_dir.mkdir(exist_ok=True)
-        self.metadata_dir.mkdir(exist_ok=True)
-        self.data_dir.mkdir(exist_ok=True)
+        self.base_path.mkdir(parents=True, exist_ok=True)
+        self.log_dir.mkdir(parents=True, exist_ok=True)
+        self.metadata_dir.mkdir(parents=True, exist_ok=True)
+        self.data_dir.mkdir(parents=True, exist_ok=True)
         if self.memory_file.exists():
             with open(self.memory_file, "r", encoding="utf-8") as fh:
                 self._memories: List[MemoryEntry] = [
