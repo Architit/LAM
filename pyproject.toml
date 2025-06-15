@@ -26,6 +26,7 @@ dev = [
     "autopep8",
     "black",
     "ruff",
+    "mypy",
 ]
 tests = [
     "opentelemetry-sdk>=1.22",
