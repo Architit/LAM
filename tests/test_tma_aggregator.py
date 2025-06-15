@@ -14,11 +14,11 @@ class AggregatorMatrixTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmpdir:
             cwd = os.getcwd()
             os.chdir(tmpdir)
-            os.environ['TMA_REPORTS_DIR'] = 'out'
+            os.environ['TMA_REPORTS_DIR'] = 'out/nested/reports'
             try:
                 def fake_run(cmd, check=False, env=None):
-                    Path('out').mkdir(exist_ok=True)
-                    Path('out/results.xml').write_text(
+                    Path('out/nested/reports').mkdir(parents=True, exist_ok=True)
+                    Path('out/nested/reports/results.xml').write_text(
                         '<testsuite tests="1" failures="0" skipped="0"></testsuite>',
                         encoding='utf-8',
                     )
@@ -36,6 +36,8 @@ class AggregatorMatrixTest(unittest.TestCase):
                     result = aggregator.aggregate_results(['a', 'b'])
 
                 self.assertEqual(result['tests'], 1)
+                self.assertTrue(Path(result['xml']).exists())
+                self.assertTrue(Path(result['html']).exists())
                 run_mock.assert_called_once()
             finally:
                 os.chdir(cwd)

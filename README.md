@@ -154,11 +154,13 @@ Set `TMA_REPORTS_DIR` to store reports elsewhere, e.g.:
 ```bash
 export TMA_REPORTS_DIR=/tmp/tma_reports
 ```
+The directory may point anywhere; it will be created along with parents if missing.
 
 Для сохранения отчётов в другом каталоге установите `TMA_REPORTS_DIR`:
 ```bash
 export TMA_REPORTS_DIR=/tmp/tma_reports
 ```
+Каталог может указывать куда угодно; при его отсутствии он и родительские папки будут созданы автоматически.
 
 Coverage badge updates via CI; target **≥ 90 %**.
 Бейдж покрытия обновляется через CI; цель **≥ 90 %**.
