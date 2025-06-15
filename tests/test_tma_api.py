@@ -4,7 +4,6 @@ from unittest.mock import patch
 
 import pytest
 
-os.environ['TMA_CONFIG'] = str(Path(__file__).resolve().parents[1] / 'tma.yaml')
 from src.tma.api import create_app
 from src.tma.storage import Metrics
 

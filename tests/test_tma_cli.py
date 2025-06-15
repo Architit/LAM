@@ -4,7 +4,6 @@ from pathlib import Path
 import tempfile
 from unittest.mock import patch, MagicMock
 
-os.environ['TMA_CONFIG'] = str(Path(__file__).resolve().parents[1] / 'tma.yaml')
 from src.tma import cli
 from src.tma.storage import Metrics
 

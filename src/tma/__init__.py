@@ -6,7 +6,25 @@ import os
 import yaml
 from typing import Any, Dict
 
-_CONFIG_PATH = Path(os.getenv("TMA_CONFIG", Path(__file__).resolve().parent.parent / "tma.yaml"))
+
+def _find_config() -> Path:
+    """Return the first existing config path from known locations."""
+    env_path = os.getenv("TMA_CONFIG")
+    if env_path:
+        return Path(env_path)
+
+    base = Path(__file__).resolve().parent.parent
+    candidates = [
+        base / "tma.yaml",
+        base.parent / "tma.yaml",
+    ]
+    for path in candidates:
+        if path.exists():
+            return path
+    return candidates[0]
+
+
+_CONFIG_PATH = _find_config()
 
 
 def load_config() -> Dict[str, Any]:
