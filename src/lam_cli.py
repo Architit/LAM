@@ -65,6 +65,7 @@ var GuardianSpec = Guardian{
 
 def scaffold(yaml_path: Path, out_dir: Path) -> None:
     """Generate Go boilerplate from a YAML cell specification."""
+    # pylint: disable=too-many-locals
     with open(yaml_path, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
     cell = data.get("cell", {})
@@ -126,4 +127,3 @@ def main(argv: list[str] | None = None) -> None:
 
 if __name__ == "__main__":
     main()
-
