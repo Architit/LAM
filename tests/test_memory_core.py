@@ -15,13 +15,7 @@ pytestmark = pytest.mark.optional
 class MemoryCoreTest(unittest.TestCase):
     def setUp(self):
         self.tmpdir = tempfile.TemporaryDirectory()
-        memory_core.MEMORY_PATH = Path(self.tmpdir.name)
-        memory_core.LOG_DIR = memory_core.MEMORY_PATH / "logs"
-        memory_core.METADATA_DIR = memory_core.MEMORY_PATH / "metadata"
-        memory_core.DATA_DIR = memory_core.MEMORY_PATH / "data"
-        memory_core.MEMORY_FILE = memory_core.DATA_DIR / "memory_items.json"
-        memory_core.CATEGORY_FILE = memory_core.METADATA_DIR / "categories.json"
-        self.core = MemoryCore()
+        self.core = MemoryCore(Path(self.tmpdir.name))
 
     def tearDown(self):
         self.tmpdir.cleanup()
@@ -48,7 +42,7 @@ class MemoryCoreTest(unittest.TestCase):
             }
         )
         categories_first = dict(self.core.categories)
-        new_core = MemoryCore()
+        new_core = MemoryCore(Path(self.tmpdir.name))
         self.assertEqual(new_core.categories, categories_first)
 
     def test_categories_file_recreated_on_init(self):
@@ -59,27 +53,25 @@ class MemoryCoreTest(unittest.TestCase):
                 "content": "check",
             }
         )
-        os.remove(memory_core.CATEGORY_FILE)
-        self.assertFalse(memory_core.CATEGORY_FILE.exists())
-        new_core = MemoryCore()
-        self.assertTrue(memory_core.CATEGORY_FILE.exists())
+        os.remove(self.core.category_file)
+        self.assertFalse(self.core.category_file.exists())
+        new_core = MemoryCore(Path(self.tmpdir.name))
+        self.assertTrue(new_core.category_file.exists())
         self.assertTrue(new_core.categories)
 
     def test_env_override(self):
         with tempfile.TemporaryDirectory() as tmp:
             os.environ["LAM_MEMORY_PATH"] = tmp
-            memory_core._update_paths(memory_core.DEFAULT_MEMORY_PATH)
-            _ = MemoryCore()
-            self.assertEqual(memory_core.MEMORY_PATH, Path(tmp))
+            core = MemoryCore()
+            self.assertEqual(core.base_path, Path(tmp))
             del os.environ["LAM_MEMORY_PATH"]
 
     def test_relative_env_path(self):
         with tempfile.TemporaryDirectory(dir=memory_core.REPO_ROOT) as tmp:
             relative = os.path.relpath(tmp, memory_core.REPO_ROOT)
             os.environ["LAM_MEMORY_PATH"] = relative
-            memory_core._update_paths(memory_core.DEFAULT_MEMORY_PATH)
-            _ = MemoryCore()
-            self.assertEqual(memory_core.MEMORY_PATH, Path(tmp).resolve())
+            core = MemoryCore()
+            self.assertEqual(core.base_path, Path(tmp).resolve())
             del os.environ["LAM_MEMORY_PATH"]
 
     def test_retrieve_by_embedding(self):

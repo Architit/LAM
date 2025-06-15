@@ -39,26 +39,21 @@ except Exception:  # pragma: no cover - optional dependency
 
 # Default path where memory data is stored relative to the repository root
 DEFAULT_MEMORY_PATH = REPO_ROOT / "memory"
-MEMORY_PATH = DEFAULT_MEMORY_PATH
-LOG_DIR = MEMORY_PATH / "logs"
-METADATA_DIR = MEMORY_PATH / "metadata"
-DATA_DIR = MEMORY_PATH / "data"
-MEMORY_FILE = DATA_DIR / "memory_items.json"
-CATEGORY_FILE = METADATA_DIR / "categories.json"
-ANCHOR_FILE = METADATA_DIR / "anchor_memory_phase.json"
 
 
-def _update_paths(base: Path) -> None:
-    """Update global path constants."""
-    global MEMORY_PATH, LOG_DIR, METADATA_DIR, DATA_DIR, MEMORY_FILE, CATEGORY_FILE, ANCHOR_FILE
+def _update_paths(base: Path) -> Dict[str, Path]:
+    """Return file paths for the given base path."""
 
-    MEMORY_PATH = base
-    LOG_DIR = MEMORY_PATH / "logs"
-    METADATA_DIR = MEMORY_PATH / "metadata"
-    DATA_DIR = MEMORY_PATH / "data"
-    MEMORY_FILE = DATA_DIR / "memory_items.json"
-    CATEGORY_FILE = METADATA_DIR / "categories.json"
-    ANCHOR_FILE = METADATA_DIR / "anchor_memory_phase.json"
+    base = base.expanduser()
+    return {
+        "base_path": base,
+        "log_dir": base / "logs",
+        "metadata_dir": base / "metadata",
+        "data_dir": base / "data",
+        "memory_file": base / "data" / "memory_items.json",
+        "category_file": base / "metadata" / "categories.json",
+        "anchor_file": base / "metadata" / "anchor_memory_phase.json",
+    }
 
 
 def _load_memory_path() -> Path:
@@ -125,17 +120,25 @@ class MemoryCore:
     """Memory management core."""
 
     def __init__(self, memory_path: Optional[Path] | None = None) -> None:
-        if memory_path is None and MEMORY_PATH == DEFAULT_MEMORY_PATH:
+        if memory_path is None:
             memory_path = _load_memory_path()
-        if memory_path is not None:
-            _update_paths(Path(memory_path))
 
-        MEMORY_PATH.mkdir(exist_ok=True)
-        LOG_DIR.mkdir(exist_ok=True)
-        METADATA_DIR.mkdir(exist_ok=True)
-        DATA_DIR.mkdir(exist_ok=True)
-        if MEMORY_FILE.exists():
-            with open(MEMORY_FILE, "r", encoding="utf-8") as fh:
+        paths = _update_paths(Path(memory_path))
+
+        self.base_path: Path = paths["base_path"].resolve()
+        self.log_dir: Path = paths["log_dir"]
+        self.metadata_dir: Path = paths["metadata_dir"]
+        self.data_dir: Path = paths["data_dir"]
+        self.memory_file: Path = paths["memory_file"]
+        self.category_file: Path = paths["category_file"]
+        self.anchor_file: Path = paths["anchor_file"]
+
+        self.base_path.mkdir(exist_ok=True)
+        self.log_dir.mkdir(exist_ok=True)
+        self.metadata_dir.mkdir(exist_ok=True)
+        self.data_dir.mkdir(exist_ok=True)
+        if self.memory_file.exists():
+            with open(self.memory_file, "r", encoding="utf-8") as fh:
                 self._memories: List[MemoryEntry] = [
                     MemoryEntry.from_dict(m) for m in json.load(fh)
                 ]
@@ -143,8 +146,8 @@ class MemoryCore:
             self._memories = []
 
         self.categories: Dict[str, List[str]] = {}
-        if CATEGORY_FILE.exists():
-            with open(CATEGORY_FILE, "r", encoding="utf-8") as fh:
+        if self.category_file.exists():
+            with open(self.category_file, "r", encoding="utf-8") as fh:
                 self.categories = json.load(fh)
         else:
             for mem in self._memories:
@@ -161,14 +164,14 @@ class MemoryCore:
 
     # --------------------------- persistence ----------------------------
     def _save(self) -> None:
-        with open(MEMORY_FILE, "w", encoding="utf-8") as fh:
+        with open(self.memory_file, "w", encoding="utf-8") as fh:
             json.dump(
                 [m.to_dict() for m in self._memories],
                 fh,
                 ensure_ascii=False,
                 indent=2,
             )
-        with open(CATEGORY_FILE, "w", encoding="utf-8") as fh:
+        with open(self.category_file, "w", encoding="utf-8") as fh:
             json.dump(self.categories, fh, ensure_ascii=False, indent=2)
 
     # --------------------------- utilities ----------------------------
