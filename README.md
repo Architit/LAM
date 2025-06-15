@@ -135,7 +135,7 @@ export OTEL_TRACES_EXPORTER=console
 
 This will print span information to the console during runtime.
 ## 2a. TMA - Test Matrix Aggregator
-TMA manages test scheduling and aggregation. Install via `pip install -e .` and use `tma trigger` to launch runs.
+TMA manages test scheduling and aggregation. Install via `pip install -e .` and use `tma trigger` to launch runs. After installation, `tma --version` should display the configured version, confirming the CLI works.
 
 
 To run via Docker: `docker build -t tma:0.1.0 .`
