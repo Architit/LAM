@@ -16,6 +16,14 @@ class EthicsSecurityTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 module.audit_interaction(data)
 
+    def test_transliteration_detection(self):
+        with tempfile.TemporaryDirectory() as tmp, patch(
+            "src.ethics_security.EthicsSecurityModule._load_openai", return_value=None
+        ):
+            module = EthicsSecurityModule(log_dir=tmp)
+            data = {"message": "запустить вирус"}
+            self.assertFalse(module.is_action_ethical(data))
+
     def test_moderation_service_flagged(self):
         class FakeOpenAI:
             class Moderation:
