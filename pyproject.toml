@@ -40,7 +40,8 @@ vector = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src"]
+packages = [{from = "src"}]
+dev-mode-dirs = ["src"]
 
 [project.scripts]
 lam = "src.lam_cli:main"
