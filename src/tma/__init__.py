@@ -6,7 +6,12 @@ import os
 import yaml
 from typing import Any, Dict
 
-_CONFIG_PATH = Path(os.getenv("TMA_CONFIG", Path(__file__).resolve().parent.parent / "tma.yaml"))
+_CONFIG_PATH = Path(
+    os.getenv(
+        "TMA_CONFIG",
+        Path(__file__).resolve().parents[2] / "tma.yaml",
+    )
+)
 
 
 def load_config() -> Dict[str, Any]:
