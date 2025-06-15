@@ -1,0 +1,9 @@
+```mermaid
+C4Container
+    title TMA Container Diagram
+    Container(tma,"Test Matrix Aggregator","Python","Schedules and aggregates test runs")
+    Container(redis,"Redis","Key-Value Store","Broker and backend")
+    Container(cicd,"CI Workflow","GitHub Actions","Calls TMA CLI")
+    Rel(cicd,tma,"trigger")
+    Rel(tma,redis,"metrics")
+```
