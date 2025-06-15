@@ -44,7 +44,7 @@ packages = ["src"]
 
 [project.scripts]
 lam = "src.lam_cli:main"
-tma = "tma.cli:main"
+tma = "src.tma.cli:main"
 
 [tool.lam]
 memory_path = "memory"
