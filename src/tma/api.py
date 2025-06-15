@@ -15,7 +15,7 @@ async def trigger_handler(request: web.Request) -> web.Response:
     return web.json_response({"status": "scheduled"})
 
 
-def metrics_handler(request: web.Request) -> web.Response:
+async def metrics_handler(request: web.Request) -> web.Response:
     store = MetricsStore(Path("reports/metrics.yaml"))
     metrics = store.load().__dict__
     return web.json_response(metrics)

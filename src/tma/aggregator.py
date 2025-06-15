@@ -7,18 +7,31 @@ from typing import Any, Dict
 from xml.etree import ElementTree as ET
 
 from jinja2 import Environment, FileSystemLoader
+import os
 
 from .storage import MetricsStore
 
 
 def aggregate_results(matrix: list[str]) -> Dict[str, Any]:
-    """Run pytest for given matrix and return metrics."""
+    """Run pytest filtered by ``matrix`` and return metrics.
+
+    Each entry in ``matrix`` is combined into a single expression passed to
+    ``pytest`` via ``-k``. The values are also exposed as ``MATRIX_<index>``
+    environment variables so tests may adapt behaviour based on the selected
+    matrix options.
+    """
     report_dir = Path("reports")
     report_dir.mkdir(exist_ok=True)
     xml_path = report_dir / "results.xml"
     html_path = report_dir / "results.html"
 
-    subprocess.run(["pytest", "-q", f"--junitxml={xml_path}"], check=False)
+    cmd = ["pytest", "-q", f"--junitxml={xml_path}"]
+    if matrix:
+        expr = " and ".join(matrix)
+        cmd += ["-k", expr]
+    env = {**os.environ, **{f"MATRIX_{i}": v for i, v in enumerate(matrix)}}
+
+    subprocess.run(cmd, check=False, env=env)
 
     tree = ET.parse(xml_path)
     root = tree.getroot()
@@ -28,8 +41,8 @@ def aggregate_results(matrix: list[str]) -> Dict[str, Any]:
     store = MetricsStore(report_dir / "metrics.yaml")
     store.record(tests, failures, skipped)
 
-    env = Environment(loader=FileSystemLoader(Path(__file__).parent))
-    template = env.from_string(
+    jinja_env = Environment(loader=FileSystemLoader(Path(__file__).parent))
+    template = jinja_env.from_string(
         """<html><body><h1>Test Results</h1><pre>{{xml}}</pre></body></html>"""
     )
     html_path.write_text(template.render(xml=xml_path.read_text(encoding="utf-8")), encoding="utf-8")
