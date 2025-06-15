@@ -1,0 +1,13 @@
+[MASTER]
+# Minimal configuration aligned with ruff and mypy
+py-version=3.10
+ignore=tests
+
+[FORMAT]
+max-line-length=88
+
+[MESSAGES CONTROL]
+disable=C0114,C0115,C0116,R0903,E0401,C0301
+
+[TYPECHECK]
+ignored-modules=faiss
