@@ -41,7 +41,11 @@ class EventManager:
 
     async def dispatch(self) -> None:
         """Process all events currently in the queue."""
-        while not self._queue.empty():
+        if self._queue.empty():
+            logger.info("dispatch_done")
+            return
+
+        while True:
             event_type, data = await self._queue.get()
             logger.info("event_dispatch", extra={"event_type": event_type})
             for handler in self._listeners.get(event_type, []):
@@ -50,6 +54,8 @@ class EventManager:
                 else:
                     handler(data)
             self._queue.task_done()
+            if self._queue.empty():
+                break
         logger.info("dispatch_done")
 
 
