@@ -140,6 +140,10 @@ TMA manages test scheduling and aggregation. Install via `pip install -e .` and 
 
 To run via Docker: `docker build -t tma:0.1.0 .`
 
+Set `TMA_CONFIG` to specify the configuration file (defaults to `tma.yaml` in the repo root):
+```bash
+export TMA_CONFIG=/path/to/tma.yaml
+```
 
 
 ---
