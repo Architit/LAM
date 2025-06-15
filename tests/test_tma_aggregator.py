@@ -38,6 +38,7 @@ class AggregatorMatrixTest(unittest.TestCase):
                 self.assertEqual(result['tests'], 1)
                 self.assertTrue(Path(result['xml']).exists())
                 self.assertTrue(Path(result['html']).exists())
+                self.assertTrue(Path('out/nested/reports/metrics.yaml').exists())
                 run_mock.assert_called_once()
             finally:
                 os.chdir(cwd)
