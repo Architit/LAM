@@ -13,6 +13,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -e .[dev,tests]
+          pip install coverage-badge
       - name: Pylint
         run: pylint src || true
       - name: Ruff
@@ -20,6 +21,8 @@ jobs:
       - name: Mypy
         run: mypy --install-types --non-interactive src
       - name: Run tests
-        run: pytest -q
+        run: pytest --cov=src --cov-branch --cov-fail-under=90
+      - name: Generate coverage badge
+        run: coverage-badge -o docs/assets/coverage.svg -f
       - name: Semgrep
         uses: returntocorp/semgrep-action@v1
