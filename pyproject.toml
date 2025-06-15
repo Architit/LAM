@@ -39,8 +39,11 @@ vector = [
     "faiss-cpu>=1.11",
 ]
 
+[tool.hatch.build]
+include = ["tma.yaml"]
+
 [tool.hatch.build.targets.wheel]
-packages = ["src"]
+packages = ["src", "src/tma"]
 
 [project.scripts]
 lam = "src.lam_cli:main"
