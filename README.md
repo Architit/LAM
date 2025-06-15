@@ -93,7 +93,7 @@ pip install .[vector]
 
 ## Configuration / Конфигурация
 
-Paths used by `MemoryCore` can be overridden via `pyproject.toml` or a `.env` file.
+Paths used by `MemoryCore` can be overridden via `pyproject.toml` or a `.env` file. `MemoryCore` automatically reads `LAM_MEMORY_PATH` from either source.
 
 ```toml
 [tool.lam]
@@ -105,6 +105,12 @@ LAM_MEMORY_PATH=/path/to/lam-memory
 ```
 
 If omitted, the default `memory/` directory is used.
+Example `.env` / Пример `.env`:
+```dotenv
+# .env
+LAM_MEMORY_PATH=/path/to/lam-memory
+```
+
 
 ### Vector Search / Векторный поиск
 
