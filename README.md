@@ -126,6 +126,7 @@ This will print span information to the console during runtime.
 ## 3. Testing / Тестирование
 
 ```bash
+pip install .[dev,tests]
 pytest -q
 ```
 
@@ -140,8 +141,8 @@ The scaffold test expects the `gofmt` binary available in `PATH`. If it is missi
 the test will be skipped.
 Тест `scaffold` требует наличие утилиты `gofmt` в `PATH`. При её отсутствии тест будет пропущен.
 
-Install extras via `pip install .[vector,tests]` to run the full suite.
-Установите дополнительные зависимости командой `pip install .[vector,tests]`, чтобы запустить полный набор.
+Install extras via `pip install .[dev,tests]` before running the suite.
+Установите дополнительные зависимости командой `pip install .[dev,tests]` перед запуском набора тестов.
 
 ---
 

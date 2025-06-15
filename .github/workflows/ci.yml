@@ -12,7 +12,7 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: |
-          pip install -e .[dev]
+          pip install -e .[dev,tests]
       - name: Pylint
         run: pylint src || true
       - name: Run tests
