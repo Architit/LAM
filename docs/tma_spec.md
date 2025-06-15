@@ -1,64 +1,39 @@
 # Test Matrix Aggregator (TMA)
 
 ![Container Diagram](diagrams/tma_container.mmd)
-Paragraph 1. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
 
-Paragraph 2. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
+TMA orchestrates automated test runs across a matrix of environments. It schedules
+jobs, runs pytest, and aggregates the results into a concise report.
 
-Paragraph 3. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
+## Key Components
 
-Paragraph 4. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
+- **CLI (`cli.py`)** – triggers test runs and displays metrics.
+- **Scheduler (`scheduler.py`)** – Celery app using Redis for message passing and
+  result storage.
+- **Aggregator (`aggregator.py`)** – executes pytest for a matrix expression and
+  produces XML/HTML reports.
+- **Metrics Store (`storage.py`)** – saves counts of tests, failures and skipped
+  cases in YAML.
+- **HTTP API (`api.py`)** – exposes `/trigger` and `/metrics` endpoints.
+- **Configuration** – defined in `tma.yaml`; values may be overridden with
+  environment variables.
 
-Paragraph 5. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
+## Workflow
 
-Paragraph 6. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 7. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 8. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 9. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 10. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 11. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 12. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 13. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 14. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 15. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 16. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 17. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 18. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 19. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 20. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 21. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 22. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 23. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 24. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
-
-Paragraph 25. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. This paragraph describes the component behaviors, interactions, and design decisions in depth. 
+1. A user or CI job calls `tma trigger --matrix <opts>` or posts to `/trigger`.
+2. `schedule()` enqueues `run_tests` via Celery.
+3. Workers run `aggregate_results()` which executes pytest and updates
+   `reports/` files.
+4. Metrics are persisted through `MetricsStore`.
+5. The CLI or `/metrics` endpoint returns current statistics for dashboards or
+   gating conditions.
 
 ---
 
-Параграф 1. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. 
+В предыдущих версиях документа разделы с 1 по 25 содержали однотипные описания
+поведения и взаимодействия модулей. Их заменила краткая сводка выше.
 
-Параграф 2. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. 
-
-Параграф 3. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. 
-
-Параграф 4. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. 
-
-Параграф 5. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. Этот параграф подробно описывает поведение компонентов, их взаимодействия и архитектурные решения. 
+TMA включает CLI, планировщик Celery, модуль агрегации результатов и HTTP‑API.
+Пользователь запускает задачу, планировщик ставит её в очередь, воркеры
+выполняют тесты и сохраняют показатели в YAML. Статистику можно получить через
+CLI или API.
