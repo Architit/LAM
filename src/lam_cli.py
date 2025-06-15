@@ -63,7 +63,6 @@ var GuardianSpec = Guardian{
 """
 def scaffold(yaml_path: Path, out_dir: Path) -> None:
     """Generate Go boilerplate from a YAML cell specification."""
-    # pylint: disable=too-many-locals
     with open(yaml_path, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
     cell = data.get("cell", {})
@@ -78,14 +77,13 @@ def scaffold(yaml_path: Path, out_dir: Path) -> None:
     )
 
     intents = ", ".join([f'"{i}"' for i in cell.get("intents", [])])
-    resources = cell.get("resources", {})
     nuc_code = TEMPLATE_NUCLEUS % (
         cell.get("kind", ""),
         cell.get("version", ""),
         cell.get("ethics_level", ""),
         intents,
-        resources.get("energy", ""),
-        resources.get("memory", ""),
+        cell.get("resources", {}).get("energy", ""),
+        cell.get("resources", {}).get("memory", ""),
     )
 
     hb = guardian.get("heartbeat", {})
