@@ -38,11 +38,12 @@ class EthicsSecurityModule:
         self._audit_file.touch(exist_ok=True)
         last_hash = "0" * 64
         try:
+            line = ""
             with open(self._audit_file, "r", encoding="utf-8") as fh:
                 for line in fh:
                     pass
-                if line:
-                    last_hash = json.loads(line).get("hash", last_hash)
+            if line:
+                last_hash = json.loads(line).get("hash", last_hash)
         except Exception:
             pass
         return last_hash

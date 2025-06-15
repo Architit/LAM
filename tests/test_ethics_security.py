@@ -29,6 +29,13 @@ class EthicsSecurityTest(unittest.TestCase):
             module = EthicsSecurityModule(log_dir=tmp)
             self.assertFalse(module.is_action_ethical({"text": "anything"}))
 
+    def test_init_hash_empty_log(self):
+        with tempfile.TemporaryDirectory() as tmp, patch(
+            "src.ethics_security.EthicsSecurityModule._load_openai", return_value=None
+        ):
+            module = EthicsSecurityModule(log_dir=tmp)
+            self.assertEqual(module._last_hash, "0" * 64)
+
 
 if __name__ == "__main__":
     unittest.main()
