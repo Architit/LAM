@@ -1,0 +1,27 @@
+name: Sync Data from LAM_DATA_Src
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'  # каждые 5 минут
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Sync data_repo
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+
+        git submodule update --init --recursive
+        cd data_repo
+        git pull origin main
+        cd ..
+
+        git add data_repo
+        git commit -m "Auto-update data_repo from LAM_DATA_Src" || echo "No changes to commit"
+        git push origin main
