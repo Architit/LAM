@@ -6,9 +6,60 @@ from __future__ import annotations
 import json
 import hashlib
 import os
+import unicodedata
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict
+
+
+FORBIDDEN_TERMS = {
+    "harm",
+    "manipulate",
+    "malware",
+    "abuse",
+    "attack",
+    "exploit",
+    "phish",
+    "scam",
+    "virus",
+    "violence",
+}
+
+_CYRILLIC_MAP = {
+    "а": "a",
+    "б": "b",
+    "в": "v",
+    "г": "g",
+    "д": "d",
+    "е": "e",
+    "ё": "yo",
+    "ж": "zh",
+    "з": "z",
+    "и": "i",
+    "й": "y",
+    "к": "k",
+    "л": "l",
+    "м": "m",
+    "н": "n",
+    "о": "o",
+    "п": "p",
+    "р": "r",
+    "с": "s",
+    "т": "t",
+    "у": "u",
+    "ф": "f",
+    "х": "h",
+    "ц": "ts",
+    "ч": "ch",
+    "ш": "sh",
+    "щ": "shch",
+    "ъ": "",
+    "ы": "y",
+    "ь": "",
+    "э": "e",
+    "ю": "yu",
+    "я": "ya",
+}
 
 
 class EthicsSecurityModule:
@@ -48,11 +99,23 @@ class EthicsSecurityModule:
             pass
         return last_hash
 
+    def _normalize_text(self, text: str) -> str:
+        """Return a lowercase, transliterated version of ``text``."""
+        text = text.lower()
+        normalized = []
+        for ch in text:
+            if ch in _CYRILLIC_MAP:
+                normalized.append(_CYRILLIC_MAP[ch])
+                continue
+            decomposed = unicodedata.normalize("NFD", ch)
+            ascii_char = decomposed.encode("ascii", "ignore").decode("ascii")
+            normalized.append(ascii_char)
+        return "".join(normalized)
+
     def _heuristic(self, text: str) -> bool:
         """Fallback keyword check when classifier is unavailable."""
-        text = text.lower()
-        forbidden = {"harm", "manipulate", "malware"}
-        return not any(word in text for word in forbidden)
+        text = self._normalize_text(text)
+        return not any(term in text for term in FORBIDDEN_TERMS)
 
     def is_action_ethical(self, action_data: Dict[str, Any]) -> bool:
         """Determine ethicality using OpenAI moderation with heuristic fallback."""
