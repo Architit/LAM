@@ -17,6 +17,7 @@ jobs, runs pytest, and aggregates the results into a concise report.
 - **HTTP API (`api.py`)** – exposes `/trigger` and `/metrics` endpoints.
 - **Configuration** – defined in `tma.yaml`; values may be overridden with
   environment variables.
+  `TMA_REPORTS_DIR` may point to any directory and will be created if missing.
 
 ## Workflow
 
