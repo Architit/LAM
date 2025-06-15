@@ -144,6 +144,16 @@ mypy --install-types --non-interactive src
 pytest -q
 ```
 
+Set `TMA_REPORTS_DIR` to store reports elsewhere, e.g.:
+```bash
+export TMA_REPORTS_DIR=/tmp/tma_reports
+```
+
+Для сохранения отчётов в другом каталоге установите `TMA_REPORTS_DIR`:
+```bash
+export TMA_REPORTS_DIR=/tmp/tma_reports
+```
+
 Coverage badge updates via CI; target **≥ 90 %**.
 Бейдж покрытия обновляется через CI; цель **≥ 90 %**.
 

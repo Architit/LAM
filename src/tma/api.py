@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import asyncio
 from pathlib import Path
+import os
 from aiohttp import web
 
 from .scheduler import schedule
@@ -16,7 +17,8 @@ async def trigger_handler(request: web.Request) -> web.Response:
 
 
 async def metrics_handler(request: web.Request) -> web.Response:
-    store = MetricsStore(Path("reports/metrics.yaml"))
+    report_dir = Path(os.getenv("TMA_REPORTS_DIR", "reports"))
+    store = MetricsStore(report_dir / "metrics.yaml")
     metrics = store.load().__dict__
     return web.json_response(metrics)
 

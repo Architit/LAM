@@ -20,7 +20,7 @@ def aggregate_results(matrix: list[str]) -> Dict[str, Any]:
     environment variables so tests may adapt behaviour based on the selected
     matrix options.
     """
-    report_dir = Path("reports")
+    report_dir = Path(os.getenv("TMA_REPORTS_DIR", "reports"))
     report_dir.mkdir(exist_ok=True)
     xml_path = report_dir / "results.xml"
     html_path = report_dir / "results.html"
