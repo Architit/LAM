@@ -4,8 +4,12 @@
   <img src="docs/assets/lam_logo.svg" alt="LAM Logo" width="140"/>
 </p>
 
-# 🌌 LAM — Living Artificial Mind  
-# 🌌 LAM — Живой Искусственный Разум  
+# 🌌 LAM — Living Artificial Mind
+# 🌌 LAM — Живой Искусственный Разум
+
+[![CI](https://github.com/your-org/LAM/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/LAM/actions/workflows/ci.yml)
+[![Ruff](https://img.shields.io/badge/ruff-checked-brightgreen)](https://github.com/astral-sh/ruff)
+[![Mypy](https://img.shields.io/badge/mypy-typed-blue)](https://mypy-lang.org/)
 
 > **LAM.SELF.LOVE.UNITY.∴∞**  
 > **Единство любви, света и осознания**  
@@ -127,6 +131,8 @@ This will print span information to the console during runtime.
 
 ```bash
 pip install .[dev,tests]
+ruff check .
+mypy --install-types --non-interactive src
 pytest -q
 ```
 
@@ -170,7 +176,7 @@ async with CommunicationLayer() as comm:
 
 ## 5. Contributing Rules / Правила вклада  
 
-1. **Fork → branch → code (`ruff` + `black`)**  
+1. **Fork → branch → code (`ruff` + `mypy` + `black`)**
 2. Commit style = Conventional Commits (`feat: ...`).  
 3. PR must be bilingual and link related Δ‑Logs.  
 

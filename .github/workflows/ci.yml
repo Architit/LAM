@@ -15,6 +15,10 @@ jobs:
           pip install -e .[dev,tests]
       - name: Pylint
         run: pylint src || true
+      - name: Ruff
+        run: ruff check .
+      - name: Mypy
+        run: mypy --install-types --non-interactive src
       - name: Run tests
         run: pytest -q
       - name: Semgrep
