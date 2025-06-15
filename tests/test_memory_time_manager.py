@@ -7,7 +7,6 @@ import pytest
 
 pytest.importorskip("opentelemetry")
 
-from src import memory_core
 from src.memory_core import MemoryCore
 from src.memory_time_manager import MemoryTimeManager
 

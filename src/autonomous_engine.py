@@ -51,12 +51,26 @@ class AutonomousEngine:
             self._shutdown_event.clear()
             self._task = asyncio.create_task(self._run())
 
-    async def shutdown(self) -> None:
-        """Stop the engine loop and close resources."""
+    async def shutdown(self, timeout: float = 1.0) -> None:
+        """Stop the engine loop and close resources.
+
+        Parameters
+        ----------
+        timeout:
+            Maximum number of seconds to wait for the running task to
+            finish before it is cancelled.
+        """
         if self._task is None:
             return
         self._shutdown_event.set()
-        await self._task
+        try:
+            await asyncio.wait_for(self._task, timeout=timeout)
+        except asyncio.TimeoutError:
+            self._task.cancel()
+            try:
+                await self._task
+            except asyncio.CancelledError:
+                pass
         self._task = None
 
     async def evaluate_and_act(self) -> None:
