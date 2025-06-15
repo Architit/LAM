@@ -105,6 +105,8 @@ LAM_MEMORY_PATH=/path/to/lam-memory
 ```
 
 If omitted, the default `memory/` directory is used.
+Missing directories are created automatically.
+Если каталогов нет, они будут созданы автоматически.
 Example `.env` / Пример `.env`:
 ```dotenv
 # .env

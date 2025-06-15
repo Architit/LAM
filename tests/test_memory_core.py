@@ -74,6 +74,16 @@ class MemoryCoreTest(unittest.TestCase):
             self.assertEqual(core.base_path, Path(tmp).resolve())
             del os.environ["LAM_MEMORY_PATH"]
 
+    def test_nested_env_path(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            nested = Path(tmp) / "nested" / "lam"
+            os.environ["LAM_MEMORY_PATH"] = str(nested)
+            core = MemoryCore()
+            self.assertEqual(core.base_path, nested.resolve())
+            self.assertTrue(core.memory_file.exists())
+            self.assertTrue(core.category_file.exists())
+            del os.environ["LAM_MEMORY_PATH"]
+
     def test_retrieve_by_embedding(self):
         self.core.add_memory(
             {
