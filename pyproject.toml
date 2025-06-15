@@ -15,6 +15,9 @@ dependencies = [
     "openai>=1.14",
     "opentelemetry-api>=1.22",
     "pyyaml>=6.0",
+    "celery>=5.3",
+    "redis>=4.6",
+    "jinja2>=3.1",
 ]
 
 [project.optional-dependencies]
@@ -41,6 +44,7 @@ packages = ["src"]
 
 [project.scripts]
 lam = "src.lam_cli:main"
+tma = "tma.cli:main"
 
 [tool.lam]
 memory_path = "memory"
