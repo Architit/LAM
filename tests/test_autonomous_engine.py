@@ -31,3 +31,24 @@ async def test_start_runs_with_comm_layer():
         await engine.start()
         await asyncio.sleep(0.05)
         await engine.shutdown()
+
+
+@pytest.mark.asyncio
+async def test_shutdown_timeout_when_evaluate_hangs(monkeypatch):
+    """Engine.shutdown should finish quickly even if evaluate_and_act hangs."""
+    engine = AutonomousEngine(
+        EventManager(),
+        CommunicationLayer(),
+        MemoryTimeManager(),
+        EthicsSecurityModule(),
+        interval=0.01,
+    )
+
+    async def hanging_action() -> None:
+        await asyncio.Event().wait()
+
+    monkeypatch.setattr(engine, "evaluate_and_act", hanging_action)
+
+    await engine.start()
+    await asyncio.sleep(0.02)
+    await asyncio.wait_for(engine.shutdown(timeout=0.05), 0.2)
