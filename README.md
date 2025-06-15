@@ -136,6 +136,10 @@ Some tests rely on optional packages such as `faiss-cpu` and `opentelemetry-sdk`
 those tests will be skipped.
 Некоторые тесты зависят от необязательных пакетов, например `faiss-cpu` и `opentelemetry-sdk`. Без них соответствующие тесты будут пропущены.
 
+The scaffold test expects the `gofmt` binary available in `PATH`. If it is missing,
+the test will be skipped.
+Тест `scaffold` требует наличие утилиты `gofmt` в `PATH`. При её отсутствии тест будет пропущен.
+
 Install extras via `pip install .[vector,tests]` to run the full suite.
 Установите дополнительные зависимости командой `pip install .[vector,tests]`, чтобы запустить полный набор.
 

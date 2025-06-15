@@ -1,29 +1,23 @@
 import subprocess
-import tempfile
+import shutil
 from pathlib import Path
-import unittest
+
+import pytest
 
 from src import lam_cli
 
+def test_generated_files_lint(tmp_path: Path) -> None:
+    """Generated Go files should pass ``gofmt``."""
+    if not shutil.which("gofmt"):
+        pytest.skip("gofmt not installed")
 
-class ScaffoldLintTest(unittest.TestCase):
-    def test_generated_files_lint(self):
-        with tempfile.TemporaryDirectory() as tmpdir:
-            out = Path(tmpdir)
-            lam_cli.scaffold(Path("100_GenomicYAML_Template.yaml"), out)
-            files = [out / "membrane.go", out / "nucleus.go", out / "guardian" / "guardian.go"]
-            for f in files:
-                result = subprocess.run([
-                    "gofmt",
-                    "-e",
-                    str(f),
-                ], capture_output=True, text=True)
-                self.assertEqual(
-                    result.returncode,
-                    0,
-                    msg=f"gofmt errors for {f}: {result.stderr}",
-                )
+    lam_cli.scaffold(Path("100_GenomicYAML_Template.yaml"), tmp_path)
+    files = [
+        tmp_path / "membrane.go",
+        tmp_path / "nucleus.go",
+        tmp_path / "guardian" / "guardian.go",
+    ]
 
-
-if __name__ == "__main__":
-    unittest.main()
+    for f in files:
+        result = subprocess.run(["gofmt", "-e", str(f)], capture_output=True, text=True)
+        assert result.returncode == 0, f"gofmt errors for {f}: {result.stderr}"
