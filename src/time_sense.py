@@ -137,9 +137,9 @@ class TimeSense:
         """Generate fuzzy time description from exact time."""
         if isinstance(exact_time, str):
             exact_base = self.parse(exact_time).base
-            exact_time = exact_base  # type: ignore[assignment]
-        if exact_time is None:
-            raise ValueError("Exact time required for fuzzy generation")
+            if exact_base is None:
+                raise ValueError("Exact time required for fuzzy generation")
+            exact_time = exact_base
 
         hour = exact_time.hour
         if 0 <= hour < 6:

@@ -27,7 +27,7 @@ from .logging_utils import get_json_logger
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 logger = get_json_logger(__name__)
-tracer = trace.get_tracer(__name__)
+tracer = trace.get_tracer(__name__)  # type: ignore[attr-defined]
 
 try:
     import faiss  # type: ignore
@@ -205,7 +205,8 @@ class MemoryCore:
         self._index = faiss.IndexFlatIP(dim)
         xb = np.array(embeddings, dtype="float32")
         faiss.normalize_L2(xb)
-        self._index.add(xb)
+        if self._index is not None:
+            self._index.add(xb)
         self._index_map = [m.id for m in self._memories if m.embedding]
 
     # --------------------------- main API ----------------------------

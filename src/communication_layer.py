@@ -17,7 +17,7 @@ from opentelemetry import trace
 from .logging_utils import get_json_logger
 
 logger = get_json_logger(__name__)
-tracer = trace.get_tracer(__name__)
+tracer = trace.get_tracer(__name__)  # type: ignore[attr-defined]
 
 
 class CommunicationLayer:
@@ -51,7 +51,7 @@ class CommunicationLayer:
             self._session = None
             raise
 
-    async def __aexit__(self, exc_type, exc, tb) -> None:
+    async def __aexit__(self, exc_type, exc, tb) -> bool:
         """Close the HTTP session on context exit."""
         try:
             return False
