@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+import os
 
 from .scheduler import schedule
 from .storage import MetricsStore
@@ -14,7 +15,8 @@ def trigger(matrix: list[str]) -> None:
 
 
 def status() -> None:
-    store = MetricsStore(Path("reports/metrics.yaml"))
+    report_dir = Path(os.getenv("TMA_REPORTS_DIR", "reports"))
+    store = MetricsStore(report_dir / "metrics.yaml")
     metrics = store.load()
     print(metrics)
 

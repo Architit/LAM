@@ -14,10 +14,11 @@ class AggregatorMatrixTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmpdir:
             cwd = os.getcwd()
             os.chdir(tmpdir)
+            os.environ['TMA_REPORTS_DIR'] = 'out'
             try:
                 def fake_run(cmd, check=False, env=None):
-                    Path('reports').mkdir(exist_ok=True)
-                    Path('reports/results.xml').write_text(
+                    Path('out').mkdir(exist_ok=True)
+                    Path('out/results.xml').write_text(
                         '<testsuite tests="1" failures="0" skipped="0"></testsuite>',
                         encoding='utf-8',
                     )
@@ -38,6 +39,7 @@ class AggregatorMatrixTest(unittest.TestCase):
                 run_mock.assert_called_once()
             finally:
                 os.chdir(cwd)
+                os.environ.pop('TMA_REPORTS_DIR')
 
 
 if __name__ == '__main__':
