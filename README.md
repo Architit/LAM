@@ -151,11 +151,14 @@ flowchart LR
     Interaction-->ExternalWorld
 ```
 
-Async call example:
+Async call example / Пример асинхронного вызова:
 
 ```python
-from lam.interaction import InteractionManager
-await InteractionManager.initiate_interaction("HELLO_FRAME")
+from lam import CommunicationLayer, EventManager, InteractionManager
+
+async with CommunicationLayer() as comm:
+    manager = InteractionManager(comm, EventManager())
+    await manager.initiate_interaction("HELLO_FRAME", "Ping")
 ```
 
 ---
