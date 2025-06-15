@@ -35,3 +35,12 @@ async def test_send_request():
         ):
             response = await layer.send_request("http://test", {"a": 1})
             assert response == {"ok": True}
+
+
+@pytest.mark.asyncio
+async def test_session_closed_on_exception():
+    layer = CommunicationLayer()
+    with pytest.raises(RuntimeError, match="boom"):
+        async with layer:
+            raise RuntimeError("boom")
+    assert layer._session is None

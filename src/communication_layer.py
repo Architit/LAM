@@ -42,14 +42,23 @@ class CommunicationLayer:
         """
         if self._session is not None:
             raise RuntimeError("CommunicationLayer session already started")
-        self._session = aiohttp.ClientSession()
-        return self
+        session = aiohttp.ClientSession()
+        try:
+            self._session = session
+            return self
+        except Exception:
+            await session.close()
+            self._session = None
+            raise
 
     async def __aexit__(self, exc_type, exc, tb) -> None:
         """Close the HTTP session on context exit."""
-        if self._session is not None:
-            await self._session.close()
-            self._session = None
+        try:
+            return False
+        finally:
+            if self._session is not None:
+                await self._session.close()
+                self._session = None
 
     async def send_request(
         self, service: str, payload: Dict[str, Any]
