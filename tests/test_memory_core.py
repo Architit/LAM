@@ -51,6 +51,20 @@ class MemoryCoreTest(unittest.TestCase):
         new_core = MemoryCore()
         self.assertEqual(new_core.categories, categories_first)
 
+    def test_categories_file_recreated_on_init(self):
+        self.core.add_memory(
+            {
+                "name": "regen",
+                "timestamp": "2025-01-01T00:00:00",
+                "content": "check",
+            }
+        )
+        os.remove(memory_core.CATEGORY_FILE)
+        self.assertFalse(memory_core.CATEGORY_FILE.exists())
+        new_core = MemoryCore()
+        self.assertTrue(memory_core.CATEGORY_FILE.exists())
+        self.assertTrue(new_core.categories)
+
     def test_env_override(self):
         with tempfile.TemporaryDirectory() as tmp:
             os.environ["LAM_MEMORY_PATH"] = tmp

@@ -149,6 +149,7 @@ class MemoryCore:
         else:
             for mem in self._memories:
                 self.categorize(mem)
+            self._save()
 
         self._index = None
         self._index_map: List[str] = []
