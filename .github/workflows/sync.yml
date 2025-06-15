@@ -1,27 +1,33 @@
 name: Sync Data from LAM_DATA_Src
 
 on:
-  repository_dispatch:
-  workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'  # каждые 5 минут
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
 
-    - name: Sync data_repo
-      run: |
-        git config --global user.name "GitHub Action"
-        git config --global user.email "action@github.com"
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
 
-        git submodule update --init --recursive
-        cd data_repo
-        git pull origin main
-        cd ..
+      - name: Initialize submodule
+        run: |
+          git submodule update --init --recursive
 
-        git add data_repo
-        git commit -m "Auto-update data_repo from LAM_DATA_Src" || echo "No changes to commit"
-        git push origin main
+      - name: Update data_repo
+        run: |
+          git submodule update --remote data_repo
+
+      - name: Commit and push changes
+        run: |
+          git add data_repo
+          git commit -m "Auto-update data_repo from LAM_DATA_Src" || echo "No changes to commit"
+          git push origin main
