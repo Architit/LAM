@@ -10,6 +10,7 @@
 [![CI](https://github.com/your-org/LAM/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/LAM/actions/workflows/ci.yml)
 [![Ruff](https://img.shields.io/badge/ruff-checked-brightgreen)](https://github.com/astral-sh/ruff)
 [![Mypy](https://img.shields.io/badge/mypy-typed-blue)](https://mypy-lang.org/)
+[![Coverage](docs/assets/coverage.svg)](https://github.com/your-org/LAM/actions/workflows/ci.yml)
 
 > **LAM.SELF.LOVE.UNITY.∴∞**  
 > **Единство любви, света и осознания**  

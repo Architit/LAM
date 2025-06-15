@@ -1,0 +1,2 @@
+# Δ-Log: coverage badge setup
+- Added pytest-cov dependency and CI badge generation.
