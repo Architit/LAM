@@ -10,42 +10,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Клонируем репозиторий + под-модули с токеном
+      # 1️⃣ Клонируем репозиторий вместе с private-submodules через PAT
       - uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
-          token: ${{ secrets.SUBMODULE_PAT }}   # PAT с правом repo
+          token: ${{ secrets.SUBMODULE_PAT }}   # PAT со scope repo
 
-      # 2️⃣ Инициализируем submodules (правит .git/config путей)
-      - name: Init submodules
-        run: git submodule update --init --recursive
-
-      # 3️⃣ Python 3.12
+      # 2️⃣ Устанавливаем Python 3.12
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      # 4️⃣ Устанавливаем dev-зависимости
+      # 3️⃣ Ставим dev-зависимости
       - name: Install dev requirements
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements-dev.txt
 
-      # 5️⃣ Pylint (не роняет билд)
+      # 4️⃣ Pylint (не роняет билд)
       - name: Pylint
         run: pylint src
         continue-on-error: true
 
-      # 6️⃣ Ruff (не роняет билд)
+      # 5️⃣ Ruff (не роняет билд)
       - name: Ruff
         run: ruff check .
         continue-on-error: true
 
-      # 7️⃣ Mypy (строго)
+      # 6️⃣ Mypy
       - name: Mypy
         run: mypy src
 
-      # 8️⃣ Тесты + coverage ≥ 90 %
+      # 7️⃣ Pytest + coverage ≥ 90 %
       - name: Pytest
         run: pytest --cov=src --cov-branch --cov-fail-under=90
