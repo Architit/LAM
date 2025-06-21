@@ -5,3 +5,4 @@ ruff
 mypy
 black
 types-PyYAML>=6.0
+pytest-cov>=4.1
