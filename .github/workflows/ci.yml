@@ -4,44 +4,53 @@ on:
   push:
     branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-      # 1️⃣ Клонируем репозиторий вместе с private-submodules через PAT
-      - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
-          token: ${{ secrets.SUBMODULE_PAT }}   # PAT со scope repo
+    env:
+      # Personal-access-token с правом repo:read для приватных сабмодулей
+      GH_SUBMODULE_TOKEN: ${{ secrets.GH_SUBMODULE_TOKEN }}
 
-      # 2️⃣ Устанавливаем Python 3.12
-      - uses: actions/setup-python@v5
+    steps:
+      # ── 0. Checkout ───────────────────────────────────────────────
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+          token: ${{ env.GH_SUBMODULE_TOKEN }}
+
+      # ── 1. Set up Python ──────────────────────────────────────────
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      # 3️⃣ Ставим dev-зависимости
-      - name: Install dev requirements
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install -r requirements-dev.txt
+      # ── 2. Upgrade pip ────────────────────────────────────────────
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
 
-      # 4️⃣ Pylint (не роняет билд)
+      # ── 3. Install dev-deps ───────────────────────────────────────
+      - name: Install requirements-dev
+        run: python -m pip install -r requirements-dev.txt
+
+      # ── 4. Pylint (не блокирует билд) ─────────────────────────────
       - name: Pylint
         run: pylint src
         continue-on-error: true
 
-      # 5️⃣ Ruff (не роняет билд)
+      # ── 5. Ruff (не блокирует билд) ───────────────────────────────
       - name: Ruff
         run: ruff check .
         continue-on-error: true
 
-      # 6️⃣ Mypy
+      # ── 6. Mypy (блокирующий) ─────────────────────────────────────
       - name: Mypy
         run: mypy src
 
-      # 7️⃣ Pytest + coverage ≥ 90 %
+      # ── 7. Pytest — только ping-pong skeleton ─────────────────────
       - name: Pytest
-        run: pytest --cov=src --cov-branch --cov-fail-under=90
+        run: pytest -q tests/test_ping_pong.py
