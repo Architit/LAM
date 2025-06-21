@@ -1,8 +1,14 @@
+# тесты
 pytest
 pytest-asyncio
-aiohttp
+pytest-cov>=4.1
+
+# статический анализ
+pylint>=3.2
 ruff
 mypy
-black
 types-PyYAML>=6.0
-pytest-cov>=4.1
+
+# утилы
+black
+aiohttp
