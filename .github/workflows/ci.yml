@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # инициализируем submodules
+      - name: Init submodules
+        run: git submodule update --init --recursive
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
