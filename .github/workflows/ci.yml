@@ -12,7 +12,7 @@ jobs:
 
     env:
       # Personal-access-token с правом repo:read для приватных сабмодулей
-      GH_SUBMODULE_TOKEN: ${{ secrets.GH_SUBMODULE_TOKEN }}
+      GH_SUBMODULE_TOKEN: ${{ secrets.SUBMODULE_PAT }}
 
     steps:
       # ── 0. Checkout ───────────────────────────────────────────────
