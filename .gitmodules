@@ -1,0 +1,9 @@
+[submodule "LAM/default/agents/codex-agent"]
+	path = LAM/default/agents/codex-agent
+	url = https://github.com/Architit/LAM-Codex_Agent.git
+[submodule "LAM/default/agents/comm-agent"]
+	path = LAM/default/agents/comm-agent
+	url = https://github.com/Architit/LAM_Communication_Agent.git
+[submodule "LAM/default/agents/data-src"]
+	path = LAM/default/agents/data-src
+	url = https://github.com/Architit/LAM_DATA_Src.git
