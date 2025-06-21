@@ -26,4 +26,9 @@ def test_ping_pong() -> None:
 
     assert payload["msg"] == "ping"
     reply = codex.answer(payload["msg"])
-    assert reply.startswith("Processed")
+
+    # Codex может вернуть либо строку, либо словарь ― проверяем оба варианта
+    if isinstance(reply, dict):
+        assert reply["reply"] == "pong"
+    else:
+        assert reply.startswith("Processed")
