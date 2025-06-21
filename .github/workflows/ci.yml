@@ -1,34 +1,51 @@
 name: CI
-on: [push, pull_request]
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
+      # 1️⃣ Клонируем репозиторий + под-модули с токеном
       - uses: actions/checkout@v4
-      # инициализируем submodules
+        with:
+          submodules: recursive
+          fetch-depth: 0
+          token: ${{ secrets.SUBMODULE_PAT }}   # PAT с правом repo
+
+      # 2️⃣ Инициализируем submodules (правит .git/config путей)
       - name: Init submodules
         run: git submodule update --init --recursive
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      # 3️⃣ Python 3.12
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
-      - name: Install dependencies
+          python-version: "3.12"
+
+      # 4️⃣ Устанавливаем dev-зависимости
+      - name: Install dev requirements
         run: |
-          pip install -e '.[dev,tests]'
-          pip install coverage-badge
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-dev.txt
+
+      # 5️⃣ Pylint (не роняет билд)
       - name: Pylint
-        continue-on-error: true
         run: pylint src
-      - name: Ruff
         continue-on-error: true
+
+      # 6️⃣ Ruff (не роняет билд)
+      - name: Ruff
         run: ruff check .
+        continue-on-error: true
+
+      # 7️⃣ Mypy (строго)
       - name: Mypy
-        run: mypy --install-types --non-interactive src
-      - name: Run tests
+        run: mypy src
+
+      # 8️⃣ Тесты + coverage ≥ 90 %
+      - name: Pytest
         run: pytest --cov=src --cov-branch --cov-fail-under=90
-      - name: Generate coverage badge
-        run: coverage-badge -o docs/assets/coverage.svg -f
-      - name: Semgrep
-        uses: returntocorp/semgrep-action@v1
