@@ -1,50 +1,60 @@
+# ─────────────────────────────────────────────
+#  pyproject.toml  · LAM mono-repo
+#  минимальный, но достаточный для CI / dev
+# ─────────────────────────────────────────────
+
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
-name = "lam"
-version = "0.1.0"
-description = "Living Artificial Mind"
-authors = [{name = "LAM Team"}]
+name            = "lam"
+version         = "0.1.0"
+description     = "Living Architectonic Mind — experimental agent ecosystem"
+requires-python = ">=3.12"
+authors = [{ name = "K. Liapustin", email = "lkises01@gmail.com" }]
 readme = "README.md"
-requires-python = ">=3.10"
-dependencies = [
-    "aiohttp>=3.8",
-    "requests>=2.32",
-    "openai>=1.14",
-    "opentelemetry-api>=1.22",
-    "pyyaml>=6.0",
-    "celery>=5.3",
-    "redis>=4.6",
-    "jinja2>=3.1",
+license = { text = "MIT" }
+keywords = ["lam", "agents", "ai"]
+
+# ── форматирование ──────────────────────────
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+# ── статический анализ / стиль ───────────────
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+select = ["E", "F", "W", "I", "B"]  # noqa-style, pyflakes, pep8, isort-import-order, flake-bugs
+ignore = ["E501"]                   # длинные строки уже контролирует black
+exclude = [
+    # подвёрнутые подмодули-агенты со своим стилем
+    "LAM/default/agents/**/src/**",
 ]
 
-[project.optional-dependencies]
-dev = [
-    "pytest",
-    "pytest-asyncio",
-    "pytest-cov",
-    "pylint",
-    "semgrep",
-    "autopep8",
-    "black",
-    "ruff",
-    "mypy",
-]
-tests = [
-    "opentelemetry-sdk>=1.22",
-]
-vector = [
-    "faiss-cpu>=1.11",
+# ── типизация ────────────────────────────────
+[tool.mypy]
+python_version        = "3.12"
+strict                = false
+ignore_missing_imports = true
+show_column_numbers   = true
+
+# ── pytest ───────────────────────────────────
+[tool.pytest.ini_options]
+addopts  = "--quiet --strict-markers --strict-config"
+testpaths = [
+  "tests",
+  "scripts",           # оставляем, чтобы ping_pong_test тоже считался
 ]
 
-[tool.hatch.build.targets.wheel]
-packages = ["src"]
+# ── покрытие ─────────────────────────────────
+[tool.coverage.run]
+branch  = true
+source  = ["src", "LAM/default/agents"]
 
-[project.scripts]
-lam = "src.lam_cli:main"
-tma = "tma.cli:main"
+[tool.coverage.report]
+fail_under = 90
+skip_empty = true
 
-[tool.lam]
-memory_path = "memory"
+# ─────────────────────────────────────────────
