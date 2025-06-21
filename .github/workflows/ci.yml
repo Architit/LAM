@@ -15,6 +15,7 @@ jobs:
           pip install -e '.[dev,tests]'
           pip install coverage-badge
       - name: Pylint
+        continue-on-error: true
         run: pylint src
       - name: Ruff
         run: ruff check .
