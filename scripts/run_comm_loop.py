@@ -2,7 +2,6 @@
 from __future__ import annotations
 from pathlib import Path
 import sys
-import time
 
 ROOT = Path(__file__).resolve().parents[1]  # …/LAM
 COMM_SRC = ROOT / "LAM/default/agents/comm-agent/src"
@@ -19,17 +18,20 @@ def main() -> None:
 
     print("COMM LOOP STARTED. Send ping -> roaudter")
 
-    # demo message
-    comm.send_data("roaudter", {"msg": "ping", "intent": "chat"})
+    # demo message (reply_to можно менять на "codex" / "comm-agent" / etc)
+    comm.send_data("roaudter", {"msg": "ping", "intent": "chat", "reply_to": "comm-agent"})
 
-    # simple loop: 1 iteration demo
     recipient, payload = comm.receive_data()
     print("RECEIVED:", recipient, payload)
 
     if recipient == "roaudter":
         out = roaudter.answer(payload)
-        comm.send_data("comm-agent", out)  # обратно "в comm-agent" как получателю
-        print("SENT BACK:", out)
+
+        reply_to = payload.get("reply_to") or "comm-agent"
+        comm.send_data(reply_to, out)
+
+        print("SENT BACK TO:", reply_to)
+        print("REPLY:", out)
 
 
 if __name__ == "__main__":
