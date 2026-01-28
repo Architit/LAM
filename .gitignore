@@ -1,3 +1,14 @@
 __pycache__/
 *.pyc
 tests/it/
+
+# runtime / local
+logs/*.log
+logs/audit.log
+memory/data/*.json
+memory/metadata/*.json
+
+# python
+__pycache__/
+.pytest_cache/
+*.pyc
