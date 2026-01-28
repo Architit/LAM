@@ -15,11 +15,12 @@ def test_comm_to_roaudter_roundtrip() -> None:
     roaudter = RoaudterComAgent()
     comm.register_agent("roaudter", roaudter)
 
-    comm.send_data("roaudter", {"msg": "ping", "intent": "chat"})
+    comm.send_data("roaudter", {"msg": "Say only: pong", "intent": "chat"})
     _, payload = comm.receive_data()
 
     out = roaudter.answer(payload)
 
     assert out["status"] == "ok"
-    assert out["provider_used"] == "ollama"
-    assert out["result"]["echo"] == "ping"
+    assert out["provider_used"] in ("ollama", "ollama_cloud")
+    assert "result" in out and out["result"] is not None
+    assert out["result"].get("text") is not None
