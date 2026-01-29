@@ -143,3 +143,6 @@ Always embed context of active projects (**Radrilonuma**, **Moduma House**, **So
 | 1.0 | 2025‑06‑14 | Initial bilingual release. | Первый двуязычный релиз. |  
 
 ---  
+
+## Development guide
+- See AGENTS_DEV.md
