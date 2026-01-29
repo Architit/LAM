@@ -13,6 +13,7 @@ from collections import defaultdict
 from typing import Any, Awaitable, Callable, Dict, List, Tuple
 
 from .logging_utils import get_json_logger
+from .lam_logging import log as lam_log
 
 logger = get_json_logger(__name__)
 
@@ -37,6 +38,13 @@ class EventManager:
     def emit_event(self, event_type: str, data: Dict[str, Any]) -> None:
         """Place a new event into the processing queue."""
         logger.info("event_emitted", extra={"event_type": event_type, "data": data})
+        lam_log(
+            "info",
+            "evt.emit",
+            "emit_event",
+            event_type=event_type,
+            queue_size=self._queue.qsize(),
+        )
         self._queue.put_nowait((event_type, data))
 
     async def dispatch(self) -> None:
@@ -48,6 +56,14 @@ class EventManager:
         while True:
             event_type, data = await self._queue.get()
             logger.info("event_dispatch", extra={"event_type": event_type})
+            lam_log(
+                "info",
+                "evt.dispatch",
+                "dispatch",
+                event_type=event_type,
+                listeners_count=len(self._listeners.get(event_type, [])),
+                queue_size=self._queue.qsize(),
+            )
             for handler in self._listeners.get(event_type, []):
                 if asyncio.iscoroutinefunction(handler):
                     await handler(data)
