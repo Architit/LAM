@@ -18,8 +18,10 @@ def test_taskarid_to_comm_to_roaudter_trace_roundtrip() -> None:
     plan_out = taskarid.answer({"goal": "Say only: pong", "intent": "chat", "provider_hint": "ollama"})
     assert plan_out["status"] == "ok"
     trace_id = plan_out["context"]["trace_id"]
+    task_id = plan_out["context"]["task_id"]
 
     task = plan_out["plan"][0]
+    expected_task_id = task["context"]["task_id"]
 
     # 2) comm-agent injects/keeps context + taskarid while enqueuing
     comm = ComAgent()
@@ -31,6 +33,7 @@ def test_taskarid_to_comm_to_roaudter_trace_roundtrip() -> None:
 
     assert "context" in payload
     assert payload["context"]["trace_id"] == trace_id
+    assert payload["context"]["task_id"] == expected_task_id
     assert "taskarid" in payload
 
     # 3) roaudter answers and must echo context back (next patch if missing)
@@ -39,4 +42,5 @@ def test_taskarid_to_comm_to_roaudter_trace_roundtrip() -> None:
     assert out["status"] == "ok"
     assert "context" in out
     assert out["context"]["trace_id"] == trace_id
+    assert out["context"]["task_id"] == expected_task_id
     assert "taskarid" in out

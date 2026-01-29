@@ -1,5 +1,10 @@
 from __future__ import annotations
 from dataclasses import dataclass
+try:
+    from src.lam_logging import set_context  # type: ignore
+except Exception:
+    set_context = None  # type: ignore
+
 from typing import Any, Dict, List
 import uuid
 
@@ -32,6 +37,8 @@ class TaskaridAgent:
     def answer(self, payload: Dict[str, Any]) -> Dict[str, Any]:
         payload = _ensure_context(payload)
         ctx = payload["context"]
+        if set_context:
+            set_context(**ctx)
 
         goal = payload.get("goal") or payload.get("mission") or payload.get("msg") or ""
 
@@ -41,7 +48,8 @@ class TaskaridAgent:
                 "intent": payload.get("intent", "chat"),
                 "msg": str(goal),
                 "provider_hint": payload.get("provider_hint"),
-                "context": {"trace_id": ctx["trace_id"], "task_id": f"{ctx['task_id']}.1"},
+                "context": {"trace_id": ctx["trace_id"], "task_id": f"{ctx['task_id']}.1", "parent_task_id": ctx["task_id"]},
+                "taskarid": f"{ctx['trace_id']}:{ctx['task_id']}.1",
             }
         ]
 

@@ -5,6 +5,25 @@ import os
 from datetime import datetime, timezone
 from typing import Any, Dict
 
+from contextvars import ContextVar
+
+_lam_ctx: ContextVar[dict] = ContextVar("lam_ctx", default={})
+
+def set_context(**ctx: Any) -> None:
+    cur = dict(_lam_ctx.get() or {})
+    cur.update({k: v for k, v in ctx.items() if v is not None})
+    _lam_ctx.set(cur)
+
+def clear_context() -> None:
+    _lam_ctx.set({})
+
+def _inject_context(fields: Dict[str, Any]) -> Dict[str, Any]:
+    cur = _lam_ctx.get() or {}
+    for k in ("trace_id", "task_id", "parent_task_id", "span_id"):
+        if k not in fields and k in cur:
+            fields[k] = cur[k]
+    return fields
+
 
 def _level_value(level: str) -> int:
     level = (level or "").lower()
@@ -42,6 +61,8 @@ def log(level: str, event: str, msg: str, **fields: Any) -> None:
     """
     if not should_log(level, event=event):
         return
+
+    fields = _inject_context(dict(fields))
 
     payload: Dict[str, Any] = {
         "ts": datetime.now(timezone.utc).isoformat(),
