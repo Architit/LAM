@@ -55,7 +55,10 @@ class TaskaridAgent:
 
         return {
             "status": "ok",
+            "result": None,
+            "error": None,
             "context": ctx,
+            "metrics": {},
             "taskarid": payload["taskarid"],
             "goal": str(goal),
             "plan": plan,
