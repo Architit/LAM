@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass, field, asdict
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 import uuid
@@ -104,7 +104,7 @@ class MemoryEntry:
     tags: List[str] = field(default_factory=list)
     attributes: Dict[str, Any] = field(default_factory=dict)
     embedding: List[float] = field(default_factory=list)
-    last_access: str = field(default_factory=lambda: datetime.utcnow().isoformat())
+    last_access: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     access_count: int = 0
 
     def to_dict(self) -> Dict[str, Any]:
@@ -257,7 +257,7 @@ class MemoryCore:
                     match = False
             if match:
                 mem.access_count += 1
-                mem.last_access = datetime.utcnow().isoformat()
+                mem.last_access = datetime.now(timezone.utc).isoformat()
                 results.append(mem)
         lam_log(
             "info",
@@ -305,7 +305,7 @@ class MemoryCore:
         results: List[MemoryEntry] = []
         for mem in top:
             mem.access_count += 1
-            mem.last_access = datetime.utcnow().isoformat()
+            mem.last_access = datetime.now(timezone.utc).isoformat()
             results.append(mem)
         lam_log(
             "info",
@@ -321,7 +321,7 @@ class MemoryCore:
 
     def update_importance(self) -> None:
         """Update memory importance based on age and accesses."""
-        now = datetime.utcnow()
+        now = datetime.now(timezone.utc)
         for mem in self._memories:
             try:
                 ts = datetime.fromisoformat(mem.timestamp.replace("≈", ""))
@@ -343,7 +343,7 @@ class MemoryCore:
         self, min_importance: float = 0.2, max_age: Optional[str] = None
     ) -> None:
         """Forget memories with low importance or exceeding max age."""
-        now = datetime.utcnow()
+        now = datetime.now(timezone.utc)
         keep: List[MemoryEntry] = []
         for mem in self._memories:
             if mem.importance < min_importance:
