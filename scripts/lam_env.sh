@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+export PYTHONPATH="$PWD/src:${PYTHONPATH:-}"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 COMM_SRC="$ROOT/LAM/default/agents/comm-agent/src"
 CODEX_SRC="$ROOT/LAM/default/agents/codex-agent/src"

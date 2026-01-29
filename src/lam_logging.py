@@ -1,0 +1,53 @@
+from __future__ import annotations
+
+import json
+import os
+from datetime import datetime, timezone
+from typing import Any, Dict
+
+
+def _level_value(level: str) -> int:
+    level = (level or "").lower()
+    return {
+        "error": 40,
+        "warn": 30,
+        "warning": 30,
+        "info": 20,
+        "debug": 10,
+        "trace": 5,
+    }.get(level, 30)
+
+
+def should_log(level: str, *, event: str | None = None) -> bool:
+    """
+    Global ecosystem filter:
+      LAM_LOG_LEVEL=error|warn|info|debug  (default: warn)
+      LAM_LOG_EVENTS=csv list (optional)   e.g. "roaudter,comm"
+    """
+    cur = os.getenv("LAM_LOG_LEVEL", "warn")
+    if _level_value(level) < _level_value(cur):
+        return False
+
+    allow = os.getenv("LAM_LOG_EVENTS", "").strip()
+    if allow and event:
+        allowed = {x.strip().lower() for x in allow.split(",") if x.strip()}
+        return event.lower() in allowed
+
+    return True
+
+
+def log(level: str, event: str, msg: str, **fields: Any) -> None:
+    """
+    Prints one-line JSON for easy grep + future parsing.
+    """
+    if not should_log(level, event=event):
+        return
+
+    payload: Dict[str, Any] = {
+        "ts": datetime.now(timezone.utc).isoformat(),
+        "level": level.lower(),
+        "event": event,
+        "msg": msg,
+        **fields,
+    }
+    print(json.dumps(payload, ensure_ascii=False, sort_keys=True))
