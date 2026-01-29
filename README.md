@@ -215,3 +215,7 @@ See `CODE_OF_CONDUCT.md` and `SECURITY.md`.
 ---
 
 GPL v3 — see LICENSE.  
+
+## 📌 Roadmap
+
+See: [ROADMAP.md](./ROADMAP.md)
