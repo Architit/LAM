@@ -30,3 +30,21 @@ def test_strict_provider_openai_bang_returns_error_when_key_missing(monkeypatch)
     # Важно: provider_used НЕ должен становиться ollama/ollama_cloud
     assert out.get("provider_used") not in ("ollama", "ollama_cloud")
     assert out.get("error")  # любое непустое описание ошибки
+
+
+def test_strict_provider_ollama_bang_succeeds(monkeypatch) -> None:
+    # STRICT на доступном провайдере должен отрабатывать как обычно (просто без fallback).
+    comm = ComAgent()
+    roaudter = RoaudterComAgent()
+    comm.register_agent("roaudter", roaudter)
+
+    comm.send_data(
+        "roaudter",
+        {"msg": "Say only: pong", "intent": "chat", "provider_hint": "ollama!"},
+    )
+    _, payload = comm.receive_data()
+
+    out = roaudter.answer(payload)
+
+    assert out["status"] == "ok"
+    assert out.get("provider_used") == "ollama"
