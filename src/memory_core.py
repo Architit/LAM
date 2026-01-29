@@ -22,6 +22,7 @@ from math import sqrt
 
 from opentelemetry import trace
 from .logging_utils import get_json_logger
+from .lam_logging import log as lam_log
 
 # Repository root resolved from this file's location
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -224,6 +225,14 @@ class MemoryCore:
         )
         memory_entry.setdefault("importance", 0.5)
         mem = MemoryEntry.from_dict(memory_entry)
+        lam_log(
+            "info",
+            "mem.write",
+            "add_memory",
+            memory_id=mem.id,
+            tags_count=len(mem.tags or []),
+            has_embedding=bool(mem.embedding),
+        )
         self.categorize(mem)
         self._memories.append(mem)
         self._save()
@@ -250,6 +259,14 @@ class MemoryCore:
                 mem.access_count += 1
                 mem.last_access = datetime.utcnow().isoformat()
                 results.append(mem)
+        lam_log(
+            "info",
+            "mem.read",
+            "retrieve_memory",
+            criteria_keys=sorted(list(criteria.keys())) if isinstance(criteria, dict) else None,
+            results_count=len(results),
+        )
+
         self._save()
         return [m.to_dict() for m in results]
 
@@ -290,6 +307,15 @@ class MemoryCore:
             mem.access_count += 1
             mem.last_access = datetime.utcnow().isoformat()
             results.append(mem)
+        lam_log(
+            "info",
+            "mem.search",
+            "retrieve_by_embedding",
+            k=k,
+            results_count=len(results),
+            faiss=bool(FAISS_AVAILABLE and self._index is not None),
+        )
+
         self._save()
         return [m.to_dict() for m in results]
 
