@@ -219,3 +219,6 @@ GPL v3 — see LICENSE.
 ## 📌 Roadmap
 
 See: [ROADMAP.md](./ROADMAP.md)
+
+## Protocol
+See [INTERACTION_PROTOCOL.md](INTERACTION_PROTOCOL.md).
