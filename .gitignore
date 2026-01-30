@@ -16,3 +16,6 @@ __pycache__/
 # runtime artifacts
 logs/
 memory/
+
+# windows artifacts
+desktop.ini
