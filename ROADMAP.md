@@ -145,3 +145,8 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - 2) Полная observability без шума (task_id/trace_id + JSON)
 - 3) RouterPolicy v3 (конфиг + метрики)
 
+
+---
+
+## Журнал изменений
+- [x] 2026-01-30 — repo hygiene: добавлен .gitignore для runtime artifacts (logs/, memory/)
