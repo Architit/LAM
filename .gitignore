@@ -12,3 +12,7 @@ memory/metadata/*.json
 __pycache__/
 .pytest_cache/
 *.pyc
+
+# runtime artifacts
+logs/
+memory/
