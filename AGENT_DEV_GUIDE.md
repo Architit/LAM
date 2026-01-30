@@ -14,3 +14,6 @@
 
 ## Runtime smoke
 TMPDIR=/tmp TEMP=/tmp TMP=/tmp bash scripts/lam_env.sh .venv/bin/python scripts/obs_smoke_roundtrip.py
+
+## Protocol
+See [INTERACTION_PROTOCOL.md](INTERACTION_PROTOCOL.md).
