@@ -150,3 +150,12 @@ LAM — “позвоночник” экосистемы: единый runtime,
 
 ## Журнал изменений
 - [x] 2026-01-30 — repo hygiene: добавлен .gitignore для runtime artifacts (logs/, memory/)
+
+## Фаза Z — Agent SDK Integrations v0 (⏭ next after Runtime EntryPoint v0)
+
+Цель: подключить Claude Agent SDK как backend-инструмент Codex (не отдельный агент на v0).
+
+### План (v0)
+- [ ] Добавить интеграцию Claude Agent SDK как "codex tool backend"
+- [ ] Smoke: 1 команда → 1 small task → envelope ok → trace ok
+- [ ] DoD: не ломает существующий codex/openai path
