@@ -17,3 +17,6 @@ black
 PyYAML
 Jinja2
 celery
+
+# ─── observability ───────────────────────────────────
+opentelemetry-api
