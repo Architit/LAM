@@ -30,8 +30,8 @@ LAM — “позвоночник” экосистемы: единый runtime,
 
 ### Следующее 🔜
 - [ ] Вынести DevKit как стандарт экосистемы (единая точка истины, синк в репо)
-- [ ] `devkit/check.sh`: pytest + минимальный sanity
-- [ ] `devkit/bootstrap.sh`: venv + deps (1 команда)
+- [x] `devkit/check.sh`: (2026-02-09) pytest + минимальный sanity
+- [x] `devkit/bootstrap.sh`: (2026-02-09) venv + deps (1 команда)
 
 ---
 
