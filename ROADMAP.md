@@ -24,7 +24,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 
 ## Фаза 0 — Foundation: единый Dev Experience (сделано / закрепляем)
 
-> **Статус:** In Progress (2026-02-09) — Phase 0 НЕ закрыта, закрепляем DevKit и окружение.
+> **Статус:** Done (2026-02-09) — Phase 0 завершена: DevKit, Docker, docs, governance OK.
 > **DoD (текущее):** `devkit/check.sh`, `devkit/bootstrap.sh`, `scripts/lam_env.sh` (ROOT-based PYTHONPATH), `python -m pytest -q` green.
 > **Router determinism:** `ollama_cloud` регистрируется только при отдельном cloud endpoint; иначе fallback строго на `ollama` (2026-02-09).
 > **Container DoD:** Dockerfile + .dockerignore, `docker build && docker run` → `devkit/check.sh` green (2026-02-09).

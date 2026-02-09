@@ -9,3 +9,4 @@
 2026-02-09 23:45 — Roaudter: deterministic ollama_cloud registration (explicit cloud endpoint only), fallback stable
 2026-02-09 23:59 — Docker: clean container runs devkit/check.sh, pytest green (pytest + opentelemetry-api)
 2026-02-09 23:26 — Added TASK_LIST.md (source of truth) and CHRONOLOG.md (system history)
+2026-02-09 23:40 — Phase 0 completed: env, devkit, docker, contracts v1, docs, governance
