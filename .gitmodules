@@ -7,3 +7,6 @@
 [submodule "LAM/default/agents/data-src"]
 	path = LAM/default/agents/data-src
 	url = https://github.com/Architit/LAM_DATA_Src.git
+[submodule "LAM/default/agents/roaudter-agent"]
+	path = LAM/default/agents/roaudter-agent
+	url = https://github.com/Architit/Roaudter-agent.git
