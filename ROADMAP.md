@@ -23,6 +23,10 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 0 — Foundation: единый Dev Experience (сделано / закрепляем)
+
+> **Статус:** In Progress (2026-02-09) — Phase 0 НЕ закрыта, закрепляем DevKit и окружение.
+> **DoD (текущее):** `devkit/check.sh`, `devkit/bootstrap.sh`, `scripts/lam_env.sh` (ROOT-based PYTHONPATH), `python -m pytest -q` green.
+
 ### Доставлено ✅
 - `scripts/lam_env.sh`: экспонирует `src` в `PYTHONPATH`
 - `src/lam_logging.py`: структурные JSON-логи + фильтры `LAM_LOG_LEVEL`, `LAM_LOG_EVENTS`
