@@ -28,6 +28,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 > **DoD (текущее):** `devkit/check.sh`, `devkit/bootstrap.sh`, `scripts/lam_env.sh` (ROOT-based PYTHONPATH), `python -m pytest -q` green.
 > **Router determinism:** `ollama_cloud` регистрируется только при отдельном cloud endpoint; иначе fallback строго на `ollama` (2026-02-09).
 > **Container DoD:** Dockerfile + .dockerignore, `docker build && docker run` → `devkit/check.sh` green (2026-02-09).
+> **System docs:** TASK_LIST.md (backlog) + CHRONOLOG.md (history) added (2026-02-09).
 
 ### Доставлено ✅
 - `scripts/lam_env.sh`: экспонирует `src` в `PYTHONPATH`
