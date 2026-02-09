@@ -10,3 +10,4 @@
 2026-02-09 23:59 — Docker: clean container runs devkit/check.sh, pytest green (pytest + opentelemetry-api)
 2026-02-09 23:26 — Added TASK_LIST.md (source of truth) and CHRONOLOG.md (system history)
 2026-02-09 23:40 — Phase 0 completed: env, devkit, docker, contracts v1, docs, governance
+2026-02-10 00:53 — Phase1 Contracts: codex-agent возвращает Envelope v1 для payload dict; добавлен tests/test_codex_envelope.py
