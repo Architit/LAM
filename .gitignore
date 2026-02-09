@@ -21,3 +21,6 @@ memory/
 desktop.ini
 .venv/
 src/lam.egg-info/
+
+# local temp
+.tmp/
