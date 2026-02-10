@@ -122,6 +122,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - retry/backoff budget (429/5xx/unknown), без ретрая 401
 - health TTL + cooldown
 - explainability (attempts/chain/errors)
+- Learning Signals v1 (contracts-only, derivation-only) — Phase 4.2 (2026-02-10)
 
 ### Следующее 🔜
 - [ ] Cost-aware routing (оценка стоимости/лимитов)

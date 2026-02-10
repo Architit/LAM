@@ -16,3 +16,4 @@
 2026-02-10 01:51 — Phase1.1 Contracts: roaudter metrics mirror (provider/latency/attempts) закреплён тестом tests/test_roaudter_metrics_mirror_v11.py
 2026-02-10 03:13 — Infra: scripts/run_comm_* добавляют ROAUDTER_SRC в sys.path; Sink context fallback — fixes local entrypoint wiring
 2026-02-10 15:43 — Governance: Cold Restart / Workflow Recovery Protocol v1 added to docs/protocols
+2026-02-10 16:10 — Phase 4.2 Learning Signals: LearningSignal v1 contract added (derivation-only, no runtime impact)
