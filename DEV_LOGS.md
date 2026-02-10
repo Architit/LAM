@@ -12,3 +12,4 @@
 2026-02-09 23:40 — Phase 0 completed: env, devkit, docker, contracts v1, docs, governance
 2026-02-10 00:53 — Phase1 Contracts: codex-agent возвращает Envelope v1 для payload dict; добавлен tests/test_codex_envelope.py
 2026-02-10 01:06 — Phase1 Contracts: comm-agent enforcement для legacy reply → Envelope v1; добавлен tests/test_comm_agent_envelope_enforcement_reply_legacy.py
+2026-02-10 01:22 — Phase1 Contracts: добавлен E2E тест taskarid→codex→roaudter (trace/context + envelope)

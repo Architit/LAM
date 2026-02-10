@@ -77,6 +77,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Протащить контракт во все агенты, которые отвечают через comm-agent (частично: codex, 2026-02-10)
   - comm-agent: enforcement legacy {'reply': ...} → Envelope v1 (2026-02-10)
   - codex-agent: Core.answer(payload dict) → Envelope Standard v1; добавлен tests/test_codex_envelope.py
+  - E2E: taskarid → codex → roaudter: trace/context сохранён; codex отдаёт Envelope v1 (2026-02-10)
 
 ---
 
