@@ -79,6 +79,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
   - codex-agent: Core.answer(payload dict) → Envelope Standard v1; добавлен tests/test_codex_envelope.py
   - E2E: taskarid → codex → roaudter: trace/context сохранён; codex отдаёт Envelope v1 (2026-02-10)
   - Phase 1.1: DoD — roaudter дублирует provider_used/latency_ms/attempts в metrics (тест: tests/test_roaudter_metrics_mirror_v11.py) (2026-02-10)
+  - Infra: scripts/run_comm_* добавляют ROAUDTER_SRC в sys.path + Sink гарантирует context dict (2026-02-10)
 
 ---
 
