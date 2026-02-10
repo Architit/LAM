@@ -11,6 +11,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - **Observability-first:** видим проблемы без шума (структурные логи + фильтры).
 - **Fail-safe:** retry/backoff/fallback/health — предсказуемо и тестируемо.
 - **WSL-friendly:** быстрые циклы разработки в ext4, минимизация зависаний.
+- **Cold-restart-safe:** продолжение работы только после явного сигнала; recovery начинается с read-only sync (pwd, git status -sb).
 
 ---
 
@@ -161,6 +162,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Журнал изменений
+- [x] 2026-02-10 — protocol: Cold Restart / Workflow Recovery v1 documented (docs/protocols)
 - [x] 2026-01-30 — repo hygiene: добавлен .gitignore для runtime artifacts (logs/, memory/)
 
 ## Фаза Z — Agent SDK Integrations v0 (⏭ next after Runtime EntryPoint v0)
