@@ -41,6 +41,12 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] `devkit/check.sh`: (2026-02-09) pytest + минимальный sanity
 - [x] `devkit/bootstrap.sh`: (2026-02-09) venv + deps (1 команда)
 
+### Срочно (Governance override)
+- [!] DevKit обязателен для всех репозиториев RADRILONIUMA
+- [!] `apply_patch` / `applypatch` / `apply-patch` запрещены (не часть окружения / недетерминировано)
+- [!] Каноничный патчер: `devkit/patch.sh` (или `git apply --index` только при починке самого DevKit)
+- [!] Цель: срочная унификация patcher между LAM и RADRILONIUMA-PROJECT, затем авто-синк DevKit
+
 ---
 
 ## Фаза 1 — Contracts: единый результат для всех агентов (1 неделя)
