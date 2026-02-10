@@ -177,3 +177,13 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [ ] Добавить интеграцию Claude Agent SDK как "codex tool backend"
 - [ ] Smoke: 1 команда → 1 small task → envelope ok → trace ok
 - [ ] DoD: не ломает существующий codex/openai path
+
+### Phase 4 Review Findings (pre-4.3)
+- [ ] R1: Spec drift — derivation mentions non-existent fields:
+  - ReflectionSnapshot.snapshot_id references `input_fingerprints` (field missing)
+  - LearningSignal.signal_id references `source_fingerprints` (field missing)
+- [ ] R2: PolicyConstraint.condition.predicates underspecified (op set, field-path format, AND/OR, missing-field semantics)
+- [ ] R3: Policy vs Learning boundary risk: `freeze_learning` / `rate_limit_adaptation` + learning proxies/attribution weights can be misread as runtime bridge
+- [ ] R4: PolicyConstraint wording: deterministic derivation/representation vs governance-defined semantics/effect needs explicit separation
+- [ ] R5: PolicyConstraint lacks explicit Non-Goals (no enforcement / no execution blocking / no conflict resolution), unlike ReflectionSnapshot “proposal-only” guardrails
+- [ ] Recommendation: address findings via **v1.x addenda (contract-only)** before starting Phase 4.3 (Adaptation Proposals)
