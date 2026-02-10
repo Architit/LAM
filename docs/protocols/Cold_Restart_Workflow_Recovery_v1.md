@@ -45,3 +45,22 @@ Context Sync → Action Block (1–3 cmds) → Safety Check → Verification →
 - starting with write operations
 - skipping Action Blocks
 - mixing recovery + work changes
+
+---
+
+## Safety Check — Untracked Files (Addendum)
+
+For newly created (untracked) files, an empty `git diff` on the first Safety Check is
+**expected and correct behavior**.
+
+### Required procedure
+- If the file is untracked:
+  - `git diff` MAY be empty — this is normal
+  - The mandatory key diff MUST be performed via staged diff:
+    ```bash
+    git add <file>
+    git diff --cached <file>
+    ```
+- A staged diff for new files is considered a **valid and complete Safety Check**.
+
+This rule is mandatory for all contract-first workflows.
