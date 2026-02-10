@@ -8,7 +8,8 @@ from typing import Any, Dict
 
 ROOT = Path(__file__).resolve().parents[1]  # …/LAM
 COMM_SRC = ROOT / "LAM/default/agents/comm-agent/src"
-sys.path.extend([str(COMM_SRC)])
+ROAUDTER_SRC = ROOT / "LAM/default/agents/roaudter-agent/src"
+sys.path.extend([str(COMM_SRC), str(ROAUDTER_SRC)])
 
 from interfaces.com_agent_interface import ComAgent  # type: ignore
 from roaudter_agent import RoaudterComAgent
@@ -18,7 +19,7 @@ class Sink:
     """Mailbox sink for reply targets (e.g. 'comm-agent')."""
 
     def answer(self, payload: Dict[str, Any]) -> Dict[str, Any]:
-        return {"status": "ok", "result": None, "error": None, "metrics": {}, "context": payload.get("context")}
+        return {"status": "ok", "result": None, "error": None, "metrics": {}, "context": payload.get("context") or {}}
 
 
 def _ensure_recipient(comm: ComAgent, name: str) -> None:

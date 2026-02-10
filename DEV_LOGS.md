@@ -10,3 +10,8 @@
 2026-02-09 23:59 — Docker: clean container runs devkit/check.sh, pytest green (pytest + opentelemetry-api)
 2026-02-09 23:26 — Added TASK_LIST.md (source of truth) and CHRONOLOG.md (system history)
 2026-02-09 23:40 — Phase 0 completed: env, devkit, docker, contracts v1, docs, governance
+2026-02-10 00:53 — Phase1 Contracts: codex-agent возвращает Envelope v1 для payload dict; добавлен tests/test_codex_envelope.py
+2026-02-10 01:06 — Phase1 Contracts: comm-agent enforcement для legacy reply → Envelope v1; добавлен tests/test_comm_agent_envelope_enforcement_reply_legacy.py
+2026-02-10 01:22 — Phase1 Contracts: добавлен E2E тест taskarid→codex→roaudter (trace/context + envelope)
+2026-02-10 01:51 — Phase1.1 Contracts: roaudter metrics mirror (provider/latency/attempts) закреплён тестом tests/test_roaudter_metrics_mirror_v11.py
+2026-02-10 03:13 — Infra: scripts/run_comm_* добавляют ROAUDTER_SRC в sys.path; Sink context fallback — fixes local entrypoint wiring
