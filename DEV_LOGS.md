@@ -21,3 +21,4 @@
 2026-02-10 17:15 — Governance: Safety Check clarified for untracked files (staged diff canonical)
 2026-02-10 17:15 — Governance: Phase 3 closure recorded (Semantics/Memory/Reflection)
 2026-02-10 17:55 — Phase 4 Review (pre-4.3): findings recorded in ROADMAP (R1–R5, v1.x addendum candidates)
+2026-02-10 18:35 — Governance: INTERACTION_PROTOCOL updated — canonical patching via devkit/patch.sh (apply_patch* forbidden)
