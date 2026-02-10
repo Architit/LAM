@@ -163,6 +163,9 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Журнал изменений
+- [x] 2026-02-10 — governance: Safety Check for untracked files clarified (staged diff canonical)
+- [x] 2026-02-10 — contracts: PolicyConstraint v1 added (policy boundaries, contract-only)
+- [x] 2026-02-10 — governance: Phase 3 closure recorded (Semantics/Memory/Reflection)
 - [x] 2026-02-10 — protocol: Cold Restart / Workflow Recovery v1 documented (docs/protocols)
 - [x] 2026-01-30 — repo hygiene: добавлен .gitignore для runtime artifacts (logs/, memory/)
 

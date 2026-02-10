@@ -17,3 +17,6 @@
 2026-02-10 03:13 — Infra: scripts/run_comm_* добавляют ROAUDTER_SRC в sys.path; Sink context fallback — fixes local entrypoint wiring
 2026-02-10 15:43 — Governance: Cold Restart / Workflow Recovery Protocol v1 added to docs/protocols
 2026-02-10 16:10 — Phase 4.2 Learning Signals: LearningSignal v1 contract added (derivation-only, no runtime impact)
+2026-02-10 17:15 — Phase4.1 Policy Contracts: added PolicyConstraint v1 (contracts-only)
+2026-02-10 17:15 — Governance: Safety Check clarified for untracked files (staged diff canonical)
+2026-02-10 17:15 — Governance: Phase 3 closure recorded (Semantics/Memory/Reflection)
