@@ -13,3 +13,4 @@
 2026-02-10 00:53 — Phase1 Contracts: codex-agent возвращает Envelope v1 для payload dict; добавлен tests/test_codex_envelope.py
 2026-02-10 01:06 — Phase1 Contracts: comm-agent enforcement для legacy reply → Envelope v1; добавлен tests/test_comm_agent_envelope_enforcement_reply_legacy.py
 2026-02-10 01:22 — Phase1 Contracts: добавлен E2E тест taskarid→codex→roaudter (trace/context + envelope)
+2026-02-10 01:51 — Phase1.1 Contracts: roaudter metrics mirror (provider/latency/attempts) закреплён тестом tests/test_roaudter_metrics_mirror_v11.py
