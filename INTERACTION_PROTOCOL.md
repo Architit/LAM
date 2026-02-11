@@ -79,6 +79,12 @@
 3. **Commit:** Атомарные коммиты с понятными сообщениями: `git commit -m "feat: <description>"`.
 4. **Merge:** По умолчанию `--ff-only` (fast-forward) для линейной истории. Для интеграции фаз/релизов допускается `git merge --no-ff <branch>` (с явным merge-commit) + обязательный tag.
 
+**Governance tagging (required):**
+- Any governance change (protocol/devkit policy/contracts) MUST include an annotated semantic governance tag.
+- Tag format (recommended): `gov-lam-<topic>-v<semver>` (e.g., `gov-lam-protocol-v1.0.0`).
+- Version authority: DevKit (RADRILONIUMA-PROJECT). LAM adopts governance rules derivation-only.
+
+
 ### 4.2.1. Patch-инструменты (WSL/CI-совместимость)
 
 **Запрещено (не стандартно, не воспроизводимо):**
