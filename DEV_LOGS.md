@@ -23,3 +23,4 @@
 2026-02-10 17:55 — Phase 4 Review (pre-4.3): findings recorded in ROADMAP (R1–R5, v1.x addendum candidates)
 2026-02-10 18:35 — Governance: INTERACTION_PROTOCOL updated — canonical patching via devkit/patch.sh (apply_patch* forbidden)
 2026-02-10 18:45 — Governance: emergency override — DevKit mandatory; start urgent DevKit/patcher integration with RADRILONIUMA-PROJECT
+2026-02-11 07:19 UTC — Phase2 Observability: verified comm.* + roaudter.* JSONL logs (pytest: comm_agent_observability_logging, roaudter_observability_logging)

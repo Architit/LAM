@@ -91,6 +91,8 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 2 — Observability: видеть важное без шума (1–2 недели)
+- [x] Observability verified: comm.enqueue/comm.dequeue + roaudter.route/result/deliver (tests: test_comm_agent_observability_logging, test_roaudter_observability_logging) (2026-02-11 07:19 UTC)
+
 ### Цель
 Шум ≈ 0, сигналы (ошибки/ретраи/фолбеки) видны сразу.
 
