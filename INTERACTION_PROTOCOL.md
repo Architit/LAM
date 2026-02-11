@@ -22,6 +22,26 @@
 
 ---
 
+## 2.1. Restart Signals (Session / Cold Restart)
+
+Используются каноничные сигналы восстановления контекста:
+
+- **`ssn rstrt` (Session Restart)**
+  - В активном чате: только EXPORT.
+  - В новом чате: IMPORT.
+
+- **`cld rstrt` (Cold Restart)**
+  - В активном чате: только EXPORT.
+  - В новом чате: IMPORT + environment sync (pwd, git status).
+
+Источник канона: RADRILONIUMA DevKit.
+LAM применяет правила derivation-only.
+
+Hard constraint: перед закрытием фазы рабочее дерево MUST be clean.
+
+---
+
+
 ## 3. Стандарты Взаимодействия
 
 ### 3.3. Анализ репозитория (карта rollout)
