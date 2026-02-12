@@ -84,15 +84,15 @@ Definition:
 - `runtime_proof = DONE` only if repo has explicit observability/runtime verification evidence (tests/logs) accepted in governance docs.
 - `runtime_proof = PENDING` until such evidence exists.
 
-Runtime proof matrix (2026-02-12 23:07 UTC):
+Runtime proof matrix (2026-02-12 23:21 UTC):
 
 | Repo | governance_done | runtime_proof | Notes |
 |---|---|---|---|
 | LAM | DONE | DONE | local runtime observability proof exists (5/5) |
 | RADRILONIUMA-PROJECT | DONE | PENDING | governance SoT; no repo runtime closure claim required for others |
-| Roaudter-agent | DONE | PENDING | baseline done; runtime proof not yet recorded in LAM map |
-| LAM-Codex_Agent | DONE | PENDING | baseline done; runtime proof pending |
-| LAM_Comunication_Agent | DONE | PENDING | baseline done; runtime proof pending |
+| Roaudter-agent | DONE | PENDING | R1 attempt executed; pytest missing (`No module named pytest`) |
+| LAM-Codex_Agent | DONE | PENDING | R1 attempt executed; no runtime/observability tests discovered |
+| LAM_Comunication_Agent | DONE | PENDING | R1 attempt executed; no runtime/observability tests discovered |
 | Archivator_Agent | DONE | PENDING | baseline done; runtime proof pending |
 | CORE | DONE | PENDING | baseline done; runtime proof pending |
 | J.A.R.V.I.S | DONE | PENDING | baseline done; runtime proof pending |
@@ -110,7 +110,8 @@ Runtime summary:
 
 Wave-runtime start set:
 - Wave R1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
-- Expected next runtime summary after R1: DONE 4 / PENDING 11 (if proof captured).
+- Wave R1 result: no status promotion (DONE=1, PENDING=14); blockers captured in matrix notes.
+- Next target: Wave R2 runtime-proof for Archivator_Agent, CORE, J.A.R.V.I.S.
 
 Deliverable: deterministic runtime closure proof matrix.
 

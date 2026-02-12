@@ -209,3 +209,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-12 — governance: P2 remediation wave-3 validated (LAM_DATA_Src, LAM_Test_Agent, System-, TRIANIUMA_DATA_BASE, Trianiuma, Trianiuma_MEM_CORE) -> DONE=15, BLOCKED=0, PENDING=0
 
 - [x] 2026-02-12 — governance: P2.4 runtime closure proof matrix initialized in DEV_MAP (governance_done=15/15, runtime_proof DONE=1, PENDING=14)
+
+- [x] 2026-02-12 — governance: P2.4 wave R1 executed (Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent); no promotions (DONE=1, PENDING=14), blockers logged
