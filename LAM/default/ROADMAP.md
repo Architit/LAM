@@ -1,12 +1,15 @@
 # ROADMAP
 
-## Phase 2 — Observability
+Synced with root `ROADMAP.md` on 2026-02-12.
+Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
-### Phase 2.1
-- roaudter-agent: ResultEnvelope.metrics populated at runtime (DONE)
-- spine: submodule roaudter-agent updated (DONE)
 ## Phase 2 — Observability
+- Status: CLOSED (verified in root roadmap on 2026-02-11 07:24 UTC)
+- Scope: Phase 2 closure is currently confirmed only for repository LAM; ecosystem-wide closure is pending.
 
-### Phase 2.3
-- comm-agent теперь логирует trace_id, span_id и parent_task_id.
-- Контрактный тест добавлен: test_comm_agent_trace_span_passthrough.py
+## Local rollout notes (default profile)
+- Phase 2.1: roaudter-agent metrics populated at runtime (DONE)
+- Phase 2.3: comm-agent logs `trace_id`, `span_id`, `parent_task_id` (DONE)
+
+## Rule
+When root `ROADMAP.md` changes, update this mirror in the same session.
