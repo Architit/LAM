@@ -26,3 +26,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - Data sync completed with RADRILONIUMA-PROJECT: snapshot/system contracts synced to SoT; patcher aligned; DEV_MAP remains LAM-derived.
 - SoT contract package imported into LAM (Phase 3.1/3.2/4.C/5.A docs + devkit task_spec templates), hash verification passed.
 - P2 baseline matrix recorded in DEV_MAP with DoD-based statuses (DONE=2, BLOCKED=1, PENDING=12).
+- P2 remediation wave-1 validated from operator facts: Roaudter-agent + 3 downstream repos moved to DONE; matrix now DONE=6, BLOCKED=0, PENDING=9.
