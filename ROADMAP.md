@@ -217,3 +217,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-12 — governance: P2.4 wave R3 executed (LAM_DATA_Src, LAM_Test_Agent, Operator_Agent); no promotions (DONE=1, PENDING=14), blockers logged
 
 - [x] 2026-02-12 — governance: P2.4 wave R4 executed (System-, TRIANIUMA_DATA_BASE, Trianiuma, Trianiuma_MEM_CORE); no promotions (DONE=1, PENDING=14), blockers logged
+
+- [x] 2026-02-12 — governance: P2.4 wave R5 planned in DEV_MAP as unblock package (pytest bootstrap policy + runtime smoke template + promotion evidence checklist), no status promotion by design

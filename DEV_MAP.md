@@ -117,7 +117,16 @@ Wave-runtime start set:
 - Wave R3 result: no status promotion (DONE=1, PENDING=14); blockers captured in matrix notes.
 - Wave R4 target repos: System-, TRIANIUMA_DATA_BASE, Trianiuma, Trianiuma_MEM_CORE.
 - Wave R4 result: no status promotion (DONE=1, PENDING=14); blockers captured in matrix notes.
-- Next target: runtime-proof unblock proposal (smoke template + pytest bootstrap policy).
+- Wave R5 type: unblock-planning wave (policy-only; no runtime claims/promotions by design).
+- Wave R5 scope: define minimal cross-repo bootstrap package for pending runtime proofs.
+- Wave R5 deliverables:
+  - `pytest` bootstrap policy (minimal dependency/install contract for downstream repos)
+  - smoke runtime template (`tests/test_runtime_smoke.py`) with facts-only acceptance criteria
+  - evidence checklist for `runtime_proof` promotion (`test path`, `runner`, `result`, `timestamp`)
+- Wave R5 success criteria:
+  - unblock package documented in governance docs
+  - operator execution blocks prepared for downstream validation waves
+- Next target: execute Wave R5 unblock package publication and queue Wave R6 validation.
 
 Deliverable: deterministic runtime closure proof matrix.
 

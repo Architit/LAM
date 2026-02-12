@@ -1,6 +1,6 @@
 # ROADMAP
 
-Synced with root `ROADMAP.md` on 2026-02-12.
+Synced with root `ROADMAP.md` on 2026-02-12 23:42 UTC.
 Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
 ## Phase 2 — Observability
@@ -13,3 +13,6 @@ Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
 ## Rule
 When root `ROADMAP.md` changes, update this mirror in the same session.
+
+## P2.4 note
+- Wave R5 is planned as an unblock package (policy-only), without status promotion by design.

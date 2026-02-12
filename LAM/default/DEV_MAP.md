@@ -1,6 +1,6 @@
 # DEV_MAP (Mirror)
 
-Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-12 23:33 UTC.
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-12 23:42 UTC.
 Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
 
 Scope marker:
@@ -18,3 +18,6 @@ P2.4 runtime summary:
 
 R1/R2/R3/R4 note:
 - All runtime waves executed; no promotions due missing pytest/tests in target repos.
+
+R5 plan note:
+- Unblock package planned (policy-only): pytest bootstrap policy + runtime smoke template + promotion evidence checklist.
