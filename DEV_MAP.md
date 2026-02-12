@@ -84,7 +84,7 @@ Definition:
 - `runtime_proof = DONE` only if repo has explicit observability/runtime verification evidence (tests/logs) accepted in governance docs.
 - `runtime_proof = PENDING` until such evidence exists.
 
-Runtime proof matrix (2026-02-12 23:25 UTC):
+Runtime proof matrix (2026-02-12 23:30 UTC):
 
 | Repo | governance_done | runtime_proof | Notes |
 |---|---|---|---|
@@ -96,9 +96,9 @@ Runtime proof matrix (2026-02-12 23:25 UTC):
 | Archivator_Agent | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
 | CORE | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
 | J.A.R.V.I.S | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
-| LAM_DATA_Src | DONE | PENDING | baseline done; runtime proof pending |
-| LAM_Test_Agent | DONE | PENDING | baseline done; runtime proof pending |
-| Operator_Agent | DONE | PENDING | baseline done; runtime proof pending |
+| LAM_DATA_Src | DONE | PENDING | R3 attempt executed; no runtime/observability tests discovered |
+| LAM_Test_Agent | DONE | PENDING | R3 attempt executed; no runtime/observability tests discovered |
+| Operator_Agent | DONE | PENDING | R3 attempt executed; no runtime/observability tests discovered |
 | System- | DONE | PENDING | baseline done; runtime proof pending |
 | TRIANIUMA_DATA_BASE | DONE | PENDING | baseline done; runtime proof pending |
 | Trianiuma | DONE | PENDING | baseline done; runtime proof pending |
@@ -113,7 +113,9 @@ Wave-runtime start set:
 - Wave R1 result: no status promotion (DONE=1, PENDING=14); blockers captured in matrix notes.
 - Wave R2 target repos: Archivator_Agent, CORE, J.A.R.V.I.S.
 - Wave R2 result: no status promotion (DONE=1, PENDING=14); blockers captured in matrix notes.
-- Next target: Wave R3 runtime-proof for LAM_DATA_Src, LAM_Test_Agent, Operator_Agent.
+- Wave R3 target repos: LAM_DATA_Src, LAM_Test_Agent, Operator_Agent.
+- Wave R3 result: no status promotion (DONE=1, PENDING=14); blockers captured in matrix notes.
+- Next target: Wave R4 runtime-proof for System-, TRIANIUMA_DATA_BASE, Trianiuma, Trianiuma_MEM_CORE.
 
 Deliverable: deterministic runtime closure proof matrix.
 
