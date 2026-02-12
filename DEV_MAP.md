@@ -53,13 +53,13 @@ DoD baseline criteria used:
   SYSTEM_STATE_CONTRACT.md, SYSTEM_STATE.md
 - contract integrity: WORKFLOW_SNAPSHOT_CONTRACT.md and SYSTEM_STATE_CONTRACT.md hash-equal to SoT
 
-Baseline matrix (2026-02-12 22:51 UTC):
+Baseline matrix (2026-02-12 23:00 UTC):
 
 | Repo | Status | Notes |
 |---|---|---|
-| Archivator_Agent | PENDING | governance baseline files missing |
-| CORE | PENDING | governance baseline files missing |
-| J.A.R.V.I.S | PENDING | governance baseline files missing |
+| Archivator_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
+| CORE | DONE | governance baseline seeded; contracts hash-equal to SoT |
+| J.A.R.V.I.S | DONE | governance baseline seeded; contracts hash-equal to SoT |
 | LAM | DONE | full DoD met; contracts hash-equal to SoT |
 | LAM-Codex_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
 | LAM_Comunication_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
@@ -74,9 +74,9 @@ Baseline matrix (2026-02-12 22:51 UTC):
 | Trianiuma_MEM_CORE | PENDING | governance baseline files missing |
 
 Summary:
-- DONE: 6
+- DONE: 9
 - BLOCKED: 0
-- PENDING: 9
+- PENDING: 6
 
 Deliverable: deterministic ecosystem status matrix (baseline complete).
 
