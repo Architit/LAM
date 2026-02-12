@@ -1,6 +1,6 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-12 22:10 UTC)
+## Execution Status (2026-02-12 22:40 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
@@ -47,7 +47,38 @@ P2.1 Facts-only statuses: DONE/PENDING/BLOCKED per repo.
 P2.2 Require per-repo proof for closure (docs + tests/log artifacts).
 P2.3 Do not promote system closure from single-repo evidence.
 
-Deliverable: deterministic ecosystem status matrix.
+DoD baseline criteria used:
+- required files: ROADMAP.md, DEV_LOGS.md, INTERACTION_PROTOCOL.md,
+  WORKFLOW_SNAPSHOT_CONTRACT.md, WORKFLOW_SNAPSHOT_STATE.md,
+  SYSTEM_STATE_CONTRACT.md, SYSTEM_STATE.md
+- contract integrity: WORKFLOW_SNAPSHOT_CONTRACT.md and SYSTEM_STATE_CONTRACT.md hash-equal to SoT
+
+Baseline matrix (2026-02-12 22:40 UTC):
+
+| Repo | Status | Notes |
+|---|---|---|
+| Archivator_Agent | PENDING | governance baseline files missing |
+| CORE | PENDING | governance baseline files missing |
+| J.A.R.V.I.S | PENDING | governance baseline files missing |
+| LAM | DONE | full DoD met; contracts hash-equal to SoT |
+| LAM-Codex_Agent | PENDING | governance baseline files missing |
+| LAM_Comunication_Agent | PENDING | governance baseline files missing |
+| LAM_DATA_Src | PENDING | governance baseline files missing |
+| LAM_Test_Agent | PENDING | governance baseline files missing |
+| Operator_Agent | PENDING | governance baseline files missing |
+| RADRILONIUMA-PROJECT | DONE | SoT baseline complete |
+| Roaudter-agent | BLOCKED | snapshot files exist but governance docs missing; contracts hash drift vs SoT |
+| System- | PENDING | governance baseline files missing |
+| TRIANIUMA_DATA_BASE | PENDING | governance baseline files missing |
+| Trianiuma | PENDING | governance baseline files missing |
+| Trianiuma_MEM_CORE | PENDING | governance baseline files missing |
+
+Summary:
+- DONE: 2
+- BLOCKED: 1
+- PENDING: 12
+
+Deliverable: deterministic ecosystem status matrix (baseline complete).
 
 ### P3) Next LAM Engineering Phase (After Sync Gate)
 P3.1 Phase 3 Automation baseline via devkit/check.sh in CI gate.

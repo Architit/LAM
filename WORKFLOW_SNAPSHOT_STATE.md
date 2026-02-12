@@ -3,11 +3,11 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-12T22:30:57Z
+timestamp: 2026-02-12T22:40:27Z
 
 ## Current pointer
 phase: Phase 2 - Observability
-stage: closed in LAM only; governance sync with SoT DEV_MAP active
+stage: closed in LAM only; P2 matrix baseline complete in DEV_MAP
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
@@ -32,8 +32,10 @@ constraints:
 - Workflow snapshot contract hash: LAM=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db, SoT=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db (equal)
 - System state contract hash: LAM=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247, SoT=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247 (equal)
 - SoT contract package imported into LAM and verified by hash (all equal)
+- P2 matrix baseline complete: DONE=2, BLOCKED=1, PENDING=12 (see DEV_MAP)
 
 ## Recent commits
+- 78c16de governance(sync): import SoT contract package from RADRILONIUMA-PROJECT into LAM
 - 56cd028 governance(sync): align LAM with SoT DEV_MAP and devkit patcher; scope Phase2 as LAM-only
 - b13217c governance(snapshot): add workflow/system state baseline artifacts
 - b6c542e docs(protocol): add restart signals (ssn/cld) + clean tree invariant
@@ -41,25 +43,14 @@ constraints:
 - d629089 governance: record Phase2 observability verification (comm.* + roaudter.* logs)
 - caa1899 governance: require annotated semantic governance tags; adopt DevKit as version authority (derivation-only)
 - 93bfdbf governance: emergency DevKit integration override
-- 8fd9c9e governance: record interaction protocol patching rule
 
 ## Git status
 ## phase2/observability...origin/phase2/observability
  M DEV_LOGS.md
+ M DEV_MAP.md
  M LAM/default/DEV_LOGS.md
- M SYSTEM_STATE.md
- M SYSTEM_STATE_CONTRACT.md
- M WORKFLOW_SNAPSHOT_CONTRACT.md
- M WORKFLOW_SNAPSHOT_STATE.md
-?? DEVKIT_SUBTREE_DISTRIBUTION.md
-?? ECOSYSTEM_STRUCTURE.md
-?? NAMING_MODEL.md
-?? PHASE_4C_CROSS_REPO_GOVERNANCE_CONTRACT.md
-?? REPO_ROLLOUT_ANALYSIS_CONTRACT.md
-?? SUBTREE_STRATEGY.md
-?? TASK_SPEC.md
-?? devkit/task_spec_example.yaml
-?? devkit/task_spec_template.yaml
+ M LAM/default/DEV_MAP.md
+ M ROADMAP.md
 
 ## References
 - INTERACTION_PROTOCOL.md

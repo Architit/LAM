@@ -180,6 +180,8 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-10 — protocol: Cold Restart / Workflow Recovery v1 documented (docs/protocols)
 - [x] 2026-01-30 — repo hygiene: добавлен .gitignore для runtime artifacts (logs/, memory/)
 
+- [x] 2026-02-12 — governance: P2 baseline matrix (15 repos) completed in DEV_MAP (DONE=2, BLOCKED=1, PENDING=12)
+
 ## Фаза Z — Agent SDK Integrations v0 (⏭ next after Runtime EntryPoint v0)
 
 Цель: подключить Claude Agent SDK как backend-инструмент Codex (не отдельный агент на v0).
@@ -198,3 +200,4 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [ ] R4: PolicyConstraint wording: deterministic derivation/representation vs governance-defined semantics/effect needs explicit separation
 - [ ] R5: PolicyConstraint lacks explicit Non-Goals (no enforcement / no execution blocking / no conflict resolution), unlike ReflectionSnapshot “proposal-only” guardrails
 - [ ] Recommendation: address findings via **v1.x addenda (contract-only)** before starting Phase 4.3 (Adaptation Proposals)
+
