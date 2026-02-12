@@ -19,6 +19,8 @@
 3. **Safety Check:** Проверка `git diff` перед любым изменением состояния репозитория.
 4. **Verification:** Запуск Smoke-tests.
 5. **Governance:** Обновление документации (Roadmap/Logs).
+6. **Post-Task Review (mandatory):** Автоматически перечитать `DEV_MAP.md`, `ROADMAP.md`, `INTERACTION_PROTOCOL.md`, `DEV_LOGS.md` после завершения задачи и сверить статус/ограничения.
+7. **User Confirmation Gate (mandatory):** После post-task review выдать короткий список следующих задач и запросить подтверждение пользователя на старт выбранной задачи.
 
 ---
 
