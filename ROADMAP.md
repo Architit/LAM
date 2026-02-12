@@ -211,3 +211,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-12 — governance: P2.4 runtime closure proof matrix initialized in DEV_MAP (governance_done=15/15, runtime_proof DONE=1, PENDING=14)
 
 - [x] 2026-02-12 — governance: P2.4 wave R1 executed (Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent); no promotions (DONE=1, PENDING=14), blockers logged
+
+- [x] 2026-02-12 — governance: P2.4 wave R2 executed (Archivator_Agent, CORE, J.A.R.V.I.S); no promotions (DONE=1, PENDING=14), blockers logged

@@ -84,7 +84,7 @@ Definition:
 - `runtime_proof = DONE` only if repo has explicit observability/runtime verification evidence (tests/logs) accepted in governance docs.
 - `runtime_proof = PENDING` until such evidence exists.
 
-Runtime proof matrix (2026-02-12 23:21 UTC):
+Runtime proof matrix (2026-02-12 23:25 UTC):
 
 | Repo | governance_done | runtime_proof | Notes |
 |---|---|---|---|
@@ -93,9 +93,9 @@ Runtime proof matrix (2026-02-12 23:21 UTC):
 | Roaudter-agent | DONE | PENDING | R1 attempt executed; pytest missing (`No module named pytest`) |
 | LAM-Codex_Agent | DONE | PENDING | R1 attempt executed; no runtime/observability tests discovered |
 | LAM_Comunication_Agent | DONE | PENDING | R1 attempt executed; no runtime/observability tests discovered |
-| Archivator_Agent | DONE | PENDING | baseline done; runtime proof pending |
-| CORE | DONE | PENDING | baseline done; runtime proof pending |
-| J.A.R.V.I.S | DONE | PENDING | baseline done; runtime proof pending |
+| Archivator_Agent | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
+| CORE | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
+| J.A.R.V.I.S | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
 | LAM_DATA_Src | DONE | PENDING | baseline done; runtime proof pending |
 | LAM_Test_Agent | DONE | PENDING | baseline done; runtime proof pending |
 | Operator_Agent | DONE | PENDING | baseline done; runtime proof pending |
@@ -111,7 +111,9 @@ Runtime summary:
 Wave-runtime start set:
 - Wave R1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
 - Wave R1 result: no status promotion (DONE=1, PENDING=14); blockers captured in matrix notes.
-- Next target: Wave R2 runtime-proof for Archivator_Agent, CORE, J.A.R.V.I.S.
+- Wave R2 target repos: Archivator_Agent, CORE, J.A.R.V.I.S.
+- Wave R2 result: no status promotion (DONE=1, PENDING=14); blockers captured in matrix notes.
+- Next target: Wave R3 runtime-proof for LAM_DATA_Src, LAM_Test_Agent, Operator_Agent.
 
 Deliverable: deterministic runtime closure proof matrix.
 
