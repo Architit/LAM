@@ -53,7 +53,7 @@ DoD baseline criteria used:
   SYSTEM_STATE_CONTRACT.md, SYSTEM_STATE.md
 - contract integrity: WORKFLOW_SNAPSHOT_CONTRACT.md and SYSTEM_STATE_CONTRACT.md hash-equal to SoT
 
-Baseline matrix (2026-02-12 23:00 UTC):
+Baseline matrix (2026-02-12 23:04 UTC):
 
 | Repo | Status | Notes |
 |---|---|---|
@@ -63,20 +63,20 @@ Baseline matrix (2026-02-12 23:00 UTC):
 | LAM | DONE | full DoD met; contracts hash-equal to SoT |
 | LAM-Codex_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
 | LAM_Comunication_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| LAM_DATA_Src | PENDING | governance baseline files missing |
-| LAM_Test_Agent | PENDING | governance baseline files missing |
+| LAM_DATA_Src | DONE | governance baseline seeded; contracts hash-equal to SoT |
+| LAM_Test_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
 | Operator_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
 | RADRILONIUMA-PROJECT | DONE | SoT baseline complete |
 | Roaudter-agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| System- | PENDING | governance baseline files missing |
-| TRIANIUMA_DATA_BASE | PENDING | governance baseline files missing |
-| Trianiuma | PENDING | governance baseline files missing |
-| Trianiuma_MEM_CORE | PENDING | governance baseline files missing |
+| System- | DONE | governance baseline seeded; contracts hash-equal to SoT |
+| TRIANIUMA_DATA_BASE | DONE | governance baseline seeded; contracts hash-equal to SoT |
+| Trianiuma | DONE | governance baseline seeded; contracts hash-equal to SoT |
+| Trianiuma_MEM_CORE | DONE | governance baseline seeded; contracts hash-equal to SoT |
 
 Summary:
-- DONE: 9
+- DONE: 15
 - BLOCKED: 0
-- PENDING: 6
+- PENDING: 0
 
 Deliverable: deterministic ecosystem status matrix (baseline complete).
 
