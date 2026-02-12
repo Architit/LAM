@@ -1,11 +1,11 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-12 22:40 UTC)
+## Execution Status (2026-02-12 23:07 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
 - Protocol scale: 0 (governance/sync)
-- Current phase pointer: Phase 2 (LAM-only) CLOSED; system-wide closure pending
+- Current phase pointer: Phase 2 (LAM-only) CLOSED; ecosystem runtime closure pending
 
 ## Synchronization Source (SoT)
 - Upstream SoT repo: /home/architit/work/RADRILONIUMA-PROJECT
@@ -19,12 +19,13 @@ This map defines current LAM development plan and governance alignment.
 Non-goals:
 - no runtime automation
 - no execution-path logic
-- no cross-repo closure claims without per-repo facts
+- no cross-repo runtime closure claims without per-repo runtime proof
 
 ## Current Facts
 - Phase 2 Observability is CLOSED in LAM only.
 - Runtime recheck in LAM .venv passed: 5/5 observability tests.
-- Ecosystem-wide (15 repos) Phase 2 closure is pending facts-based verification.
+- Governance coverage matrix for 15 repos is complete.
+- Ecosystem-wide runtime closure is pending proof matrix completion.
 
 ## Work Program (Current)
 
@@ -53,32 +54,65 @@ DoD baseline criteria used:
   SYSTEM_STATE_CONTRACT.md, SYSTEM_STATE.md
 - contract integrity: WORKFLOW_SNAPSHOT_CONTRACT.md and SYSTEM_STATE_CONTRACT.md hash-equal to SoT
 
-Baseline matrix (2026-02-12 23:04 UTC):
+Governance coverage matrix (2026-02-12 23:07 UTC):
 
-| Repo | Status | Notes |
+| Repo | governance_done | Notes |
 |---|---|---|
-| Archivator_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| CORE | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| J.A.R.V.I.S | DONE | governance baseline seeded; contracts hash-equal to SoT |
+| Archivator_Agent | DONE | baseline seeded; contracts hash-equal to SoT |
+| CORE | DONE | baseline seeded; contracts hash-equal to SoT |
+| J.A.R.V.I.S | DONE | baseline seeded; contracts hash-equal to SoT |
 | LAM | DONE | full DoD met; contracts hash-equal to SoT |
-| LAM-Codex_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| LAM_Comunication_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| LAM_DATA_Src | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| LAM_Test_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| Operator_Agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
+| LAM-Codex_Agent | DONE | baseline seeded; contracts hash-equal to SoT |
+| LAM_Comunication_Agent | DONE | baseline seeded; contracts hash-equal to SoT |
+| LAM_DATA_Src | DONE | baseline seeded; contracts hash-equal to SoT |
+| LAM_Test_Agent | DONE | baseline seeded; contracts hash-equal to SoT |
+| Operator_Agent | DONE | baseline seeded; contracts hash-equal to SoT |
 | RADRILONIUMA-PROJECT | DONE | SoT baseline complete |
-| Roaudter-agent | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| System- | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| TRIANIUMA_DATA_BASE | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| Trianiuma | DONE | governance baseline seeded; contracts hash-equal to SoT |
-| Trianiuma_MEM_CORE | DONE | governance baseline seeded; contracts hash-equal to SoT |
+| Roaudter-agent | DONE | baseline seeded; contracts hash-equal to SoT |
+| System- | DONE | baseline seeded; contracts hash-equal to SoT |
+| TRIANIUMA_DATA_BASE | DONE | baseline seeded; contracts hash-equal to SoT |
+| Trianiuma | DONE | baseline seeded; contracts hash-equal to SoT |
+| Trianiuma_MEM_CORE | DONE | baseline seeded; contracts hash-equal to SoT |
 
-Summary:
+Governance summary:
 - DONE: 15
 - BLOCKED: 0
 - PENDING: 0
 
-Deliverable: deterministic ecosystem status matrix (baseline complete).
+### P2.4) Runtime Closure Proof Matrix (new)
+Definition:
+- `runtime_proof = DONE` only if repo has explicit observability/runtime verification evidence (tests/logs) accepted in governance docs.
+- `runtime_proof = PENDING` until such evidence exists.
+
+Runtime proof matrix (2026-02-12 23:07 UTC):
+
+| Repo | governance_done | runtime_proof | Notes |
+|---|---|---|---|
+| LAM | DONE | DONE | local runtime observability proof exists (5/5) |
+| RADRILONIUMA-PROJECT | DONE | PENDING | governance SoT; no repo runtime closure claim required for others |
+| Roaudter-agent | DONE | PENDING | baseline done; runtime proof not yet recorded in LAM map |
+| LAM-Codex_Agent | DONE | PENDING | baseline done; runtime proof pending |
+| LAM_Comunication_Agent | DONE | PENDING | baseline done; runtime proof pending |
+| Archivator_Agent | DONE | PENDING | baseline done; runtime proof pending |
+| CORE | DONE | PENDING | baseline done; runtime proof pending |
+| J.A.R.V.I.S | DONE | PENDING | baseline done; runtime proof pending |
+| LAM_DATA_Src | DONE | PENDING | baseline done; runtime proof pending |
+| LAM_Test_Agent | DONE | PENDING | baseline done; runtime proof pending |
+| Operator_Agent | DONE | PENDING | baseline done; runtime proof pending |
+| System- | DONE | PENDING | baseline done; runtime proof pending |
+| TRIANIUMA_DATA_BASE | DONE | PENDING | baseline done; runtime proof pending |
+| Trianiuma | DONE | PENDING | baseline done; runtime proof pending |
+| Trianiuma_MEM_CORE | DONE | PENDING | baseline done; runtime proof pending |
+
+Runtime summary:
+- DONE: 1
+- PENDING: 14
+
+Wave-runtime start set:
+- Wave R1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
+- Expected next runtime summary after R1: DONE 4 / PENDING 11 (if proof captured).
+
+Deliverable: deterministic runtime closure proof matrix.
 
 ### P3) Next LAM Engineering Phase (After Sync Gate)
 P3.1 Phase 3 Automation baseline via devkit/check.sh in CI gate.
