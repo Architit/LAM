@@ -33,3 +33,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P2.4 wave R1 executed; no promotions (DONE=1, PENDING=14). Blockers recorded: missing pytest / no runtime tests.
 - P2.4 wave R2 executed; no promotions (DONE=1, PENDING=14). Blocker: no runtime tests in Archivator_Agent/CORE/J.A.R.V.I.S.
 - P2.4 wave R3 executed; no promotions (DONE=1, PENDING=14). Blocker: no runtime tests in LAM_DATA_Src/LAM_Test_Agent/Operator_Agent.
+- P2.4 wave R4 executed; no promotions (DONE=1, PENDING=14). Blocker: no runtime tests in System-/TRIANIUMA_DATA_BASE/Trianiuma/Trianiuma_MEM_CORE.

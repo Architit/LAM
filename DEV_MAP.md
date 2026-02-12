@@ -84,7 +84,7 @@ Definition:
 - `runtime_proof = DONE` only if repo has explicit observability/runtime verification evidence (tests/logs) accepted in governance docs.
 - `runtime_proof = PENDING` until such evidence exists.
 
-Runtime proof matrix (2026-02-12 23:30 UTC):
+Runtime proof matrix (2026-02-12 23:33 UTC):
 
 | Repo | governance_done | runtime_proof | Notes |
 |---|---|---|---|
@@ -99,10 +99,10 @@ Runtime proof matrix (2026-02-12 23:30 UTC):
 | LAM_DATA_Src | DONE | PENDING | R3 attempt executed; no runtime/observability tests discovered |
 | LAM_Test_Agent | DONE | PENDING | R3 attempt executed; no runtime/observability tests discovered |
 | Operator_Agent | DONE | PENDING | R3 attempt executed; no runtime/observability tests discovered |
-| System- | DONE | PENDING | baseline done; runtime proof pending |
-| TRIANIUMA_DATA_BASE | DONE | PENDING | baseline done; runtime proof pending |
-| Trianiuma | DONE | PENDING | baseline done; runtime proof pending |
-| Trianiuma_MEM_CORE | DONE | PENDING | baseline done; runtime proof pending |
+| System- | DONE | PENDING | R4 attempt executed; no runtime/observability tests discovered |
+| TRIANIUMA_DATA_BASE | DONE | PENDING | R4 attempt executed; no runtime/observability tests discovered |
+| Trianiuma | DONE | PENDING | R4 attempt executed; no runtime/observability tests discovered |
+| Trianiuma_MEM_CORE | DONE | PENDING | R4 attempt executed; no runtime/observability tests discovered |
 
 Runtime summary:
 - DONE: 1
@@ -115,7 +115,9 @@ Wave-runtime start set:
 - Wave R2 result: no status promotion (DONE=1, PENDING=14); blockers captured in matrix notes.
 - Wave R3 target repos: LAM_DATA_Src, LAM_Test_Agent, Operator_Agent.
 - Wave R3 result: no status promotion (DONE=1, PENDING=14); blockers captured in matrix notes.
-- Next target: Wave R4 runtime-proof for System-, TRIANIUMA_DATA_BASE, Trianiuma, Trianiuma_MEM_CORE.
+- Wave R4 target repos: System-, TRIANIUMA_DATA_BASE, Trianiuma, Trianiuma_MEM_CORE.
+- Wave R4 result: no status promotion (DONE=1, PENDING=14); blockers captured in matrix notes.
+- Next target: runtime-proof unblock proposal (smoke template + pytest bootstrap policy).
 
 Deliverable: deterministic runtime closure proof matrix.
 
