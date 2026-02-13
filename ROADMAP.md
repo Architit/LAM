@@ -245,6 +245,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Z.RUNTIME.START: decision record published (`Z_RUNTIME_START_DECISION_RECORD.md`) -> `approved` (governance-only)
 - [x] Z.RUNTIME.EXEC.W1: execution wave contract opened (`Z_RUNTIME_EXEC_WAVE_CONTRACT.md`) with guardrails + rollback
 - [x] EXEC.W1.T1: bounded implementation record published (`Z_RUNTIME_EXEC_W1_T1_IMPLEMENTATION_RECORD.md`)
+- [x] EXEC.W1.T2: smoke/observability verification record published (`Z_RUNTIME_EXEC_W1_T2_VERIFICATION_RECORD.md`)
 
 ### Phase 4 Review Findings (pre-4.3)
 - [ ] R1: Spec drift — derivation mentions non-existent fields:
@@ -440,3 +441,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: `EXEC.W1.T1` bounded implementation record published (`Z_RUNTIME_EXEC_W1_T1_IMPLEMENTATION_RECORD.md`).
 
 - [x] 2026-02-13 — governance: RADR ASR sync confirmed for `EXEC.W1.T1` step (`1e7b999`).
+
+- [x] 2026-02-13 — governance: `EXEC.W1.T2` verification record published (`Z_RUNTIME_EXEC_W1_T2_VERIFICATION_RECORD.md`), smoke/observability PASS.
+
+- [x] 2026-02-13 — governance: RADR ASR sync confirmed for `EXEC.W1.T2` step (`9a53b2c`).
