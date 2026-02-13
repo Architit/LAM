@@ -171,6 +171,19 @@ Hard constraint: перед закрытием фазы рабочее дере�
 2. Заполнить обязательные assertions и evidence-ссылки.
 3. Зафиксировать запись в `DEV_LOGS.md` и `ROADMAP.md` до правки протокола.
 
+Template-backed hard rule (mandatory for `hard-rule`/`procedure` updates):
+- `update_id`, `timestamp_utc`, `reason`, `section_targets`, `change_type` MUST be explicitly recorded.
+- Evidence refs MUST be non-empty: `dev_logs_ref`, `roadmap_ref`, `protocol_ref`, `snapshot_ref`, `confirmation_ref`.
+- Assertions checklist in template MUST be fully resolved before closure (`passed` or `needs-fix` with follow-up).
+
+### 5.4. ASR Data Sync for Protocol Updates
+
+Для протокольных governance-изменений (особенно `hard-rule`/`procedure`) требуется ASR data sync:
+
+1. Зафиксировать session record в SoT: `RADRILONIUMA-PROJECT/gov/asr/sessions/*`.
+2. Обновить `gov/asr/INDEX.md` в SoT.
+3. Сослаться на ASR commit/session в `DEV_LOGS.md` (и при необходимости в `ROADMAP.md`).
+
 ---
 
 ## 6. Пример Идеальной Итерации (Шаблон)

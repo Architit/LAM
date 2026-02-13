@@ -116,3 +116,4 @@ normalized.
 2026-02-13 05:04 UTC — Governance: Z.T2 completed (governance-only) — published `Z_T2_SMOKE_CONTRACT_DRAFT.md`; smoke contract draft blocks fixed; next target moved to `Z.T3` compatibility DoD draft.
 2026-02-13 05:05 UTC — Governance: Z.T3 completed (governance-only) — published `Z_T3_COMPATIBILITY_DOD_CONTRACT.md`; compatibility DoD blocks fixed; prep package (`Z.T1/Z.T2/Z.T3`) marked complete.
 2026-02-13 05:26 UTC — Governance: RADR ASR data sync completed (`300631e`) — fixed wrapped paths in `gov/asr/INDEX.md`, normalized `phase5b-lam-followup-f1f4-closure` session filename/content, removed malformed newline-path duplicate.
+2026-02-13 05:28 UTC — Governance: interaction protocol/template drift reviewed and aligned — protocol hard-rule now requires template-backed update record with evidence refs; RADR ASR data sync recorded (`4b3a260`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-interaction-protocol-template-alignment-sync.md`).

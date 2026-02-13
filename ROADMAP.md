@@ -398,3 +398,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: Z.T2 smoke contract draft published (`Z_T2_SMOKE_CONTRACT_DRAFT.md`); next target moved to Z.T3 compatibility DoD draft
 
 - [x] 2026-02-13 — governance: Z.T3 compatibility DoD contract published (`Z_T3_COMPATIBILITY_DOD_CONTRACT.md`); prep package (`Z.T1/Z.T2/Z.T3`) marked complete
+
+- [x] 2026-02-13 — governance: interaction protocol/template drift aligned (template-backed update record + mandatory evidence refs) and RADR ASR sync recorded (`4b3a260`).
