@@ -85,3 +85,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - Z.RUNTIME.T1/T2/T3 package published/closed in root (candidate + preflight + start decision record); RADR ASR sync confirmed (`11cffa8`).
 - Z.RUNTIME.START decision record published/closed in root (`Z_RUNTIME_START_DECISION_RECORD.md` => approved); RADR ASR sync confirmed (`a04b47a`).
 - Z.RUNTIME.EXEC.W1 opened in root (`Z_RUNTIME_EXEC_WAVE_CONTRACT.md`) with guarded execution boundaries; RADR ASR sync confirmed (`dfe8f4f`).
+- EXEC.W1.T1 bounded implementation recorded in root (`Z_RUNTIME_EXEC_W1_T1_IMPLEMENTATION_RECORD.md`); RADR ASR sync confirmed (`1e7b999`).

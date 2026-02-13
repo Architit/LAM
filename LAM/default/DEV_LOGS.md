@@ -107,3 +107,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - Z.RUNTIME.T1/T2/T3 package closed in root (`Z_RUNTIME_T1_TASK_WAVE_CANDIDATE_CONTRACT.md`, `Z_RUNTIME_T2_PREFLIGHT_VALIDATION_CONTRACT.md`, `Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md`); RADR ASR sync recorded (`11cffa8`).
 - Z.RUNTIME.START decision record published in root (`Z_RUNTIME_START_DECISION_RECORD.md`) with `approved` outcome; RADR ASR sync recorded (`a04b47a`).
 - Z.RUNTIME.EXEC.W1 opened in root (`Z_RUNTIME_EXEC_WAVE_CONTRACT.md`) with execution-path guardrails/rollback; RADR ASR sync recorded (`dfe8f4f`).
+- EXEC.W1.T1 implementation record published in root (`Z_RUNTIME_EXEC_W1_T1_IMPLEMENTATION_RECORD.md`); RADR ASR sync confirmed (`1e7b999`).

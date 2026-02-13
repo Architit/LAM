@@ -1,6 +1,6 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 05:56 UTC)
+## Execution Status (2026-02-13 05:59 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
@@ -56,6 +56,8 @@ Non-goals:
 - RADR ASR sync for Z.RUNTIME START decision is confirmed (`a04b47a`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-start-decision-sync.md`).
 - Z.RUNTIME.EXEC.W1 contract is OPEN with guardrails/rollback (`Z_RUNTIME_EXEC_WAVE_CONTRACT.md`).
 - RADR ASR sync for Z.RUNTIME EXEC.W1 opening is confirmed (`dfe8f4f`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-wave-open-sync.md`).
+- EXEC.W1.T1 bounded implementation record is published (`Z_RUNTIME_EXEC_W1_T1_IMPLEMENTATION_RECORD.md`).
+- RADR ASR sync for EXEC.W1.T1 step is confirmed (`1e7b999`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-w1-t1-sync.md`).
 
 ## Work Program (Current)
 
@@ -182,7 +184,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: user-gated `EXEC.W1.T1` implementation step under `Z_RUNTIME_EXEC_WAVE_CONTRACT.md` guardrails.
+- Next target: user-gated `EXEC.W1.T2` smoke/observability verification step.
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -420,6 +422,8 @@ Z.RUNTIME.T package:
 - State: OPEN (execution-approved boundary with strict guardrails).
 - Queue: `EXEC.W1.T1` -> `EXEC.W1.T2` -> `EXEC.W1.T3`.
 - SoT ASR continuity session recorded: `/home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-wave-open-sync.md` (`dfe8f4f`).
+- `EXEC.W1.T1` record published: `Z_RUNTIME_EXEC_W1_T1_IMPLEMENTATION_RECORD.md`.
+- `EXEC.W1.T1` SoT ASR continuity session: `/home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-w1-t1-sync.md` (`1e7b999`).
 
 ## Gate Criteria
 - G1: Root and mirror docs are synchronized.
@@ -482,12 +486,14 @@ Z.RUNTIME.T package:
 - Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md
 - Z_RUNTIME_START_DECISION_RECORD.md
 - Z_RUNTIME_EXEC_WAVE_CONTRACT.md
+- Z_RUNTIME_EXEC_W1_T1_IMPLEMENTATION_RECORD.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-prep-risk-ops-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-t1t2t3-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-start-decision-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-wave-open-sync.md
+- /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-w1-t1-sync.md
 - INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
