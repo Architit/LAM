@@ -3,11 +3,11 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T01:39:29Z
+timestamp: 2026-02-13T01:41:51Z
 
 ## Current pointer
 phase: Phase 2 - Observability
-stage: governance coverage closed (15/15); runtime proof matrix active (P2.4), R6.5 host-split retry succeeded
+stage: governance coverage closed (15/15); runtime proof matrix finalized (P2.4), published and SoT-synced
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
@@ -53,9 +53,12 @@ constraints:
 - Patcher hash: LAM=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7, SoT=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7 (equal)
 - Workflow snapshot contract hash: LAM=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db, SoT=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db (equal)
 - System state contract hash: LAM=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247, SoT=e154be15f9dbc88f2c460cce16326b3862992e744ecc5a247 (equal)
-- Next target: push finalized runtime-proof policy/state (`DONE=14, EXEMPT=1, PENDING=0`) to origin.
+- Next target: protocol task selection for next phase after P2.4 closure.
 
 ## Recent commits
+- 2ca0126 governance(dev-map): acknowledge SoT EXEMPT closure sync
+- 2d82009 governance(dev-map): close SoT runtime row as EXEMPT (PENDING=0)
+- 84cd207 governance(dev-map): record post-review sync with RADR after R6.5
 - 9f9760e governance(dev-map): record P2.4 R6.5 success (Trianiuma_MEM_CORE)
 - 9a787e1 governance(dev-map): record P2.4 R6.4 success (3 repos)
 - 7a9dff5 governance(dev-map): record P2.4 R6.3 success (3 repos)
@@ -68,13 +71,6 @@ constraints:
 
 ## Git status
 ## phase2/observability...origin/phase2/observability
- M DEV_LOGS.md
- M DEV_MAP.md
- M LAM/default/DEV_LOGS.md
- M LAM/default/DEV_MAP.md
- M LAM/default/ROADMAP.md
- M ROADMAP.md
- M WORKFLOW_SNAPSHOT_STATE.md
 
 ## References
 - INTERACTION_PROTOCOL.md
