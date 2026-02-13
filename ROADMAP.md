@@ -224,7 +224,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-12 — governance: P2 baseline matrix (15 repos) completed in DEV_MAP (DONE=2, BLOCKED=1, PENDING=12)
 
 ## Фаза Z — Agent SDK Integrations v0 (⏭ next after Runtime EntryPoint v0)
-> **Статус:** PREP CLOSED (governance-only) (2026-02-13) — prep-пакет `Z.T1-T3` завершён.
+> **Статус:** PREP CLOSED + POST PACKAGE CLOSED (governance-only) (2026-02-13) — prep-пакет `Z.T1-T3` и пост-пакет `Z.POST1-Z.POST3` завершены.
 
 Цель: подключить Claude Agent SDK как backend-инструмент Codex (не отдельный агент на v0).
 
@@ -233,6 +233,9 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Z.T1: Agent SDK backend integration contract draft (`Z_T1_AGENT_SDK_BACKEND_INTEGRATION_CONTRACT.md`)
 - [x] Z.T2: Smoke contract draft (`Z_T2_SMOKE_CONTRACT_DRAFT.md`)
 - [x] Z.T3: Compatibility DoD contract draft (`Z_T3_COMPATIBILITY_DOD_CONTRACT.md`)
+- [x] Z.POST1: Protocol compliance sweep (facts-only) (`Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md`)
+- [x] Z.POST2: Root/default mirror sync gate (`Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md`)
+- [x] Z.POST3: ASR continuity sync for post-Z closure (`gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md`)
 
 ### Phase 4 Review Findings (pre-4.3)
 - [ ] R1: Spec drift — derivation mentions non-existent fields:
@@ -400,3 +403,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: Z.T3 compatibility DoD contract published (`Z_T3_COMPATIBILITY_DOD_CONTRACT.md`); prep package (`Z.T1/Z.T2/Z.T3`) marked complete
 
 - [x] 2026-02-13 — governance: interaction protocol/template drift aligned (template-backed update record + mandatory evidence refs) and RADR ASR sync recorded (`4b3a260`).
+
+- [x] 2026-02-13 — governance: post-Z package `Z.POST` executed in-order and closed (`Z_POST_SELECTION_GATE_CONTRACT.md`, `Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md`, `Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md`).
+
+- [x] 2026-02-13 — governance: RADR ASR continuity sync confirmed for Z.POST closure (`a5c5dd5`).

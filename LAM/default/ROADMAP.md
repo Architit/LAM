@@ -79,3 +79,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - Z.T3 compatibility DoD contract draft completed in root roadmap/maps (governance-only); `Z_T3_COMPATIBILITY_DOD_CONTRACT.md` published and prep package marked complete.
 - Interaction protocol update template published in root roadmap/maps (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and linked to governance protocol update flow.
 - Interaction protocol/template drift aligned in root roadmap/logs/protocol; template-backed protocol update record and evidence refs fixed; RADR ASR sync recorded (`4b3a260`).
+- Z.POST package completed in root roadmap/maps (governance-only): protocol sweep PASS, root/default mirror gate PASS, ASR continuity sync recorded (`a5c5dd5`).
