@@ -173,7 +173,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] P5.G2: Risk boundary register для phase5 изменений (`P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`)
 - [x] P5.G3: Operator decision checklist перед runtime-facing шагами (`P5_G3_OPERATOR_CHECKLIST_CONTRACT.md`)
 - [x] Открыть runtime-facing gate decision контракт (governance-only): `P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md`
-- [ ] P5.RG1: Runtime-facing eligibility matrix
+- [x] P5.RG1: Runtime-facing eligibility matrix (`P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md`)
 - [ ] P5.RG2: Hold/reject decision policy
 - [ ] P5.RG3: Start-approval evidence record
 
@@ -338,3 +338,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: RADR ASR sync confirmed for P5 execution-gate closure (`e86650d`, `gov-radr-asr-phase5b-lam-p5-exec-gate-closure-v1.0.0`)
 
 - [x] 2026-02-13 — governance: runtime-facing gate decision package activated (`P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md`); queue `P5.RG1/P5.RG2/P5.RG3` fixed
+
+- [x] 2026-02-13 — governance: P5.RG1 eligibility matrix contract published (`P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md`); next target moved to P5.RG2 hold/reject policy draft

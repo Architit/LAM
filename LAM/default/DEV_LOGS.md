@@ -78,3 +78,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P5.G3 completed (governance-only); `P5_G3_OPERATOR_CHECKLIST_CONTRACT.md` published and P5 execution gate wave marked complete.
 - RADR ASR sync confirmed for P5 execution-gate closure (`e86650d`, `gov-radr-asr-phase5b-lam-p5-exec-gate-closure-v1.0.0`).
 - Runtime-facing gate decision package activated (governance-only); `P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md` published and queue `P5.RG1/P5.RG2/P5.RG3` fixed.
+- P5.RG1 completed (governance-only); `P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md` published and next target moved to P5.RG2 hold/reject policy draft.

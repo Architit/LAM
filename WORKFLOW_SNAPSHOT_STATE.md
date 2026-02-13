@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T04:05:41Z
+timestamp: 2026-02-13T04:07:09Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge
-stage: runtime-facing gate decision package activation (governance-only)
+stage: P5.RG1 eligibility matrix contract completed (governance-only)
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
-- preserve closed P5 execution-gate state
-- activate runtime-facing decision package in governance-only mode
-- provide deterministic stop-point before P5.RG1 start
+- preserve runtime-facing gate decision continuity after RG1 completion
+- keep closed states (P2.4, P4 follow-up, P5 prep, P5.EXEC) immutable
+- provide deterministic stop-point before P5.RG2 start
 constraints:
 - contracts-first
 - observability-first
@@ -22,12 +22,13 @@ constraints:
 - NO execution-path impact
 
 ## Verification
-- P5.EXEC wave remains closed: G1 DONE, G2 DONE, G3 DONE.
-- P5.RG decision package contract published: P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md
-- P5.RG queue fixed: RG1, RG2, RG3.
-- Next target: P5.RG1 runtime-facing eligibility matrix draft (governance-only).
+- P5.RG contract published: P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md
+- P5.RG1 contract published: P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md
+- P5.RG queue state: RG1 DONE, RG2 TODO, RG3 TODO.
+- Next target: P5.RG2 hold/reject decision policy draft (governance-only).
 
 ## Recent commits
+- 4b78079 governance(p5.rg): activate runtime-facing gate decision package
 - a978389 governance(dev-map): acknowledge RADR ASR and update P5 exec gate contracts
 - 621294a ssn rstrt(EXPORT): set stop-point after P5 execution-gate closure
 - 0e36e25 governance(snapshot): align P5 execution-gate closure snapshot with head
@@ -39,18 +40,15 @@ constraints:
 - ba859b7 governance(snapshot): align P5 prep closure snapshot with branch head
 - b0f044e governance(p5.t3): publish domain partitioning contract draft
 - 405684b governance(p5.t2): publish retrieval boundary contract draft
-- dfd65f7 governance(p5.t1): publish timestamp UTC contract draft
 
 ## Git status
-## phase2/observability...origin/phase2/observability
-M  DEV_LOGS.md
-M  DEV_MAP.md
-M  LAM/default/DEV_LOGS.md
-M  LAM/default/ROADMAP.md
-M  NEW_CHAT_INIT_MESSAGE
-A  P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md
-M  ROADMAP.md
- M WORKFLOW_SNAPSHOT_STATE.md
+## phase2/observability...origin/phase2/observability [ahead 1]
+ M DEV_LOGS.md
+ M DEV_MAP.md
+ M LAM/default/DEV_LOGS.md
+ M LAM/default/ROADMAP.md
+ M ROADMAP.md
+?? P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -58,6 +56,7 @@ M  ROADMAP.md
 - DEV_LOGS.md
 - DEV_MAP.md
 - P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md
+- P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md
 - P5_EXECUTION_GATE_CONTRACT.md
 - P5_G1_EVIDENCE_PROFILE_CONTRACT.md
 - P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md
