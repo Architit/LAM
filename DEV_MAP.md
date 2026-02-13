@@ -84,15 +84,15 @@ Definition:
 - `runtime_proof = DONE` only if repo has explicit observability/runtime verification evidence (tests/logs) accepted in governance docs.
 - `runtime_proof = PENDING` until such evidence exists.
 
-Runtime proof matrix (2026-02-12 23:33 UTC):
+Runtime proof matrix (2026-02-13 00:27 UTC):
 
 | Repo | governance_done | runtime_proof | Notes |
 |---|---|---|---|
 | LAM | DONE | DONE | local runtime observability proof exists (5/5) |
 | RADRILONIUMA-PROJECT | DONE | PENDING | governance SoT; no repo runtime closure claim required for others |
-| Roaudter-agent | DONE | PENDING | R1 attempt executed; pytest missing (`No module named pytest`) |
-| LAM-Codex_Agent | DONE | PENDING | R1 attempt executed; no runtime/observability tests discovered |
-| LAM_Comunication_Agent | DONE | PENDING | R1 attempt executed; no runtime/observability tests discovered |
+| Roaudter-agent | DONE | PENDING | R6.1 wave-1 attempt: python3/venv present, pytest bootstrap failed offline (`Name or service not known`) |
+| LAM-Codex_Agent | DONE | PENDING | R6.1 wave-1 attempt: python3/venv present, pytest bootstrap failed offline (`Name or service not known`) |
+| LAM_Comunication_Agent | DONE | PENDING | R6.1 wave-1 attempt: python3/venv present, pytest bootstrap failed offline (`Name or service not known`) |
 | Archivator_Agent | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
 | CORE | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
 | J.A.R.V.I.S | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
@@ -137,7 +137,9 @@ Wave-runtime start set:
   - READY: 0
   - BLOCKED: 14
   - common blockers: missing `.venv/bin/python`, missing `tests/test_runtime_smoke.py` in all pending repos
-- Next target: Wave R6.1 execution (seed `.venv` + smoke template) for first 3 pending repos.
+- Wave R6.1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
+- Wave R6.1 result: no status promotion (DONE=1, PENDING=14); common blocker `pytest-install-failed-offline` (PyPI/DNS unavailable) for all 3 repos.
+- Next target: Wave R6.1 retry after network/package-source recovery (or preseeded offline wheelhouse).
 
 Deliverable: deterministic runtime closure proof matrix.
 

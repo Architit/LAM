@@ -1,6 +1,6 @@
 # DEV_LOGS
 
-Synced with root `DEV_LOGS.md` on 2026-02-13 00:17 UTC.
+Synced with root `DEV_LOGS.md` on 2026-02-13 00:27 UTC.
 Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 
 ## 2026-02-10
@@ -38,3 +38,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P2.4 wave R5 published in LAM: bootstrap policy + smoke template + evidence checklist + operator blocks; Wave R6 queued.
 - P2.4/R6 strict gate: `python3 >= 3.10` and mandatory `.venv/bin/python` runner for promotion evidence.
 - P2.4/R6 readiness audit: 14 pending repos are BLOCKED by missing `.venv` runner and smoke template.
+- P2.4 wave R6.1 (first 3 repos) executed in offline-safe mode; no promotions due offline pytest bootstrap failure.
