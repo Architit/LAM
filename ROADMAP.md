@@ -242,6 +242,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Z.RUNTIME.T1: task wave candidate contract (`Z_RUNTIME_T1_TASK_WAVE_CANDIDATE_CONTRACT.md`)
 - [x] Z.RUNTIME.T2: preflight validation contract (`Z_RUNTIME_T2_PREFLIGHT_VALIDATION_CONTRACT.md`)
 - [x] Z.RUNTIME.T3: start decision record contract (`Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md`)
+- [x] Z.RUNTIME.START: decision record published (`Z_RUNTIME_START_DECISION_RECORD.md`) -> `approved` (governance-only)
 
 ### Phase 4 Review Findings (pre-4.3)
 - [ ] R1: Spec drift — derivation mentions non-existent fields:
@@ -425,3 +426,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: `Z.RUNTIME.T1/T2/T3` package published (`Z_RUNTIME_T1_TASK_WAVE_CANDIDATE_CONTRACT.md`, `Z_RUNTIME_T2_PREFLIGHT_VALIDATION_CONTRACT.md`, `Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md`).
 
 - [x] 2026-02-13 — governance: RADR ASR sync confirmed for Z.RUNTIME T1/T2/T3 closure (`11cffa8`).
+
+- [x] 2026-02-13 — governance: `Z.RUNTIME.START` decision record published (`Z_RUNTIME_START_DECISION_RECORD.md`) with `approved` outcome (governance-only).
+
+- [x] 2026-02-13 — governance: RADR ASR sync confirmed for Z.RUNTIME start decision (`a04b47a`).

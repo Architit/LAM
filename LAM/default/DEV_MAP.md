@@ -1,6 +1,6 @@
 # DEV_MAP (Mirror)
 
-Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 05:51 UTC.
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 05:53 UTC.
 Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
 
 Scope marker:
@@ -58,3 +58,4 @@ R5 publication note:
 - Gov subtree coverage (maps/protocols/logs) published in root: `GOV_SUBTREE_COVERAGE_CONTRACT.md`; RADR ASR sync confirmed (`243e50b`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md`).
 - Z.RUNTIME.PREP package (risk/ops/start gate) published and closed in root; RADR ASR sync confirmed (`33cc47f`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-prep-risk-ops-sync.md`).
 - Z.RUNTIME.T1/T2/T3 package published and closed in root; RADR ASR sync confirmed (`11cffa8`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-t1t2t3-sync.md`).
+- Z.RUNTIME.START decision record published in root (`Z_RUNTIME_START_DECISION_RECORD.md` => approved); RADR ASR sync confirmed (`a04b47a`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-start-decision-sync.md`).

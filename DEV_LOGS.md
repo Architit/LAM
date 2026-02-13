@@ -128,3 +128,5 @@ normalized.
 2026-02-13 05:51 UTC — Governance: user-gated runtime-facing package `+++` executed — published `Z_RUNTIME_T1_TASK_WAVE_CANDIDATE_CONTRACT.md`, `Z_RUNTIME_T2_PREFLIGHT_VALIDATION_CONTRACT.md`, `Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md`.
 2026-02-13 05:51 UTC — Governance: Z.RUNTIME T1/T2/T3 boundaries fixed (candidate scope, preflight hold/reject, start decision record) with governance-only constraints preserved.
 2026-02-13 05:51 UTC — Governance: RADR ASR sync confirmed for Z.RUNTIME T1/T2/T3 package (`11cffa8`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-t1t2t3-sync.md`).
+2026-02-13 05:53 UTC — Governance: Z.RUNTIME.START decision recorded as `approved` in `Z_RUNTIME_START_DECISION_RECORD.md` (based on explicit user gate `+` and T2 preflight PASS).
+2026-02-13 05:53 UTC — Governance: RADR ASR sync confirmed for Z.RUNTIME start decision (`a04b47a`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-start-decision-sync.md`).

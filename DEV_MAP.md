@@ -1,6 +1,6 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 05:51 UTC)
+## Execution Status (2026-02-13 05:53 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
@@ -52,6 +52,8 @@ Non-goals:
 - Z.RUNTIME.T2 preflight validation contract published (`Z_RUNTIME_T2_PREFLIGHT_VALIDATION_CONTRACT.md`).
 - Z.RUNTIME.T3 start decision record contract published (`Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md`).
 - RADR ASR sync for Z.RUNTIME T1/T2/T3 closure is confirmed (`11cffa8`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-t1t2t3-sync.md`).
+- Z.RUNTIME.START decision record is published with `approved` outcome (`Z_RUNTIME_START_DECISION_RECORD.md`).
+- RADR ASR sync for Z.RUNTIME START decision is confirmed (`a04b47a`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-start-decision-sync.md`).
 
 ## Work Program (Current)
 
@@ -178,7 +180,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: user-gated `Z.RUNTIME.START` decision using T2 preflight evidence and T3 decision record format.
+- Next target: user-gated activation of first runtime-facing execution package (execution-path changes require separate explicit approval).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -406,6 +408,11 @@ Z.RUNTIME.T package:
 - SoT ASR continuity session recorded: `/home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-t1t2t3-sync.md` (`11cffa8`).
 - Runtime impact: none (contracts-only, derivation-only).
 
+### Z.RUNTIME.START) Start Decision Record (CLOSED, governance-only)
+- Decision record published: `Z_RUNTIME_START_DECISION_RECORD.md`.
+- Decision outcome: `approved` (governance-only approval record; no runtime changes applied).
+- SoT ASR continuity session recorded: `/home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-start-decision-sync.md` (`a04b47a`).
+
 ## Gate Criteria
 - G1: Root and mirror docs are synchronized.
 - G2: Snapshot state reflects true git status and phase scope.
@@ -465,10 +472,12 @@ Z.RUNTIME.T package:
 - Z_RUNTIME_T1_TASK_WAVE_CANDIDATE_CONTRACT.md
 - Z_RUNTIME_T2_PREFLIGHT_VALIDATION_CONTRACT.md
 - Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md
+- Z_RUNTIME_START_DECISION_RECORD.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-prep-risk-ops-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-t1t2t3-sync.md
+- /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-start-decision-sync.md
 - INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md

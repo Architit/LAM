@@ -3,11 +3,11 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T05:51:04Z
+timestamp: 2026-02-13T05:53:54Z
 
 ## Current pointer
 phase: Phase Z - Agent SDK Integrations v0
-stage: runtime t1/t2/t3 contracts closure (governance-only)
+stage: runtime start decision closure (governance-only)
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
@@ -18,7 +18,8 @@ goal:
 - preserve gov subtree coverage closure for maps/protocols/logs
 - preserve closed Z.RUNTIME.PREP package (`risk/ops/start-gate`)
 - preserve closed Z.RUNTIME.T package (`candidate/preflight/start-record`)
-- keep deterministic stop-point before user-gated runtime start decision
+- preserve closed Z.RUNTIME.START decision record (`approved`, governance-only)
+- keep deterministic stop-point before explicit runtime execution package approval
 constraints:
 - contracts-first
 - observability-first
@@ -37,7 +38,8 @@ constraints:
 - Gov subtree coverage is closed: facts-only PASS matrix recorded in `GOV_SUBTREE_COVERAGE_CONTRACT.md`; ASR sync (`243e50b`).
 - Z.RUNTIME.PREP package is closed: risk boundary + ops preflight + start gate recommendation fixed; ASR sync (`33cc47f`).
 - Z.RUNTIME.T package is closed: candidate + preflight + start decision record templates fixed; ASR sync (`11cffa8`).
-- Next target: user-gated `Z.RUNTIME.START` decision (approve/hold/reject) using T2 evidence and T3 record format.
+- Z.RUNTIME.START decision record is closed: `approved` in `Z_RUNTIME_START_DECISION_RECORD.md`; ASR sync (`a04b47a`).
+- Next target: user-gated approval of first runtime execution package (execution-path changes).
 
 ## Recent commits
 - 375d4a0 governance(protocol): align update record rules and sync ASR reference
@@ -65,6 +67,7 @@ constraints:
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-prep-risk-ops-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-t1t2t3-sync.md
+- /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-start-decision-sync.md
 - ROADMAP.md
 - DEV_LOGS.md
 - DEV_MAP.md
@@ -75,6 +78,7 @@ constraints:
 - Z_RUNTIME_T1_TASK_WAVE_CANDIDATE_CONTRACT.md
 - Z_RUNTIME_T2_PREFLIGHT_VALIDATION_CONTRACT.md
 - Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md
+- Z_RUNTIME_START_DECISION_RECORD.md
 - Z_POST_SELECTION_GATE_CONTRACT.md
 - Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md
 - Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md
