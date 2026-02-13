@@ -158,7 +158,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 5 — Memory & Knowledge Layer (1–2 месяца)
-> **Статус:** RUNTIME-GATE-DECISION ACTIVE (governance-only) (2026-02-13) — `P5.EXEC` закрыт, открыт decision-пакет `P5.RG1-RG3`.
+> **Статус:** RUNTIME-GATE-DECISION CLOSED (governance-only) (2026-02-13) — decision-пакет `P5.RG1-RG3` завершён, ожидается выбор первой runtime-facing задачи.
 
 ### Цель
 Система “живёт”, копит опыт, извлекает знания и не забывает важное.
@@ -175,7 +175,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Открыть runtime-facing gate decision контракт (governance-only): `P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md`
 - [x] P5.RG1: Runtime-facing eligibility matrix (`P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md`)
 - [x] P5.RG2: Hold/reject decision policy (`P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md`)
-- [ ] P5.RG3: Start-approval evidence record
+- [x] P5.RG3: Start-approval evidence record (`P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md`)
 
 ---
 
@@ -342,3 +342,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P5.RG1 eligibility matrix contract published (`P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md`); next target moved to P5.RG2 hold/reject policy draft
 
 - [x] 2026-02-13 — governance: P5.RG2 hold/reject policy contract published (`P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md`); next target moved to P5.RG3 start-approval evidence record draft
+
+- [x] 2026-02-13 — governance: P5.RG3 start-approval evidence contract published (`P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md`); runtime-facing gate decision wave (`RG1/RG2/RG3`) marked complete

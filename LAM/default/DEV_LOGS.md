@@ -80,3 +80,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - Runtime-facing gate decision package activated (governance-only); `P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md` published and queue `P5.RG1/P5.RG2/P5.RG3` fixed.
 - P5.RG1 completed (governance-only); `P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md` published and next target moved to P5.RG2 hold/reject policy draft.
 - P5.RG2 completed (governance-only); `P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md` published and next target moved to P5.RG3 start-approval evidence record draft.
+- P5.RG3 completed (governance-only); `P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md` published and runtime-facing gate decision wave marked complete.

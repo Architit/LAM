@@ -5,7 +5,7 @@
 - Repository: LAM
 - Branch: phase2/observability
 - Protocol scale: 0 (governance/sync)
-- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep finalized; Phase 5 execution gate finalized; Phase 5 runtime-facing gate decision ACTIVE (governance-only)
+- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep finalized; Phase 5 execution gate finalized; Phase 5 runtime-facing gate decision finalized (governance-only)
 
 ## Synchronization Source (SoT)
 - Upstream SoT repo: /home/architit/work/RADRILONIUMA-PROJECT
@@ -31,7 +31,7 @@ Non-goals:
 - P5 prep governance wave is closed (`T1/T2/T3` all DONE).
 - P5 execution gate package is closed (`P5.G1/P5.G2/P5.G3` all DONE, governance-only).
 - RADR ASR sync for P5 execution-gate closure is confirmed (`e86650d`, `gov-radr-asr-phase5b-lam-p5-exec-gate-closure-v1.0.0`).
-- P5 runtime-facing gate decision package is activated (`P5.RG1/P5.RG2/P5.RG3` queued, governance-only).
+- P5 runtime-facing gate decision package is closed (`P5.RG1/P5.RG2/P5.RG3` all DONE, governance-only).
 
 ## Work Program (Current)
 
@@ -158,7 +158,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P5.RG3 start-approval evidence record draft (governance-only).
+- Next target: post-runtime-facing gate decision selection (sync/push + first runtime-facing task decision).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -293,12 +293,13 @@ P5.EXEC package:
 ### P5.RG) Runtime-Facing Gate Decision Package (ACTIVE, governance-only)
 P5.RG1 Runtime-facing eligibility matrix. (DONE)
 P5.RG2 Hold/reject decision policy. (DONE)
-P5.RG3 Start-approval evidence record.
+P5.RG3 Start-approval evidence record. (DONE)
 
 P5.RG package:
 - Contract published: `P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md`.
 - P5.RG1 contract published: `P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md`.
 - P5.RG2 contract published: `P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md`.
+- P5.RG3 contract published: `P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md`.
 - Runtime impact: none (contracts-only, derivation-only).
 
 ## Gate Criteria
@@ -333,6 +334,7 @@ P5.RG package:
 - P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md
 - P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md
 - P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md
+- P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md
