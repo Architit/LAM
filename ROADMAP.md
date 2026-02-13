@@ -239,6 +239,9 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Z.RUNTIME.PREP: стартовый runtime-facing gate package (`Z_RUNTIME_PREP_GATE_CONTRACT.md`)
 - [x] Z.RUNTIME.RISK: runtime-facing risk boundary register (`Z_RUNTIME_RISK_BOUNDARY_REGISTER_CONTRACT.md`)
 - [x] Z.RUNTIME.OPS: runtime-facing ops preflight checklist (`Z_RUNTIME_OPS_PREFLIGHT_CHECKLIST_CONTRACT.md`)
+- [x] Z.RUNTIME.T1: task wave candidate contract (`Z_RUNTIME_T1_TASK_WAVE_CANDIDATE_CONTRACT.md`)
+- [x] Z.RUNTIME.T2: preflight validation contract (`Z_RUNTIME_T2_PREFLIGHT_VALIDATION_CONTRACT.md`)
+- [x] Z.RUNTIME.T3: start decision record contract (`Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md`)
 
 ### Phase 4 Review Findings (pre-4.3)
 - [ ] R1: Spec drift — derivation mentions non-existent fields:
@@ -418,3 +421,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: `Z.RUNTIME.PREP` package closed in one cycle (`Z_RUNTIME_PREP_GATE_CONTRACT.md`, `Z_RUNTIME_RISK_BOUNDARY_REGISTER_CONTRACT.md`, `Z_RUNTIME_OPS_PREFLIGHT_CHECKLIST_CONTRACT.md`).
 
 - [x] 2026-02-13 — governance: RADR ASR sync confirmed for Z.RUNTIME prep/risk/ops closure (`33cc47f`).
+
+- [x] 2026-02-13 — governance: `Z.RUNTIME.T1/T2/T3` package published (`Z_RUNTIME_T1_TASK_WAVE_CANDIDATE_CONTRACT.md`, `Z_RUNTIME_T2_PREFLIGHT_VALIDATION_CONTRACT.md`, `Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md`).
+
+- [x] 2026-02-13 — governance: RADR ASR sync confirmed for Z.RUNTIME T1/T2/T3 closure (`11cffa8`).

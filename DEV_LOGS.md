@@ -125,3 +125,6 @@ normalized.
 2026-02-13 05:47 UTC — Governance: user-gated bundle `1+2+3+` executed as `Z.RUNTIME.PREP` closure cycle — published `Z_RUNTIME_PREP_GATE_CONTRACT.md`, `Z_RUNTIME_RISK_BOUNDARY_REGISTER_CONTRACT.md`, `Z_RUNTIME_OPS_PREFLIGHT_CHECKLIST_CONTRACT.md`.
 2026-02-13 05:47 UTC — Governance: Z.RUNTIME.RISK and Z.RUNTIME.OPS boundaries fixed (facts-only, no runtime logic, no execution-path impact); start recommendation remains explicitly user-gated.
 2026-02-13 05:47 UTC — Governance: RADR ASR sync confirmed for Z.RUNTIME prep/risk/ops closure (`33cc47f`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-prep-risk-ops-sync.md`).
+2026-02-13 05:51 UTC — Governance: user-gated runtime-facing package `+++` executed — published `Z_RUNTIME_T1_TASK_WAVE_CANDIDATE_CONTRACT.md`, `Z_RUNTIME_T2_PREFLIGHT_VALIDATION_CONTRACT.md`, `Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md`.
+2026-02-13 05:51 UTC — Governance: Z.RUNTIME T1/T2/T3 boundaries fixed (candidate scope, preflight hold/reject, start decision record) with governance-only constraints preserved.
+2026-02-13 05:51 UTC — Governance: RADR ASR sync confirmed for Z.RUNTIME T1/T2/T3 package (`11cffa8`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-t1t2t3-sync.md`).

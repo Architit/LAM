@@ -104,3 +104,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - Z.POST package executed and closed in-order (`Z_POST_SELECTION_GATE_CONTRACT.md`, `Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md`, `Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md`); RADR ASR continuity sync recorded (`a5c5dd5`).
 - Gov subtree coverage (maps/protocols/logs) published in root (`GOV_SUBTREE_COVERAGE_CONTRACT.md`), facts-only PASS; RADR ASR sync recorded (`243e50b`).
 - Z.RUNTIME.PREP bundle (`1+2+3+`) closed in root (`Z_RUNTIME_PREP_GATE_CONTRACT.md`, `Z_RUNTIME_RISK_BOUNDARY_REGISTER_CONTRACT.md`, `Z_RUNTIME_OPS_PREFLIGHT_CHECKLIST_CONTRACT.md`); RADR ASR sync recorded (`33cc47f`).
+- Z.RUNTIME.T1/T2/T3 package closed in root (`Z_RUNTIME_T1_TASK_WAVE_CANDIDATE_CONTRACT.md`, `Z_RUNTIME_T2_PREFLIGHT_VALIDATION_CONTRACT.md`, `Z_RUNTIME_T3_START_DECISION_RECORD_CONTRACT.md`); RADR ASR sync recorded (`11cffa8`).
