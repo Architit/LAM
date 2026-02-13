@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T02:13:05Z
+timestamp: 2026-02-13T02:14:43Z
 
 ## Current pointer
 phase: Phase 3 - Automation
@@ -70,6 +70,8 @@ constraints:
 - Next target: protocol task selection after P3.3 hardening.
 
 ## Recent commits
+- 6588e13 governance(dev-map): record RADR post-review sync for P3.2/P3.3
+- 605c264 governance(p3.3): harden mandatory update-order protocol
 - f115586 governance(p3.2): unify test entrypoint and smoke profile contract
 - 8a25ed0 governance(mirror): remove stale P3.1 blocked note in default roadmap
 - 0a8d8c4 governance(p3.1): resolve gate blocker and mark validation done
