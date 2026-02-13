@@ -1,6 +1,6 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 03:00 UTC)
+## Execution Status (2026-02-13 03:14 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
@@ -153,7 +153,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P4 follow-up wave F3 (policy-v3 config contract draft).
+- Next target: P4 follow-up wave F4 (provider metrics contract draft).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -244,6 +244,11 @@ P4 follow-up F2 (governance-only):
 - Quality profile mapping and evidence boundaries fixed for governance traces.
 - Runtime impact: none (contract-only step).
 
+P4 follow-up F3 (governance-only):
+- Contract published: `P4_FOLLOWUP_F3_POLICY_V3_CONFIG_CONTRACT.md`.
+- Policy-v3 schema outline and v2->v3 governance migration boundaries fixed.
+- Runtime impact: none (contract-only step).
+
 Deliverable: controlled start of Router Core execution with explicit gates and evidence loop.
 
 ## Gate Criteria
@@ -265,6 +270,7 @@ Deliverable: controlled start of Router Core execution with explicit gates and e
 - P4_FOLLOWUP_BACKLOG_CONTRACT.md
 - P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md
 - P4_FOLLOWUP_F2_QUALITY_AWARE_CONTRACT.md
+- P4_FOLLOWUP_F3_POLICY_V3_CONFIG_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md

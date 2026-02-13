@@ -1,6 +1,6 @@
 # ROADMAP
 
-Synced with root `ROADMAP.md` on 2026-02-13 03:00 UTC.
+Synced with root `ROADMAP.md` on 2026-02-13 03:14 UTC.
 Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
 ## Phase 2 — Observability
@@ -44,3 +44,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - P4 follow-up backlog contract published in root roadmap/maps; next target is F1 cost-aware contract wave.
 - F1 cost-aware contract draft completed in root roadmap/maps; next target is F2 quality-aware contract wave.
 - F2 quality-aware contract draft completed in root roadmap/maps; next target is F3 policy-v3 contract wave.
+- F3 policy-v3 config contract draft completed in root roadmap/maps; next target is F4 provider metrics contract wave.

@@ -1,6 +1,6 @@
 # DEV_LOGS
 
-Synced with root `DEV_LOGS.md` on 2026-02-13 03:00 UTC.
+Synced with root `DEV_LOGS.md` on 2026-02-13 03:14 UTC.
 Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 
 ## 2026-02-10
@@ -65,3 +65,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P4 follow-up backlog contract published (`P4_FOLLOWUP_BACKLOG_CONTRACT.md`); next target moved to F1 cost-aware contract wave.
 - F1 cost-aware contract draft published (`P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`); next target moved to F2 quality-aware contract wave.
 - F2 quality-aware contract draft published (`P4_FOLLOWUP_F2_QUALITY_AWARE_CONTRACT.md`); next target moved to F3 policy-v3 contract wave.
+- F3 policy-v3 config contract draft published (`P4_FOLLOWUP_F3_POLICY_V3_CONFIG_CONTRACT.md`); next target moved to F4 provider metrics contract wave.
