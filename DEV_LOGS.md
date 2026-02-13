@@ -79,3 +79,4 @@ Operational note: avoid command substitution in heredoc payloads with backticks;
 2026-02-13 02:58 UTC — Governance: ASR sync confirmed in RADRILONIUMA-PROJECT (`0a5a8e6`, `gov-radr-asr-phase5b-lam-followup-f1-v1.0.0`); session `gov/asr/sessions/2026-02-13__ASR__phase5b-lam-followup-f1-closure.md`.
 2026-02-13 03:00 UTC — Governance: F2 quality-aware contract draft published (`P4_FOLLOWUP_F2_QUALITY_AWARE_CONTRACT.md`); next target moved to F3 policy-v3 config contract draft.
 2026-02-13 03:14 UTC — Governance: F3 policy-v3 config contract draft published (`P4_FOLLOWUP_F3_POLICY_V3_CONFIG_CONTRACT.md`); next target moved to F4 provider metrics contract draft.
+2026-02-13 03:18 UTC — Governance: F4 provider metrics contract draft published (`P4_FOLLOWUP_F4_PROVIDER_METRICS_CONTRACT.md`); follow-up wave F1-F4 marked complete.

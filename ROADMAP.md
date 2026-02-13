@@ -152,7 +152,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Cost-aware routing contract draft (governance-only): `P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`
 - [x] Quality-aware routing contract draft (governance-only): `P4_FOLLOWUP_F2_QUALITY_AWARE_CONTRACT.md`
 - [x] Policy v3 config contract draft (governance-only): `P4_FOLLOWUP_F3_POLICY_V3_CONFIG_CONTRACT.md`
-- [ ] Метрики по провайдерам (успех/ошибки/латентность/токены)
+- [x] Provider metrics contract draft (governance-only): `P4_FOLLOWUP_F4_PROVIDER_METRICS_CONTRACT.md`
 - [x] Follow-up backlog contract published: `P4_FOLLOWUP_BACKLOG_CONTRACT.md` (F1-F4 wave plan, governance-only)
 
 ---
@@ -300,3 +300,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 (`0a5a8e6`, `gov-radr-asr-phase5b-lam-followup-f1-v1.0.0`).
 
 - [x] 2026-02-13 — governance: F3 policy-v3 config contract draft published (`P4_FOLLOWUP_F3_POLICY_V3_CONFIG_CONTRACT.md`), next target moved to F4 provider metrics contract wave
+
+- [x] 2026-02-13 — governance: F4 provider metrics contract draft published (`P4_FOLLOWUP_F4_PROVIDER_METRICS_CONTRACT.md`), follow-up wave F1-F4 marked complete
