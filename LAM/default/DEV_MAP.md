@@ -1,6 +1,6 @@
 # DEV_MAP (Mirror)
 
-Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 01:07 UTC.
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 01:12 UTC.
 Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
 
 Scope marker:
@@ -33,3 +33,4 @@ R5 publication note:
 - Host role contract fixed: builder online vendoring, runner offline install via `--no-index --find-links`.
 - R6.1 host-split retry succeeded for first 3 repos.
 - R6.2 host-split retry succeeded for next 3 repos; runtime summary now DONE=7, PENDING=8.
+- R6.3 host-split retry succeeded for next 3 repos; runtime summary now DONE=10, PENDING=5.

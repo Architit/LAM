@@ -84,7 +84,7 @@ Definition:
 - `runtime_proof = DONE` only if repo has explicit observability/runtime verification evidence (tests/logs) accepted in governance docs.
 - `runtime_proof = PENDING` until such evidence exists.
 
-Runtime proof matrix (2026-02-13 01:07 UTC):
+Runtime proof matrix (2026-02-13 01:12 UTC):
 
 | Repo | governance_done | runtime_proof | Notes |
 |---|---|---|---|
@@ -96,17 +96,17 @@ Runtime proof matrix (2026-02-13 01:07 UTC):
 | Archivator_Agent | DONE | DONE | R6.2 host-split retry passed (`2026-02-13T01:06:56Z`, rev `3dfda79`, exit_code=0) |
 | CORE | DONE | DONE | R6.2 host-split retry passed (`2026-02-13T01:07:03Z`, rev `8dbed52`, exit_code=0) |
 | J.A.R.V.I.S | DONE | DONE | R6.2 host-split retry passed (`2026-02-13T01:07:11Z`, rev `254804e`, exit_code=0) |
-| LAM_DATA_Src | DONE | PENDING | R3 attempt executed; no runtime/observability tests discovered |
-| LAM_Test_Agent | DONE | PENDING | R3 attempt executed; no runtime/observability tests discovered |
-| Operator_Agent | DONE | PENDING | R3 attempt executed; no runtime/observability tests discovered |
+| LAM_DATA_Src | DONE | DONE | R6.3 host-split retry passed (`2026-02-13T01:12:23Z`, rev `667b10b`, exit_code=0) |
+| LAM_Test_Agent | DONE | DONE | R6.3 host-split retry passed (`2026-02-13T01:12:31Z`, rev `b02ad7b`, exit_code=0) |
+| Operator_Agent | DONE | DONE | R6.3 host-split retry passed (`2026-02-13T01:12:38Z`, rev `7bc96ed`, exit_code=0) |
 | System- | DONE | PENDING | R4 attempt executed; no runtime/observability tests discovered |
 | TRIANIUMA_DATA_BASE | DONE | PENDING | R4 attempt executed; no runtime/observability tests discovered |
 | Trianiuma | DONE | PENDING | R4 attempt executed; no runtime/observability tests discovered |
 | Trianiuma_MEM_CORE | DONE | PENDING | R4 attempt executed; no runtime/observability tests discovered |
 
 Runtime summary:
-- DONE: 7
-- PENDING: 8
+- DONE: 10
+- PENDING: 5
 
 Wave-runtime start set:
 - Wave R1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
@@ -145,7 +145,8 @@ Wave-runtime start set:
   - Runner host: internet denied; installs must be `--no-index --find-links`
 - Wave R6.1 host-split retry result: status promotion for 3 repos (DONE=4, PENDING=11); all smoke runs passed with exit_code=0 using offline wheelhouse.
 - Wave R6.2 result: status promotion for 3 repos (DONE=7, PENDING=8); all smoke runs passed with exit_code=0 using offline wheelhouse.
-- Next target: Wave R6.3 execution for next 3 pending repos (LAM_DATA_Src, LAM_Test_Agent, Operator_Agent).
+- Wave R6.3 result: status promotion for 3 repos (DONE=10, PENDING=5); all smoke runs passed with exit_code=0 using offline wheelhouse.
+- Next target: Wave R6.4 execution for next 3 pending repos (System-, TRIANIUMA_DATA_BASE, Trianiuma).
 
 Deliverable: deterministic runtime closure proof matrix.
 

@@ -239,3 +239,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P2.4 wave R6.1 host-split retry succeeded for first 3 repos (DONE=4, PENDING=11)
 
 - [x] 2026-02-13 — governance: P2.4 wave R6.2 host-split retry succeeded for next 3 repos (DONE=7, PENDING=8)
+
+- [x] 2026-02-13 — governance: P2.4 wave R6.3 host-split retry succeeded for next 3 repos (DONE=10, PENDING=5)
