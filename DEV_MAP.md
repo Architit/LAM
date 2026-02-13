@@ -84,15 +84,15 @@ Definition:
 - `runtime_proof = DONE` only if repo has explicit observability/runtime verification evidence (tests/logs) accepted in governance docs.
 - `runtime_proof = PENDING` until such evidence exists.
 
-Runtime proof matrix (2026-02-13 00:36 UTC):
+Runtime proof matrix (2026-02-13 01:01 UTC):
 
 | Repo | governance_done | runtime_proof | Notes |
 |---|---|---|---|
 | LAM | DONE | DONE | local runtime observability proof exists (5/5) |
 | RADRILONIUMA-PROJECT | DONE | PENDING | governance SoT; no repo runtime closure claim required for others |
-| Roaudter-agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `lam-wheelhouse-py312.tgz` (wheelhouse not unpacked) |
-| LAM-Codex_Agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `lam-wheelhouse-py312.tgz` (wheelhouse not unpacked) |
-| LAM_Comunication_Agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `lam-wheelhouse-py312.tgz` (wheelhouse not unpacked) |
+| Roaudter-agent | DONE | DONE | R6.1 host-split retry passed (`2026-02-13T01:00:48Z`, rev `bd16495`, exit_code=0) |
+| LAM-Codex_Agent | DONE | DONE | R6.1 host-split retry passed (`2026-02-13T01:00:54Z`, rev `3e15737`, exit_code=0) |
+| LAM_Comunication_Agent | DONE | DONE | R6.1 host-split retry passed (`2026-02-13T01:01:00Z`, rev `c3a7285`, exit_code=0) |
 | Archivator_Agent | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
 | CORE | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
 | J.A.R.V.I.S | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
@@ -105,8 +105,8 @@ Runtime proof matrix (2026-02-13 00:36 UTC):
 | Trianiuma_MEM_CORE | DONE | PENDING | R4 attempt executed; no runtime/observability tests discovered |
 
 Runtime summary:
-- DONE: 1
-- PENDING: 14
+- DONE: 4
+- PENDING: 11
 
 Wave-runtime start set:
 - Wave R1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
@@ -143,8 +143,8 @@ Wave-runtime start set:
 - Host role contract fixed in runtime-proof contracts:
   - Builder host: internet allowed for dependency vendoring (wheelhouse)
   - Runner host: internet denied; installs must be `--no-index --find-links`
-- Wave R6.1 retry result: no status promotion (DONE=1, PENDING=14); common blocker `wheelhouse-artifact-missing` (`/home/architit/work/lam-wheelhouse-py312.tgz`) in all 3 repos.
-- Next target: deliver wheelhouse archive, unpack to `lam-wheelhouse/`, then rerun R6.1 retry.
+- Wave R6.1 host-split retry result: status promotion for 3 repos (DONE=4, PENDING=11); all smoke runs passed with exit_code=0 using offline wheelhouse.
+- Next target: Wave R6.2 execution for next 3 pending repos (Archivator_Agent, CORE, J.A.R.V.I.S) using same host-split wheelhouse flow.
 
 Deliverable: deterministic runtime closure proof matrix.
 

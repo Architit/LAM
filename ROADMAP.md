@@ -235,3 +235,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: R6.1 retry blocker root-cause recorded (`lam-wheelhouse-py312.tgz` missing before unpack/distribution)
 
 - [x] 2026-02-13 — governance: runtime-proof host-role contract fixed (builder online vendoring / runner offline `--no-index --find-links`)
+
+- [x] 2026-02-13 — governance: P2.4 wave R6.1 host-split retry succeeded for first 3 repos (DONE=4, PENDING=11)
