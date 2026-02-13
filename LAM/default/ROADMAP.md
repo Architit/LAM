@@ -46,3 +46,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - F2 quality-aware contract draft completed in root roadmap/maps; next target is F3 policy-v3 contract wave.
 - F3 policy-v3 config contract draft completed in root roadmap/maps; next target is F4 provider metrics contract wave.
 - F4 provider metrics contract draft completed in root roadmap/maps; follow-up wave F1-F4 marked complete.
+- Snapshot consistency refresh completed in root governance state; `WORKFLOW_SNAPSHOT_STATE.md` now reflects clean sync with origin.

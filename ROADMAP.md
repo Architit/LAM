@@ -305,3 +305,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 
 - [x] 2026-02-13 — governance: RADR ASR filename/index fix acknowledged
 (`2577b50`, `0b863e9`).
+
+- [x] 2026-02-13 — governance: snapshot consistency refresh after follow-up closure pushes; `WORKFLOW_SNAPSHOT_STATE.md` normalized to clean git state (`phase2/observability` in sync with origin)

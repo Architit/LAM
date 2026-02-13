@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T03:18:26Z
+timestamp: 2026-02-13T03:30:52Z
 
 ## Current pointer
 phase: Phase 4 - Router Core
@@ -23,15 +23,17 @@ constraints:
 
 ## Verification
 - Follow-up contracts published:
-  - `P4_FOLLOWUP_BACKLOG_CONTRACT.md`
-  - `P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`
-  - `P4_FOLLOWUP_F2_QUALITY_AWARE_CONTRACT.md`
-  - `P4_FOLLOWUP_F3_POLICY_V3_CONFIG_CONTRACT.md`
-  - `P4_FOLLOWUP_F4_PROVIDER_METRICS_CONTRACT.md`
+  - P4_FOLLOWUP_BACKLOG_CONTRACT.md
+  - P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md
+  - P4_FOLLOWUP_F2_QUALITY_AWARE_CONTRACT.md
+  - P4_FOLLOWUP_F3_POLICY_V3_CONFIG_CONTRACT.md
+  - P4_FOLLOWUP_F4_PROVIDER_METRICS_CONTRACT.md
 - Follow-up wave status: F1 DONE, F2 DONE, F3 DONE, F4 DONE.
 - Next target: post-follow-up task selection (sync/push + next phase gate).
 
 ## Recent commits
+- 2fde680 governance(dev-map): acknowledge RADR ASR filename/index fix
+- 202dc08 ssn rstrt(EXPORT): set stop-point after follow-up wave F1-F4 closure
 - 8ca6fc6 governance(p4.follow-up.f4): publish provider metrics contract draft
 - 9460445 governance(p4.follow-up.f3): publish policy-v3 config contract draft
 - cfeccf9 governance(p4.follow-up.f2): publish quality-aware contract draft
@@ -42,12 +44,14 @@ constraints:
 - 842dd84 governance(dev-map): sync RADR ASR record for LAM P4 closure
 - 0e52448 ssn rstrt(EXPORT): set stop-point after P4.1-P4.3 closure
 - 8a95e9e governance(p4.3): publish router operator evidence blocks
-- 19e82fe governance(p4.2): publish deterministic ci-smoke policy profile draft
-- de7ec83 governance(p4.1): record router-core inventory baseline
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 4]
- M NEW_CHAT_INIT_MESSAGE
+## phase2/observability...origin/phase2/observability
+ M DEV_LOGS.md
+ M LAM/default/DEV_LOGS.md
+ M LAM/default/ROADMAP.md
+ M ROADMAP.md
+ M WORKFLOW_SNAPSHOT_STATE.md
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -65,11 +69,11 @@ constraints:
 ## New Chat Init
 ssn rstrt
 IMPORT:
-1) Read `WORKFLOW_SNAPSHOT_STATE.md`.
+1) Read WORKFLOW_SNAPSHOT_STATE.md.
 2) Run read-only sync:
-   - `pwd`
-   - `git status -sb`
-   - `git log -n 12 --oneline`
+   - pwd
+   - git status -sb
+   - git log -n 12 --oneline
 3) Continue from declared pointer:
    - phase: Phase 4 - Router Core
    - stage: stop-point after follow-up wave F1-F4 closure

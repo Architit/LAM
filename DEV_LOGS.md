@@ -83,3 +83,4 @@ Operational note: avoid command substitution in heredoc payloads with backticks;
 2026-02-13 03:22 UTC — Governance: RADR ASR filename/index fix confirmed
 (`2577b50`, `0b863e9`) for follow-up F1/F1F4 sessions; SoT session paths
 normalized.
+2026-02-13 03:29 UTC — Governance: snapshot consistency refresh after push (`phase2/observability` in sync with origin); `WORKFLOW_SNAPSHOT_STATE.md` git-status section normalized to clean state.
