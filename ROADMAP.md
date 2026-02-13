@@ -182,7 +182,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] P5.RT3: Runtime-facing start decision record (`P5_RT3_RUNTIME_START_DECISION_RECORD_CONTRACT.md`)
 - [x] Открыть post-runtime-task пакет (governance-only): `P5_POST_RUNTIME_TASK_WAVE_CONTRACT.md`
 - [x] P5.POST1: Runtime-facing evidence consolidation (`P5_POST1_RUNTIME_EVIDENCE_CONSOLIDATION_CONTRACT.md`)
-- [ ] P5.POST2: Runtime-facing boundary confirmation
+- [x] P5.POST2: Runtime-facing boundary confirmation (`P5_POST2_RUNTIME_BOUNDARY_CONFIRMATION_CONTRACT.md`)
 - [ ] P5.POST3: Next package start recommendation
 
 ---
@@ -368,3 +368,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: autopilot confirmation gate hardened in protocol/template (`INTERACTION_PROTOCOL.md`, `INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`); next-task start requires explicit numbered user selection
 
 - [x] 2026-02-13 — governance: P5.POST1 runtime evidence consolidation contract published (`P5_POST1_RUNTIME_EVIDENCE_CONSOLIDATION_CONTRACT.md`); next target moved to P5.POST2 boundary confirmation
+
+- [x] 2026-02-13 — governance: P5.POST2 runtime boundary confirmation contract published (`P5_POST2_RUNTIME_BOUNDARY_CONFIRMATION_CONTRACT.md`); next target moved to P5.POST3 start recommendation
