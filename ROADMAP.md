@@ -261,3 +261,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P3.2 unified test entrypoint completed (`devkit/check.sh` delegates to `scripts/test_entrypoint.sh`; profiles `ci/smoke/full`; CI uses `--profile ci`; local `ci+smoke` validation green)
 
 - [x] 2026-02-13 — governance: P3.3 update-order protocol hardening completed (`DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL -> WORKFLOW_SNAPSHOT_STATE` codified)
+
+- [x] 2026-02-13 — governance: post-review sync with RADRILONIUMA-PROJECT completed for LAM P3.2/P3.3 state (`df4eed8`, `gov-radr-phase5b-p33-sync-v1.0.0`)

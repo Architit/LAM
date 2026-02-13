@@ -36,3 +36,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - P3.1 blocker resolved; local CI payload gate run passed (`4 passed`), ready for P3.2.
 - P3.2 completed: unified test entrypoint with `ci/smoke/full` profiles; CI uses `--profile ci`; local `ci+smoke` validation green.
 - P3.3 completed: protocol hardening for governance update order (`DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL -> WORKFLOW_SNAPSHOT_STATE`).
+- Post-review sync with RADRILONIUMA-PROJECT completed for LAM P3.2/P3.3 state (`df4eed8`, `gov-radr-phase5b-p33-sync-v1.0.0`).
