@@ -22,6 +22,10 @@
 6. **Post-Task Review (mandatory):** Автоматически перечитать `DEV_MAP.md`, `ROADMAP.md`, `INTERACTION_PROTOCOL.md`, `DEV_LOGS.md` после завершения задачи и сверить статус/ограничения.
 7. **User Confirmation Gate (mandatory):** После post-task review выдать короткий список следующих задач и запросить подтверждение пользователя на старт выбранной задачи.
 
+Governance update order (mandatory):
+- `DEV_LOGS.md` -> `ROADMAP.md` -> `INTERACTION_PROTOCOL.md`
+- then refresh `WORKFLOW_SNAPSHOT_STATE.md`
+
 ---
 
 ## 2.1. Restart Signals (Session / Cold Restart)
@@ -129,6 +133,19 @@ Hard constraint: перед закрытием фазы рабочее дере�
 ## 5. Управление Проектом (Governance)
 
 **Ни один этап не считается завершенным без обновления документации.**
+
+### 5.0. Обязательный Порядок Обновлений (Hard Rule)
+
+После каждого завершенного action-блока документация обновляется строго в порядке:
+
+1. `DEV_LOGS.md` (факт выполнения/блокер/результат)
+2. `ROADMAP.md` (статус задачи и фазовый маркер)
+3. `INTERACTION_PROTOCOL.md` (если менялись правила/процедуры)
+4. `WORKFLOW_SNAPSHOT_STATE.md` (экспорт актуального состояния)
+
+Запрещено:
+- обновлять `ROADMAP.md` раньше `DEV_LOGS.md`;
+- фиксировать изменение протокола без записи в `DEV_LOGS.md` и `ROADMAP.md`.
 
 ### 5.1. ROADMAP.md
 

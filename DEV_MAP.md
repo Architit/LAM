@@ -153,14 +153,14 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: proceed to P3.3 governance update-order protocol hardening.
+- Next target: protocol task selection after P3.3 governance hardening.
 
 Deliverable: deterministic runtime closure proof matrix.
 
 ### P3) Next LAM Engineering Phase (After Sync Gate)
 P3.1 Phase 3 Automation baseline via devkit/check.sh in CI gate (DONE).
 P3.2 Unified test entrypoint and reproducible smoke profile (DONE).
-P3.3 Governance update order: DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL.
+P3.3 Governance update order: DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL (DONE).
 
 P3.1 deliverables (current):
 - `.github/workflows/ci.yml` runs local `./devkit/bootstrap.sh` + `./devkit/check.sh` gate.
@@ -174,6 +174,11 @@ P3.2 deliverables (current):
 - Operator blocks published: `P3_TEST_ENTRYPOINT_OPERATOR_BLOCKS.md`.
 - CI aligned to profile contract: `.github/workflows/ci.yml` uses `./devkit/check.sh --profile ci`.
 - Validation status: DONE (`--profile ci` and `--profile smoke` passed locally).
+
+P3.3 deliverables (current):
+- Mandatory governance update order codified in `INTERACTION_PROTOCOL.md`.
+- Rule enforced sequence: `DEV_LOGS.md -> ROADMAP.md -> INTERACTION_PROTOCOL.md -> WORKFLOW_SNAPSHOT_STATE.md`.
+- Post-task review/gate loop aligned with this order.
 
 Deliverable: transition-ready plan from governance sync to execution.
 

@@ -55,3 +55,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P3.1 validation blocker: local gate run failed in `tests/test_taskarid_comm_roaudter_trace.py`; status is ACTIVE/BLOCKED until gate returns green.
 - P3.1 blocker resolved: trace-roundtrip test stabilized; local CI payload gate run passed (`4 passed`), status DONE.
 - P3.2 completed: unified test entrypoint (`devkit/check.sh` -> `scripts/test_entrypoint.sh`) with profiles (`ci/smoke/full`); CI now uses `--profile ci`; local `ci+smoke` validation passed.
+- P3.3 completed: governance update order hardened in protocol (`DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL -> WORKFLOW_SNAPSHOT_STATE`).

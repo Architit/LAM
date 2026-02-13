@@ -259,3 +259,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — P3.1 blocker resolved: trace-roundtrip test stabilized; local `./devkit/check.sh` CI payload passed (`4 passed`), proceed to P3.2
 
 - [x] 2026-02-13 — governance: P3.2 unified test entrypoint completed (`devkit/check.sh` delegates to `scripts/test_entrypoint.sh`; profiles `ci/smoke/full`; CI uses `--profile ci`; local `ci+smoke` validation green)
+
+- [x] 2026-02-13 — governance: P3.3 update-order protocol hardening completed (`DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL -> WORKFLOW_SNAPSHOT_STATE` codified)

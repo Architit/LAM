@@ -1,6 +1,6 @@
 # ROADMAP
 
-Synced with root `ROADMAP.md` on 2026-02-13 02:02 UTC.
+Synced with root `ROADMAP.md` on 2026-02-13 02:06 UTC.
 Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
 ## Phase 2 — Observability
@@ -35,3 +35,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - P3.1 CI gate baseline activated in LAM (local devkit gate + policy/operator docs).
 - P3.1 blocker resolved; local CI payload gate run passed (`4 passed`), ready for P3.2.
 - P3.2 completed: unified test entrypoint with `ci/smoke/full` profiles; CI uses `--profile ci`; local `ci+smoke` validation green.
+- P3.3 completed: protocol hardening for governance update order (`DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL -> WORKFLOW_SNAPSHOT_STATE`).

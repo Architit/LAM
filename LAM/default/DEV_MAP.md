@@ -1,6 +1,6 @@
 # DEV_MAP (Mirror)
 
-Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 02:02 UTC.
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 02:06 UTC.
 Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
 
 Scope marker:
@@ -42,3 +42,4 @@ R5 publication note:
 - P3.1 activated: CI gate baseline uses local `devkit/bootstrap.sh` + `devkit/check.sh`; policy/operator docs published.
 - P3.1 validation now DONE: local CI payload check passed (`4 passed`); ready for P3.2.
 - P3.2 completed: unified entrypoint via `scripts/test_entrypoint.sh` with profiles (`ci/smoke/full`), CI aligned to `--profile ci`, local `ci+smoke` green.
+- P3.3 completed: update-order governance rule codified (`DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL -> WORKFLOW_SNAPSHOT_STATE`).
