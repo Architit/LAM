@@ -127,6 +127,19 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 4 — Router Core: Roaudter как мозг маршрутизации (3–4 недели)
+> **Статус:** ACTIVE (2026-02-13) — старт после закрытия P3.1/P3.2/P3.3 и публикации post-review sync.
+> **Гейт входа:** runtime-proof closure зафиксирован (`DONE=14, EXEMPT=1, PENDING=0`), противоречий с P2.4 нет.
+
+### P4 стартовый пакет (DoD)
+- [x] D1: Фаза 4 явно активирована в `DEV_MAP.md` и `ROADMAP.md`.
+- [x] D2: Зафиксирована стартовая очередь задач P4 (T1-T3).
+- [x] D3: Синхронизация root/default карт и snapshot выполняется в одном governance-цикле.
+
+### P4 стартовая очередь (T1-T3)
+- [ ] T1: Инвентаризация router-core entrypoints, provider-chain решений и health/fallback hooks.
+- [ ] T2: Черновик deterministic policy profile для `ci` и `smoke` parity.
+- [ ] T3: Governance-only operator block для P4.1 evidence capture (read-only + smoke refs).
+
 ### Уже есть ✅
 - strict provider selection (`openai!` без fallback)
 - unified usage/tokens
@@ -263,3 +276,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P3.3 update-order protocol hardening completed (`DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL -> WORKFLOW_SNAPSHOT_STATE` codified)
 
 - [x] 2026-02-13 — governance: post-review sync with RADRILONIUMA-PROJECT completed for LAM P3.2/P3.3 state (`df4eed8`, `gov-radr-phase5b-p33-sync-v1.0.0`)
+
+- [x] 2026-02-13 — governance: P4 activation package started in LAM (DEV_MAP/ROADMAP DoD + first-task queue fixed; Phase 4 marked ACTIVE)

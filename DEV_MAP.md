@@ -1,11 +1,11 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 01:45 UTC)
+## Execution Status (2026-02-13 02:22 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
 - Protocol scale: 0 (governance/sync)
-- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3.1 automation baseline ACTIVE
+- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core execution) ACTIVE
 
 ## Synchronization Source (SoT)
 - Upstream SoT repo: /home/architit/work/RADRILONIUMA-PROJECT
@@ -26,7 +26,7 @@ Non-goals:
 - Runtime recheck in LAM .venv passed: 5/5 observability tests.
 - Governance coverage matrix for 15 repos is complete.
 - Ecosystem runtime proof matrix is closed in LAM governance (`DONE=14, EXEMPT=1, PENDING=0`).
-- P3.1 CI gate baseline is activated with local DevKit scripts.
+- P3 automation hardening package is closed (`P3.1/P3.2/P3.3` all DONE).
 
 ## Work Program (Current)
 
@@ -153,7 +153,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: protocol task selection after P3.3 governance hardening.
+- Next target: P4.1 router-core baseline inventory and operator evidence block draft.
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -181,6 +181,24 @@ P3.3 deliverables (current):
 - Post-task review/gate loop aligned with this order.
 
 Deliverable: transition-ready plan from governance sync to execution.
+
+### P4) Router Core Execution Phase (ACTIVE)
+P4.1 Router-core baseline inventory and execution boundary mapping (ACTIVE).
+P4.2 Deterministic policy-profile hardening for `ci`/`smoke` parity (ACTIVE).
+P4.3 Operator-first evidence loop for router-core changes (ACTIVE).
+
+P4 DoD (phase activation):
+- D1: `DEV_MAP.md` and `ROADMAP.md` explicitly mark Phase 4 as ACTIVE.
+- D2: first P4 task queue is fixed and ordered (T1-T3).
+- D3: `WORKFLOW_SNAPSHOT_STATE.md` and default mirrors are synchronized in the same governance cycle.
+- D4: no contradiction with finalized runtime-proof closure (`DONE=14, EXEMPT=1, PENDING=0`).
+
+P4 first task queue:
+- T1: inventory router-core entrypoints, provider-chain decisions, health/fallback hooks.
+- T2: define deterministic policy profile draft for `ci` and `smoke` execution parity.
+- T3: publish governance-only operator block for P4.1 evidence capture (read-only + smoke references).
+
+Deliverable: controlled start of Router Core execution with explicit gates and evidence loop.
 
 ## Gate Criteria
 - G1: Root and mirror docs are synchronized.
