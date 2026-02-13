@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T04:20:10Z
+timestamp: 2026-02-13T04:23:44Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge
-stage: runtime-facing task wave planning activation (governance-only)
+stage: runtime-facing task candidate definition closure (governance-only)
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
 - preserve closed runtime-facing gate decision state
-- activate runtime-facing task wave planning package in governance-only mode
-- provide deterministic stop-point before P5.RT1 start
+- keep runtime task wave active in governance-only mode
+- close P5.RT1 and set deterministic stop-point before P5.RT2
 constraints:
 - contracts-first
 - observability-first
@@ -23,11 +23,12 @@ constraints:
 
 ## Verification
 - Runtime-facing gate decision wave remains closed: RG1 DONE, RG2 DONE, RG3 DONE.
-- P5.RT contract published: P5_RUNTIME_TASK_WAVE_CONTRACT.md
-- P5.RT queue fixed: RT1, RT2, RT3.
-- Next target: P5.RT1 runtime-facing task candidate definition (governance-only).
+- P5.RT wave remains active in governance-only mode.
+- P5.RT1 contract published: P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md
+- Next target: P5.RT2 runtime-facing preflight checklist (governance-only).
 
 ## Recent commits
+- 2569560 governance(snapshot): align runtime-task-wave snapshot with head
 - 18a8c5b governance(p5.rt): activate runtime task wave planning package
 - 257dacc governance(protocol): add interaction update template and align flow
 - 5ddd019 ssn rstrt(EXPORT): set stop-point after runtime-facing gate decision closure
@@ -39,7 +40,6 @@ constraints:
 - 621294a ssn rstrt(EXPORT): set stop-point after P5 execution-gate closure
 - 0e36e25 governance(snapshot): align P5 execution-gate closure snapshot with head
 - 76853dd governance(p5.g3): publish operator checklist contract draft
-- b6df697 governance(p5.g2): publish risk boundary register contract draft
 
 ## Git status
 ## phase2/observability...origin/phase2/observability [ahead 1]
@@ -51,6 +51,7 @@ constraints:
 - DEV_LOGS.md
 - DEV_MAP.md
 - P5_RUNTIME_TASK_WAVE_CONTRACT.md
+- P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md
 - P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md
 - P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md
 - P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md

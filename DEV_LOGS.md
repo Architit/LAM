@@ -99,3 +99,4 @@ normalized.
 2026-02-13 04:09 UTC — Governance: P5.RG3 completed (governance-only) — published `P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md`; start-approval evidence fields fixed; runtime-facing gate decision wave (`RG1/RG2/RG3`) marked complete; next target moved to post-gate task selection.
 2026-02-13 04:14 UTC — Governance: interaction protocol update template introduced (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and protocol updated to require template-backed protocol change records.
 2026-02-13 04:19 UTC — Governance: runtime-facing task wave planning activated (governance-only) — published `P5_RUNTIME_TASK_WAVE_CONTRACT.md`; fixed queue `P5.RT1/P5.RT2/P5.RT3`; next target set to `P5.RT1` candidate definition.
+2026-02-13 04:23 UTC — Governance: P5.RT1 completed (governance-only) — published `P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md`; candidate scope/record fields fixed; next target moved to `P5.RT2` preflight checklist.

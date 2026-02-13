@@ -83,3 +83,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P5.RG3 completed (governance-only); `P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md` published and runtime-facing gate decision wave marked complete.
 - Interaction protocol update template added (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and protocol flow aligned to template-backed updates.
 - Runtime-facing task wave planning package activated (governance-only); `P5_RUNTIME_TASK_WAVE_CONTRACT.md` published and queue `P5.RT1/P5.RT2/P5.RT3` fixed.
+- P5.RT1 completed (governance-only); `P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md` published and next target moved to `P5.RT2`.
