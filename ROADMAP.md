@@ -302,3 +302,6 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: F3 policy-v3 config contract draft published (`P4_FOLLOWUP_F3_POLICY_V3_CONFIG_CONTRACT.md`), next target moved to F4 provider metrics contract wave
 
 - [x] 2026-02-13 — governance: F4 provider metrics contract draft published (`P4_FOLLOWUP_F4_PROVIDER_METRICS_CONTRACT.md`), follow-up wave F1-F4 marked complete
+
+- [x] 2026-02-13 — governance: RADR ASR filename/index fix acknowledged
+(`2577b50`, `0b863e9`).
