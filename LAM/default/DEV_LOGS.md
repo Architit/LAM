@@ -81,3 +81,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P5.RG1 completed (governance-only); `P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md` published and next target moved to P5.RG2 hold/reject policy draft.
 - P5.RG2 completed (governance-only); `P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md` published and next target moved to P5.RG3 start-approval evidence record draft.
 - P5.RG3 completed (governance-only); `P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md` published and runtime-facing gate decision wave marked complete.
+- Interaction protocol update template added (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and protocol flow aligned to template-backed updates.

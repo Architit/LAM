@@ -344,3 +344,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P5.RG2 hold/reject policy contract published (`P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md`); next target moved to P5.RG3 start-approval evidence record draft
 
 - [x] 2026-02-13 — governance: P5.RG3 start-approval evidence contract published (`P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md`); runtime-facing gate decision wave (`RG1/RG2/RG3`) marked complete
+
+- [x] 2026-02-13 — governance: interaction protocol update template added (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`); protocol update flow aligned to template-backed records

@@ -32,6 +32,7 @@ Non-goals:
 - P5 execution gate package is closed (`P5.G1/P5.G2/P5.G3` all DONE, governance-only).
 - RADR ASR sync for P5 execution-gate closure is confirmed (`e86650d`, `gov-radr-asr-phase5b-lam-p5-exec-gate-closure-v1.0.0`).
 - P5 runtime-facing gate decision package is closed (`P5.RG1/P5.RG2/P5.RG3` all DONE, governance-only).
+- Protocol update template is active for procedure changes (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`).
 
 ## Work Program (Current)
 
@@ -335,6 +336,7 @@ P5.RG package:
 - P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md
 - P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md
 - P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md
+- INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md

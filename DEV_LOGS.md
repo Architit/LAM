@@ -97,3 +97,4 @@ normalized.
 2026-02-13 04:06 UTC — Governance: P5.RG1 completed (governance-only) — published `P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md`; eligibility matrix fixed; next target moved to `P5.RG2` hold/reject policy draft.
 2026-02-13 04:08 UTC — Governance: P5.RG2 completed (governance-only) — published `P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md`; hold/reject policy rules fixed; next target moved to `P5.RG3` start-approval evidence record draft.
 2026-02-13 04:09 UTC — Governance: P5.RG3 completed (governance-only) — published `P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md`; start-approval evidence fields fixed; runtime-facing gate decision wave (`RG1/RG2/RG3`) marked complete; next target moved to post-gate task selection.
+2026-02-13 04:14 UTC — Governance: interaction protocol update template introduced (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and protocol updated to require template-backed protocol change records.

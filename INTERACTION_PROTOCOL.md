@@ -25,6 +25,7 @@
 Governance update order (mandatory):
 - `DEV_LOGS.md` -> `ROADMAP.md` -> `INTERACTION_PROTOCOL.md`
 - then refresh `WORKFLOW_SNAPSHOT_STATE.md`
+- protocol updates SHOULD use `INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md` for deterministic change records
 
 ---
 
@@ -160,6 +161,14 @@ Hard constraint: перед закрытием фазы рабочее дере�
 
 * Записывать краткий итог сессии: "Реализовано X, обнаружен баг Y, исправлено".
 * Это позволяет быстро восстановить контекст при следующем запуске.
+
+### 5.3. INTERACTION_PROTOCOL.md
+
+При любом изменении процедур/жестких правил:
+
+1. Использовать шаблон `INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`.
+2. Заполнить обязательные assertions и evidence-ссылки.
+3. Зафиксировать запись в `DEV_LOGS.md` и `ROADMAP.md` до правки протокола.
 
 ---
 

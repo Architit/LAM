@@ -7,7 +7,7 @@ IMPORT:
    - git log -n 12 --oneline
 3) Continue from declared pointer:
    - phase: Phase 5 - Memory and Knowledge
-   - stage: ssn rstrt stop-point after runtime-facing gate decision closure (RG1/RG2/RG3 DONE)
+   - stage: post-review sync after protocol template update (governance-only)
 4) Constraints remain strict:
    - contracts-first
    - observability-first

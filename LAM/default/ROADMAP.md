@@ -60,3 +60,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - P5.RG1 eligibility matrix contract published in root roadmap/maps (`P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md`); next target moved to P5.RG2 hold/reject policy.
 - P5.RG2 hold/reject policy contract published in root roadmap/maps (`P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md`); next target moved to P5.RG3 start-approval evidence record.
 - P5.RG3 start-approval evidence contract published in root roadmap/maps (`P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md`); runtime-facing gate decision wave marked complete.
+- Interaction protocol update template published in root roadmap/maps (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and linked to governance protocol update flow.
