@@ -91,3 +91,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P5.POST1 completed (governance-only); `P5_POST1_RUNTIME_EVIDENCE_CONSOLIDATION_CONTRACT.md` published and next target moved to `P5.POST2`.
 - P5.POST2 completed (governance-only); `P5_POST2_RUNTIME_BOUNDARY_CONFIRMATION_CONTRACT.md` published and next target moved to `P5.POST3`.
 - P5.POST3 completed (governance-only); `P5_POST3_NEXT_PACKAGE_START_RECOMMENDATION_CONTRACT.md` published and post-runtime-task package marked complete.
+- Phase 6 prep activated (governance-only); `P6_PREP_CONTROL_PLANE_BACKLOG_CONTRACT.md` published and queue `P6.T1/P6.T2/P6.T3` fixed.

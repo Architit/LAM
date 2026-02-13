@@ -69,4 +69,5 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - P5.POST1 evidence consolidation completed in root roadmap/maps (governance-only); `P5_POST1_RUNTIME_EVIDENCE_CONSOLIDATION_CONTRACT.md` published and next target moved to `P5.POST2`.
 - P5.POST2 boundary confirmation completed in root roadmap/maps (governance-only); `P5_POST2_RUNTIME_BOUNDARY_CONFIRMATION_CONTRACT.md` published and next target moved to `P5.POST3`.
 - P5.POST3 next-package recommendation completed in root roadmap/maps (governance-only); `P5_POST3_NEXT_PACKAGE_START_RECOMMENDATION_CONTRACT.md` published and post-runtime-task package marked complete.
+- Phase 6 prep package activated in root roadmap/maps (governance-only); `P6_PREP_CONTROL_PLANE_BACKLOG_CONTRACT.md` published with queue `P6.T1/P6.T2/P6.T3`.
 - Interaction protocol update template published in root roadmap/maps (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and linked to governance protocol update flow.
