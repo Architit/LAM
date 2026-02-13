@@ -158,7 +158,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 5 — Memory & Knowledge Layer (1–2 месяца)
-> **Статус:** POST-RUNTIME-TASK PACKAGE ACTIVE (governance-only) (2026-02-13) — `P5.RG` и `P5.RT` закрыты; открыт `P5.POST1-POST3`.
+> **Статус:** POST-RUNTIME-TASK PACKAGE CLOSED (governance-only) (2026-02-13) — `P5.RG`, `P5.RT`, `P5.POST` закрыты.
 
 ### Цель
 Система “живёт”, копит опыт, извлекает знания и не забывает важное.
@@ -183,7 +183,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Открыть post-runtime-task пакет (governance-only): `P5_POST_RUNTIME_TASK_WAVE_CONTRACT.md`
 - [x] P5.POST1: Runtime-facing evidence consolidation (`P5_POST1_RUNTIME_EVIDENCE_CONSOLIDATION_CONTRACT.md`)
 - [x] P5.POST2: Runtime-facing boundary confirmation (`P5_POST2_RUNTIME_BOUNDARY_CONFIRMATION_CONTRACT.md`)
-- [ ] P5.POST3: Next package start recommendation
+- [x] P5.POST3: Next package start recommendation (`P5_POST3_NEXT_PACKAGE_START_RECOMMENDATION_CONTRACT.md`)
 
 ---
 
@@ -370,3 +370,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P5.POST1 runtime evidence consolidation contract published (`P5_POST1_RUNTIME_EVIDENCE_CONSOLIDATION_CONTRACT.md`); next target moved to P5.POST2 boundary confirmation
 
 - [x] 2026-02-13 — governance: P5.POST2 runtime boundary confirmation contract published (`P5_POST2_RUNTIME_BOUNDARY_CONFIRMATION_CONTRACT.md`); next target moved to P5.POST3 start recommendation
+
+- [x] 2026-02-13 — governance: P5.POST3 next package recommendation contract published (`P5_POST3_NEXT_PACKAGE_START_RECOMMENDATION_CONTRACT.md`); post-runtime-task package (`POST1/POST2/POST3`) marked complete

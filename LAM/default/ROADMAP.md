@@ -68,4 +68,5 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - Interaction protocol/template autopilot gate hardened in root roadmap/maps; explicit numbered user selection is required before next task start.
 - P5.POST1 evidence consolidation completed in root roadmap/maps (governance-only); `P5_POST1_RUNTIME_EVIDENCE_CONSOLIDATION_CONTRACT.md` published and next target moved to `P5.POST2`.
 - P5.POST2 boundary confirmation completed in root roadmap/maps (governance-only); `P5_POST2_RUNTIME_BOUNDARY_CONFIRMATION_CONTRACT.md` published and next target moved to `P5.POST3`.
+- P5.POST3 next-package recommendation completed in root roadmap/maps (governance-only); `P5_POST3_NEXT_PACKAGE_START_RECOMMENDATION_CONTRACT.md` published and post-runtime-task package marked complete.
 - Interaction protocol update template published in root roadmap/maps (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and linked to governance protocol update flow.
