@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T03:52:16Z
+timestamp: 2026-02-13T03:54:01Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge
-stage: P5 execution gate activation (governance-only)
+stage: P5.G1 evidence profile contract completed (governance-only)
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
-- preserve closed P5 prep package state
-- activate execution gate package in governance-only mode
-- provide deterministic stop-point before P5.G1 start
+- preserve P5 execution gate continuity after G1 completion
+- keep closed states (P2.4, P4 follow-up, P5 prep) immutable
+- provide deterministic stop-point before P5.G2 start
 constraints:
 - contracts-first
 - observability-first
@@ -22,12 +22,13 @@ constraints:
 - NO execution-path impact
 
 ## Verification
-- P5 prep wave remains closed: T1 DONE, T2 DONE, T3 DONE.
 - P5 execution gate contract published: P5_EXECUTION_GATE_CONTRACT.md
-- P5 execution queue fixed: P5.G1, P5.G2, P5.G3.
-- Next target: P5.G1 evidence profile contract draft (governance-only).
+- P5.G1 contract published: P5_G1_EVIDENCE_PROFILE_CONTRACT.md
+- P5 execution queue state: G1 DONE, G2 TODO, G3 TODO.
+- Next target: P5.G2 risk boundary register draft (governance-only).
 
 ## Recent commits
+- f178ec3 governance(p5.exec-gate): activate execution gate package
 - 9ad28f6 ssn rstrt(EXPORT): set stop-point after P5 prep closure
 - ba859b7 governance(snapshot): align P5 prep closure snapshot with branch head
 - b0f044e governance(p5.t3): publish domain partitioning contract draft
@@ -39,16 +40,15 @@ constraints:
 - 851d7c9 ssn rstrt(EXPORT): refresh stop-point after follow-up F1-F4 closure
 - fdefc27 governance(snapshot): normalize post-push state and mirror sync
 - 2fde680 governance(dev-map): acknowledge RADR ASR filename/index fix
-- 202dc08 ssn rstrt(EXPORT): set stop-point after follow-up wave F1-F4 closure
 
 ## Git status
-## phase2/observability...origin/phase2/observability
+## phase2/observability...origin/phase2/observability [ahead 1]
 M  DEV_LOGS.md
 M  DEV_MAP.md
 M  LAM/default/DEV_LOGS.md
 M  LAM/default/ROADMAP.md
 M  NEW_CHAT_INIT_MESSAGE
-A  P5_EXECUTION_GATE_CONTRACT.md
+A  P5_G1_EVIDENCE_PROFILE_CONTRACT.md
 M  ROADMAP.md
  M WORKFLOW_SNAPSHOT_STATE.md
 
@@ -57,10 +57,11 @@ M  ROADMAP.md
 - ROADMAP.md
 - DEV_LOGS.md
 - DEV_MAP.md
+- P5_EXECUTION_GATE_CONTRACT.md
+- P5_G1_EVIDENCE_PROFILE_CONTRACT.md
 - P5_PREP_BACKLOG_CONTRACT.md
 - P5_T1_TIMESTAMP_UTC_CONTRACT.md
 - P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md
 - P5_T3_DOMAIN_PARTITIONING_CONTRACT.md
-- P5_EXECUTION_GATE_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
