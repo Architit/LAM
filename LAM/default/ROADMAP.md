@@ -1,6 +1,6 @@
 # ROADMAP
 
-Synced with root `ROADMAP.md` on 2026-02-13 00:10 UTC.
+Synced with root `ROADMAP.md` on 2026-02-13 00:17 UTC.
 Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
 ## Phase 2 — Observability
@@ -18,3 +18,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - Wave R5 is planned as an unblock package (policy-only), without status promotion by design.
 - Wave R5 is published in LAM; Wave R6 validation is next.
 - R6 uses strict validation gate: `python3 >= 3.10` and `.venv/bin/python` runner.
+- R6 readiness audit completed: all 14 pending repos are currently blocked.

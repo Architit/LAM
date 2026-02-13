@@ -1,6 +1,6 @@
 # DEV_MAP (Mirror)
 
-Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 00:10 UTC.
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 00:17 UTC.
 Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
 
 Scope marker:
@@ -25,3 +25,4 @@ R5 plan note:
 R5 publication note:
 - Unblock package published in LAM; Wave R6 validation is queued.
 - R6 strict gate: `python3 >= 3.10` and mandatory `.venv/bin/python` runner.
+- R6 readiness audit: READY=0, BLOCKED=14 (missing `.venv/bin/python` and smoke template).

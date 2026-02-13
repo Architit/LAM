@@ -133,7 +133,11 @@ Wave-runtime start set:
   - `.venv/bin/python` exists and is used as canonical runner
   - smoke command passes with exit code `0`
   - evidence is recorded in governance logs
-- Next target: Wave R6 validation execution on pending repos using R5 package.
+- Wave R6 readiness audit (read-only) result:
+  - READY: 0
+  - BLOCKED: 14
+  - common blockers: missing `.venv/bin/python`, missing `tests/test_runtime_smoke.py` in all pending repos
+- Next target: Wave R6.1 execution (seed `.venv` + smoke template) for first 3 pending repos.
 
 Deliverable: deterministic runtime closure proof matrix.
 

@@ -223,3 +223,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-12 — governance: P2.4 wave R5 published in LAM (bootstrap policy + smoke template + evidence checklist + operator blocks); R6 queued, no status promotion by design
 
 - [x] 2026-02-13 — governance: P2.4/R6 strict gate defined (`python3 >= 3.10` + mandatory `.venv/bin/python` runner for promotion evidence)
+
+- [x] 2026-02-13 — governance: P2.4/R6 readiness audit completed (14 pending repos; BLOCKED=14 by missing `.venv` runner and smoke template)

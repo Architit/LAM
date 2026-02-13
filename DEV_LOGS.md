@@ -46,3 +46,4 @@
 2026-02-12 23:42 UTC — Governance: P2.4 wave R5 planned (unblock package): pytest bootstrap policy + runtime smoke template + promotion evidence checklist; by design no immediate runtime_proof promotions.
 2026-02-12 23:59 UTC — Governance: P2.4 wave R5 published in LAM: `RUNTIME_PROOF_PYTEST_BOOTSTRAP_POLICY.md`, `RUNTIME_PROOF_PROMOTION_CHECKLIST.md`, `RUNTIME_PROOF_OPERATOR_BLOCKS.md`, `tests/test_runtime_smoke.py`; queued Wave R6 validation.
 2026-02-13 00:10 UTC — Governance: P2.4/R6 gate hardened: contract updated to require `python3 >= 3.10` and mandatory `.venv/bin/python` runner for runtime_proof promotion evidence.
+2026-02-13 00:17 UTC — Governance: P2.4/R6 readiness audit (read-only) across 14 pending repos: python3 present (`3.12.3`) in all; BLOCKED=14 due missing `.venv/bin/python` and missing `tests/test_runtime_smoke.py`.
