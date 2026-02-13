@@ -95,3 +95,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P6.T1 completed (governance-only); `P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md` published and next target moved to `P6.T2`.
 - P6.T2 completed (governance-only); `P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md` published and next target moved to `P6.T3`.
 - P6.T3 completed (governance-only); `P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md` published and prep package marked complete.
+- Phase Z prep activated (governance-only); `Z_PREP_AGENT_SDK_BACKLOG_CONTRACT.md` published and queue `Z.T1/Z.T2/Z.T3` fixed.

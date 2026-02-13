@@ -224,13 +224,15 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-12 — governance: P2 baseline matrix (15 repos) completed in DEV_MAP (DONE=2, BLOCKED=1, PENDING=12)
 
 ## Фаза Z — Agent SDK Integrations v0 (⏭ next after Runtime EntryPoint v0)
+> **Статус:** PREP ACTIVE (governance-only) (2026-02-13) — закрыт `P6.PREP`, открыт prep-пакет `Z.T1-T3`.
 
 Цель: подключить Claude Agent SDK как backend-инструмент Codex (не отдельный агент на v0).
 
 ### План (v0)
-- [ ] Добавить интеграцию Claude Agent SDK как "codex tool backend"
-- [ ] Smoke: 1 команда → 1 small task → envelope ok → trace ok
-- [ ] DoD: не ломает существующий codex/openai path
+- [x] Открыть Z prep backlog контракт (governance-only): `Z_PREP_AGENT_SDK_BACKLOG_CONTRACT.md`
+- [ ] Z.T1: Agent SDK backend integration contract draft
+- [ ] Z.T2: Smoke contract draft
+- [ ] Z.T3: Compatibility DoD contract draft
 
 ### Phase 4 Review Findings (pre-4.3)
 - [ ] R1: Spec drift — derivation mentions non-existent fields:
@@ -388,3 +390,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P6.T2 health/telemetry profile draft contract published (`P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md`); next target moved to P6.T3 boundary checklist
 
 - [x] 2026-02-13 — governance: P6.T3 operator action boundary checklist contract published (`P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md`); prep package (`T1/T2/T3`) marked complete
+
+- [x] 2026-02-13 — governance: Phase Z prep activated (`Z_PREP_AGENT_SDK_BACKLOG_CONTRACT.md`); queue `Z.T1/Z.T2/Z.T3` fixed; next target moved to Z.T1 backend integration draft

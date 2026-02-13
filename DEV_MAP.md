@@ -1,11 +1,11 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 04:56 UTC)
+## Execution Status (2026-02-13 04:57 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
 - Protocol scale: 0 (governance/sync)
-- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep finalized; Phase 5 execution gate finalized; Phase 5 runtime-facing gate decision finalized; Phase 5 runtime task wave finalized (RT1/RT2/RT3 done, governance-only); Phase 5 post-runtime task package finalized; Phase 6 prep package ACTIVE (governance-only)
+- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep finalized; Phase 5 execution gate finalized; Phase 5 runtime-facing gate decision finalized; Phase 5 runtime task wave finalized (RT1/RT2/RT3 done, governance-only); Phase 5 post-runtime task package finalized; Phase 6 prep package finalized; Phase Z prep package ACTIVE (governance-only)
 
 ## Synchronization Source (SoT)
 - Upstream SoT repo: /home/architit/work/RADRILONIUMA-PROJECT
@@ -36,6 +36,7 @@ Non-goals:
 - P5 runtime task wave is closed (`P5.RT1/P5.RT2/P5.RT3` all DONE, governance-only).
 - P5 post-runtime task package is closed (`P5.POST1/P5.POST2/P5.POST3` all DONE, governance-only).
 - P6 prep package is closed (`P6.T1/P6.T2/P6.T3` all DONE, governance-only).
+- Phase Z prep package is activated (`Z.T1/Z.T2/Z.T3` queued, governance-only).
 
 ## Work Program (Current)
 
@@ -162,7 +163,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: post-P6.PREP package selection (governance-only).
+- Next target: Z.T1 Agent SDK backend integration contract draft (governance-only).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -330,7 +331,7 @@ P5.POST package:
 - P5.POST3 contract published: `P5_POST3_NEXT_PACKAGE_START_RECOMMENDATION_CONTRACT.md`.
 - Runtime impact: none (contracts-only, derivation-only).
 
-### P6.PREP) Control Plane Prep Package (ACTIVE, governance-only)
+### P6.PREP) Control Plane Prep Package (CLOSED, governance-only)
 P6.T1 Control plane surface inventory. (DONE)
 P6.T2 Health/telemetry panel profile draft. (DONE)
 P6.T3 Operator action boundary checklist. (DONE)
@@ -340,6 +341,15 @@ P6.PREP package:
 - P6.T1 contract published: `P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md`.
 - P6.T2 contract published: `P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md`.
 - P6.T3 contract published: `P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md`.
+- Runtime impact: none (contracts-only, derivation-only).
+
+### Z.PREP) Agent SDK Integrations Prep Package (ACTIVE, governance-only)
+Z.T1 Agent SDK backend integration contract draft.
+Z.T2 Smoke contract draft.
+Z.T3 Compatibility DoD contract draft.
+
+Z.PREP package:
+- Contract published: `Z_PREP_AGENT_SDK_BACKLOG_CONTRACT.md`.
 - Runtime impact: none (contracts-only, derivation-only).
 
 ## Gate Criteria
@@ -387,6 +397,7 @@ P6.PREP package:
 - P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md
 - P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md
 - P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md
+- Z_PREP_AGENT_SDK_BACKLOG_CONTRACT.md
 - INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md

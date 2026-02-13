@@ -6,8 +6,8 @@ IMPORT:
    - git status -sb
    - git log -n 12 --oneline
 3) Continue from declared pointer:
-   - phase: Phase 6 - Control Plane and UI
-   - stage: prep package closure (governance-only)
+   - phase: Phase Z - Agent SDK Integrations v0
+   - stage: prep package activation (governance-only)
 4) Constraints remain strict:
    - contracts-first
    - observability-first
