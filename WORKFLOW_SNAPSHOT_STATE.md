@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T02:39:13Z
+timestamp: 2026-02-13T02:41:44Z
 
 ## Current pointer
 phase: Phase 4 - Router Core
-stage: P4.T3 operator evidence block completed
+stage: stop-point after P4.1/P4.2/P4.3 closure
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
-- keep runtime-proof closure stable (DONE=14, EXEMPT=1, PENDING=0)
-- execute post-P4.3 task selection with mandatory user confirmation gate
-- preserve deterministic restart semantics for ssn rstrt/cld rstrt
+- preserve closed P4 queue state (T1/T2/T3 DONE)
+- keep restart/import deterministic before post-P4.3 task selection
+- preserve clean recovery semantics for ssn rstrt/cld rstrt
 constraints:
 - contracts-first
 - observability-first
@@ -22,12 +22,18 @@ constraints:
 - NO execution-path impact
 
 ## Verification
-- P4 task queue status: T1 DONE, T2 DONE, T3 DONE.
-- P4 operator evidence flow published (`P4_ROUTER_OPERATOR_BLOCKS.md`).
-- Next target: post-P4.3 task selection + SoT sync/push gate.
-- SoT sync refs acknowledged: a35e1cd (P4.T1 sync), 8cd69bf (P4.T2 sync).
+- P4 queue closure fixed in maps: T1 DONE, T2 DONE, T3 DONE.
+- Operator evidence contracts published:
+  - `P4_ROUTER_POLICY_PROFILE_DRAFT.md`
+  - `P4_ROUTER_OPERATOR_BLOCKS.md`
+- SoT sync refs acknowledged in cycle:
+  - `a35e1cd` (P4.T1 sync)
+  - `8cd69bf` (P4.T2 sync)
+  - `517f7ba` (P4.T3 sync)
+- Next target: post-P4.3 task selection with user confirmation gate.
 
 ## Recent commits
+- 8a95e9e governance(p4.3): publish router operator evidence blocks
 - 19e82fe governance(p4.2): publish deterministic ci-smoke policy profile draft
 - de7ec83 governance(p4.1): record router-core inventory baseline
 - 44cbd81 ssn rstrt(EXPORT): refresh snapshot before P4.1 execution
@@ -39,18 +45,11 @@ constraints:
 - f115586 governance(p3.2): unify test entrypoint and smoke profile contract
 - 8a25ed0 governance(mirror): remove stale P3.1 blocked note in default roadmap
 - 0a8d8c4 governance(p3.1): resolve gate blocker and mark validation done
-- 95c7605 governance(p3.1): activate local CI gate baseline and record blocker
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 2]
- M DEV_LOGS.md
- M DEV_MAP.md
- M LAM/default/DEV_LOGS.md
- M LAM/default/DEV_MAP.md
- M LAM/default/ROADMAP.md
+## phase2/observability...origin/phase2/observability [ahead 3]
  M NEW_CHAT_INIT_MESSAGE
- M ROADMAP.md
-?? P4_ROUTER_OPERATOR_BLOCKS.md
+ M WORKFLOW_SNAPSHOT_STATE.md
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -72,7 +71,7 @@ IMPORT:
    - `git log -n 12 --oneline`
 3) Continue from declared pointer:
    - phase: Phase 4 - Router Core
-   - stage: P4.T3 operator evidence block completed
+   - stage: stop-point after P4.1/P4.2/P4.3 closure
 4) Constraints remain strict:
    - contracts-first
    - observability-first
