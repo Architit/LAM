@@ -158,7 +158,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 5 — Memory & Knowledge Layer (1–2 месяца)
-> **Статус:** RUNTIME-GATE-DECISION CLOSED (governance-only) (2026-02-13) — decision-пакет `P5.RG1-RG3` завершён, ожидается выбор первой runtime-facing задачи.
+> **Статус:** RUNTIME-TASK-WAVE ACTIVE (governance-only planning) (2026-02-13) — `P5.RG` закрыт, открыт planning-пакет `P5.RT1-RT3`.
 
 ### Цель
 Система “живёт”, копит опыт, извлекает знания и не забывает важное.
@@ -176,6 +176,10 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] P5.RG1: Runtime-facing eligibility matrix (`P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md`)
 - [x] P5.RG2: Hold/reject decision policy (`P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md`)
 - [x] P5.RG3: Start-approval evidence record (`P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md`)
+- [x] Открыть runtime task wave контракт (governance-only): `P5_RUNTIME_TASK_WAVE_CONTRACT.md`
+- [ ] P5.RT1: Runtime-facing task candidate definition
+- [ ] P5.RT2: Runtime-facing preflight checklist
+- [ ] P5.RT3: Runtime-facing start decision record
 
 ---
 
@@ -346,3 +350,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P5.RG3 start-approval evidence contract published (`P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md`); runtime-facing gate decision wave (`RG1/RG2/RG3`) marked complete
 
 - [x] 2026-02-13 — governance: interaction protocol update template added (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`); protocol update flow aligned to template-backed records
+
+- [x] 2026-02-13 — governance: runtime-facing task wave planning activated (`P5_RUNTIME_TASK_WAVE_CONTRACT.md`); queue `P5.RT1/P5.RT2/P5.RT3` fixed
