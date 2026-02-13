@@ -1,6 +1,6 @@
 # ROADMAP
 
-Synced with root `ROADMAP.md` on 2026-02-13 01:01 UTC.
+Synced with root `ROADMAP.md` on 2026-02-13 01:07 UTC.
 Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
 ## Phase 2 — Observability
@@ -25,3 +25,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - R6.1 retry root-cause fixed in governance notes: missing `lam-wheelhouse-py312.tgz`.
 - Runtime-proof host-role contract fixed for builder/runner split.
 - R6.1 host-split retry succeeded for first 3 repos (DONE=4, PENDING=11).
+- R6.2 host-split retry succeeded for next 3 repos (DONE=7, PENDING=8).

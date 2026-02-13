@@ -53,3 +53,4 @@
 2026-02-13 00:40 UTC — Governance: clarified R6.1 retry blocker root cause — archive `/home/architit/work/lam-wheelhouse-py312.tgz` absent, so `lam-wheelhouse/` could not be unpacked/distributed to targets.
 2026-02-13 00:44 UTC — Governance: host-role contract made explicit in runtime-proof policies: builder host allows internet for vendoring; runner host is offline and must install via `--no-index --find-links` (absolute wheelhouse path in operator block).
 2026-02-13 01:01 UTC — Governance: P2.4 wave R6.1 host-split retry succeeded for 3 repos (Roaudter-agent `bd16495`, LAM-Codex_Agent `3e15737`, LAM_Comunication_Agent `c3a7285`), all smoke runs exit_code=0 via offline wheelhouse; runtime summary now DONE=4, PENDING=11.
+2026-02-13 01:07 UTC — Governance: P2.4 wave R6.2 host-split retry succeeded for 3 repos (Archivator_Agent `3dfda79`, CORE `8dbed52`, J.A.R.V.I.S `254804e`), all smoke runs exit_code=0; runtime summary now DONE=7, PENDING=8.
