@@ -1,6 +1,6 @@
 # DEV_LOGS
 
-Synced with root `DEV_LOGS.md` on 2026-02-13 02:47 UTC.
+Synced with root `DEV_LOGS.md` on 2026-02-13 02:55 UTC.
 Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 
 ## 2026-02-10
@@ -63,3 +63,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P4.T2 draft completed: deterministic policy profile contract published; strict/fallback boundaries fixed; next target moved to P4.T3.
 - P4.T3 completed: operator evidence blocks published (`P4_ROUTER_OPERATOR_BLOCKS.md`); next target moved to post-P4.3 task selection.
 - P4 follow-up backlog contract published (`P4_FOLLOWUP_BACKLOG_CONTRACT.md`); next target moved to F1 cost-aware contract wave.
+- F1 cost-aware contract draft published (`P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`); next target moved to F2 quality-aware contract wave.

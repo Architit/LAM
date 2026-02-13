@@ -1,6 +1,6 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 02:47 UTC)
+## Execution Status (2026-02-13 02:55 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
@@ -153,7 +153,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P4 follow-up wave F1 (cost-aware routing contract draft).
+- Next target: P4 follow-up wave F2 (quality-aware routing contract draft).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -234,6 +234,11 @@ P4 follow-up backlog (governance-only):
 - Follow-up wave order fixed: F1 cost-aware -> F2 quality-aware -> F3 policy-v3 config -> F4 provider metrics.
 - Runtime impact: none (planning contract only).
 
+P4 follow-up F1 (governance-only):
+- Contract published: `P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`.
+- Cost budget and evidence fields fixed for governance traces.
+- Runtime impact: none (contract-only step).
+
 Deliverable: controlled start of Router Core execution with explicit gates and evidence loop.
 
 ## Gate Criteria
@@ -253,6 +258,7 @@ Deliverable: controlled start of Router Core execution with explicit gates and e
 - P4_ROUTER_POLICY_PROFILE_DRAFT.md
 - P4_ROUTER_OPERATOR_BLOCKS.md
 - P4_FOLLOWUP_BACKLOG_CONTRACT.md
+- P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md

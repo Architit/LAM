@@ -149,7 +149,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - Learning Signals v1 (contracts-only, derivation-only) — Phase 4.2 (2026-02-10)
 
 ### Следующее 🔜
-- [ ] Cost-aware routing (оценка стоимости/лимитов)
+- [x] Cost-aware routing contract draft (governance-only): `P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`
 - [ ] Quality-aware routing (профили по intent)
 - [ ] Policy v3: конфиг-профили (yaml/json), без хардкода
 - [ ] Метрики по провайдерам (успех/ошибки/латентность/токены)
@@ -289,5 +289,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P4 follow-up backlog contract published (`P4_FOLLOWUP_BACKLOG_CONTRACT.md`), next target moved to F1 cost-aware contract wave
 
 - [x] 2026-02-13 — governance: ASR record synced for LAM P4 closure (`133ef73`, `gov-radr-asr-phase5b-lam-p4-closure-v1.0.0`).
+
+- [x] 2026-02-13 — governance: F1 cost-aware contract draft published (`P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`), next target moved to F2 quality-aware contract wave
 
 - [x] 2026-02-13 — governance: ASR record synced for LAM P4 follow-up backlog (`8f5bcb4`, `gov-radr-asr-phase5b-lam-p4-followup-v1.0.0`).

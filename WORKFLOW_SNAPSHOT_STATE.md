@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T02:49:21Z
+timestamp: 2026-02-13T02:55:44Z
 
 ## Current pointer
 phase: Phase 4 - Router Core
-stage: post-P4.3 stop-point + follow-up backlog contract published
+stage: follow-up wave F1 cost-aware contract completed
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
-- preserve closed P4 queue state (T1/T2/T3 DONE)
-- keep restart/import deterministic before follow-up wave execution
-- start follow-up wave from F1 cost-aware contract draft
+- keep closed P4 queue state (T1/T2/T3 DONE)
+- preserve deterministic restart/import semantics
+- start follow-up wave F2 quality-aware contract draft
 constraints:
 - contracts-first
 - observability-first
@@ -22,12 +22,15 @@ constraints:
 - NO execution-path impact
 
 ## Verification
-- P4 queue closure fixed in maps: T1 DONE, T2 DONE, T3 DONE.
-- Follow-up backlog contract published: `P4_FOLLOWUP_BACKLOG_CONTRACT.md`.
-- ASR sync acknowledged: RADR `133ef73` / `gov-radr-asr-phase5b-lam-p4-closure-v1.0.0`.
-- Next target: F1 cost-aware routing contract draft.
+- Follow-up contracts published:
+  - `P4_FOLLOWUP_BACKLOG_CONTRACT.md`
+  - `P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`
+- Next target: F2 quality-aware routing contract draft.
+- ASR sync refs acknowledged: RADR `133ef73`, `8f5bcb4`.
 
 ## Recent commits
+- 9760cf2 governance(dev-map): sync RADR ASR record for LAM P4 follow-up backlog
+- 09f5f3b governance(p4.follow-up): publish backlog contract for cost-quality-policy-v3
 - 842dd84 governance(dev-map): sync RADR ASR record for LAM P4 closure
 - 0e52448 ssn rstrt(EXPORT): set stop-point after P4.1-P4.3 closure
 - 8a95e9e governance(p4.3): publish router operator evidence blocks
@@ -38,8 +41,6 @@ constraints:
 - f833c14 governance(dev-map): sync RADR ASR record for LAM P3.x closure
 - 03e7bbc ssn rstrt(EXPORT): refresh snapshot after P3.3 + RADR sync publish
 - 6588e13 governance(dev-map): record RADR post-review sync for P3.2/P3.3
-- 605c264 governance(p3.3): harden mandatory update-order protocol
-- f115586 governance(p3.2): unify test entrypoint and smoke profile contract
 
 ## Git status
 ## phase2/observability...origin/phase2/observability
@@ -50,17 +51,15 @@ constraints:
  M LAM/default/ROADMAP.md
  M NEW_CHAT_INIT_MESSAGE
  M ROADMAP.md
- M WORKFLOW_SNAPSHOT_STATE.md
-?? P4_FOLLOWUP_BACKLOG_CONTRACT.md
+?? P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md
 
 ## References
 - INTERACTION_PROTOCOL.md
 - ROADMAP.md
 - DEV_LOGS.md
 - DEV_MAP.md
-- P4_ROUTER_POLICY_PROFILE_DRAFT.md
-- P4_ROUTER_OPERATOR_BLOCKS.md
 - P4_FOLLOWUP_BACKLOG_CONTRACT.md
+- P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 
@@ -74,7 +73,7 @@ IMPORT:
    - `git log -n 12 --oneline`
 3) Continue from declared pointer:
    - phase: Phase 4 - Router Core
-   - stage: post-P4.3 stop-point + follow-up backlog contract published
+   - stage: follow-up wave F1 cost-aware contract completed
 4) Constraints remain strict:
    - contracts-first
    - observability-first
