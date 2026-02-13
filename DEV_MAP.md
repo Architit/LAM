@@ -1,11 +1,11 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 04:28 UTC)
+## Execution Status (2026-02-13 04:30 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
 - Protocol scale: 0 (governance/sync)
-- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep finalized; Phase 5 execution gate finalized; Phase 5 runtime-facing gate decision finalized; Phase 5 runtime task wave ACTIVE (RT1/RT2 done, governance-only)
+- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep finalized; Phase 5 execution gate finalized; Phase 5 runtime-facing gate decision finalized; Phase 5 runtime task wave finalized (RT1/RT2/RT3 done, governance-only)
 
 ## Synchronization Source (SoT)
 - Upstream SoT repo: /home/architit/work/RADRILONIUMA-PROJECT
@@ -33,7 +33,7 @@ Non-goals:
 - RADR ASR sync for P5 execution-gate closure is confirmed (`e86650d`, `gov-radr-asr-phase5b-lam-p5-exec-gate-closure-v1.0.0`).
 - P5 runtime-facing gate decision package is closed (`P5.RG1/P5.RG2/P5.RG3` all DONE, governance-only).
 - Protocol update template is active for procedure changes (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`).
-- P5 runtime task wave remains ACTIVE with `P5.RT1/P5.RT2` closed and `P5.RT3` pending (governance-only).
+- P5 runtime task wave is closed (`P5.RT1/P5.RT2/P5.RT3` all DONE, governance-only).
 
 ## Work Program (Current)
 
@@ -160,7 +160,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P5.RT3 runtime-facing start decision record (governance-only).
+- Next target: post-runtime-task-wave selection (governance-only).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -307,12 +307,13 @@ P5.RG package:
 ### P5.RT) Runtime Task Wave Planning Package (ACTIVE, governance-only)
 P5.RT1 Runtime-facing task candidate definition. (DONE)
 P5.RT2 Runtime-facing preflight checklist. (DONE)
-P5.RT3 Runtime-facing start decision record.
+P5.RT3 Runtime-facing start decision record. (DONE)
 
 P5.RT package:
 - Contract published: `P5_RUNTIME_TASK_WAVE_CONTRACT.md`.
 - P5.RT1 contract published: `P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md`.
 - P5.RT2 contract published: `P5_RT2_RUNTIME_PREFLIGHT_CHECKLIST_CONTRACT.md`.
+- P5.RT3 contract published: `P5_RT3_RUNTIME_START_DECISION_RECORD_CONTRACT.md`.
 - Runtime impact: none (contracts-only, derivation-only).
 
 ## Gate Criteria
@@ -351,6 +352,7 @@ P5.RT package:
 - P5_RUNTIME_TASK_WAVE_CONTRACT.md
 - P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md
 - P5_RT2_RUNTIME_PREFLIGHT_CHECKLIST_CONTRACT.md
+- P5_RT3_RUNTIME_START_DECISION_RECORD_CONTRACT.md
 - INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md

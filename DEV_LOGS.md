@@ -101,3 +101,4 @@ normalized.
 2026-02-13 04:19 UTC — Governance: runtime-facing task wave planning activated (governance-only) — published `P5_RUNTIME_TASK_WAVE_CONTRACT.md`; fixed queue `P5.RT1/P5.RT2/P5.RT3`; next target set to `P5.RT1` candidate definition.
 2026-02-13 04:23 UTC — Governance: P5.RT1 completed (governance-only) — published `P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md`; candidate scope/record fields fixed; next target moved to `P5.RT2` preflight checklist.
 2026-02-13 04:28 UTC — Governance: P5.RT2 completed (governance-only) — published `P5_RT2_RUNTIME_PREFLIGHT_CHECKLIST_CONTRACT.md`; read-only preflight checks and record fields fixed; next target moved to `P5.RT3` start decision record.
+2026-02-13 04:30 UTC — Governance: P5.RT3 completed (governance-only) — published `P5_RT3_RUNTIME_START_DECISION_RECORD_CONTRACT.md`; decision outcome/evidence reference fields fixed; runtime-task-wave (`RT1/RT2/RT3`) marked complete.

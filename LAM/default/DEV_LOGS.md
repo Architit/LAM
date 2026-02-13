@@ -85,3 +85,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - Runtime-facing task wave planning package activated (governance-only); `P5_RUNTIME_TASK_WAVE_CONTRACT.md` published and queue `P5.RT1/P5.RT2/P5.RT3` fixed.
 - P5.RT1 completed (governance-only); `P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md` published and next target moved to `P5.RT2`.
 - P5.RT2 completed (governance-only); `P5_RT2_RUNTIME_PREFLIGHT_CHECKLIST_CONTRACT.md` published and next target moved to `P5.RT3`.
+- P5.RT3 completed (governance-only); `P5_RT3_RUNTIME_START_DECISION_RECORD_CONTRACT.md` published and runtime task wave marked complete.
