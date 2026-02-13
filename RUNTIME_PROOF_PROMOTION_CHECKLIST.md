@@ -15,11 +15,13 @@ to `runtime_proof=DONE`.
 - [ ] UTC timestamp of execution
 - [ ] Short output summary (pass/fail/skipped + reason)
 - [ ] Governance note added to `DEV_LOGS.md` / rollout map
+- [ ] If offline fallback used: wheelhouse path/source and `--no-index --find-links` command recorded
 
 ## Blocking Conditions
 - `python3` missing or version < 3.10
 - `.venv` missing or not used as runner boundary
 - `pytest` unavailable and not bootstrapped
+- offline mode selected but wheelhouse missing/incompatible
 - smoke test file missing
 - non-zero exit code
 - evidence missing or non-reproducible

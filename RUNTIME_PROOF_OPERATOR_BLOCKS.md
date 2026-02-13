@@ -13,12 +13,22 @@ git status -sb
 git log -n 5 --oneline
 ```
 
-## Block 2: Bootstrap `pytest` if missing
+## Block 2: Bootstrap `pytest` (online)
 ```bash
 python3 --version
 python3 -m venv .venv
 .venv/bin/python -m pip --version
 .venv/bin/python -m pip install -U pip pytest
+.venv/bin/python -m pytest --version
+```
+
+## Block 2b: Bootstrap `pytest` (offline wheelhouse fallback)
+```bash
+python3 --version
+python3 -m venv .venv
+.venv/bin/python -m pip --version
+test -d wheelhouse || { echo "wheelhouse missing"; exit 1; }
+.venv/bin/python -m pip install --no-index --find-links=wheelhouse pytest
 .venv/bin/python -m pytest --version
 ```
 

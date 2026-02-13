@@ -24,6 +24,8 @@ Interpretation:
 - `python3 >= 3.10` is REQUIRED for runtime-proof validation.
 - `pip` availability is REQUIRED for bootstrap (`python3 -m pip`).
 - `pytest` is REQUIRED as the smoke test runner.
+- Offline fallback is allowed only via wheelhouse policy:
+  `RUNTIME_PROOF_OFFLINE_WHEELHOUSE_POLICY.md`.
 
 ## Verification Boundary (Strict)
 - `.venv` is the mandatory boundary for P2.4/R6 validation.
@@ -39,6 +41,10 @@ For each target repository:
 5. Ensure `tests/test_runtime_smoke.py` exists (template in LAM).
 6. Run `.venv/bin/python -m pytest -q tests/test_runtime_smoke.py`.
 7. Record evidence (command, exit status, timestamp, branch, commit, python version).
+
+If online bootstrap is unavailable:
+8. Use offline wheelhouse install flow (`--no-index --find-links`).
+9. Record offline source/install evidence before smoke execution.
 
 ## Acceptance
 Runtime proof MAY be promoted from `PENDING` to `DONE` only when all facts are

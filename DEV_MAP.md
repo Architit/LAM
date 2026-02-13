@@ -139,7 +139,8 @@ Wave-runtime start set:
   - common blockers: missing `.venv/bin/python`, missing `tests/test_runtime_smoke.py` in all pending repos
 - Wave R6.1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
 - Wave R6.1 result: no status promotion (DONE=1, PENDING=14); common blocker `pytest-install-failed-offline` (PyPI/DNS unavailable) for all 3 repos.
-- Next target: Wave R6.1 retry after network/package-source recovery (or preseeded offline wheelhouse).
+- R6.1 fallback policy published: `RUNTIME_PROOF_OFFLINE_WHEELHOUSE_POLICY.md`.
+- Next target: Wave R6.1 retry using offline wheelhouse (preferred) or after network/package-source recovery.
 
 Deliverable: deterministic runtime closure proof matrix.
 
