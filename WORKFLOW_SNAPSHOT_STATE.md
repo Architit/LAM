@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T04:54:27Z
+timestamp: 2026-02-13T04:56:13Z
 
 ## Current pointer
 phase: Phase 6 - Control Plane and UI
-stage: health telemetry profile draft closure (governance-only)
+stage: prep package closure (governance-only)
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
 - preserve closed Phase 5 packages (`RG`, `RT`, `POST`)
-- keep Phase 6 prep package active in governance-only mode
-- close P6.T2 and set deterministic stop-point before P6.T3
+- close Phase 6 prep package in governance-only mode
+- set deterministic stop-point before post-P6 selection
 constraints:
 - contracts-first
 - observability-first
@@ -25,11 +25,12 @@ constraints:
 - Phase 5 runtime-facing gate decision package is closed.
 - Phase 5 runtime task wave package is closed.
 - Phase 5 post-runtime-task package is closed.
-- Phase 6 prep package remains active: T1 DONE, T2 DONE, T3 pending.
-- P6.T2 contract published: P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md
-- Next target: P6.T3 operator action boundary checklist (governance-only).
+- Phase 6 prep package is closed: T1 DONE, T2 DONE, T3 DONE.
+- P6.T3 contract published: P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md
+- Next target: post-P6.PREP package selection (governance-only).
 
 ## Recent commits
+- c648ea4 governance(p6.t2): publish health telemetry profile draft contract
 - e615c44 governance(p6.t1): publish control plane surface inventory contract
 - 3dd9373 governance(p6.prep): activate control plane prep package
 - 2a4dcf0 ssn rstrt(EXPORT): refresh snapshot after p5.post package closure
@@ -41,10 +42,9 @@ constraints:
 - 8e70acb governance(p5.post): activate post-runtime-task package
 - 3929fda ssn rstrt(EXPORT): refresh stop-point after p5 rt-wave closure
 - 7cd05bc governance(p5.rt3): publish runtime start decision record contract
-- b5bc21a governance(p5.rt2): publish runtime preflight checklist contract
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 2]
+## phase2/observability...origin/phase2/observability [ahead 3]
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -55,9 +55,7 @@ constraints:
 - P6_PREP_CONTROL_PLANE_BACKLOG_CONTRACT.md
 - P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md
 - P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md
+- P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md
 - P5_POST_RUNTIME_TASK_WAVE_CONTRACT.md
-- P5_POST1_RUNTIME_EVIDENCE_CONSOLIDATION_CONTRACT.md
-- P5_POST2_RUNTIME_BOUNDARY_CONFIRMATION_CONTRACT.md
-- P5_POST3_NEXT_PACKAGE_START_RECOMMENDATION_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md

@@ -188,7 +188,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 6 — Control Plane / UI (позже)
-> **Статус:** PREP ACTIVE (governance-only) (2026-02-13) — закрыт `P5.POST`, открыт prep-пакет `P6.T1-T3`.
+> **Статус:** PREP CLOSED (governance-only) (2026-02-13) — prep-пакет `P6.T1-T3` завершён.
 
 ### Цель
 Управление экосистемой как оператор:
@@ -202,7 +202,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Открыть P6 prep backlog контракт (governance-only): `P6_PREP_CONTROL_PLANE_BACKLOG_CONTRACT.md`
 - [x] P6.T1: Control plane surface inventory (`P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md`)
 - [x] P6.T2: Health/telemetry panel profile draft (`P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md`)
-- [ ] P6.T3: Operator action boundary checklist
+- [x] P6.T3: Operator action boundary checklist (`P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md`)
 
 ---
 
@@ -386,3 +386,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P6.T1 control plane surface inventory contract published (`P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md`); next target moved to P6.T2 profile draft
 
 - [x] 2026-02-13 — governance: P6.T2 health/telemetry profile draft contract published (`P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md`); next target moved to P6.T3 boundary checklist
+
+- [x] 2026-02-13 — governance: P6.T3 operator action boundary checklist contract published (`P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md`); prep package (`T1/T2/T3`) marked complete

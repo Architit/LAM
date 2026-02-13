@@ -1,6 +1,6 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 04:54 UTC)
+## Execution Status (2026-02-13 04:56 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
@@ -35,7 +35,7 @@ Non-goals:
 - Protocol update template is active for procedure changes (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`).
 - P5 runtime task wave is closed (`P5.RT1/P5.RT2/P5.RT3` all DONE, governance-only).
 - P5 post-runtime task package is closed (`P5.POST1/P5.POST2/P5.POST3` all DONE, governance-only).
-- P6 prep package is activated (`P6.T1/P6.T2/P6.T3` queued, governance-only).
+- P6 prep package is closed (`P6.T1/P6.T2/P6.T3` all DONE, governance-only).
 
 ## Work Program (Current)
 
@@ -162,7 +162,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P6.T3 operator action boundary checklist (governance-only).
+- Next target: post-P6.PREP package selection (governance-only).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -333,12 +333,13 @@ P5.POST package:
 ### P6.PREP) Control Plane Prep Package (ACTIVE, governance-only)
 P6.T1 Control plane surface inventory. (DONE)
 P6.T2 Health/telemetry panel profile draft. (DONE)
-P6.T3 Operator action boundary checklist.
+P6.T3 Operator action boundary checklist. (DONE)
 
 P6.PREP package:
 - Contract published: `P6_PREP_CONTROL_PLANE_BACKLOG_CONTRACT.md`.
 - P6.T1 contract published: `P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md`.
 - P6.T2 contract published: `P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md`.
+- P6.T3 contract published: `P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md`.
 - Runtime impact: none (contracts-only, derivation-only).
 
 ## Gate Criteria
@@ -385,6 +386,7 @@ P6.PREP package:
 - P6_PREP_CONTROL_PLANE_BACKLOG_CONTRACT.md
 - P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md
 - P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md
+- P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md
 - INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md

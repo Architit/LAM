@@ -72,4 +72,5 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - Phase 6 prep package activated in root roadmap/maps (governance-only); `P6_PREP_CONTROL_PLANE_BACKLOG_CONTRACT.md` published with queue `P6.T1/P6.T2/P6.T3`.
 - P6.T1 control plane surface inventory completed in root roadmap/maps (governance-only); `P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md` published and next target moved to `P6.T2`.
 - P6.T2 health/telemetry profile draft completed in root roadmap/maps (governance-only); `P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md` published and next target moved to `P6.T3`.
+- P6.T3 operator action boundary checklist completed in root roadmap/maps (governance-only); `P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md` published and prep package marked complete.
 - Interaction protocol update template published in root roadmap/maps (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and linked to governance protocol update flow.
