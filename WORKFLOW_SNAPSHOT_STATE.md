@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T04:30:56Z
+timestamp: 2026-02-13T04:32:56Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge
@@ -13,7 +13,7 @@ protocol_semantic_en: neutral
 goal:
 - preserve closed runtime-facing gate decision state
 - finalize runtime task wave in governance-only mode
-- set deterministic stop-point after P5.RT closure
+- keep deterministic stop-point before next governance package
 constraints:
 - contracts-first
 - observability-first
@@ -30,6 +30,7 @@ constraints:
 - Next target: post-runtime-task-wave selection (governance-only).
 
 ## Recent commits
+- 7cd05bc governance(p5.rt3): publish runtime start decision record contract
 - b5bc21a governance(p5.rt2): publish runtime preflight checklist contract
 - 2e4db78 governance(p5.rt1): publish runtime task candidate contract
 - 2569560 governance(snapshot): align runtime-task-wave snapshot with head
@@ -41,10 +42,9 @@ constraints:
 - 9aa9870 governance(p5.rg1): publish eligibility matrix contract draft
 - 4b78079 governance(p5.rg): activate runtime-facing gate decision package
 - a978389 governance(dev-map): acknowledge RADR ASR and update P5 exec gate contracts
-- 621294a ssn rstrt(EXPORT): set stop-point after P5 execution-gate closure
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 2]
+## phase2/observability...origin/phase2/observability [ahead 3]
 
 ## References
 - INTERACTION_PROTOCOL.md
