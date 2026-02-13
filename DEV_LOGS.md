@@ -130,3 +130,5 @@ normalized.
 2026-02-13 05:51 UTC — Governance: RADR ASR sync confirmed for Z.RUNTIME T1/T2/T3 package (`11cffa8`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-t1t2t3-sync.md`).
 2026-02-13 05:53 UTC — Governance: Z.RUNTIME.START decision recorded as `approved` in `Z_RUNTIME_START_DECISION_RECORD.md` (based on explicit user gate `+` and T2 preflight PASS).
 2026-02-13 05:53 UTC — Governance: RADR ASR sync confirmed for Z.RUNTIME start decision (`a04b47a`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-start-decision-sync.md`).
+2026-02-13 05:56 UTC — Governance: first runtime execution package opened — published `Z_RUNTIME_EXEC_WAVE_CONTRACT.md` (`Z.RUNTIME.EXEC.W1`, state OPEN) with strict execution-path guardrails and rollback plan.
+2026-02-13 05:56 UTC — Governance: RADR ASR sync confirmed for execution-wave opening (`dfe8f4f`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-wave-open-sync.md`).
