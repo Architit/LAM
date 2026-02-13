@@ -1,6 +1,6 @@
 # ROADMAP
 
-Synced with root `ROADMAP.md` on 2026-02-13 02:40 UTC.
+Synced with root `ROADMAP.md` on 2026-02-13 02:47 UTC.
 Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
 ## Phase 2 — Observability
@@ -41,3 +41,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - P4.T1 inventory completed in root roadmap/maps; next target is P4.T2 profile draft.
 - P4.T2 profile draft completed in root roadmap/maps; next target is P4.T3 operator evidence block.
 - P4.T3 operator evidence block completed in root roadmap/maps; next target is post-P4.3 task selection.
+- P4 follow-up backlog contract published in root roadmap/maps; next target is F1 cost-aware contract wave.

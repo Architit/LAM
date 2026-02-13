@@ -153,6 +153,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [ ] Quality-aware routing (профили по intent)
 - [ ] Policy v3: конфиг-профили (yaml/json), без хардкода
 - [ ] Метрики по провайдерам (успех/ошибки/латентность/токены)
+- [x] Follow-up backlog contract published: `P4_FOLLOWUP_BACKLOG_CONTRACT.md` (F1-F4 wave plan, governance-only)
 
 ---
 
@@ -284,5 +285,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P4.T2 deterministic policy profile draft published (`P4_ROUTER_POLICY_PROFILE_DRAFT.md`), T2 marked DONE with no runtime-path changes
 
 - [x] 2026-02-13 — governance: P4.T3 operator evidence blocks published (`P4_ROUTER_OPERATOR_BLOCKS.md`), T3 marked DONE (governance-only, read-only evidence flow)
+
+- [x] 2026-02-13 — governance: P4 follow-up backlog contract published (`P4_FOLLOWUP_BACKLOG_CONTRACT.md`), next target moved to F1 cost-aware contract wave
 
 - [x] 2026-02-13 — governance: ASR record synced for LAM P4 closure (`133ef73`, `gov-radr-asr-phase5b-lam-p4-closure-v1.0.0`).
