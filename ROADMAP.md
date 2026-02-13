@@ -158,7 +158,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 5 — Memory & Knowledge Layer (1–2 месяца)
-> **Статус:** EXEC-GATE CLOSED (governance-only) (2026-02-13) — gate-пакет `P5.G1-G3` завершён, ожидается выбор следующего runtime-facing gate decision.
+> **Статус:** RUNTIME-GATE-DECISION ACTIVE (governance-only) (2026-02-13) — `P5.EXEC` закрыт, открыт decision-пакет `P5.RG1-RG3`.
 
 ### Цель
 Система “живёт”, копит опыт, извлекает знания и не забывает важное.
@@ -172,6 +172,10 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] P5.G1: Evidence profile для memory/retrieval операций (`P5_G1_EVIDENCE_PROFILE_CONTRACT.md`)
 - [x] P5.G2: Risk boundary register для phase5 изменений (`P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`)
 - [x] P5.G3: Operator decision checklist перед runtime-facing шагами (`P5_G3_OPERATOR_CHECKLIST_CONTRACT.md`)
+- [x] Открыть runtime-facing gate decision контракт (governance-only): `P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md`
+- [ ] P5.RG1: Runtime-facing eligibility matrix
+- [ ] P5.RG2: Hold/reject decision policy
+- [ ] P5.RG3: Start-approval evidence record
 
 ---
 
@@ -332,3 +336,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P5.G3 operator checklist contract published (`P5_G3_OPERATOR_CHECKLIST_CONTRACT.md`); P5 execution gate wave (`G1/G2/G3`) marked complete
 
 - [x] 2026-02-13 — governance: RADR ASR sync confirmed for P5 execution-gate closure (`e86650d`, `gov-radr-asr-phase5b-lam-p5-exec-gate-closure-v1.0.0`)
+
+- [x] 2026-02-13 — governance: runtime-facing gate decision package activated (`P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md`); queue `P5.RG1/P5.RG2/P5.RG3` fixed
