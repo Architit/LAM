@@ -5,7 +5,7 @@
 - Repository: LAM
 - Branch: phase2/observability
 - Protocol scale: 0 (governance/sync)
-- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep (memory/knowledge governance) ACTIVE
+- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep (memory/knowledge governance) finalized
 
 ## Synchronization Source (SoT)
 - Upstream SoT repo: /home/architit/work/RADRILONIUMA-PROJECT
@@ -28,6 +28,7 @@ Non-goals:
 - Ecosystem runtime proof matrix is closed in LAM governance (`DONE=14, EXEMPT=1, PENDING=0`).
 - P3 automation hardening package is closed (`P3.1/P3.2/P3.3` all DONE).
 - P4 router-core follow-up wave is closed (`F1/F2/F3/F4` all DONE).
+- P5 prep governance wave is closed (`T1/T2/T3` all DONE).
 
 ## Work Program (Current)
 
@@ -154,7 +155,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P5.T3 domain memory partitioning contract draft (governance-only).
+- Next target: post-P5 prep task selection (sync/push + phase5 execution gate).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -260,12 +261,13 @@ Deliverable: controlled start of Router Core execution with explicit gates and e
 ### P5) Memory & Knowledge Prep Phase (ACTIVE, governance-only)
 P5.T1 Timestamp normalization policy contract draft (timezone-aware UTC boundaries, docs/events semantics). (DONE)
 P5.T2 Retrieval routing boundary contract draft (memory/search before LLM, non-goals fixed). (DONE)
-P5.T3 Domain memory partitioning contract draft (RADRILONIUMA/TRIANIUMA boundaries and traceability).
+P5.T3 Domain memory partitioning contract draft (RADRILONIUMA/TRIANIUMA boundaries and traceability). (DONE)
 
 P5 prep package:
 - Backlog contract published: `P5_PREP_BACKLOG_CONTRACT.md`.
 - P5.T1 contract published: `P5_T1_TIMESTAMP_UTC_CONTRACT.md`.
 - P5.T2 contract published: `P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md`.
+- P5.T3 contract published: `P5_T3_DOMAIN_PARTITIONING_CONTRACT.md`.
 - Runtime impact: none (contracts-only, derivation-only).
 
 P5 prep DoD:
@@ -297,6 +299,7 @@ P5 prep DoD:
 - P5_PREP_BACKLOG_CONTRACT.md
 - P5_T1_TIMESTAMP_UTC_CONTRACT.md
 - P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md
+- P5_T3_DOMAIN_PARTITIONING_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md

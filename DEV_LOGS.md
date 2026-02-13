@@ -87,3 +87,4 @@ normalized.
 2026-02-13 03:35 UTC — Governance: Phase 5 prep activated (governance-only) — published `P5_PREP_BACKLOG_CONTRACT.md`; fixed queue `P5.T1/P5.T2/P5.T3`; next target set to `P5.T1` timestamp policy contract draft.
 2026-02-13 03:39 UTC — Governance: P5.T1 completed (governance-only) — published `P5_T1_TIMESTAMP_UTC_CONTRACT.md`; timestamp normalization rules fixed for `UTC`/`Z`; next target moved to `P5.T2` retrieval boundary draft.
 2026-02-13 03:41 UTC — Governance: P5.T2 completed (governance-only) — published `P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md`; retrieval-first boundary semantics fixed at policy level; next target moved to `P5.T3` domain partitioning draft.
+2026-02-13 03:44 UTC — Governance: P5.T3 completed (governance-only) — published `P5_T3_DOMAIN_PARTITIONING_CONTRACT.md`; domain partitioning boundaries fixed; P5 prep wave (`T1/T2/T3`) marked complete; next target moved to post-P5 prep task selection.
