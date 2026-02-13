@@ -284,3 +284,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P4.T2 deterministic policy profile draft published (`P4_ROUTER_POLICY_PROFILE_DRAFT.md`), T2 marked DONE with no runtime-path changes
 
 - [x] 2026-02-13 — governance: P4.T3 operator evidence blocks published (`P4_ROUTER_OPERATOR_BLOCKS.md`), T3 marked DONE (governance-only, read-only evidence flow)
+
+- [x] 2026-02-13 — governance: ASR record synced for LAM P4 closure (`133ef73`, `gov-radr-asr-phase5b-lam-p4-closure-v1.0.0`).

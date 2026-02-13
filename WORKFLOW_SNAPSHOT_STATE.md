@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T02:41:44Z
+timestamp: 2026-02-13T02:46:04Z
 
 ## Current pointer
 phase: Phase 4 - Router Core
-stage: stop-point after P4.1/P4.2/P4.3 closure
+stage: stop-point after P4.1/P4.2/P4.3 closure + ASR sync acknowledged
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
 - preserve closed P4 queue state (T1/T2/T3 DONE)
 - keep restart/import deterministic before post-P4.3 task selection
-- preserve clean recovery semantics for ssn rstrt/cld rstrt
+- keep SoT ASR links synchronized
 constraints:
 - contracts-first
 - observability-first
@@ -23,16 +23,14 @@ constraints:
 
 ## Verification
 - P4 queue closure fixed in maps: T1 DONE, T2 DONE, T3 DONE.
-- Operator evidence contracts published:
-  - `P4_ROUTER_POLICY_PROFILE_DRAFT.md`
-  - `P4_ROUTER_OPERATOR_BLOCKS.md`
-- SoT sync refs acknowledged in cycle:
-  - `a35e1cd` (P4.T1 sync)
-  - `8cd69bf` (P4.T2 sync)
-  - `517f7ba` (P4.T3 sync)
+- ASR sync acknowledged:
+  - RADR commit: 133ef73
+  - RADR tag: gov-radr-asr-phase5b-lam-p4-closure-v1.0.0
+  - session: gov/asr/sessions/2026-02-13__ASR__phase5b-lam-p4-closure-sync.md
 - Next target: post-P4.3 task selection with user confirmation gate.
 
 ## Recent commits
+- 0e52448 ssn rstrt(EXPORT): set stop-point after P4.1-P4.3 closure
 - 8a95e9e governance(p4.3): publish router operator evidence blocks
 - 19e82fe governance(p4.2): publish deterministic ci-smoke policy profile draft
 - de7ec83 governance(p4.1): record router-core inventory baseline
@@ -44,12 +42,11 @@ constraints:
 - 605c264 governance(p3.3): harden mandatory update-order protocol
 - f115586 governance(p3.2): unify test entrypoint and smoke profile contract
 - 8a25ed0 governance(mirror): remove stale P3.1 blocked note in default roadmap
-- 0a8d8c4 governance(p3.1): resolve gate blocker and mark validation done
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 3]
- M NEW_CHAT_INIT_MESSAGE
- M WORKFLOW_SNAPSHOT_STATE.md
+## phase2/observability...origin/phase2/observability
+ M DEV_LOGS.md
+ M ROADMAP.md
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -60,21 +57,3 @@ constraints:
 - P4_ROUTER_OPERATOR_BLOCKS.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
-
-## New Chat Init
-ssn rstrt
-IMPORT:
-1) Read `WORKFLOW_SNAPSHOT_STATE.md`.
-2) Run read-only sync:
-   - `pwd`
-   - `git status -sb`
-   - `git log -n 12 --oneline`
-3) Continue from declared pointer:
-   - phase: Phase 4 - Router Core
-   - stage: stop-point after P4.1/P4.2/P4.3 closure
-4) Constraints remain strict:
-   - contracts-first
-   - observability-first
-   - derivation-only
-   - NO runtime logic
-   - NO execution-path impact
