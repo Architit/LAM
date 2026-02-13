@@ -58,3 +58,4 @@
 2026-02-13 01:16 UTC — Governance: P2.4 wave R6.4 host-split retry succeeded for 3 repos (System- `9598a75`, TRIANIUMA_DATA_BASE `667b10b`, Trianiuma `a617da3`), all smoke runs exit_code=0; runtime summary now DONE=13, PENDING=2.
 2026-02-13 01:22 UTC — Governance: P2.4 wave R6.5 host-split retry succeeded for Trianiuma_MEM_CORE (`b8eff8f6`), smoke run passed (pytest 9.0.2, exit_code=0); runtime summary now DONE=14, PENDING=1.
 2026-02-13 01:30 UTC — Governance: post-review sync with RADRILONIUMA-PROJECT confirmed (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`); SoT updated through LAM R6.5 state (DONE=14, PENDING=1).
+2026-02-13 01:34 UTC — Governance: policy decision applied in DEV_MAP DoD — `RADRILONIUMA-PROJECT` runtime row set to `EXEMPT` (SoT governance repo); runtime summary finalized to DONE=14, EXEMPT=1, PENDING=0.

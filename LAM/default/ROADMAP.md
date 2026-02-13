@@ -30,3 +30,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - R6.4 host-split retry succeeded for next 3 repos (DONE=13, PENDING=2).
 - R6.5 host-split retry succeeded for Trianiuma_MEM_CORE (DONE=14, PENDING=1).
 - Post-review sync with RADRILONIUMA-PROJECT completed for LAM R6.5 state.
+- SoT row policy finalized in DEV_MAP: RADRILONIUMA-PROJECT => EXEMPT (DONE=14, EXEMPT=1, PENDING=0).

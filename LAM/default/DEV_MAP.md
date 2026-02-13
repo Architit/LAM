@@ -14,7 +14,8 @@ P2 governance summary:
 
 P2.4 runtime summary:
 - DONE: 14
-- PENDING: 1
+- EXEMPT: 1
+- PENDING: 0
 
 R1/R2/R3/R4 note:
 - All runtime waves executed; no promotions due missing pytest/tests in target repos.
@@ -37,3 +38,4 @@ R5 publication note:
 - R6.4 host-split retry succeeded for next 3 repos; runtime summary now DONE=13, PENDING=2.
 - R6.5 host-split retry succeeded for Trianiuma_MEM_CORE; runtime summary now DONE=14, PENDING=1.
 - Post-review sync with RADRILONIUMA-PROJECT completed (commit 69eff02, tag gov-radr-phase5b-r65-postreview-sync-v1.0.0).
+- SoT row policy finalized: RADRILONIUMA-PROJECT marked EXEMPT; runtime summary closed to DONE=14, EXEMPT=1, PENDING=0.

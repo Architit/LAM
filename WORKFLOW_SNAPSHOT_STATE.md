@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T01:28:17Z
+timestamp: 2026-02-13T01:34:09Z
 
 ## Current pointer
 phase: Phase 2 - Observability
@@ -23,7 +23,7 @@ constraints:
 
 ## Verification
 - governance coverage matrix: DONE=15, BLOCKED=0, PENDING=0
-- runtime proof matrix after R6.5 host-split retry: DONE=14, PENDING=1
+- runtime proof matrix after SoT row policy closure: DONE=14, EXEMPT=1, PENDING=0
 - R6 strict gate: python3 >= 3.10 and mandatory .venv/bin/python runner for promotion evidence
 - R6.1 success evidence:
   - Roaudter-agent: 2026-02-13T01:00:48Z, rev bd16495, exit_code=0
@@ -47,12 +47,12 @@ constraints:
   - builder host: internet allowed for vendoring
   - runner host: offline, installs via --no-index --find-links
 - SoT DEVMAP reference: commit e8a82fb, sha256 fdef6e4b581b6dfafe65054b4163a047221706f29ab2989f36ad8ce804a59cbf
-- LAM DEVMAP sha256: ac27c9977856c62fa6f5b4889c6905bc43b9b59cbc21dd2ed52f420ea068ea41 (derived/local)
+- LAM DEVMAP sha256: a9d6322282081e7315c146acbb0c28c08bd30fb84ef07fcd61f4880f5b92acab (derived/local)
 - SoT post-review sync status: RADRILONIUMA-PROJECT commit 69eff02, tag gov-radr-phase5b-r65-postreview-sync-v1.0.0
 - Patcher hash: LAM=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7, SoT=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7 (equal)
 - Workflow snapshot contract hash: LAM=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db, SoT=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db (equal)
 - System state contract hash: LAM=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247, SoT=e154be15f9dbc88f2c460cce16326b3862992e744ecc5a247 (equal)
-- Next target: finalize LAM decision for SoT runtime row semantics (`RADRILONIUMA-PROJECT` currently PENDING by matrix definition)
+- Next target: push finalized runtime-proof policy/state (`DONE=14, EXEMPT=1, PENDING=0`) to origin.
 
 ## Recent commits
 - 9f9760e governance(dev-map): record P2.4 R6.5 success (Trianiuma_MEM_CORE)

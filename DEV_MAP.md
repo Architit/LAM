@@ -83,13 +83,14 @@ Governance summary:
 Definition:
 - `runtime_proof = DONE` only if repo has explicit observability/runtime verification evidence (tests/logs) accepted in governance docs.
 - `runtime_proof = PENDING` until such evidence exists.
+- `runtime_proof = EXEMPT` only for governance SoT repo where downstream runtime-proof closure is not applicable by policy.
 
 Runtime proof matrix (2026-02-13 01:22 UTC):
 
 | Repo | governance_done | runtime_proof | Notes |
 |---|---|---|---|
 | LAM | DONE | DONE | local runtime observability proof exists (5/5) |
-| RADRILONIUMA-PROJECT | DONE | PENDING | governance SoT; no repo runtime closure claim required for others |
+| RADRILONIUMA-PROJECT | DONE | EXEMPT | governance SoT; excluded from downstream runtime-proof closure by policy DoD |
 | Roaudter-agent | DONE | DONE | R6.1 host-split retry passed (`2026-02-13T01:00:48Z`, rev `bd16495`, exit_code=0) |
 | LAM-Codex_Agent | DONE | DONE | R6.1 host-split retry passed (`2026-02-13T01:00:54Z`, rev `3e15737`, exit_code=0) |
 | LAM_Comunication_Agent | DONE | DONE | R6.1 host-split retry passed (`2026-02-13T01:01:00Z`, rev `c3a7285`, exit_code=0) |
@@ -106,7 +107,8 @@ Runtime proof matrix (2026-02-13 01:22 UTC):
 
 Runtime summary:
 - DONE: 14
-- PENDING: 1
+- EXEMPT: 1
+- PENDING: 0
 
 Wave-runtime start set:
 - Wave R1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
@@ -149,7 +151,8 @@ Wave-runtime start set:
 - Wave R6.4 result: status promotion for 3 repos (DONE=13, PENDING=2); all smoke runs passed with exit_code=0 using offline wheelhouse.
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
-- Next target: decide final SoT runtime row policy in LAM matrix (`RADRILONIUMA-PROJECT` remains `PENDING` by current definition).
+- Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
+- Next target: push finalized policy/state to origin.
 
 Deliverable: deterministic runtime closure proof matrix.
 
