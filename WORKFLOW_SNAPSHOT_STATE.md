@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T02:14:43Z
+timestamp: 2026-02-13T02:20:04Z
 
 ## Current pointer
 phase: Phase 3 - Automation
@@ -51,6 +51,7 @@ constraints:
 - SoT post-review sync status: RADRILONIUMA-PROJECT commit 69eff02, tag gov-radr-phase5b-r65-postreview-sync-v1.0.0
 - SoT EXEMPT closure sync status: RADRILONIUMA-PROJECT commit 1fc28cb, tag gov-radr-phase5b-sot-exempt-sync-v1.0.0
 - SoT phase-3 hardening sync status: RADRILONIUMA-PROJECT commit df4eed8, tag gov-radr-phase5b-p33-sync-v1.0.0
+- SoT ASR sync status: RADRILONIUMA-PROJECT commit 739e1f4, tag gov-radr-asr-phase5b-lam-p3x-sync-v1.0.0
 - P3.1 package status:
   - CI workflow gate aligned to local `./devkit/bootstrap.sh` + `./devkit/check.sh`
   - `P3_CI_GATE_POLICY.md` published
@@ -67,7 +68,7 @@ constraints:
 - Patcher hash: LAM=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7, SoT=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7 (equal)
 - Workflow snapshot contract hash: LAM=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db, SoT=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db (equal)
 - System state contract hash: LAM=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247, SoT=e154be15f9dbc88f2c460cce16326b3862992e744ecc5a247 (equal)
-- Next target: protocol task selection after P3.3 hardening.
+- Next target: protocol task selection after P3.x + ASR sync closure.
 
 ## Recent commits
 - 6588e13 governance(dev-map): record RADR post-review sync for P3.2/P3.3
@@ -94,8 +95,6 @@ constraints:
 ## phase2/observability...origin/phase2/observability
  M DEV_LOGS.md
  M LAM/default/DEV_LOGS.md
- M LAM/default/ROADMAP.md
- M ROADMAP.md
  M WORKFLOW_SNAPSHOT_STATE.md
 
 ## References
