@@ -28,3 +28,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - R6.2 host-split retry succeeded for next 3 repos (DONE=7, PENDING=8).
 - R6.3 host-split retry succeeded for next 3 repos (DONE=10, PENDING=5).
 - R6.4 host-split retry succeeded for next 3 repos (DONE=13, PENDING=2).
+- R6.5 host-split retry succeeded for Trianiuma_MEM_CORE (DONE=14, PENDING=1).

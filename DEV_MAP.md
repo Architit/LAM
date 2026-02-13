@@ -84,7 +84,7 @@ Definition:
 - `runtime_proof = DONE` only if repo has explicit observability/runtime verification evidence (tests/logs) accepted in governance docs.
 - `runtime_proof = PENDING` until such evidence exists.
 
-Runtime proof matrix (2026-02-13 01:16 UTC):
+Runtime proof matrix (2026-02-13 01:22 UTC):
 
 | Repo | governance_done | runtime_proof | Notes |
 |---|---|---|---|
@@ -102,11 +102,11 @@ Runtime proof matrix (2026-02-13 01:16 UTC):
 | System- | DONE | DONE | R6.4 host-split retry passed (`2026-02-13T01:16:34Z`, rev `9598a75`, exit_code=0) |
 | TRIANIUMA_DATA_BASE | DONE | DONE | R6.4 host-split retry passed (`2026-02-13T01:16:41Z`, rev `667b10b`, exit_code=0) |
 | Trianiuma | DONE | DONE | R6.4 host-split retry passed (`2026-02-13T01:16:49Z`, rev `a617da3`, exit_code=0) |
-| Trianiuma_MEM_CORE | DONE | PENDING | R4 attempt executed; no runtime/observability tests discovered |
+| Trianiuma_MEM_CORE | DONE | DONE | R6.5 host-split retry passed (`2026-02-13T01:22:52Z`, rev `b8eff8f6`, exit_code=0) |
 
 Runtime summary:
-- DONE: 13
-- PENDING: 2
+- DONE: 14
+- PENDING: 1
 
 Wave-runtime start set:
 - Wave R1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
@@ -147,7 +147,8 @@ Wave-runtime start set:
 - Wave R6.2 result: status promotion for 3 repos (DONE=7, PENDING=8); all smoke runs passed with exit_code=0 using offline wheelhouse.
 - Wave R6.3 result: status promotion for 3 repos (DONE=10, PENDING=5); all smoke runs passed with exit_code=0 using offline wheelhouse.
 - Wave R6.4 result: status promotion for 3 repos (DONE=13, PENDING=2); all smoke runs passed with exit_code=0 using offline wheelhouse.
-- Next target: Wave R6.5 execution for final pending runtime repo (`Trianiuma_MEM_CORE`).
+- Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
+- Next target: governance post-review sync with `RADRILONIUMA-PROJECT` for final SoT runtime row handling (`PENDING=1`).
 
 Deliverable: deterministic runtime closure proof matrix.
 

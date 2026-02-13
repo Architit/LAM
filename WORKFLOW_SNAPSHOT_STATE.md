@@ -3,11 +3,11 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T01:19:29Z
+timestamp: 2026-02-13T01:24:42Z
 
 ## Current pointer
 phase: Phase 2 - Observability
-stage: governance coverage closed (15/15); runtime proof matrix active (P2.4), R6.4 host-split retry succeeded
+stage: governance coverage closed (15/15); runtime proof matrix active (P2.4), R6.5 host-split retry succeeded
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
@@ -23,7 +23,7 @@ constraints:
 
 ## Verification
 - governance coverage matrix: DONE=15, BLOCKED=0, PENDING=0
-- runtime proof matrix after R6.4 host-split retry: DONE=13, PENDING=2
+- runtime proof matrix after R6.5 host-split retry: DONE=14, PENDING=1
 - R6 strict gate: python3 >= 3.10 and mandatory .venv/bin/python runner for promotion evidence
 - R6.1 success evidence:
   - Roaudter-agent: 2026-02-13T01:00:48Z, rev bd16495, exit_code=0
@@ -41,17 +41,20 @@ constraints:
   - System-: 2026-02-13T01:16:34Z, rev 9598a75, exit_code=0
   - TRIANIUMA_DATA_BASE: 2026-02-13T01:16:41Z, rev 667b10b, exit_code=0
   - Trianiuma: 2026-02-13T01:16:49Z, rev a617da3, exit_code=0
+- R6.5 success evidence:
+  - Trianiuma_MEM_CORE: 2026-02-13T01:22:52Z, rev b8eff8f6, exit_code=0
 - Host role contract active:
   - builder host: internet allowed for vendoring
   - runner host: offline, installs via --no-index --find-links
 - SoT DEVMAP reference: commit e8a82fb, sha256 fdef6e4b581b6dfafe65054b4163a047221706f29ab2989f36ad8ce804a59cbf
-- LAM DEVMAP sha256: 35a0456d90818a05c493f93bcc2740e6fd7b51f6987c7f0565877365402ca74c (derived/local)
+- LAM DEVMAP sha256: b6da70fafefe2615a200ca07b29cbe2bb5866d9ca0f99afdc1f45985cd5baff9 (derived/local)
 - Patcher hash: LAM=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7, SoT=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7 (equal)
 - Workflow snapshot contract hash: LAM=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db, SoT=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db (equal)
 - System state contract hash: LAM=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247, SoT=e154be15f9dbc88f2c460cce16326b3862992e744ecc5a247 (equal)
-- Next target: Wave R6.5 execution for final pending runtime repo (`Trianiuma_MEM_CORE`)
+- Next target: governance post-review sync with RADRILONIUMA-PROJECT for final SoT runtime row handling (`PENDING=1`)
 
 ## Recent commits
+- 9a787e1 governance(dev-map): record P2.4 R6.4 success (3 repos)
 - 7a9dff5 governance(dev-map): record P2.4 R6.3 success (3 repos)
 - 7dc55ca governance(dev-map): record P2.4 R6.2 success (3 repos)
 - 1cdf00b governance(dev-map): record P2.4 R6.1 host-split success (3 repos)
@@ -59,7 +62,6 @@ constraints:
 - bc5583e governance(dev-map): record R6.1 retry artifact-missing root cause
 - a5deab7 governance(dev-map): record P2.4 R6.1 retry wheelhouse-missing blocker
 - 1547f32 governance(runtime-proof): add offline wheelhouse fallback for R6.1
-- cfcbaf8 governance(dev-map): record P2.4 R6.1 wave-1 offline blocker
 
 ## Git status
 ## phase2/observability...origin/phase2/observability
@@ -69,6 +71,7 @@ constraints:
  M LAM/default/DEV_MAP.md
  M LAM/default/ROADMAP.md
  M ROADMAP.md
+ M WORKFLOW_SNAPSHOT_STATE.md
 
 ## References
 - INTERACTION_PROTOCOL.md
