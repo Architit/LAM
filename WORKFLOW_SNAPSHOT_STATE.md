@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T01:34:09Z
+timestamp: 2026-02-13T01:39:29Z
 
 ## Current pointer
 phase: Phase 2 - Observability
@@ -49,6 +49,7 @@ constraints:
 - SoT DEVMAP reference: commit e8a82fb, sha256 fdef6e4b581b6dfafe65054b4163a047221706f29ab2989f36ad8ce804a59cbf
 - LAM DEVMAP sha256: a9d6322282081e7315c146acbb0c28c08bd30fb84ef07fcd61f4880f5b92acab (derived/local)
 - SoT post-review sync status: RADRILONIUMA-PROJECT commit 69eff02, tag gov-radr-phase5b-r65-postreview-sync-v1.0.0
+- SoT EXEMPT closure sync status: RADRILONIUMA-PROJECT commit 1fc28cb, tag gov-radr-phase5b-sot-exempt-sync-v1.0.0
 - Patcher hash: LAM=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7, SoT=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7 (equal)
 - Workflow snapshot contract hash: LAM=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db, SoT=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db (equal)
 - System state contract hash: LAM=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247, SoT=e154be15f9dbc88f2c460cce16326b3862992e744ecc5a247 (equal)

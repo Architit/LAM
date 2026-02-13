@@ -59,3 +59,5 @@
 2026-02-13 01:22 UTC — Governance: P2.4 wave R6.5 host-split retry succeeded for Trianiuma_MEM_CORE (`b8eff8f6`), smoke run passed (pytest 9.0.2, exit_code=0); runtime summary now DONE=14, PENDING=1.
 2026-02-13 01:30 UTC — Governance: post-review sync with RADRILONIUMA-PROJECT confirmed (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`); SoT updated through LAM R6.5 state (DONE=14, PENDING=1).
 2026-02-13 01:34 UTC — Governance: policy decision applied in DEV_MAP DoD — `RADRILONIUMA-PROJECT` runtime row set to `EXEMPT` (SoT governance repo); runtime summary finalized to DONE=14, EXEMPT=1, PENDING=0.
+2026-02-13 01:39 UTC — Governance: SoT sync acknowledged for EXEMPT closure (`1fc28cb`, tag `gov-radr-phase5b-sot-exempt-sync-v1.0.0`).
+Operational note: avoid command substitution in heredoc payloads with backticks; use quoted heredoc marker (`<<'EOF'`) for literal tags/refs.

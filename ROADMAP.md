@@ -249,3 +249,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: post-review sync with RADRILONIUMA-PROJECT completed for LAM R6.5 state (`69eff02`, `gov-radr-phase5b-r65-postreview-sync-v1.0.0`)
 
 - [x] 2026-02-13 — governance: DEV_MAP DoD policy finalized for SoT row (`RADRILONIUMA-PROJECT` => `EXEMPT`), runtime summary closed to DONE=14, EXEMPT=1, PENDING=0
+
+- [x] 2026-02-13 — governance: SoT synced EXEMPT closure (`1fc28cb`, `gov-radr-phase5b-sot-exempt-sync-v1.0.0`)
