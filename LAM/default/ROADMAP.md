@@ -76,4 +76,5 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - Phase Z prep package activated in root roadmap/maps (governance-only); `Z_PREP_AGENT_SDK_BACKLOG_CONTRACT.md` published with queue `Z.T1/Z.T2/Z.T3`.
 - Z.T1 backend integration draft completed in root roadmap/maps (governance-only); `Z_T1_AGENT_SDK_BACKEND_INTEGRATION_CONTRACT.md` published and next target moved to `Z.T2`.
 - Z.T2 smoke contract draft completed in root roadmap/maps (governance-only); `Z_T2_SMOKE_CONTRACT_DRAFT.md` published and next target moved to `Z.T3`.
+- Z.T3 compatibility DoD contract draft completed in root roadmap/maps (governance-only); `Z_T3_COMPATIBILITY_DOD_CONTRACT.md` published and prep package marked complete.
 - Interaction protocol update template published in root roadmap/maps (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and linked to governance protocol update flow.

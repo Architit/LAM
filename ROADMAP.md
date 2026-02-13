@@ -224,7 +224,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-12 — governance: P2 baseline matrix (15 repos) completed in DEV_MAP (DONE=2, BLOCKED=1, PENDING=12)
 
 ## Фаза Z — Agent SDK Integrations v0 (⏭ next after Runtime EntryPoint v0)
-> **Статус:** PREP ACTIVE (governance-only) (2026-02-13) — закрыт `P6.PREP`, открыт prep-пакет `Z.T1-T3`.
+> **Статус:** PREP CLOSED (governance-only) (2026-02-13) — prep-пакет `Z.T1-T3` завершён.
 
 Цель: подключить Claude Agent SDK как backend-инструмент Codex (не отдельный агент на v0).
 
@@ -232,7 +232,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Открыть Z prep backlog контракт (governance-only): `Z_PREP_AGENT_SDK_BACKLOG_CONTRACT.md`
 - [x] Z.T1: Agent SDK backend integration contract draft (`Z_T1_AGENT_SDK_BACKEND_INTEGRATION_CONTRACT.md`)
 - [x] Z.T2: Smoke contract draft (`Z_T2_SMOKE_CONTRACT_DRAFT.md`)
-- [ ] Z.T3: Compatibility DoD contract draft
+- [x] Z.T3: Compatibility DoD contract draft (`Z_T3_COMPATIBILITY_DOD_CONTRACT.md`)
 
 ### Phase 4 Review Findings (pre-4.3)
 - [ ] R1: Spec drift — derivation mentions non-existent fields:
@@ -396,3 +396,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: Z.T1 backend integration draft contract published (`Z_T1_AGENT_SDK_BACKEND_INTEGRATION_CONTRACT.md`); next target moved to Z.T2 smoke contract draft
 
 - [x] 2026-02-13 — governance: Z.T2 smoke contract draft published (`Z_T2_SMOKE_CONTRACT_DRAFT.md`); next target moved to Z.T3 compatibility DoD draft
+
+- [x] 2026-02-13 — governance: Z.T3 compatibility DoD contract published (`Z_T3_COMPATIBILITY_DOD_CONTRACT.md`); prep package (`Z.T1/Z.T2/Z.T3`) marked complete
