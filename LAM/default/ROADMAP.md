@@ -1,6 +1,6 @@
 # ROADMAP
 
-Synced with root `ROADMAP.md` on 2026-02-13 01:12 UTC.
+Synced with root `ROADMAP.md` on 2026-02-13 01:16 UTC.
 Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
 ## Phase 2 — Observability
@@ -27,3 +27,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - R6.1 host-split retry succeeded for first 3 repos (DONE=4, PENDING=11).
 - R6.2 host-split retry succeeded for next 3 repos (DONE=7, PENDING=8).
 - R6.3 host-split retry succeeded for next 3 repos (DONE=10, PENDING=5).
+- R6.4 host-split retry succeeded for next 3 repos (DONE=13, PENDING=2).
