@@ -158,7 +158,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 5 — Memory & Knowledge Layer (1–2 месяца)
-> **Статус:** PREP-CLOSED (governance-only) (2026-02-13) — подготовительный пакет `P5.T1-T3` завершён, ожидается выбор следующего execution gate.
+> **Статус:** EXEC-GATE ACTIVE (governance-only) (2026-02-13) — `P5 prep` закрыт, открыт gate-пакет `P5.G1-G3`.
 
 ### Цель
 Система “живёт”, копит опыт, извлекает знания и не забывает важное.
@@ -168,6 +168,10 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] P5.T1: Контракт нормализации timestamp к timezone-aware UTC (`P5_T1_TIMESTAMP_UTC_CONTRACT.md`)
 - [x] P5.T2: Контракт boundary для retrieval routing (memory/search -> LLM) (`P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md`)
 - [x] P5.T3: Контракт доменной сегментации памяти (RADRILONIUMA/TRIANIUMA) (`P5_T3_DOMAIN_PARTITIONING_CONTRACT.md`)
+- [x] Открыть execution gate контракт (governance-only): `P5_EXECUTION_GATE_CONTRACT.md`
+- [ ] P5.G1: Evidence profile для memory/retrieval операций
+- [ ] P5.G2: Risk boundary register для phase5 изменений
+- [ ] P5.G3: Operator decision checklist перед runtime-facing шагами
 
 ---
 
@@ -318,3 +322,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P5.T2 retrieval boundary contract published (`P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md`); next target moved to P5.T3 domain partitioning draft
 
 - [x] 2026-02-13 — governance: P5.T3 domain partitioning contract published (`P5_T3_DOMAIN_PARTITIONING_CONTRACT.md`); P5 prep wave (`T1/T2/T3`) marked complete
+
+- [x] 2026-02-13 — governance: P5 execution gate activated (governance-only); `P5_EXECUTION_GATE_CONTRACT.md` published with queue `P5.G1/P5.G2/P5.G3`

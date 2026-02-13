@@ -72,3 +72,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P5.T1 completed (governance-only); `P5_T1_TIMESTAMP_UTC_CONTRACT.md` published and next target moved to P5.T2 retrieval boundary draft.
 - P5.T2 completed (governance-only); `P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md` published and next target moved to P5.T3 domain partitioning draft.
 - P5.T3 completed (governance-only); `P5_T3_DOMAIN_PARTITIONING_CONTRACT.md` published and P5 prep wave marked complete.
+- P5 execution gate activated (governance-only); `P5_EXECUTION_GATE_CONTRACT.md` published and queue `P5.G1/P5.G2/P5.G3` fixed.

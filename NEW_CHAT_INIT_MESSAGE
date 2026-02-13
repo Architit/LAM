@@ -6,8 +6,8 @@ IMPORT:
    - git status -sb
    - git log -n 12 --oneline
 3) Continue from declared pointer:
-   - phase: Phase 5 - Memory and Knowledge Prep
-   - stage: ssn rstrt stop-point after P5 prep closure (T1/T2/T3 DONE)
+   - phase: Phase 5 - Memory and Knowledge
+   - stage: P5 execution gate activation (governance-only)
 4) Constraints remain strict:
    - contracts-first
    - observability-first

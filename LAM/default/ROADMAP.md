@@ -51,3 +51,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - P5.T1 timestamp UTC contract published in root roadmap/maps (`P5_T1_TIMESTAMP_UTC_CONTRACT.md`); next target moved to P5.T2 retrieval boundary.
 - P5.T2 retrieval boundary contract published in root roadmap/maps (`P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md`); next target moved to P5.T3 domain partitioning.
 - P5.T3 domain partitioning contract published in root roadmap/maps (`P5_T3_DOMAIN_PARTITIONING_CONTRACT.md`); P5 prep wave marked complete.
+- P5 execution gate activated in root roadmap/maps (governance-only); `P5_EXECUTION_GATE_CONTRACT.md` published with queue `P5.G1/P5.G2/P5.G3`.
