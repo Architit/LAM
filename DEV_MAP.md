@@ -1,6 +1,6 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 02:31 UTC)
+## Execution Status (2026-02-13 02:36 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
@@ -153,7 +153,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P4.T2 deterministic policy profile draft for `ci`/`smoke` parity.
+- Next target: P4.T3 governance-only operator block for P4 evidence capture.
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -195,7 +195,7 @@ P4 DoD (phase activation):
 
 P4 first task queue:
 - T1: inventory router-core entrypoints, provider-chain decisions, health/fallback hooks. (DONE)
-- T2: define deterministic policy profile draft for `ci` and `smoke` execution parity.
+- T2: define deterministic policy profile draft for `ci` and `smoke` execution parity. (DONE)
 - T3: publish governance-only operator block for P4.1 evidence capture (read-only + smoke references).
 
 P4.T1 inventory (facts, read-only):
@@ -214,6 +214,13 @@ P4.T1 inventory (facts, read-only):
   - retry budget/backoff/fallback to next provider in `LAM/default/agents/roaudter-agent/src/roaudter_agent/router.py`
   - observability events around routing lifecycle: `roaudter.route`, `roaudter.result`, `roaudter.deliver`, optional `roaudter.trace`
 
+P4.T2 deterministic policy profile draft (governance-only):
+- Draft contract published: `P4_ROUTER_POLICY_PROFILE_DRAFT.md`.
+- Draft binds test profiles (`ci`, `smoke`) to deterministic router profile semantics from current policy implementation.
+- Strict mode boundary fixed in draft: `provider_hint` + `!` means no fallback.
+- Health/fallback boundary fixed in draft: health monitor and retry budget remain router-level controls.
+- Runtime impact: none (documentation/contract step only).
+
 Deliverable: controlled start of Router Core execution with explicit gates and evidence loop.
 
 ## Gate Criteria
@@ -230,6 +237,7 @@ Deliverable: controlled start of Router Core execution with explicit gates and e
 - P3_CI_GATE_OPERATOR_BLOCKS.md
 - P3_TEST_ENTRYPOINT_POLICY.md
 - P3_TEST_ENTRYPOINT_OPERATOR_BLOCKS.md
+- P4_ROUTER_POLICY_PROFILE_DRAFT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md
