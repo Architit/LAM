@@ -35,3 +35,5 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P2.4 wave R3 executed; no promotions (DONE=1, PENDING=14). Blocker: no runtime tests in LAM_DATA_Src/LAM_Test_Agent/Operator_Agent.
 - P2.4 wave R4 executed; no promotions (DONE=1, PENDING=14). Blocker: no runtime tests in System-/TRIANIUMA_DATA_BASE/Trianiuma/Trianiuma_MEM_CORE.
 - P2.4 wave R5 planned: unblock package (pytest bootstrap policy + runtime smoke template + promotion evidence checklist), no immediate promotions by design.
+- P2.4 wave R5 published in LAM: bootstrap policy + smoke template + evidence checklist + operator blocks; Wave R6 queued.
+- P2.4/R6 strict gate: `python3 >= 3.10` and mandatory `.venv/bin/python` runner for promotion evidence.

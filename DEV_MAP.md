@@ -123,10 +123,17 @@ Wave-runtime start set:
   - `pytest` bootstrap policy (minimal dependency/install contract for downstream repos)
   - smoke runtime template (`tests/test_runtime_smoke.py`) with facts-only acceptance criteria
   - evidence checklist for `runtime_proof` promotion (`test path`, `runner`, `result`, `timestamp`)
+  - version/boundary contract: `python3 >= 3.10` and mandatory `.venv` runner for promotion evidence
 - Wave R5 success criteria:
   - unblock package documented in governance docs
   - operator execution blocks prepared for downstream validation waves
-- Next target: execute Wave R5 unblock package publication and queue Wave R6 validation.
+- Wave R5 result: unblock package published in LAM (`RUNTIME_PROOF_PYTEST_BOOTSTRAP_POLICY.md`, `RUNTIME_PROOF_PROMOTION_CHECKLIST.md`, `RUNTIME_PROOF_OPERATOR_BLOCKS.md`, `tests/test_runtime_smoke.py`); no status promotion by design.
+- Wave R6 promotion gate (strict):
+  - `python3 --version` satisfies `>= 3.10`
+  - `.venv/bin/python` exists and is used as canonical runner
+  - smoke command passes with exit code `0`
+  - evidence is recorded in governance logs
+- Next target: Wave R6 validation execution on pending repos using R5 package.
 
 Deliverable: deterministic runtime closure proof matrix.
 

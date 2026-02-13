@@ -44,3 +44,5 @@
 2026-02-12 23:30 UTC — Governance: P2.4 wave R3 executed (LAM_DATA_Src, LAM_Test_Agent, Operator_Agent); no runtime_proof promotions (DONE=1, PENDING=14). Blocker: no runtime tests discovered in all three repos.
 2026-02-12 23:33 UTC — Governance: P2.4 wave R4 executed (System-, TRIANIUMA_DATA_BASE, Trianiuma, Trianiuma_MEM_CORE); no runtime_proof promotions (DONE=1, PENDING=14). Blocker: no runtime tests discovered in all four repos.
 2026-02-12 23:42 UTC — Governance: P2.4 wave R5 planned (unblock package): pytest bootstrap policy + runtime smoke template + promotion evidence checklist; by design no immediate runtime_proof promotions.
+2026-02-12 23:59 UTC — Governance: P2.4 wave R5 published in LAM: `RUNTIME_PROOF_PYTEST_BOOTSTRAP_POLICY.md`, `RUNTIME_PROOF_PROMOTION_CHECKLIST.md`, `RUNTIME_PROOF_OPERATOR_BLOCKS.md`, `tests/test_runtime_smoke.py`; queued Wave R6 validation.
+2026-02-13 00:10 UTC — Governance: P2.4/R6 gate hardened: contract updated to require `python3 >= 3.10` and mandatory `.venv/bin/python` runner for runtime_proof promotion evidence.
