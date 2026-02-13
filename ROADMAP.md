@@ -445,3 +445,4 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: `EXEC.W1.T2` verification record published (`Z_RUNTIME_EXEC_W1_T2_VERIFICATION_RECORD.md`), smoke/observability PASS.
 
 - [x] 2026-02-13 — governance: RADR ASR sync confirmed for `EXEC.W1.T2` step (`9a53b2c`).
+- [x] 2026-02-13 — governance: restart semantics normalized (ACTIVE -> Phase 1 EXPORT, NEW -> Phase 2 IMPORT)

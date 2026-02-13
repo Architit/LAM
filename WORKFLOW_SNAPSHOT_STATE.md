@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T06:01:26Z
+timestamp: 2026-02-13T08:30:00Z
 
 ## Current pointer
 phase: Phase Z - Agent SDK Integrations v0
@@ -104,3 +104,9 @@ constraints:
 - P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
+
+## Governance Sync
+- 2026-02-13 08:30 UTC — restart-semantics-unified-v1
+- branch: phase2/observability
+- git_status: ## phase2/observability...origin/phase2/observability [ahead 10]
+- NEW_CHAT_INIT_MESSAGE: cld rstrt NEW

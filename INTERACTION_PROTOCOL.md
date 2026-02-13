@@ -35,12 +35,12 @@ Governance update order (mandatory):
 Используются каноничные сигналы восстановления контекста:
 
 - **`ssn rstrt` (Session Restart)**
-  - В активном чате: только EXPORT.
-  - В новом чате: IMPORT.
+  - ACTIVE chat: **Phase 1 (EXPORT-only)**.
+  - NEW chat: **Phase 2 (IMPORT)**.
 
 - **`cld rstrt` (Cold Restart)**
-  - В активном чате: только EXPORT.
-  - В новом чате: IMPORT + environment sync (pwd, git status).
+  - ACTIVE chat: **Phase 1 (EXPORT-only)**.
+  - NEW chat: **Phase 2 (IMPORT) + minimal environment sync** (`pwd`, `git status -sb`, `git log -n 12 --oneline`).
 
 Источник канона: RADRILONIUMA DevKit.
 LAM применяет правила derivation-only.

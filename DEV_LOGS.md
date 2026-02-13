@@ -136,3 +136,4 @@ normalized.
 2026-02-13 05:59 UTC — Governance: RADR ASR sync confirmed for `EXEC.W1.T1` step (`1e7b999`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-w1-t1-sync.md`).
 2026-02-13 06:01 UTC — Governance: `EXEC.W1.T2` verification record published (`Z_RUNTIME_EXEC_W1_T2_VERIFICATION_RECORD.md`); smoke/observability verification marked PASS.
 2026-02-13 06:01 UTC — Governance: RADR ASR sync confirmed for `EXEC.W1.T2` step (`9a53b2c`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-w1-t2-sync.md`).
+2026-02-13 08:30 UTC — governance: restart semantics normalized (ACTIVE -> Phase 1 EXPORT, NEW -> Phase 2 IMPORT) [restart-semantics-unified-v1]
