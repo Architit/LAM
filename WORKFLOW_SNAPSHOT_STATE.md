@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T03:45:39Z
+timestamp: 2026-02-13T03:46:06Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge Prep
@@ -32,6 +32,7 @@ constraints:
 - Next target: post-P5 prep task selection (sync/push + phase5 execution gate).
 
 ## Recent commits
+- b0f044e governance(p5.t3): publish domain partitioning contract draft
 - 405684b governance(p5.t2): publish retrieval boundary contract draft
 - dfd65f7 governance(p5.t1): publish timestamp UTC contract draft
 - 92c4e53 governance(snapshot): align P5 prep snapshot with branch head
@@ -43,18 +44,9 @@ constraints:
 - 202dc08 ssn rstrt(EXPORT): set stop-point after follow-up wave F1-F4 closure
 - 8ca6fc6 governance(p4.follow-up.f4): publish provider metrics contract draft
 - 9460445 governance(p4.follow-up.f3): publish policy-v3 config contract draft
-- cfeccf9 governance(p4.follow-up.f2): publish quality-aware contract draft
 
 ## Git status
-## phase2/observability...origin/phase2/observability
-M  DEV_LOGS.md
-M  DEV_MAP.md
-M  LAM/default/DEV_LOGS.md
-M  LAM/default/ROADMAP.md
-M  NEW_CHAT_INIT_MESSAGE
-A  P5_T3_DOMAIN_PARTITIONING_CONTRACT.md
-M  ROADMAP.md
- M WORKFLOW_SNAPSHOT_STATE.md
+## phase2/observability...origin/phase2/observability [ahead 1]
 
 ## References
 - INTERACTION_PROTOCOL.md
