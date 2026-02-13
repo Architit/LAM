@@ -81,3 +81,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - Interaction protocol/template drift aligned in root roadmap/logs/protocol; template-backed protocol update record and evidence refs fixed; RADR ASR sync recorded (`4b3a260`).
 - Z.POST package completed in root roadmap/maps (governance-only): protocol sweep PASS, root/default mirror gate PASS, ASR continuity sync recorded (`a5c5dd5`).
 - Gov subtree coverage for maps/protocols/logs published in root (`GOV_SUBTREE_COVERAGE_CONTRACT.md`); RADR ASR sync confirmed (`243e50b`).
+- Z.RUNTIME.PREP package published/closed in root (risk + ops + start gate recommendation); RADR ASR sync confirmed (`33cc47f`).

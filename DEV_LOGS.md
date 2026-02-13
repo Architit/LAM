@@ -122,3 +122,6 @@ normalized.
 2026-02-13 05:36 UTC — Governance: RADR ASR continuity sync confirmed for Z.POST closure (`a5c5dd5`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md`).
 2026-02-13 05:41 UTC — Governance: gov subtree coverage completed for maps/protocols/logs (`GOV_SUBTREE_COVERAGE_CONTRACT.md`) with facts-only PASS matrix and explicit mirror-boundary note.
 2026-02-13 05:41 UTC — Governance: RADR ASR sync confirmed for gov subtree coverage (`243e50b`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md`).
+2026-02-13 05:47 UTC — Governance: user-gated bundle `1+2+3+` executed as `Z.RUNTIME.PREP` closure cycle — published `Z_RUNTIME_PREP_GATE_CONTRACT.md`, `Z_RUNTIME_RISK_BOUNDARY_REGISTER_CONTRACT.md`, `Z_RUNTIME_OPS_PREFLIGHT_CHECKLIST_CONTRACT.md`.
+2026-02-13 05:47 UTC — Governance: Z.RUNTIME.RISK and Z.RUNTIME.OPS boundaries fixed (facts-only, no runtime logic, no execution-path impact); start recommendation remains explicitly user-gated.
+2026-02-13 05:47 UTC — Governance: RADR ASR sync confirmed for Z.RUNTIME prep/risk/ops closure (`33cc47f`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-prep-risk-ops-sync.md`).

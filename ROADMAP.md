@@ -224,7 +224,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-12 — governance: P2 baseline matrix (15 repos) completed in DEV_MAP (DONE=2, BLOCKED=1, PENDING=12)
 
 ## Фаза Z — Agent SDK Integrations v0 (⏭ next after Runtime EntryPoint v0)
-> **Статус:** PREP CLOSED + POST PACKAGE CLOSED (governance-only) (2026-02-13) — prep-пакет `Z.T1-T3` и пост-пакет `Z.POST1-Z.POST3` завершены.
+> **Статус:** PREP CLOSED + POST PACKAGE CLOSED + RUNTIME PREP CLOSED (governance-only) (2026-02-13) — `Z.T1-T3`, `Z.POST1-Z.POST3`, `Z.RUNTIME.PREP` завершены.
 
 Цель: подключить Claude Agent SDK как backend-инструмент Codex (не отдельный агент на v0).
 
@@ -236,6 +236,9 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Z.POST1: Protocol compliance sweep (facts-only) (`Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md`)
 - [x] Z.POST2: Root/default mirror sync gate (`Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md`)
 - [x] Z.POST3: ASR continuity sync for post-Z closure (`gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md`)
+- [x] Z.RUNTIME.PREP: стартовый runtime-facing gate package (`Z_RUNTIME_PREP_GATE_CONTRACT.md`)
+- [x] Z.RUNTIME.RISK: runtime-facing risk boundary register (`Z_RUNTIME_RISK_BOUNDARY_REGISTER_CONTRACT.md`)
+- [x] Z.RUNTIME.OPS: runtime-facing ops preflight checklist (`Z_RUNTIME_OPS_PREFLIGHT_CHECKLIST_CONTRACT.md`)
 
 ### Phase 4 Review Findings (pre-4.3)
 - [ ] R1: Spec drift — derivation mentions non-existent fields:
@@ -411,3 +414,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: gov subtree coverage for maps/protocols/logs published (`GOV_SUBTREE_COVERAGE_CONTRACT.md`), facts-only PASS.
 
 - [x] 2026-02-13 — governance: RADR ASR sync confirmed for gov subtree coverage (`243e50b`).
+
+- [x] 2026-02-13 — governance: `Z.RUNTIME.PREP` package closed in one cycle (`Z_RUNTIME_PREP_GATE_CONTRACT.md`, `Z_RUNTIME_RISK_BOUNDARY_REGISTER_CONTRACT.md`, `Z_RUNTIME_OPS_PREFLIGHT_CHECKLIST_CONTRACT.md`).
+
+- [x] 2026-02-13 — governance: RADR ASR sync confirmed for Z.RUNTIME prep/risk/ops closure (`33cc47f`).

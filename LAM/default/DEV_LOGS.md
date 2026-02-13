@@ -103,3 +103,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - Interaction protocol/template drift aligned in root docs; template-backed update record and mandatory evidence refs fixed in protocol. RADR ASR sync recorded (`4b3a260`).
 - Z.POST package executed and closed in-order (`Z_POST_SELECTION_GATE_CONTRACT.md`, `Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md`, `Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md`); RADR ASR continuity sync recorded (`a5c5dd5`).
 - Gov subtree coverage (maps/protocols/logs) published in root (`GOV_SUBTREE_COVERAGE_CONTRACT.md`), facts-only PASS; RADR ASR sync recorded (`243e50b`).
+- Z.RUNTIME.PREP bundle (`1+2+3+`) closed in root (`Z_RUNTIME_PREP_GATE_CONTRACT.md`, `Z_RUNTIME_RISK_BOUNDARY_REGISTER_CONTRACT.md`, `Z_RUNTIME_OPS_PREFLIGHT_CHECKLIST_CONTRACT.md`); RADR ASR sync recorded (`33cc47f`).

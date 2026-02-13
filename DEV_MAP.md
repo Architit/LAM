@@ -1,11 +1,11 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 05:41 UTC)
+## Execution Status (2026-02-13 05:47 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
 - Protocol scale: 0 (governance/sync)
-- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep finalized; Phase 5 execution gate finalized; Phase 5 runtime-facing gate decision finalized; Phase 5 runtime task wave finalized (RT1/RT2/RT3 done, governance-only); Phase 5 post-runtime task package finalized; Phase 6 prep package finalized; Phase Z prep package finalized; Phase Z post-selection package finalized (Z.POST1/Z.POST2/Z.POST3, governance-only)
+- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep finalized; Phase 5 execution gate finalized; Phase 5 runtime-facing gate decision finalized; Phase 5 runtime task wave finalized (RT1/RT2/RT3 done, governance-only); Phase 5 post-runtime task package finalized; Phase 6 prep package finalized; Phase Z prep package finalized; Phase Z post-selection package finalized (Z.POST1/Z.POST2/Z.POST3, governance-only); Phase Z runtime-prep package finalized (risk/ops/start gate, governance-only)
 
 ## Synchronization Source (SoT)
 - Upstream SoT repo: /home/architit/work/RADRILONIUMA-PROJECT
@@ -43,6 +43,10 @@ Non-goals:
 - RADR ASR continuity sync for Z.POST closure is confirmed (`a5c5dd5`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md`).
 - Gov subtree coverage (maps/protocols/logs) is PASS and recorded in `GOV_SUBTREE_COVERAGE_CONTRACT.md`.
 - RADR ASR sync for gov subtree coverage is confirmed (`243e50b`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md`).
+- Z.RUNTIME.PREP package is closed (`prep/risk/ops` all DONE, governance-only).
+- Z.RUNTIME risk boundary register is published (`Z_RUNTIME_RISK_BOUNDARY_REGISTER_CONTRACT.md`).
+- Z.RUNTIME ops preflight checklist is published (`Z_RUNTIME_OPS_PREFLIGHT_CHECKLIST_CONTRACT.md`).
+- RADR ASR sync for Z.RUNTIME prep/risk/ops closure is confirmed (`33cc47f`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-prep-risk-ops-sync.md`).
 
 ## Work Program (Current)
 
@@ -169,7 +173,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: user-gated selection of first runtime-facing Z execution package (governance-only).
+- Next target: user-gated selection of first runtime-facing Z task wave (`Z.RUNTIME.T1`) with explicit start approval.
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -373,6 +377,18 @@ Z.POST package:
 - SoT ASR continuity session recorded: `/home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md` (`a5c5dd5`).
 - Runtime impact: none (contracts-only, derivation-only).
 
+### Z.RUNTIME.PREP) Runtime-Facing Start Preparation Package (CLOSED, governance-only)
+Z.RUNTIME.RISK Runtime-facing risk boundary register. (DONE)
+Z.RUNTIME.OPS Runtime-facing operator preflight checklist. (DONE)
+Z.RUNTIME.START Start gate recommendation (user-gated). (DONE)
+
+Z.RUNTIME.PREP package:
+- Contract published: `Z_RUNTIME_PREP_GATE_CONTRACT.md`.
+- Z.RUNTIME.RISK contract published: `Z_RUNTIME_RISK_BOUNDARY_REGISTER_CONTRACT.md`.
+- Z.RUNTIME.OPS contract published: `Z_RUNTIME_OPS_PREFLIGHT_CHECKLIST_CONTRACT.md`.
+- SoT ASR continuity session recorded: `/home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-prep-risk-ops-sync.md` (`33cc47f`).
+- Runtime impact: none (contracts-only, derivation-only).
+
 ## Gate Criteria
 - G1: Root and mirror docs are synchronized.
 - G2: Snapshot state reflects true git status and phase scope.
@@ -426,8 +442,12 @@ Z.POST package:
 - Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md
 - Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md
 - GOV_SUBTREE_COVERAGE_CONTRACT.md
+- Z_RUNTIME_PREP_GATE_CONTRACT.md
+- Z_RUNTIME_RISK_BOUNDARY_REGISTER_CONTRACT.md
+- Z_RUNTIME_OPS_PREFLIGHT_CHECKLIST_CONTRACT.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md
+- /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-prep-risk-ops-sync.md
 - INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
