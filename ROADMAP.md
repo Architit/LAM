@@ -289,3 +289,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P4 follow-up backlog contract published (`P4_FOLLOWUP_BACKLOG_CONTRACT.md`), next target moved to F1 cost-aware contract wave
 
 - [x] 2026-02-13 — governance: ASR record synced for LAM P4 closure (`133ef73`, `gov-radr-asr-phase5b-lam-p4-closure-v1.0.0`).
+
+- [x] 2026-02-13 — governance: ASR record synced for LAM P4 follow-up backlog (`8f5bcb4`, `gov-radr-asr-phase5b-lam-p4-followup-v1.0.0`).
