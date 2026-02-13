@@ -158,7 +158,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P5.RG2 hold/reject decision policy draft (governance-only).
+- Next target: P5.RG3 start-approval evidence record draft (governance-only).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -292,12 +292,13 @@ P5.EXEC package:
 
 ### P5.RG) Runtime-Facing Gate Decision Package (ACTIVE, governance-only)
 P5.RG1 Runtime-facing eligibility matrix. (DONE)
-P5.RG2 Hold/reject decision policy.
+P5.RG2 Hold/reject decision policy. (DONE)
 P5.RG3 Start-approval evidence record.
 
 P5.RG package:
 - Contract published: `P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md`.
 - P5.RG1 contract published: `P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md`.
+- P5.RG2 contract published: `P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md`.
 - Runtime impact: none (contracts-only, derivation-only).
 
 ## Gate Criteria
@@ -331,6 +332,7 @@ P5.RG package:
 - P5_G3_OPERATOR_CHECKLIST_CONTRACT.md
 - P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md
 - P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md
+- P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md

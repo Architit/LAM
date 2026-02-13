@@ -58,3 +58,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - RADR ASR sync confirmed in root roadmap/logs for P5 execution-gate closure (`e86650d`).
 - Runtime-facing gate decision package activated in root roadmap/maps (governance-only); `P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md` published with queue `P5.RG1/P5.RG2/P5.RG3`.
 - P5.RG1 eligibility matrix contract published in root roadmap/maps (`P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md`); next target moved to P5.RG2 hold/reject policy.
+- P5.RG2 hold/reject policy contract published in root roadmap/maps (`P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md`); next target moved to P5.RG3 start-approval evidence record.

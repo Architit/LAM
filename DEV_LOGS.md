@@ -95,3 +95,4 @@ normalized.
 2026-02-13 03:57 UTC — Governance: RADR ASR sync confirmed for P5 execution-gate closure (`e86650d`, `gov-radr-asr-phase5b-lam-p5-exec-gate-closure-v1.0.0`); session `gov/asr/sessions/2026-02-13__ASR__phase5b-lam-p5-exec-gate-closure-sync.md`.
 2026-02-13 04:04 UTC — Governance: runtime-facing gate decision package activated (governance-only) — published `P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md`; fixed queue `P5.RG1/P5.RG2/P5.RG3`; next target set to `P5.RG1` eligibility matrix draft.
 2026-02-13 04:06 UTC — Governance: P5.RG1 completed (governance-only) — published `P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md`; eligibility matrix fixed; next target moved to `P5.RG2` hold/reject policy draft.
+2026-02-13 04:08 UTC — Governance: P5.RG2 completed (governance-only) — published `P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md`; hold/reject policy rules fixed; next target moved to `P5.RG3` start-approval evidence record draft.
