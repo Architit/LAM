@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T05:07:33Z
+timestamp: 2026-02-13T05:10:14Z
 
 ## Current pointer
 phase: Phase Z - Agent SDK Integrations v0
@@ -13,7 +13,7 @@ protocol_semantic_en: neutral
 goal:
 - preserve closed Phase 5 and Phase 6 packages
 - preserve closed Phase Z prep package (`T1/T2/T3`)
-- set deterministic stop-point before post-Z selection
+- keep deterministic stop-point before post-Z selection
 constraints:
 - contracts-first
 - observability-first
@@ -31,6 +31,7 @@ constraints:
 - Next target: post-Z.PREP package selection (governance-only).
 
 ## Recent commits
+- 0d66598 ssn rstrt(EXPORT): refresh snapshot after z.prep closure
 - 792e41b governance(z.t3): publish compatibility dod contract
 - 6365a38 governance(z.t2): publish smoke contract draft
 - b501858 governance(z.t1): publish agent sdk backend integration draft contract
@@ -42,10 +43,9 @@ constraints:
 - 3dd9373 governance(p6.prep): activate control plane prep package
 - 2a4dcf0 ssn rstrt(EXPORT): refresh snapshot after p5.post package closure
 - 3950e3d governance(p5.post3): publish next package start recommendation contract
-- e39f61e governance(p5.post2): publish runtime boundary confirmation contract
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 4]
+## phase2/observability...origin/phase2/observability
 
 ## References
 - INTERACTION_PROTOCOL.md
