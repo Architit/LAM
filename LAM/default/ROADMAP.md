@@ -1,11 +1,11 @@
 # ROADMAP
 
-Synced with root `ROADMAP.md` on 2026-02-13 01:16 UTC.
+Synced with root `ROADMAP.md` on 2026-02-13 01:50 UTC.
 Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
 ## Phase 2 — Observability
 - Status: CLOSED (verified in root roadmap on 2026-02-11 07:24 UTC)
-- Scope: Phase 2 closure is currently confirmed only for repository LAM; ecosystem-wide closure is pending.
+- Scope: Phase 2 closure confirmed in LAM; ecosystem runtime-proof governance state finalized (DONE=14, EXEMPT=1, PENDING=0).
 
 ## Local rollout notes (default profile)
 - Phase 2.1: roaudter-agent metrics populated at runtime (DONE)
@@ -32,3 +32,5 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - Post-review sync with RADRILONIUMA-PROJECT completed for LAM R6.5 state.
 - SoT row policy finalized in DEV_MAP: RADRILONIUMA-PROJECT => EXEMPT (DONE=14, EXEMPT=1, PENDING=0).
 - SoT EXEMPT closure synced (1fc28cb, gov-radr-phase5b-sot-exempt-sync-v1.0.0).
+- P3.1 CI gate baseline activated in LAM (local devkit gate + policy/operator docs).
+- P3.1 currently BLOCKED by failing local gate test (`tests/test_taskarid_comm_roaudter_trace.py`).

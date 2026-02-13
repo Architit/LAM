@@ -20,21 +20,17 @@ jobs:
           python-version: "3.12"
           cache: "pip"
 
-      - name: Fetch DevKit
-        run: |
-          git clone --depth 1 https://github.com/Architit/RADRILONIUMA-PROJECT.git /tmp/radriloniuma-project
-
       - name: Bootstrap venv + deps
         run: |
-          /tmp/radriloniuma-project/devkit/bootstrap.sh "$GITHUB_WORKSPACE"
+          ./devkit/bootstrap.sh
 
-      - name: Run tests (sanity)
+      - name: CI Gate via devkit/check.sh
         env:
           TMPDIR: /tmp
           TEMP: /tmp
           TMP: /tmp
         run: |
-          /tmp/radriloniuma-project/devkit/check.sh "$GITHUB_WORKSPACE" \
+          ./devkit/check.sh \
             tests/test_envelope_standard.py \
             tests/test_taskarid_comm_roaudter_trace.py \
             tests/test_comm_agent_envelope_enforcement.py

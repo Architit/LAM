@@ -1,11 +1,11 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-12 23:07 UTC)
+## Execution Status (2026-02-13 01:45 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
 - Protocol scale: 0 (governance/sync)
-- Current phase pointer: Phase 2 (LAM-only) CLOSED; ecosystem runtime closure pending
+- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3.1 automation baseline ACTIVE
 
 ## Synchronization Source (SoT)
 - Upstream SoT repo: /home/architit/work/RADRILONIUMA-PROJECT
@@ -25,7 +25,8 @@ Non-goals:
 - Phase 2 Observability is CLOSED in LAM only.
 - Runtime recheck in LAM .venv passed: 5/5 observability tests.
 - Governance coverage matrix for 15 repos is complete.
-- Ecosystem-wide runtime closure is pending proof matrix completion.
+- Ecosystem runtime proof matrix is closed in LAM governance (`DONE=14, EXEMPT=1, PENDING=0`).
+- P3.1 CI gate baseline is activated with local DevKit scripts.
 
 ## Work Program (Current)
 
@@ -152,14 +153,20 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: push finalized policy/state to origin.
+- Next target: resolve P3.1 blocker (`test_taskarid_comm_roaudter_trace_roundtrip`), then proceed to P3.2 unified test entrypoint.
 
 Deliverable: deterministic runtime closure proof matrix.
 
 ### P3) Next LAM Engineering Phase (After Sync Gate)
-P3.1 Phase 3 Automation baseline via devkit/check.sh in CI gate.
+P3.1 Phase 3 Automation baseline via devkit/check.sh in CI gate (ACTIVE).
 P3.2 Unified test entrypoint and reproducible smoke profile.
 P3.3 Governance update order: DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL.
+
+P3.1 deliverables (current):
+- `.github/workflows/ci.yml` runs local `./devkit/bootstrap.sh` + `./devkit/check.sh` gate.
+- `P3_CI_GATE_POLICY.md` published.
+- `P3_CI_GATE_OPERATOR_BLOCKS.md` published.
+- Validation status: BLOCKED (local gate run failed on `tests/test_taskarid_comm_roaudter_trace.py`).
 
 Deliverable: transition-ready plan from governance sync to execution.
 
@@ -173,6 +180,8 @@ Deliverable: transition-ready plan from governance sync to execution.
 - INTERACTION_PROTOCOL.md
 - ROADMAP.md
 - DEV_LOGS.md
+- P3_CI_GATE_POLICY.md
+- P3_CI_GATE_OPERATOR_BLOCKS.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md

@@ -251,3 +251,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: DEV_MAP DoD policy finalized for SoT row (`RADRILONIUMA-PROJECT` => `EXEMPT`), runtime summary closed to DONE=14, EXEMPT=1, PENDING=0
 
 - [x] 2026-02-13 — governance: SoT synced EXEMPT closure (`1fc28cb`, `gov-radr-phase5b-sot-exempt-sync-v1.0.0`)
+
+- [x] 2026-02-13 — governance: P3.1 CI gate baseline activated in LAM (`.github/workflows/ci.yml` -> local `devkit/bootstrap.sh` + `devkit/check.sh`; policy+operator docs published)
+
+- [!] 2026-02-13 — P3.1 validation blocker: local gate payload failed in `tests/test_taskarid_comm_roaudter_trace.py` (`out['status']='error'`); hold P3.2 until gate returns green

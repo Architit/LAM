@@ -3,16 +3,16 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T01:41:51Z
+timestamp: 2026-02-13T01:51:03Z
 
 ## Current pointer
-phase: Phase 2 - Observability
-stage: governance coverage closed (15/15); runtime proof matrix finalized (P2.4), published and SoT-synced
+phase: Phase 3 - Automation
+stage: P3.1 CI gate baseline activated; validation currently BLOCKED by failing trace roundtrip test
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
-- keep governance_done 15/15 stable
-- execute runtime_proof waves without over-claiming closure
+- preserve finalized runtime-proof closure state (DONE=14, EXEMPT=1, PENDING=0)
+- activate P3.1 CI gate baseline via local devkit scripts
 - preserve clean recovery semantics for ssn rstrt/cld rstrt
 constraints:
 - contracts-first
@@ -47,15 +47,21 @@ constraints:
   - builder host: internet allowed for vendoring
   - runner host: offline, installs via --no-index --find-links
 - SoT DEVMAP reference: commit e8a82fb, sha256 fdef6e4b581b6dfafe65054b4163a047221706f29ab2989f36ad8ce804a59cbf
-- LAM DEVMAP sha256: a9d6322282081e7315c146acbb0c28c08bd30fb84ef07fcd61f4880f5b92acab (derived/local)
+- LAM DEVMAP sha256: 0f09f3102a1ea90de42a3711f5a7ea7f35d0dcccaea2227724c35d56213fc846 (derived/local)
 - SoT post-review sync status: RADRILONIUMA-PROJECT commit 69eff02, tag gov-radr-phase5b-r65-postreview-sync-v1.0.0
 - SoT EXEMPT closure sync status: RADRILONIUMA-PROJECT commit 1fc28cb, tag gov-radr-phase5b-sot-exempt-sync-v1.0.0
+- P3.1 package status:
+  - CI workflow gate aligned to local `./devkit/bootstrap.sh` + `./devkit/check.sh`
+  - `P3_CI_GATE_POLICY.md` published
+  - `P3_CI_GATE_OPERATOR_BLOCKS.md` published
+  - local validation blocker: `tests/test_taskarid_comm_roaudter_trace.py::test_taskarid_to_comm_to_roaudter_trace_roundtrip` (`out['status']='error'`)
 - Patcher hash: LAM=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7, SoT=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7 (equal)
 - Workflow snapshot contract hash: LAM=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db, SoT=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db (equal)
 - System state contract hash: LAM=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247, SoT=e154be15f9dbc88f2c460cce16326b3862992e744ecc5a247 (equal)
-- Next target: protocol task selection for next phase after P2.4 closure.
+- Next target: resolve P3.1 gate blocker (trace roundtrip), rerun `./devkit/check.sh` payload to green, then proceed to P3.2.
 
 ## Recent commits
+- e889b60 ssn rstrt(EXPORT): refresh snapshot after P2.4 publish/sync closure
 - 2ca0126 governance(dev-map): acknowledge SoT EXEMPT closure sync
 - 2d82009 governance(dev-map): close SoT runtime row as EXEMPT (PENDING=0)
 - 84cd207 governance(dev-map): record post-review sync with RADR after R6.5
@@ -71,6 +77,16 @@ constraints:
 
 ## Git status
 ## phase2/observability...origin/phase2/observability
+ M .github/workflows/ci.yml
+ M DEV_LOGS.md
+ M DEV_MAP.md
+ M LAM/default/DEV_LOGS.md
+ M LAM/default/DEV_MAP.md
+ M LAM/default/ROADMAP.md
+ M ROADMAP.md
+ M WORKFLOW_SNAPSHOT_STATE.md
+?? P3_CI_GATE_OPERATOR_BLOCKS.md
+?? P3_CI_GATE_POLICY.md
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -81,5 +97,7 @@ constraints:
 - RUNTIME_PROOF_PROMOTION_CHECKLIST.md
 - RUNTIME_PROOF_OPERATOR_BLOCKS.md
 - RUNTIME_PROOF_OFFLINE_WHEELHOUSE_POLICY.md
+- P3_CI_GATE_POLICY.md
+- P3_CI_GATE_OPERATOR_BLOCKS.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - SYSTEM_STATE_CONTRACT.md

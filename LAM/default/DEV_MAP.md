@@ -1,11 +1,11 @@
 # DEV_MAP (Mirror)
 
-Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 01:22 UTC.
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 01:50 UTC.
 Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
 
 Scope marker:
 - governance coverage completed for 15/15 repos.
-- runtime closure proof matrix active; system-wide runtime closure pending.
+- runtime closure proof matrix finalized in governance state (DONE=14, EXEMPT=1, PENDING=0).
 
 P2 governance summary:
 - DONE: 15
@@ -39,3 +39,4 @@ R5 publication note:
 - R6.5 host-split retry succeeded for Trianiuma_MEM_CORE; runtime summary now DONE=14, PENDING=1.
 - Post-review sync with RADRILONIUMA-PROJECT completed (commit 69eff02, tag gov-radr-phase5b-r65-postreview-sync-v1.0.0).
 - SoT row policy finalized: RADRILONIUMA-PROJECT marked EXEMPT; runtime summary closed to DONE=14, EXEMPT=1, PENDING=0.
+- P3.1 activated: CI gate baseline uses local `devkit/bootstrap.sh` + `devkit/check.sh`; policy/operator docs published.

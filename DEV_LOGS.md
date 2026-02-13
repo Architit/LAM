@@ -61,3 +61,5 @@
 2026-02-13 01:34 UTC — Governance: policy decision applied in DEV_MAP DoD — `RADRILONIUMA-PROJECT` runtime row set to `EXEMPT` (SoT governance repo); runtime summary finalized to DONE=14, EXEMPT=1, PENDING=0.
 2026-02-13 01:39 UTC — Governance: SoT sync acknowledged for EXEMPT closure (`1fc28cb`, tag `gov-radr-phase5b-sot-exempt-sync-v1.0.0`).
 Operational note: avoid command substitution in heredoc payloads with backticks; use quoted heredoc marker (`<<'EOF'`) for literal tags/refs.
+2026-02-13 01:45 UTC — Governance: P3.1 activation started in LAM — CI gate baseline aligned to local `devkit/check.sh`/`devkit/bootstrap.sh`; policy and operator blocks published (`P3_CI_GATE_POLICY.md`, `P3_CI_GATE_OPERATOR_BLOCKS.md`).
+2026-02-13 01:49 UTC — P3.1 validation run: `./devkit/check.sh` with CI payload returned FAIL (`tests/test_taskarid_comm_roaudter_trace.py::test_taskarid_to_comm_to_roaudter_trace_roundtrip`, roaudter returned `status=error`); P3.1 remains ACTIVE/BLOCKED.
