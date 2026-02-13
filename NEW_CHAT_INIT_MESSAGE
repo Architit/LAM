@@ -7,7 +7,7 @@ IMPORT:
    - git log -n 12 --oneline
 3) Continue from declared pointer:
    - phase: Phase Z - Agent SDK Integrations v0
-   - stage: prep package activation (governance-only)
+   - stage: backend integration draft closure (governance-only)
 4) Constraints remain strict:
    - contracts-first
    - observability-first

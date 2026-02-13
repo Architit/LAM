@@ -74,4 +74,5 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - P6.T2 health/telemetry profile draft completed in root roadmap/maps (governance-only); `P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md` published and next target moved to `P6.T3`.
 - P6.T3 operator action boundary checklist completed in root roadmap/maps (governance-only); `P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md` published and prep package marked complete.
 - Phase Z prep package activated in root roadmap/maps (governance-only); `Z_PREP_AGENT_SDK_BACKLOG_CONTRACT.md` published with queue `Z.T1/Z.T2/Z.T3`.
+- Z.T1 backend integration draft completed in root roadmap/maps (governance-only); `Z_T1_AGENT_SDK_BACKEND_INTEGRATION_CONTRACT.md` published and next target moved to `Z.T2`.
 - Interaction protocol update template published in root roadmap/maps (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and linked to governance protocol update flow.

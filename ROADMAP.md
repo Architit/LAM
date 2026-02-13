@@ -230,7 +230,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 
 ### План (v0)
 - [x] Открыть Z prep backlog контракт (governance-only): `Z_PREP_AGENT_SDK_BACKLOG_CONTRACT.md`
-- [ ] Z.T1: Agent SDK backend integration contract draft
+- [x] Z.T1: Agent SDK backend integration contract draft (`Z_T1_AGENT_SDK_BACKEND_INTEGRATION_CONTRACT.md`)
 - [ ] Z.T2: Smoke contract draft
 - [ ] Z.T3: Compatibility DoD contract draft
 
@@ -392,3 +392,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P6.T3 operator action boundary checklist contract published (`P6_T3_OPERATOR_ACTION_BOUNDARY_CHECKLIST_CONTRACT.md`); prep package (`T1/T2/T3`) marked complete
 
 - [x] 2026-02-13 — governance: Phase Z prep activated (`Z_PREP_AGENT_SDK_BACKLOG_CONTRACT.md`); queue `Z.T1/Z.T2/Z.T3` fixed; next target moved to Z.T1 backend integration draft
+
+- [x] 2026-02-13 — governance: Z.T1 backend integration draft contract published (`Z_T1_AGENT_SDK_BACKEND_INTEGRATION_CONTRACT.md`); next target moved to Z.T2 smoke contract draft
