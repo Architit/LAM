@@ -102,3 +102,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - RADR ASR data sync completed (`300631e`): `gov/asr/INDEX.md` path-wrap fixed, `phase5b-lam-followup-f1f4-closure` session normalized, malformed newline-path duplicate removed.
 - Interaction protocol/template drift aligned in root docs; template-backed update record and mandatory evidence refs fixed in protocol. RADR ASR sync recorded (`4b3a260`).
 - Z.POST package executed and closed in-order (`Z_POST_SELECTION_GATE_CONTRACT.md`, `Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md`, `Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md`); RADR ASR continuity sync recorded (`a5c5dd5`).
+- Gov subtree coverage (maps/protocols/logs) published in root (`GOV_SUBTREE_COVERAGE_CONTRACT.md`), facts-only PASS; RADR ASR sync recorded (`243e50b`).

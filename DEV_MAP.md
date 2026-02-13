@@ -1,6 +1,6 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 05:36 UTC)
+## Execution Status (2026-02-13 05:41 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
@@ -41,6 +41,8 @@ Non-goals:
 - Z.POST1 protocol compliance sweep is PASS (template-backed records/evidence refs/update-order/confirmation-gate).
 - Z.POST2 root/default mirror sync gate is PASS (no unresolved contradictions).
 - RADR ASR continuity sync for Z.POST closure is confirmed (`a5c5dd5`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md`).
+- Gov subtree coverage (maps/protocols/logs) is PASS and recorded in `GOV_SUBTREE_COVERAGE_CONTRACT.md`.
+- RADR ASR sync for gov subtree coverage is confirmed (`243e50b`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md`).
 
 ## Work Program (Current)
 
@@ -423,7 +425,9 @@ Z.POST package:
 - Z_POST_SELECTION_GATE_CONTRACT.md
 - Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md
 - Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md
+- GOV_SUBTREE_COVERAGE_CONTRACT.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md
+- /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md
 - INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md

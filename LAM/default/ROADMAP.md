@@ -80,3 +80,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - Interaction protocol update template published in root roadmap/maps (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and linked to governance protocol update flow.
 - Interaction protocol/template drift aligned in root roadmap/logs/protocol; template-backed protocol update record and evidence refs fixed; RADR ASR sync recorded (`4b3a260`).
 - Z.POST package completed in root roadmap/maps (governance-only): protocol sweep PASS, root/default mirror gate PASS, ASR continuity sync recorded (`a5c5dd5`).
+- Gov subtree coverage for maps/protocols/logs published in root (`GOV_SUBTREE_COVERAGE_CONTRACT.md`); RADR ASR sync confirmed (`243e50b`).

@@ -1,6 +1,6 @@
 # DEV_MAP (Mirror)
 
-Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 05:36 UTC.
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 05:41 UTC.
 Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
 
 Scope marker:
@@ -55,3 +55,4 @@ R5 publication note:
 - Z.POST package selected and closed in-order (governance-only): `Z.POST1` protocol compliance sweep PASS, `Z.POST2` root/default mirror sync gate PASS, `Z.POST3` ASR continuity sync recorded.
 - Z.POST package contracts published in root: `Z_POST_SELECTION_GATE_CONTRACT.md`, `Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md`, `Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md`.
 - RADR ASR continuity sync confirmed for Z.POST closure (`a5c5dd5`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md`).
+- Gov subtree coverage (maps/protocols/logs) published in root: `GOV_SUBTREE_COVERAGE_CONTRACT.md`; RADR ASR sync confirmed (`243e50b`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md`).

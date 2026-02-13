@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T05:36:25Z
+timestamp: 2026-02-13T05:41:38Z
 
 ## Current pointer
 phase: Phase Z - Agent SDK Integrations v0
@@ -15,6 +15,7 @@ goal:
 - preserve closed Phase Z prep package (`T1/T2/T3`)
 - preserve protocol/template alignment for deterministic governance updates
 - preserve closed Z.POST package (`Z.POST1/Z.POST2/Z.POST3`)
+- preserve gov subtree coverage closure for maps/protocols/logs
 - keep deterministic stop-point before first runtime-facing Z execution package selection
 constraints:
 - contracts-first
@@ -31,6 +32,7 @@ constraints:
 - Phase Z prep package is closed: T1 DONE, T2 DONE, T3 DONE.
 - Z.T3 contract published: Z_T3_COMPATIBILITY_DOD_CONTRACT.md
 - Z.POST package is closed: protocol compliance sweep PASS, mirror sync gate PASS, ASR continuity sync recorded (`a5c5dd5`).
+- Gov subtree coverage is closed: facts-only PASS matrix recorded in `GOV_SUBTREE_COVERAGE_CONTRACT.md`; ASR sync (`243e50b`).
 - Next target: user-gated selection of first runtime-facing Z execution package (governance-only).
 
 ## Recent commits
@@ -56,9 +58,11 @@ constraints:
 - INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-interaction-protocol-template-alignment-sync.md
 - /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md
+- /home/architit/work/RADRILONIUMA-PROJECT/gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md
 - ROADMAP.md
 - DEV_LOGS.md
 - DEV_MAP.md
+- GOV_SUBTREE_COVERAGE_CONTRACT.md
 - Z_POST_SELECTION_GATE_CONTRACT.md
 - Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md
 - Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md

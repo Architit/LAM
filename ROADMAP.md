@@ -407,3 +407,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: post-Z package `Z.POST` executed in-order and closed (`Z_POST_SELECTION_GATE_CONTRACT.md`, `Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md`, `Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md`).
 
 - [x] 2026-02-13 — governance: RADR ASR continuity sync confirmed for Z.POST closure (`a5c5dd5`).
+
+- [x] 2026-02-13 — governance: gov subtree coverage for maps/protocols/logs published (`GOV_SUBTREE_COVERAGE_CONTRACT.md`), facts-only PASS.
+
+- [x] 2026-02-13 — governance: RADR ASR sync confirmed for gov subtree coverage (`243e50b`).
