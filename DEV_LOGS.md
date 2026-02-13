@@ -85,3 +85,4 @@ Operational note: avoid command substitution in heredoc payloads with backticks;
 normalized.
 2026-02-13 03:29 UTC — Governance: snapshot consistency refresh after push (`phase2/observability` in sync with origin); `WORKFLOW_SNAPSHOT_STATE.md` git-status section normalized to clean state.
 2026-02-13 03:35 UTC — Governance: Phase 5 prep activated (governance-only) — published `P5_PREP_BACKLOG_CONTRACT.md`; fixed queue `P5.T1/P5.T2/P5.T3`; next target set to `P5.T1` timestamp policy contract draft.
+2026-02-13 03:39 UTC — Governance: P5.T1 completed (governance-only) — published `P5_T1_TIMESTAMP_UTC_CONTRACT.md`; timestamp normalization rules fixed for `UTC`/`Z`; next target moved to `P5.T2` retrieval boundary draft.

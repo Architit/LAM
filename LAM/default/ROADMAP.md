@@ -48,3 +48,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - F4 provider metrics contract draft completed in root roadmap/maps; follow-up wave F1-F4 marked complete.
 - Snapshot consistency refresh completed in root governance state; `WORKFLOW_SNAPSHOT_STATE.md` now reflects clean sync with origin.
 - Phase 5 prep activated in root roadmap/maps (governance-only); `P5_PREP_BACKLOG_CONTRACT.md` published with ordered queue `P5.T1/P5.T2/P5.T3`.
+- P5.T1 timestamp UTC contract published in root roadmap/maps (`P5_T1_TIMESTAMP_UTC_CONTRACT.md`); next target moved to P5.T2 retrieval boundary.

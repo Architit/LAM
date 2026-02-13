@@ -69,3 +69,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - F4 provider metrics contract draft published (`P4_FOLLOWUP_F4_PROVIDER_METRICS_CONTRACT.md`); follow-up wave F1-F4 marked complete.
 - Snapshot consistency refreshed after closure pushes; root `WORKFLOW_SNAPSHOT_STATE.md` normalized to clean git state (`phase2/observability` in sync with origin).
 - Phase 5 prep activated (governance-only); `P5_PREP_BACKLOG_CONTRACT.md` published and queue `P5.T1/P5.T2/P5.T3` fixed in root docs.
+- P5.T1 completed (governance-only); `P5_T1_TIMESTAMP_UTC_CONTRACT.md` published and next target moved to P5.T2 retrieval boundary draft.

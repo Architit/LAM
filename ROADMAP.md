@@ -165,7 +165,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 
 ### Задачи
 - [x] Опубликовать P5 prep backlog контракт (governance-only): `P5_PREP_BACKLOG_CONTRACT.md`
-- [ ] P5.T1: Контракт нормализации timestamp к timezone-aware UTC
+- [x] P5.T1: Контракт нормализации timestamp к timezone-aware UTC (`P5_T1_TIMESTAMP_UTC_CONTRACT.md`)
 - [ ] P5.T2: Контракт boundary для retrieval routing (memory/search -> LLM)
 - [ ] P5.T3: Контракт доменной сегментации памяти (RADRILONIUMA/TRIANIUMA)
 
@@ -312,3 +312,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: snapshot consistency refresh after follow-up closure pushes; `WORKFLOW_SNAPSHOT_STATE.md` normalized to clean git state (`phase2/observability` in sync with origin)
 
 - [x] 2026-02-13 — governance: Phase 5 prep activated (governance-only); `P5_PREP_BACKLOG_CONTRACT.md` published and P5 queue (`T1-T3`) fixed
+
+- [x] 2026-02-13 — governance: P5.T1 timestamp UTC contract published (`P5_T1_TIMESTAMP_UTC_CONTRACT.md`); next target moved to P5.T2 retrieval boundary draft
