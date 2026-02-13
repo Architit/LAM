@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T03:57:30Z
+timestamp: 2026-02-13T03:57:49Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge
@@ -31,6 +31,7 @@ constraints:
 - Next target: post-P5 execution-gate task selection (sync/push + runtime-facing gate decision).
 
 ## Recent commits
+- 76853dd governance(p5.g3): publish operator checklist contract draft
 - b6df697 governance(p5.g2): publish risk boundary register contract draft
 - 9f52cb6 governance(p5.g1): publish evidence profile contract draft
 - f178ec3 governance(p5.exec-gate): activate execution gate package
@@ -42,18 +43,9 @@ constraints:
 - 92c4e53 governance(snapshot): align P5 prep snapshot with branch head
 - 7b8660b governance(snapshot): refresh P5 prep state after commit
 - dc4df5c governance(p5.prep): activate backlog contract and phase pointer
-- 851d7c9 ssn rstrt(EXPORT): refresh stop-point after follow-up F1-F4 closure
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 3]
-M  DEV_LOGS.md
-M  DEV_MAP.md
-M  LAM/default/DEV_LOGS.md
-M  LAM/default/ROADMAP.md
-M  NEW_CHAT_INIT_MESSAGE
-A  P5_G3_OPERATOR_CHECKLIST_CONTRACT.md
-M  ROADMAP.md
- M WORKFLOW_SNAPSHOT_STATE.md
+## phase2/observability...origin/phase2/observability [ahead 4]
 
 ## References
 - INTERACTION_PROTOCOL.md
