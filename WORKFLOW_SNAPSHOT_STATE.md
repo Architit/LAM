@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T04:42:11Z
+timestamp: 2026-02-13T04:45:13Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge
@@ -29,6 +29,7 @@ constraints:
 - Next target: P5.POST2 runtime-facing boundary confirmation (governance-only).
 
 ## Recent commits
+- 4b25eae governance(p5.post1): publish runtime evidence consolidation contract
 - edd8f04 governance(protocol): harden autopilot confirmation gate via template
 - 8e70acb governance(p5.post): activate post-runtime-task package
 - 3929fda ssn rstrt(EXPORT): refresh stop-point after p5 rt-wave closure
@@ -40,10 +41,9 @@ constraints:
 - 257dacc governance(protocol): add interaction update template and align flow
 - 5ddd019 ssn rstrt(EXPORT): set stop-point after runtime-facing gate decision closure
 - d4bfac3 governance(p5.rg3): publish start-approval evidence contract draft
-- 6af895f governance(p5.rg2): publish hold-reject policy contract draft
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 2]
+## phase2/observability...origin/phase2/observability
 
 ## References
 - INTERACTION_PROTOCOL.md
