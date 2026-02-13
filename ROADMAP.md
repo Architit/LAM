@@ -158,13 +158,16 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 5 — Memory & Knowledge Layer (1–2 месяца)
+> **Статус:** ACTIVE (prep, governance-only) (2026-02-13) — старт подготовительного пакета после закрытия P4 follow-up (F1-F4).
+
 ### Цель
 Система “живёт”, копит опыт, извлекает знания и не забывает важное.
 
 ### Задачи
-- [ ] Привести timestamp к timezone-aware UTC
-- [ ] Retrieval routing: память/поиск → затем LLM
-- [ ] Память по доменам RADRILONIUMA / королевства TRIANIUMA 👑
+- [x] Опубликовать P5 prep backlog контракт (governance-only): `P5_PREP_BACKLOG_CONTRACT.md`
+- [ ] P5.T1: Контракт нормализации timestamp к timezone-aware UTC
+- [ ] P5.T2: Контракт boundary для retrieval routing (memory/search -> LLM)
+- [ ] P5.T3: Контракт доменной сегментации памяти (RADRILONIUMA/TRIANIUMA)
 
 ---
 
@@ -307,3 +310,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 (`2577b50`, `0b863e9`).
 
 - [x] 2026-02-13 — governance: snapshot consistency refresh after follow-up closure pushes; `WORKFLOW_SNAPSHOT_STATE.md` normalized to clean git state (`phase2/observability` in sync with origin)
+
+- [x] 2026-02-13 — governance: Phase 5 prep activated (governance-only); `P5_PREP_BACKLOG_CONTRACT.md` published and P5 queue (`T1-T3`) fixed

@@ -6,8 +6,8 @@ IMPORT:
    - git status -sb
    - git log -n 12 --oneline
 3) Continue from declared pointer:
-   - phase: Phase 4 - Router Core
-   - stage: stop-point after follow-up wave F1-F4 closure
+   - phase: Phase 5 - Memory and Knowledge Prep
+   - stage: P5 prep activation (governance-only) after P4 follow-up closure
 4) Constraints remain strict:
    - contracts-first
    - observability-first

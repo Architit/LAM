@@ -1,11 +1,11 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 03:18 UTC)
+## Execution Status (2026-02-13 03:35 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
 - Protocol scale: 0 (governance/sync)
-- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core execution) ACTIVE
+- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep (memory/knowledge governance) ACTIVE
 
 ## Synchronization Source (SoT)
 - Upstream SoT repo: /home/architit/work/RADRILONIUMA-PROJECT
@@ -27,6 +27,7 @@ Non-goals:
 - Governance coverage matrix for 15 repos is complete.
 - Ecosystem runtime proof matrix is closed in LAM governance (`DONE=14, EXEMPT=1, PENDING=0`).
 - P3 automation hardening package is closed (`P3.1/P3.2/P3.3` all DONE).
+- P4 router-core follow-up wave is closed (`F1/F2/F3/F4` all DONE).
 
 ## Work Program (Current)
 
@@ -153,7 +154,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: post-follow-up task selection (sync/push + next phase gate).
+- Next target: P5.T1 timestamp normalization policy contract draft (governance-only).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -255,6 +256,20 @@ P4 follow-up F4 (governance-only):
 - Runtime impact: none (contract-only step).
 
 Deliverable: controlled start of Router Core execution with explicit gates and evidence loop.
+
+### P5) Memory & Knowledge Prep Phase (ACTIVE, governance-only)
+P5.T1 Timestamp normalization policy contract draft (timezone-aware UTC boundaries, docs/events semantics).
+P5.T2 Retrieval routing boundary contract draft (memory/search before LLM, non-goals fixed).
+P5.T3 Domain memory partitioning contract draft (RADRILONIUMA/TRIANIUMA boundaries and traceability).
+
+P5 prep package:
+- Backlog contract published: `P5_PREP_BACKLOG_CONTRACT.md`.
+- Runtime impact: none (contracts-only, derivation-only).
+
+P5 prep DoD:
+- D1: P5 prep status and queue are explicit in `DEV_MAP.md` and `ROADMAP.md`.
+- D2: P5.T1-T3 queue order is fixed without runtime commitments.
+- D3: mirrors (`LAM/default/*`) and restart snapshot are synchronized in same governance cycle.
 
 ## Gate Criteria
 - G1: Root and mirror docs are synchronized.

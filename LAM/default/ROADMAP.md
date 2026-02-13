@@ -47,3 +47,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - F3 policy-v3 config contract draft completed in root roadmap/maps; next target is F4 provider metrics contract wave.
 - F4 provider metrics contract draft completed in root roadmap/maps; follow-up wave F1-F4 marked complete.
 - Snapshot consistency refresh completed in root governance state; `WORKFLOW_SNAPSHOT_STATE.md` now reflects clean sync with origin.
+- Phase 5 prep activated in root roadmap/maps (governance-only); `P5_PREP_BACKLOG_CONTRACT.md` published with ordered queue `P5.T1/P5.T2/P5.T3`.
