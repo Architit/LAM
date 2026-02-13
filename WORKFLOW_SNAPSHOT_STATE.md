@@ -3,16 +3,16 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T02:36:08Z
+timestamp: 2026-02-13T02:39:13Z
 
 ## Current pointer
 phase: Phase 4 - Router Core
-stage: P4.T2 deterministic policy profile draft completed
+stage: P4.T3 operator evidence block completed
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
 - keep runtime-proof closure stable (DONE=14, EXEMPT=1, PENDING=0)
-- complete P4.T3 governance-only operator evidence block
+- execute post-P4.3 task selection with mandatory user confirmation gate
 - preserve deterministic restart semantics for ssn rstrt/cld rstrt
 constraints:
 - contracts-first
@@ -22,12 +22,13 @@ constraints:
 - NO execution-path impact
 
 ## Verification
-- P4.T1 inventory is recorded and remains valid.
-- P4.T2 deterministic policy profile draft is published (`P4_ROUTER_POLICY_PROFILE_DRAFT.md`).
-- Next target: P4.T3 operator evidence block (governance-only).
-- SoT sync refs acknowledged: df4eed8 (P3.2/P3.3), 739e1f4 (ASR), a35e1cd (P4.T1 sync).
+- P4 task queue status: T1 DONE, T2 DONE, T3 DONE.
+- P4 operator evidence flow published (`P4_ROUTER_OPERATOR_BLOCKS.md`).
+- Next target: post-P4.3 task selection + SoT sync/push gate.
+- SoT sync refs acknowledged: a35e1cd (P4.T1 sync), 8cd69bf (P4.T2 sync).
 
 ## Recent commits
+- 19e82fe governance(p4.2): publish deterministic ci-smoke policy profile draft
 - de7ec83 governance(p4.1): record router-core inventory baseline
 - 44cbd81 ssn rstrt(EXPORT): refresh snapshot before P4.1 execution
 - e9be941 governance(p4): activate router-core phase with DoD and start queue
@@ -39,10 +40,9 @@ constraints:
 - 8a25ed0 governance(mirror): remove stale P3.1 blocked note in default roadmap
 - 0a8d8c4 governance(p3.1): resolve gate blocker and mark validation done
 - 95c7605 governance(p3.1): activate local CI gate baseline and record blocker
-- e889b60 ssn rstrt(EXPORT): refresh snapshot after P2.4 publish/sync closure
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 1]
+## phase2/observability...origin/phase2/observability [ahead 2]
  M DEV_LOGS.md
  M DEV_MAP.md
  M LAM/default/DEV_LOGS.md
@@ -50,7 +50,7 @@ constraints:
  M LAM/default/ROADMAP.md
  M NEW_CHAT_INIT_MESSAGE
  M ROADMAP.md
-?? P4_ROUTER_POLICY_PROFILE_DRAFT.md
+?? P4_ROUTER_OPERATOR_BLOCKS.md
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -58,6 +58,7 @@ constraints:
 - DEV_LOGS.md
 - DEV_MAP.md
 - P4_ROUTER_POLICY_PROFILE_DRAFT.md
+- P4_ROUTER_OPERATOR_BLOCKS.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 
@@ -71,7 +72,7 @@ IMPORT:
    - `git log -n 12 --oneline`
 3) Continue from declared pointer:
    - phase: Phase 4 - Router Core
-   - stage: P4.T2 deterministic policy profile draft completed
+   - stage: P4.T3 operator evidence block completed
 4) Constraints remain strict:
    - contracts-first
    - observability-first

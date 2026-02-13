@@ -1,6 +1,6 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 02:36 UTC)
+## Execution Status (2026-02-13 02:40 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
@@ -153,7 +153,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P4.T3 governance-only operator block for P4 evidence capture.
+- Next target: post-P4.3 task selection (push + SoT sync + next phase gate).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -196,7 +196,7 @@ P4 DoD (phase activation):
 P4 first task queue:
 - T1: inventory router-core entrypoints, provider-chain decisions, health/fallback hooks. (DONE)
 - T2: define deterministic policy profile draft for `ci` and `smoke` execution parity. (DONE)
-- T3: publish governance-only operator block for P4.1 evidence capture (read-only + smoke references).
+- T3: publish governance-only operator block for P4.1 evidence capture (read-only + smoke references). (DONE)
 
 P4.T1 inventory (facts, read-only):
 - Entrypoints:
@@ -221,6 +221,14 @@ P4.T2 deterministic policy profile draft (governance-only):
 - Health/fallback boundary fixed in draft: health monitor and retry budget remain router-level controls.
 - Runtime impact: none (documentation/contract step only).
 
+P4.T3 operator evidence block (governance-only):
+- Operator blocks published: `P4_ROUTER_OPERATOR_BLOCKS.md`.
+- Flow covers read-only evidence capture for:
+  - router policy profile semantics
+  - health/fallback controls
+  - ci/smoke contract checks
+- Runtime impact: none (documentation/contract step only).
+
 Deliverable: controlled start of Router Core execution with explicit gates and evidence loop.
 
 ## Gate Criteria
@@ -238,6 +246,7 @@ Deliverable: controlled start of Router Core execution with explicit gates and e
 - P3_TEST_ENTRYPOINT_POLICY.md
 - P3_TEST_ENTRYPOINT_OPERATOR_BLOCKS.md
 - P4_ROUTER_POLICY_PROFILE_DRAFT.md
+- P4_ROUTER_OPERATOR_BLOCKS.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md

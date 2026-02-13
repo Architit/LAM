@@ -138,7 +138,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ### P4 стартовая очередь (T1-T3)
 - [x] T1: Инвентаризация router-core entrypoints, provider-chain решений и health/fallback hooks.
 - [x] T2: Черновик deterministic policy profile для `ci` и `smoke` parity.
-- [ ] T3: Governance-only operator block для P4.1 evidence capture (read-only + smoke refs).
+- [x] T3: Governance-only operator block для P4.1 evidence capture (read-only + smoke refs).
 
 ### Уже есть ✅
 - strict provider selection (`openai!` без fallback)
@@ -282,3 +282,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P4.T1 inventory completed (entrypoints/provider-chain/health-fallback mapped from roaudter-agent + integration scripts; read-only evidence captured in DEV_MAP)
 
 - [x] 2026-02-13 — governance: P4.T2 deterministic policy profile draft published (`P4_ROUTER_POLICY_PROFILE_DRAFT.md`), T2 marked DONE with no runtime-path changes
+
+- [x] 2026-02-13 — governance: P4.T3 operator evidence blocks published (`P4_ROUTER_OPERATOR_BLOCKS.md`), T3 marked DONE (governance-only, read-only evidence flow)
