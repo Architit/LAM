@@ -158,7 +158,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 5 — Memory & Knowledge Layer (1–2 месяца)
-> **Статус:** RUNTIME-TASK-WAVE ACTIVE (governance-only) (2026-02-13) — `P5.RG` закрыт, `P5.RT1` завершён, `P5.RT2-RT3` в очереди.
+> **Статус:** RUNTIME-TASK-WAVE ACTIVE (governance-only) (2026-02-13) — `P5.RG` закрыт, `P5.RT1-RT2` завершены, `P5.RT3` в очереди.
 
 ### Цель
 Система “живёт”, копит опыт, извлекает знания и не забывает важное.
@@ -178,7 +178,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] P5.RG3: Start-approval evidence record (`P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md`)
 - [x] Открыть runtime task wave контракт (governance-only): `P5_RUNTIME_TASK_WAVE_CONTRACT.md`
 - [x] P5.RT1: Runtime-facing task candidate definition (`P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md`)
-- [ ] P5.RT2: Runtime-facing preflight checklist
+- [x] P5.RT2: Runtime-facing preflight checklist (`P5_RT2_RUNTIME_PREFLIGHT_CHECKLIST_CONTRACT.md`)
 - [ ] P5.RT3: Runtime-facing start decision record
 
 ---
@@ -354,3 +354,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: runtime-facing task wave planning activated (`P5_RUNTIME_TASK_WAVE_CONTRACT.md`); queue `P5.RT1/P5.RT2/P5.RT3` fixed
 
 - [x] 2026-02-13 — governance: P5.RT1 runtime-facing task candidate contract published (`P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md`); next target moved to P5.RT2 preflight checklist
+
+- [x] 2026-02-13 — governance: P5.RT2 runtime preflight checklist contract published (`P5_RT2_RUNTIME_PREFLIGHT_CHECKLIST_CONTRACT.md`); next target moved to P5.RT3 start decision record

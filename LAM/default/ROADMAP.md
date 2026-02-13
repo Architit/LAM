@@ -62,4 +62,5 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - P5.RG3 start-approval evidence contract published in root roadmap/maps (`P5_RG3_START_APPROVAL_EVIDENCE_CONTRACT.md`); runtime-facing gate decision wave marked complete.
 - Runtime-facing task wave planning package activated in root roadmap/maps (governance-only); `P5_RUNTIME_TASK_WAVE_CONTRACT.md` published with queue `P5.RT1/P5.RT2/P5.RT3`.
 - P5.RT1 candidate definition completed in root roadmap/maps (governance-only); `P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md` published and next target moved to `P5.RT2`.
+- P5.RT2 preflight checklist completed in root roadmap/maps (governance-only); `P5_RT2_RUNTIME_PREFLIGHT_CHECKLIST_CONTRACT.md` published and next target moved to `P5.RT3`.
 - Interaction protocol update template published in root roadmap/maps (`INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`) and linked to governance protocol update flow.
