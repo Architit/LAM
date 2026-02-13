@@ -148,7 +148,8 @@ Wave-runtime start set:
 - Wave R6.3 result: status promotion for 3 repos (DONE=10, PENDING=5); all smoke runs passed with exit_code=0 using offline wheelhouse.
 - Wave R6.4 result: status promotion for 3 repos (DONE=13, PENDING=2); all smoke runs passed with exit_code=0 using offline wheelhouse.
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
-- Next target: governance post-review sync with `RADRILONIUMA-PROJECT` for final SoT runtime row handling (`PENDING=1`).
+- Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
+- Next target: decide final SoT runtime row policy in LAM matrix (`RADRILONIUMA-PROJECT` remains `PENDING` by current definition).
 
 Deliverable: deterministic runtime closure proof matrix.
 

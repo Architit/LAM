@@ -245,3 +245,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P2.4 wave R6.4 host-split retry succeeded for next 3 repos (DONE=13, PENDING=2)
 
 - [x] 2026-02-13 — governance: P2.4 wave R6.5 host-split retry succeeded for Trianiuma_MEM_CORE (DONE=14, PENDING=1)
+
+- [x] 2026-02-13 — governance: post-review sync with RADRILONIUMA-PROJECT completed for LAM R6.5 state (`69eff02`, `gov-radr-phase5b-r65-postreview-sync-v1.0.0`)

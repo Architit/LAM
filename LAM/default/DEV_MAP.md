@@ -36,3 +36,4 @@ R5 publication note:
 - R6.3 host-split retry succeeded for next 3 repos; runtime summary now DONE=10, PENDING=5.
 - R6.4 host-split retry succeeded for next 3 repos; runtime summary now DONE=13, PENDING=2.
 - R6.5 host-split retry succeeded for Trianiuma_MEM_CORE; runtime summary now DONE=14, PENDING=1.
+- Post-review sync with RADRILONIUMA-PROJECT completed (commit 69eff02, tag gov-radr-phase5b-r65-postreview-sync-v1.0.0).

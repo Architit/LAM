@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T01:24:42Z
+timestamp: 2026-02-13T01:28:17Z
 
 ## Current pointer
 phase: Phase 2 - Observability
@@ -47,13 +47,15 @@ constraints:
   - builder host: internet allowed for vendoring
   - runner host: offline, installs via --no-index --find-links
 - SoT DEVMAP reference: commit e8a82fb, sha256 fdef6e4b581b6dfafe65054b4163a047221706f29ab2989f36ad8ce804a59cbf
-- LAM DEVMAP sha256: b6da70fafefe2615a200ca07b29cbe2bb5866d9ca0f99afdc1f45985cd5baff9 (derived/local)
+- LAM DEVMAP sha256: ac27c9977856c62fa6f5b4889c6905bc43b9b59cbc21dd2ed52f420ea068ea41 (derived/local)
+- SoT post-review sync status: RADRILONIUMA-PROJECT commit 69eff02, tag gov-radr-phase5b-r65-postreview-sync-v1.0.0
 - Patcher hash: LAM=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7, SoT=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7 (equal)
 - Workflow snapshot contract hash: LAM=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db, SoT=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db (equal)
 - System state contract hash: LAM=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247, SoT=e154be15f9dbc88f2c460cce16326b3862992e744ecc5a247 (equal)
-- Next target: governance post-review sync with RADRILONIUMA-PROJECT for final SoT runtime row handling (`PENDING=1`)
+- Next target: finalize LAM decision for SoT runtime row semantics (`RADRILONIUMA-PROJECT` currently PENDING by matrix definition)
 
 ## Recent commits
+- 9f9760e governance(dev-map): record P2.4 R6.5 success (Trianiuma_MEM_CORE)
 - 9a787e1 governance(dev-map): record P2.4 R6.4 success (3 repos)
 - 7a9dff5 governance(dev-map): record P2.4 R6.3 success (3 repos)
 - 7dc55ca governance(dev-map): record P2.4 R6.2 success (3 repos)
