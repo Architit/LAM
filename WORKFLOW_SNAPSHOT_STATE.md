@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T03:57:49Z
+timestamp: 2026-02-13T03:58:48Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge
-stage: P5 execution gate wave completed (G1/G2/G3, governance-only)
+stage: ssn rstrt stop-point after P5 execution-gate closure (G1/G2/G3 DONE)
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
-- preserve closed P5 execution gate package state
+- preserve closed P5 execution-gate package state
 - keep closed states (P2.4, P4 follow-up, P5 prep) immutable
-- provide deterministic stop-point before runtime-facing gate decision
+- provide deterministic import point before runtime-facing gate decision
 constraints:
 - contracts-first
 - observability-first
@@ -31,6 +31,7 @@ constraints:
 - Next target: post-P5 execution-gate task selection (sync/push + runtime-facing gate decision).
 
 ## Recent commits
+- 0e36e25 governance(snapshot): align P5 execution-gate closure snapshot with head
 - 76853dd governance(p5.g3): publish operator checklist contract draft
 - b6df697 governance(p5.g2): publish risk boundary register contract draft
 - 9f52cb6 governance(p5.g1): publish evidence profile contract draft
@@ -42,10 +43,9 @@ constraints:
 - dfd65f7 governance(p5.t1): publish timestamp UTC contract draft
 - 92c4e53 governance(snapshot): align P5 prep snapshot with branch head
 - 7b8660b governance(snapshot): refresh P5 prep state after commit
-- dc4df5c governance(p5.prep): activate backlog contract and phase pointer
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 4]
+## phase2/observability...origin/phase2/observability
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -56,9 +56,5 @@ constraints:
 - P5_G1_EVIDENCE_PROFILE_CONTRACT.md
 - P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md
 - P5_G3_OPERATOR_CHECKLIST_CONTRACT.md
-- P5_PREP_BACKLOG_CONTRACT.md
-- P5_T1_TIMESTAMP_UTC_CONTRACT.md
-- P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md
-- P5_T3_DOMAIN_PARTITIONING_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
