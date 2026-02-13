@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T03:16:40Z
+timestamp: 2026-02-13T03:18:26Z
 
 ## Current pointer
 phase: Phase 4 - Router Core
-stage: follow-up wave F4 provider metrics contract completed
+stage: stop-point after follow-up wave F1-F4 closure
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
-- keep closed P4 queue state (T1/T2/T3 DONE)
-- preserve deterministic restart/import semantics
-- move to post-follow-up task selection with user confirmation gate
+- preserve closed P4 queue state (T1/T2/T3 DONE)
+- preserve closed follow-up wave state (F1/F2/F3/F4 DONE)
+- keep deterministic restart/import semantics before next phase/task selection
 constraints:
 - contracts-first
 - observability-first
@@ -32,6 +32,7 @@ constraints:
 - Next target: post-follow-up task selection (sync/push + next phase gate).
 
 ## Recent commits
+- 8ca6fc6 governance(p4.follow-up.f4): publish provider metrics contract draft
 - 9460445 governance(p4.follow-up.f3): publish policy-v3 config contract draft
 - cfeccf9 governance(p4.follow-up.f2): publish quality-aware contract draft
 - af5ada7 governance(dev-map): sync RADR ASR record for LAM follow-up F1
@@ -43,18 +44,10 @@ constraints:
 - 8a95e9e governance(p4.3): publish router operator evidence blocks
 - 19e82fe governance(p4.2): publish deterministic ci-smoke policy profile draft
 - de7ec83 governance(p4.1): record router-core inventory baseline
-- 44cbd81 ssn rstrt(EXPORT): refresh snapshot before P4.1 execution
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 3]
- M DEV_LOGS.md
- M DEV_MAP.md
- M LAM/default/DEV_LOGS.md
- M LAM/default/DEV_MAP.md
- M LAM/default/ROADMAP.md
+## phase2/observability...origin/phase2/observability [ahead 4]
  M NEW_CHAT_INIT_MESSAGE
- M ROADMAP.md
-?? P4_FOLLOWUP_F4_PROVIDER_METRICS_CONTRACT.md
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -79,7 +72,7 @@ IMPORT:
    - `git log -n 12 --oneline`
 3) Continue from declared pointer:
    - phase: Phase 4 - Router Core
-   - stage: follow-up wave F4 provider metrics contract completed
+   - stage: stop-point after follow-up wave F1-F4 closure
 4) Constraints remain strict:
    - contracts-first
    - observability-first
