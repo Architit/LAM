@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T04:32:56Z
+timestamp: 2026-02-13T04:35:24Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge
-stage: runtime-facing start decision record closure (governance-only)
+stage: post-runtime-task package activation (governance-only)
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
-- preserve closed runtime-facing gate decision state
-- finalize runtime task wave in governance-only mode
-- keep deterministic stop-point before next governance package
+- preserve closed runtime-facing gate decision and runtime task wave state
+- activate post-runtime-task package in governance-only mode
+- provide deterministic stop-point before P5.POST1 start
 constraints:
 - contracts-first
 - observability-first
@@ -23,13 +23,13 @@ constraints:
 
 ## Verification
 - Runtime-facing gate decision wave remains closed: RG1 DONE, RG2 DONE, RG3 DONE.
-- Runtime task wave is closed: RT1 DONE, RT2 DONE, RT3 DONE.
-- P5.RT1 contract published: P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md
-- P5.RT2 contract published: P5_RT2_RUNTIME_PREFLIGHT_CHECKLIST_CONTRACT.md
-- P5.RT3 contract published: P5_RT3_RUNTIME_START_DECISION_RECORD_CONTRACT.md
-- Next target: post-runtime-task-wave selection (governance-only).
+- Runtime task wave remains closed: RT1 DONE, RT2 DONE, RT3 DONE.
+- Post-runtime-task package is active: POST1/POST2/POST3 queued.
+- P5.POST contract published: P5_POST_RUNTIME_TASK_WAVE_CONTRACT.md
+- Next target: P5.POST1 runtime-facing evidence consolidation (governance-only).
 
 ## Recent commits
+- 3929fda ssn rstrt(EXPORT): refresh stop-point after p5 rt-wave closure
 - 7cd05bc governance(p5.rt3): publish runtime start decision record contract
 - b5bc21a governance(p5.rt2): publish runtime preflight checklist contract
 - 2e4db78 governance(p5.rt1): publish runtime task candidate contract
@@ -41,10 +41,9 @@ constraints:
 - 6af895f governance(p5.rg2): publish hold-reject policy contract draft
 - 9aa9870 governance(p5.rg1): publish eligibility matrix contract draft
 - 4b78079 governance(p5.rg): activate runtime-facing gate decision package
-- a978389 governance(dev-map): acknowledge RADR ASR and update P5 exec gate contracts
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 3]
+## phase2/observability...origin/phase2/observability
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -56,6 +55,7 @@ constraints:
 - P5_RT1_RUNTIME_TASK_CANDIDATE_CONTRACT.md
 - P5_RT2_RUNTIME_PREFLIGHT_CHECKLIST_CONTRACT.md
 - P5_RT3_RUNTIME_START_DECISION_RECORD_CONTRACT.md
+- P5_POST_RUNTIME_TASK_WAVE_CONTRACT.md
 - P5_RUNTIME_FACING_GATE_DECISION_CONTRACT.md
 - P5_RG1_ELIGIBILITY_MATRIX_CONTRACT.md
 - P5_RG2_HOLD_REJECT_POLICY_CONTRACT.md

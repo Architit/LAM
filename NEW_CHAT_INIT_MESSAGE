@@ -7,7 +7,7 @@ IMPORT:
    - git log -n 12 --oneline
 3) Continue from declared pointer:
    - phase: Phase 5 - Memory and Knowledge
-   - stage: runtime-facing start decision record closure (governance-only)
+   - stage: post-runtime-task package activation (governance-only)
 4) Constraints remain strict:
    - contracts-first
    - observability-first
