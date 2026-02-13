@@ -1,6 +1,6 @@
 # ROADMAP
 
-Synced with root `ROADMAP.md` on 2026-02-13 00:31 UTC.
+Synced with root `ROADMAP.md` on 2026-02-13 00:36 UTC.
 Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
 ## Phase 2 — Observability
@@ -21,3 +21,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - R6 readiness audit completed: all 14 pending repos are currently blocked.
 - R6.1 wave-1 executed for first 3 repos; blocked by offline pytest bootstrap.
 - Offline wheelhouse fallback policy is published for R6.1 retry.
+- R6.1 retry executed for first 3 repos; blocked by missing `wheelhouse/`.

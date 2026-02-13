@@ -1,6 +1,6 @@
 # DEV_MAP (Mirror)
 
-Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 00:31 UTC.
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 00:36 UTC.
 Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
 
 Scope marker:
@@ -28,3 +28,4 @@ R5 publication note:
 - R6 readiness audit: READY=0, BLOCKED=14 (missing `.venv/bin/python` and smoke template).
 - R6.1 wave-1 executed; no promotions due offline pytest bootstrap failure.
 - R6.1 offline wheelhouse fallback policy published.
+- R6.1 retry executed; no promotions due missing `wheelhouse/`.

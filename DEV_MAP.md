@@ -84,15 +84,15 @@ Definition:
 - `runtime_proof = DONE` only if repo has explicit observability/runtime verification evidence (tests/logs) accepted in governance docs.
 - `runtime_proof = PENDING` until such evidence exists.
 
-Runtime proof matrix (2026-02-13 00:27 UTC):
+Runtime proof matrix (2026-02-13 00:36 UTC):
 
 | Repo | governance_done | runtime_proof | Notes |
 |---|---|---|---|
 | LAM | DONE | DONE | local runtime observability proof exists (5/5) |
 | RADRILONIUMA-PROJECT | DONE | PENDING | governance SoT; no repo runtime closure claim required for others |
-| Roaudter-agent | DONE | PENDING | R6.1 wave-1 attempt: python3/venv present, pytest bootstrap failed offline (`Name or service not known`) |
-| LAM-Codex_Agent | DONE | PENDING | R6.1 wave-1 attempt: python3/venv present, pytest bootstrap failed offline (`Name or service not known`) |
-| LAM_Comunication_Agent | DONE | PENDING | R6.1 wave-1 attempt: python3/venv present, pytest bootstrap failed offline (`Name or service not known`) |
+| Roaudter-agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `wheelhouse/` |
+| LAM-Codex_Agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `wheelhouse/` |
+| LAM_Comunication_Agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `wheelhouse/` |
 | Archivator_Agent | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
 | CORE | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
 | J.A.R.V.I.S | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
@@ -140,7 +140,8 @@ Wave-runtime start set:
 - Wave R6.1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
 - Wave R6.1 result: no status promotion (DONE=1, PENDING=14); common blocker `pytest-install-failed-offline` (PyPI/DNS unavailable) for all 3 repos.
 - R6.1 fallback policy published: `RUNTIME_PROOF_OFFLINE_WHEELHOUSE_POLICY.md`.
-- Next target: Wave R6.1 retry using offline wheelhouse (preferred) or after network/package-source recovery.
+- Wave R6.1 retry result: no status promotion (DONE=1, PENDING=14); common blocker `wheelhouse-missing` in all 3 repos.
+- Next target: prepare/distribute wheelhouse package, then rerun R6.1 retry.
 
 Deliverable: deterministic runtime closure proof matrix.
 
