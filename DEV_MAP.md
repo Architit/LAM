@@ -153,13 +153,13 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: proceed to P3.2 unified test entrypoint and reproducible smoke profile.
+- Next target: proceed to P3.3 governance update-order protocol hardening.
 
 Deliverable: deterministic runtime closure proof matrix.
 
 ### P3) Next LAM Engineering Phase (After Sync Gate)
 P3.1 Phase 3 Automation baseline via devkit/check.sh in CI gate (DONE).
-P3.2 Unified test entrypoint and reproducible smoke profile.
+P3.2 Unified test entrypoint and reproducible smoke profile (DONE).
 P3.3 Governance update order: DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL.
 
 P3.1 deliverables (current):
@@ -167,6 +167,13 @@ P3.1 deliverables (current):
 - `P3_CI_GATE_POLICY.md` published.
 - `P3_CI_GATE_OPERATOR_BLOCKS.md` published.
 - Validation status: DONE (`./devkit/check.sh` CI payload re-run passed after trace-roundtrip test stabilization).
+
+P3.2 deliverables (current):
+- Unified test entrypoint: `devkit/check.sh` delegates to `scripts/test_entrypoint.sh`.
+- Profile contract published: `P3_TEST_ENTRYPOINT_POLICY.md`.
+- Operator blocks published: `P3_TEST_ENTRYPOINT_OPERATOR_BLOCKS.md`.
+- CI aligned to profile contract: `.github/workflows/ci.yml` uses `./devkit/check.sh --profile ci`.
+- Validation status: DONE (`--profile ci` and `--profile smoke` passed locally).
 
 Deliverable: transition-ready plan from governance sync to execution.
 
@@ -182,6 +189,8 @@ Deliverable: transition-ready plan from governance sync to execution.
 - DEV_LOGS.md
 - P3_CI_GATE_POLICY.md
 - P3_CI_GATE_OPERATOR_BLOCKS.md
+- P3_TEST_ENTRYPOINT_POLICY.md
+- P3_TEST_ENTRYPOINT_OPERATOR_BLOCKS.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md

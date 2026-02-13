@@ -257,3 +257,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [!] 2026-02-13 — P3.1 validation blocker: local gate payload failed in `tests/test_taskarid_comm_roaudter_trace.py` (`out['status']='error'`); hold P3.2 until gate returns green
 
 - [x] 2026-02-13 — P3.1 blocker resolved: trace-roundtrip test stabilized; local `./devkit/check.sh` CI payload passed (`4 passed`), proceed to P3.2
+
+- [x] 2026-02-13 — governance: P3.2 unified test entrypoint completed (`devkit/check.sh` delegates to `scripts/test_entrypoint.sh`; profiles `ci/smoke/full`; CI uses `--profile ci`; local `ci+smoke` validation green)

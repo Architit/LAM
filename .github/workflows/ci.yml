@@ -30,7 +30,4 @@ jobs:
           TEMP: /tmp
           TMP: /tmp
         run: |
-          ./devkit/check.sh \
-            tests/test_envelope_standard.py \
-            tests/test_taskarid_comm_roaudter_trace.py \
-            tests/test_comm_agent_envelope_enforcement.py
+          ./devkit/check.sh --profile ci

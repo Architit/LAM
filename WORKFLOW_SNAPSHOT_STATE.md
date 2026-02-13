@@ -3,16 +3,16 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T01:55:47Z
+timestamp: 2026-02-13T02:02:08Z
 
 ## Current pointer
 phase: Phase 3 - Automation
-stage: P3.1 CI gate baseline activated and validated locally (CI payload green)
+stage: P3.2 unified test entrypoint and reproducible smoke profile completed
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
 - preserve finalized runtime-proof closure state (DONE=14, EXEMPT=1, PENDING=0)
-- activate P3.1 CI gate baseline via local devkit scripts
+- complete P3.2 unified test entrypoint/profile contract
 - preserve clean recovery semantics for ssn rstrt/cld rstrt
 constraints:
 - contracts-first
@@ -47,7 +47,7 @@ constraints:
   - builder host: internet allowed for vendoring
   - runner host: offline, installs via --no-index --find-links
 - SoT DEVMAP reference: commit e8a82fb, sha256 fdef6e4b581b6dfafe65054b4163a047221706f29ab2989f36ad8ce804a59cbf
-- LAM DEVMAP sha256: b7488f5bdd9a37feba030b23ba2bf6601b8637f223dbcdd7dbb7f529ad41cbff (derived/local)
+- LAM DEVMAP sha256: 1bb9b467808e7dc16f00fcc45de3690236f2eae028c096621549b7c32df93744 (derived/local)
 - SoT post-review sync status: RADRILONIUMA-PROJECT commit 69eff02, tag gov-radr-phase5b-r65-postreview-sync-v1.0.0
 - SoT EXEMPT closure sync status: RADRILONIUMA-PROJECT commit 1fc28cb, tag gov-radr-phase5b-sot-exempt-sync-v1.0.0
 - P3.1 package status:
@@ -55,12 +55,19 @@ constraints:
   - `P3_CI_GATE_POLICY.md` published
   - `P3_CI_GATE_OPERATOR_BLOCKS.md` published
   - local validation: `./devkit/check.sh` CI payload passed (`4 passed`)
+- P3.2 package status:
+  - unified entrypoint: `devkit/check.sh` -> `scripts/test_entrypoint.sh`
+  - profile contract: `ci/smoke/full`
+  - CI profile use: `./devkit/check.sh --profile ci`
+  - local validation: `--profile ci` and `--profile smoke` passed
 - Patcher hash: LAM=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7, SoT=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7 (equal)
 - Workflow snapshot contract hash: LAM=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db, SoT=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db (equal)
 - System state contract hash: LAM=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247, SoT=e154be15f9dbc88f2c460cce16326b3862992e744ecc5a247 (equal)
-- Next target: proceed to P3.2 unified test entrypoint and reproducible smoke profile.
+- Next target: proceed to P3.3 governance update-order protocol hardening.
 
 ## Recent commits
+- 8a25ed0 governance(mirror): remove stale P3.1 blocked note in default roadmap
+- 0a8d8c4 governance(p3.1): resolve gate blocker and mark validation done
 - 95c7605 governance(p3.1): activate local CI gate baseline and record blocker
 - e889b60 ssn rstrt(EXPORT): refresh snapshot after P2.4 publish/sync closure
 - 2ca0126 governance(dev-map): acknowledge SoT EXEMPT closure sync
@@ -78,14 +85,17 @@ constraints:
 
 ## Git status
 ## phase2/observability...origin/phase2/observability
+ M .github/workflows/ci.yml
  M DEV_LOGS.md
  M DEV_MAP.md
  M LAM/default/DEV_LOGS.md
  M LAM/default/DEV_MAP.md
  M LAM/default/ROADMAP.md
  M ROADMAP.md
- M WORKFLOW_SNAPSHOT_STATE.md
- M tests/test_taskarid_comm_roaudter_trace.py
+ M devkit/check.sh
+?? P3_TEST_ENTRYPOINT_OPERATOR_BLOCKS.md
+?? P3_TEST_ENTRYPOINT_POLICY.md
+?? scripts/test_entrypoint.sh
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -98,5 +108,7 @@ constraints:
 - RUNTIME_PROOF_OFFLINE_WHEELHOUSE_POLICY.md
 - P3_CI_GATE_POLICY.md
 - P3_CI_GATE_OPERATOR_BLOCKS.md
+- P3_TEST_ENTRYPOINT_POLICY.md
+- P3_TEST_ENTRYPOINT_OPERATOR_BLOCKS.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - SYSTEM_STATE_CONTRACT.md
