@@ -75,3 +75,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P5 execution gate activated (governance-only); `P5_EXECUTION_GATE_CONTRACT.md` published and queue `P5.G1/P5.G2/P5.G3` fixed.
 - P5.G1 completed (governance-only); `P5_G1_EVIDENCE_PROFILE_CONTRACT.md` published and next target moved to P5.G2 risk boundary register draft.
 - P5.G2 completed (governance-only); `P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md` published and next target moved to P5.G3 operator checklist draft.
+- P5.G3 completed (governance-only); `P5_G3_OPERATOR_CHECKLIST_CONTRACT.md` published and P5 execution gate wave marked complete.

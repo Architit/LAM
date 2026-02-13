@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T03:55:44Z
+timestamp: 2026-02-13T03:57:30Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge
-stage: P5.G2 risk boundary register contract completed (governance-only)
+stage: P5 execution gate wave completed (G1/G2/G3, governance-only)
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
-- preserve P5 execution gate continuity after G2 completion
+- preserve closed P5 execution gate package state
 - keep closed states (P2.4, P4 follow-up, P5 prep) immutable
-- provide deterministic stop-point before P5.G3 start
+- provide deterministic stop-point before runtime-facing gate decision
 constraints:
 - contracts-first
 - observability-first
@@ -22,13 +22,16 @@ constraints:
 - NO execution-path impact
 
 ## Verification
-- P5 execution gate contract published: P5_EXECUTION_GATE_CONTRACT.md
-- P5.G1 contract published: P5_G1_EVIDENCE_PROFILE_CONTRACT.md
-- P5.G2 contract published: P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md
-- P5 execution queue state: G1 DONE, G2 DONE, G3 TODO.
-- Next target: P5.G3 operator decision checklist draft (governance-only).
+- P5 execution gate contracts published:
+  - P5_EXECUTION_GATE_CONTRACT.md
+  - P5_G1_EVIDENCE_PROFILE_CONTRACT.md
+  - P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md
+  - P5_G3_OPERATOR_CHECKLIST_CONTRACT.md
+- P5 execution queue state: G1 DONE, G2 DONE, G3 DONE.
+- Next target: post-P5 execution-gate task selection (sync/push + runtime-facing gate decision).
 
 ## Recent commits
+- b6df697 governance(p5.g2): publish risk boundary register contract draft
 - 9f52cb6 governance(p5.g1): publish evidence profile contract draft
 - f178ec3 governance(p5.exec-gate): activate execution gate package
 - 9ad28f6 ssn rstrt(EXPORT): set stop-point after P5 prep closure
@@ -40,16 +43,15 @@ constraints:
 - 7b8660b governance(snapshot): refresh P5 prep state after commit
 - dc4df5c governance(p5.prep): activate backlog contract and phase pointer
 - 851d7c9 ssn rstrt(EXPORT): refresh stop-point after follow-up F1-F4 closure
-- fdefc27 governance(snapshot): normalize post-push state and mirror sync
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 2]
+## phase2/observability...origin/phase2/observability [ahead 3]
 M  DEV_LOGS.md
 M  DEV_MAP.md
 M  LAM/default/DEV_LOGS.md
 M  LAM/default/ROADMAP.md
 M  NEW_CHAT_INIT_MESSAGE
-A  P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md
+A  P5_G3_OPERATOR_CHECKLIST_CONTRACT.md
 M  ROADMAP.md
  M WORKFLOW_SNAPSHOT_STATE.md
 
@@ -61,6 +63,7 @@ M  ROADMAP.md
 - P5_EXECUTION_GATE_CONTRACT.md
 - P5_G1_EVIDENCE_PROFILE_CONTRACT.md
 - P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md
+- P5_G3_OPERATOR_CHECKLIST_CONTRACT.md
 - P5_PREP_BACKLOG_CONTRACT.md
 - P5_T1_TIMESTAMP_UTC_CONTRACT.md
 - P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md

@@ -5,7 +5,7 @@
 - Repository: LAM
 - Branch: phase2/observability
 - Protocol scale: 0 (governance/sync)
-- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep finalized; Phase 5 execution gate ACTIVE (governance-only)
+- Current phase pointer: Phase 2 (runtime closure) finalized; Phase 3 (automation hardening) finalized; Phase 4 (router-core follow-up) finalized; Phase 5 prep finalized; Phase 5 execution gate finalized (governance-only)
 
 ## Synchronization Source (SoT)
 - Upstream SoT repo: /home/architit/work/RADRILONIUMA-PROJECT
@@ -29,7 +29,7 @@ Non-goals:
 - P3 automation hardening package is closed (`P3.1/P3.2/P3.3` all DONE).
 - P4 router-core follow-up wave is closed (`F1/F2/F3/F4` all DONE).
 - P5 prep governance wave is closed (`T1/T2/T3` all DONE).
-- P5 execution gate package is activated (`P5.G1/P5.G2/P5.G3` queued, governance-only).
+- P5 execution gate package is closed (`P5.G1/P5.G2/P5.G3` all DONE, governance-only).
 
 ## Work Program (Current)
 
@@ -156,7 +156,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P5.G3 operator decision checklist draft (governance-only).
+- Next target: post-P5 execution-gate task selection (sync/push + runtime-facing gate decision).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -279,12 +279,13 @@ P5 prep DoD:
 ### P5.EXEC) Phase 5 Execution Gate (ACTIVE, governance-only)
 P5.G1 Evidence profile for memory/retrieval operations. (DONE)
 P5.G2 Risk boundary register for memory/retrieval changes. (DONE)
-P5.G3 Operator decision checklist before runtime-facing phase5 tasks.
+P5.G3 Operator decision checklist before runtime-facing phase5 tasks. (DONE)
 
 P5.EXEC package:
 - Gate contract published: `P5_EXECUTION_GATE_CONTRACT.md`.
 - P5.G1 contract published: `P5_G1_EVIDENCE_PROFILE_CONTRACT.md`.
 - P5.G2 contract published: `P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`.
+- P5.G3 contract published: `P5_G3_OPERATOR_CHECKLIST_CONTRACT.md`.
 - Runtime impact: none (contracts-only, derivation-only).
 
 ## Gate Criteria
@@ -315,6 +316,7 @@ P5.EXEC package:
 - P5_EXECUTION_GATE_CONTRACT.md
 - P5_G1_EVIDENCE_PROFILE_CONTRACT.md
 - P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md
+- P5_G3_OPERATOR_CHECKLIST_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md

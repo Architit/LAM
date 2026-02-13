@@ -91,3 +91,4 @@ normalized.
 2026-02-13 03:51 UTC — Governance: P5 execution gate activated (governance-only) — published `P5_EXECUTION_GATE_CONTRACT.md`; fixed queue `P5.G1/P5.G2/P5.G3`; next target set to `P5.G1` evidence profile contract draft.
 2026-02-13 03:52 UTC — Governance: P5.G1 completed (governance-only) — published `P5_G1_EVIDENCE_PROFILE_CONTRACT.md`; evidence profile fields/markers fixed; next target moved to `P5.G2` risk boundary register draft.
 2026-02-13 03:54 UTC — Governance: P5.G2 completed (governance-only) — published `P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`; risk classes/register fields fixed; next target moved to `P5.G3` operator checklist draft.
+2026-02-13 03:56 UTC — Governance: P5.G3 completed (governance-only) — published `P5_G3_OPERATOR_CHECKLIST_CONTRACT.md`; operator pre-start checklist fixed; P5 execution gate wave (`G1/G2/G3`) marked complete; next target moved to post-gate task selection.

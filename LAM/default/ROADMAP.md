@@ -54,3 +54,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - P5 execution gate activated in root roadmap/maps (governance-only); `P5_EXECUTION_GATE_CONTRACT.md` published with queue `P5.G1/P5.G2/P5.G3`.
 - P5.G1 evidence profile contract published in root roadmap/maps (`P5_G1_EVIDENCE_PROFILE_CONTRACT.md`); next target moved to P5.G2 risk boundary register.
 - P5.G2 risk boundary register contract published in root roadmap/maps (`P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`); next target moved to P5.G3 operator checklist.
+- P5.G3 operator checklist contract published in root roadmap/maps (`P5_G3_OPERATOR_CHECKLIST_CONTRACT.md`); P5 execution gate wave marked complete.

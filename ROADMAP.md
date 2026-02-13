@@ -158,7 +158,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ---
 
 ## Фаза 5 — Memory & Knowledge Layer (1–2 месяца)
-> **Статус:** EXEC-GATE ACTIVE (governance-only) (2026-02-13) — `P5 prep` закрыт, открыт gate-пакет `P5.G1-G3`.
+> **Статус:** EXEC-GATE CLOSED (governance-only) (2026-02-13) — gate-пакет `P5.G1-G3` завершён, ожидается выбор следующего runtime-facing gate decision.
 
 ### Цель
 Система “живёт”, копит опыт, извлекает знания и не забывает важное.
@@ -171,7 +171,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] Открыть execution gate контракт (governance-only): `P5_EXECUTION_GATE_CONTRACT.md`
 - [x] P5.G1: Evidence profile для memory/retrieval операций (`P5_G1_EVIDENCE_PROFILE_CONTRACT.md`)
 - [x] P5.G2: Risk boundary register для phase5 изменений (`P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`)
-- [ ] P5.G3: Operator decision checklist перед runtime-facing шагами
+- [x] P5.G3: Operator decision checklist перед runtime-facing шагами (`P5_G3_OPERATOR_CHECKLIST_CONTRACT.md`)
 
 ---
 
@@ -328,3 +328,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P5.G1 evidence profile contract published (`P5_G1_EVIDENCE_PROFILE_CONTRACT.md`); next target moved to P5.G2 risk boundary register draft
 
 - [x] 2026-02-13 — governance: P5.G2 risk boundary register contract published (`P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`); next target moved to P5.G3 operator checklist draft
+
+- [x] 2026-02-13 — governance: P5.G3 operator checklist contract published (`P5_G3_OPERATOR_CHECKLIST_CONTRACT.md`); P5 execution gate wave (`G1/G2/G3`) marked complete
