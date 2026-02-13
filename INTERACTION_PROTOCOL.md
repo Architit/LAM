@@ -20,7 +20,8 @@
 4. **Verification:** Запуск Smoke-tests.
 5. **Governance:** Обновление документации (Roadmap/Logs).
 6. **Post-Task Review (mandatory):** Автоматически перечитать `DEV_MAP.md`, `ROADMAP.md`, `INTERACTION_PROTOCOL.md`, `DEV_LOGS.md` после завершения задачи и сверить статус/ограничения.
-7. **User Confirmation Gate (mandatory):** После post-task review выдать короткий список следующих задач и запросить подтверждение пользователя на старт выбранной задачи.
+7. **User Confirmation Gate (mandatory):** После post-task review выдать нумерованный список следующих задач и запросить явное подтверждение пользователя на старт выбранной задачи.
+8. **Autopilot Boundary (mandatory):** Запрещен автостарт следующей задачи без явного выбора пользователя (`1/2/3...`) после п.7.
 
 Governance update order (mandatory):
 - `DEV_LOGS.md` -> `ROADMAP.md` -> `INTERACTION_PROTOCOL.md`

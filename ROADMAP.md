@@ -364,3 +364,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P5.RT3 runtime start decision record contract published (`P5_RT3_RUNTIME_START_DECISION_RECORD_CONTRACT.md`); runtime-task-wave (`RT1/RT2/RT3`) marked complete
 
 - [x] 2026-02-13 — governance: post-runtime-task package activated (`P5_POST_RUNTIME_TASK_WAVE_CONTRACT.md`); queue `P5.POST1/P5.POST2/P5.POST3` fixed; next target moved to P5.POST1 evidence consolidation
+
+- [x] 2026-02-13 — governance: autopilot confirmation gate hardened in protocol/template (`INTERACTION_PROTOCOL.md`, `INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`); next-task start requires explicit numbered user selection

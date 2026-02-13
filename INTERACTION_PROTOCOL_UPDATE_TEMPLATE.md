@@ -20,12 +20,15 @@ Template for deterministic updates to `INTERACTION_PROTOCOL.md` in governance-on
 - [ ] `DEV_LOGS.md` updated before `ROADMAP.md`.
 - [ ] `ROADMAP.md` updated before `INTERACTION_PROTOCOL.md`.
 - [ ] `WORKFLOW_SNAPSHOT_STATE.md` refreshed after protocol update.
+- [ ] Numbered next-task options are provided after post-task review.
+- [ ] Explicit user selection is captured before next task start.
 
 ## Evidence
 - `dev_logs_ref`:
 - `roadmap_ref`:
 - `protocol_ref`:
 - `snapshot_ref`:
+- `confirmation_ref`:
 
 ## Post-Update Gate
 - `review_status`: `passed` | `needs-fix`
