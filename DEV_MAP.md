@@ -1,6 +1,6 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 02:22 UTC)
+## Execution Status (2026-02-13 02:31 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
@@ -153,7 +153,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P4.1 router-core baseline inventory and operator evidence block draft.
+- Next target: P4.T2 deterministic policy profile draft for `ci`/`smoke` parity.
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -194,9 +194,25 @@ P4 DoD (phase activation):
 - D4: no contradiction with finalized runtime-proof closure (`DONE=14, EXEMPT=1, PENDING=0`).
 
 P4 first task queue:
-- T1: inventory router-core entrypoints, provider-chain decisions, health/fallback hooks.
+- T1: inventory router-core entrypoints, provider-chain decisions, health/fallback hooks. (DONE)
 - T2: define deterministic policy profile draft for `ci` and `smoke` execution parity.
 - T3: publish governance-only operator block for P4.1 evidence capture (read-only + smoke references).
+
+P4.T1 inventory (facts, read-only):
+- Entrypoints:
+  - comm integration entrypoint: `LAM/default/agents/roaudter-agent/src/roaudter_agent/lam_entrypoint.py` (`RoaudterComAgent.answer`)
+  - core routing entrypoint: `LAM/default/agents/roaudter-agent/src/roaudter_agent/router.py` (`RouterAgent.route`)
+  - local integration scripts: `scripts/run_comm_with_roaudter.py`, `scripts/run_comm_loop.py`
+  - test gate entrypoint: `scripts/test_entrypoint.sh` (called by `devkit/check.sh`)
+- Provider-chain decisions:
+  - default router build and provider registry in `LAM/default/agents/roaudter-agent/src/roaudter_agent/registry.py`
+  - selection logic in `LAM/default/agents/roaudter-agent/src/roaudter_agent/policy.py`
+  - strict provider selection via `provider_hint` with `!` suffix (no fallback); profile chains `local_only`, `cheap`, `best`, `fast`
+  - model-driven cloud preference (`model: *:cloud`) and intent heuristic are applied before default chain
+- Health/fallback hooks:
+  - health TTL/cooldown gate in `LAM/default/agents/roaudter-agent/src/roaudter_agent/health.py`
+  - retry budget/backoff/fallback to next provider in `LAM/default/agents/roaudter-agent/src/roaudter_agent/router.py`
+  - observability events around routing lifecycle: `roaudter.route`, `roaudter.result`, `roaudter.deliver`, optional `roaudter.trace`
 
 Deliverable: controlled start of Router Core execution with explicit gates and evidence loop.
 

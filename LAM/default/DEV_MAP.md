@@ -1,6 +1,6 @@
 # DEV_MAP (Mirror)
 
-Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 02:22 UTC.
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 02:31 UTC.
 Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
 
 Scope marker:
@@ -44,3 +44,4 @@ R5 publication note:
 - P3.2 completed: unified entrypoint via `scripts/test_entrypoint.sh` with profiles (`ci/smoke/full`), CI aligned to `--profile ci`, local `ci+smoke` green.
 - P3.3 completed: update-order governance rule codified (`DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL -> WORKFLOW_SNAPSHOT_STATE`).
 - P4 activated: router-core phase switched to ACTIVE with DoD (`D1-D4`) and ordered start queue (`T1-T3`).
+- P4.T1 completed: router-core inventory captured (entrypoints/provider-chain/health-fallback); next target shifted to P4.T2.

@@ -1,6 +1,6 @@
 # ROADMAP
 
-Synced with root `ROADMAP.md` on 2026-02-13 02:22 UTC.
+Synced with root `ROADMAP.md` on 2026-02-13 02:31 UTC.
 Canonical source of truth: `/home/architit/work/LAM/ROADMAP.md`.
 
 ## Phase 2 — Observability
@@ -38,3 +38,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - P3.3 completed: protocol hardening for governance update order (`DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL -> WORKFLOW_SNAPSHOT_STATE`).
 - Post-review sync with RADRILONIUMA-PROJECT completed for LAM P3.2/P3.3 state (`df4eed8`, `gov-radr-phase5b-p33-sync-v1.0.0`).
 - Phase 4 (Router Core) marked ACTIVE; P4 DoD (`D1-D3`) and start queue (`T1-T3`) fixed in root roadmap.
+- P4.T1 inventory completed in root roadmap/maps; next target is P4.T2 profile draft.

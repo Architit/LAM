@@ -136,7 +136,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] D3: Синхронизация root/default карт и snapshot выполняется в одном governance-цикле.
 
 ### P4 стартовая очередь (T1-T3)
-- [ ] T1: Инвентаризация router-core entrypoints, provider-chain решений и health/fallback hooks.
+- [x] T1: Инвентаризация router-core entrypoints, provider-chain решений и health/fallback hooks.
 - [ ] T2: Черновик deterministic policy profile для `ci` и `smoke` parity.
 - [ ] T3: Governance-only operator block для P4.1 evidence capture (read-only + smoke refs).
 
@@ -278,3 +278,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: post-review sync with RADRILONIUMA-PROJECT completed for LAM P3.2/P3.3 state (`df4eed8`, `gov-radr-phase5b-p33-sync-v1.0.0`)
 
 - [x] 2026-02-13 — governance: P4 activation package started in LAM (DEV_MAP/ROADMAP DoD + first-task queue fixed; Phase 4 marked ACTIVE)
+
+- [x] 2026-02-13 — governance: P4.T1 inventory completed (entrypoints/provider-chain/health-fallback mapped from roaudter-agent + integration scripts; read-only evidence captured in DEV_MAP)
