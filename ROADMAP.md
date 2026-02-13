@@ -330,3 +330,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P5.G2 risk boundary register contract published (`P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`); next target moved to P5.G3 operator checklist draft
 
 - [x] 2026-02-13 — governance: P5.G3 operator checklist contract published (`P5_G3_OPERATOR_CHECKLIST_CONTRACT.md`); P5 execution gate wave (`G1/G2/G3`) marked complete
+
+- [x] 2026-02-13 — governance: RADR ASR sync confirmed for P5 execution-gate closure (`e86650d`, `gov-radr-asr-phase5b-lam-p5-exec-gate-closure-v1.0.0`)

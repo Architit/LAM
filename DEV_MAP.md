@@ -30,6 +30,7 @@ Non-goals:
 - P4 router-core follow-up wave is closed (`F1/F2/F3/F4` all DONE).
 - P5 prep governance wave is closed (`T1/T2/T3` all DONE).
 - P5 execution gate package is closed (`P5.G1/P5.G2/P5.G3` all DONE, governance-only).
+- RADR ASR sync for P5 execution-gate closure is confirmed (`e86650d`, `gov-radr-asr-phase5b-lam-p5-exec-gate-closure-v1.0.0`).
 
 ## Work Program (Current)
 

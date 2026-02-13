@@ -30,3 +30,4 @@ Hard constraints:
 - D2: Queue `P5.G1/P5.G2/P5.G3` is fixed and ordered.
 - D3: `DEV_LOGS.md`, `WORKFLOW_SNAPSHOT_STATE.md`, and mirrors are synchronized in the same governance cycle.
 - D4: no contradiction with closed states (`P2.4`, `P4` follow-up, `P5` prep).
+- D5: post-closure ASR sync is recorded in `RADRILONIUMA-PROJECT` (`gov/asr/*`) and acknowledged in LAM governance logs.

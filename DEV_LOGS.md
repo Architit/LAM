@@ -92,3 +92,4 @@ normalized.
 2026-02-13 03:52 UTC — Governance: P5.G1 completed (governance-only) — published `P5_G1_EVIDENCE_PROFILE_CONTRACT.md`; evidence profile fields/markers fixed; next target moved to `P5.G2` risk boundary register draft.
 2026-02-13 03:54 UTC — Governance: P5.G2 completed (governance-only) — published `P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`; risk classes/register fields fixed; next target moved to `P5.G3` operator checklist draft.
 2026-02-13 03:56 UTC — Governance: P5.G3 completed (governance-only) — published `P5_G3_OPERATOR_CHECKLIST_CONTRACT.md`; operator pre-start checklist fixed; P5 execution gate wave (`G1/G2/G3`) marked complete; next target moved to post-gate task selection.
+2026-02-13 03:57 UTC — Governance: RADR ASR sync confirmed for P5 execution-gate closure (`e86650d`, `gov-radr-asr-phase5b-lam-p5-exec-gate-closure-v1.0.0`); session `gov/asr/sessions/2026-02-13__ASR__phase5b-lam-p5-exec-gate-closure-sync.md`.

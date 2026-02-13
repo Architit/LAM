@@ -76,3 +76,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - P5.G1 completed (governance-only); `P5_G1_EVIDENCE_PROFILE_CONTRACT.md` published and next target moved to P5.G2 risk boundary register draft.
 - P5.G2 completed (governance-only); `P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md` published and next target moved to P5.G3 operator checklist draft.
 - P5.G3 completed (governance-only); `P5_G3_OPERATOR_CHECKLIST_CONTRACT.md` published and P5 execution gate wave marked complete.
+- RADR ASR sync confirmed for P5 execution-gate closure (`e86650d`, `gov-radr-asr-phase5b-lam-p5-exec-gate-closure-v1.0.0`).
