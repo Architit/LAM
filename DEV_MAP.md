@@ -90,9 +90,9 @@ Runtime proof matrix (2026-02-13 00:36 UTC):
 |---|---|---|---|
 | LAM | DONE | DONE | local runtime observability proof exists (5/5) |
 | RADRILONIUMA-PROJECT | DONE | PENDING | governance SoT; no repo runtime closure claim required for others |
-| Roaudter-agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `wheelhouse/` |
-| LAM-Codex_Agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `wheelhouse/` |
-| LAM_Comunication_Agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `wheelhouse/` |
+| Roaudter-agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `lam-wheelhouse-py312.tgz` (wheelhouse not unpacked) |
+| LAM-Codex_Agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `lam-wheelhouse-py312.tgz` (wheelhouse not unpacked) |
+| LAM_Comunication_Agent | DONE | PENDING | R6.1 retry: python3/venv present, blocked by missing `lam-wheelhouse-py312.tgz` (wheelhouse not unpacked) |
 | Archivator_Agent | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
 | CORE | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
 | J.A.R.V.I.S | DONE | PENDING | R2 attempt executed; no runtime/observability tests discovered |
@@ -140,8 +140,8 @@ Wave-runtime start set:
 - Wave R6.1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
 - Wave R6.1 result: no status promotion (DONE=1, PENDING=14); common blocker `pytest-install-failed-offline` (PyPI/DNS unavailable) for all 3 repos.
 - R6.1 fallback policy published: `RUNTIME_PROOF_OFFLINE_WHEELHOUSE_POLICY.md`.
-- Wave R6.1 retry result: no status promotion (DONE=1, PENDING=14); common blocker `wheelhouse-missing` in all 3 repos.
-- Next target: prepare/distribute wheelhouse package, then rerun R6.1 retry.
+- Wave R6.1 retry result: no status promotion (DONE=1, PENDING=14); common blocker `wheelhouse-artifact-missing` (`/home/architit/work/lam-wheelhouse-py312.tgz`) in all 3 repos.
+- Next target: deliver wheelhouse archive, unpack to `lam-wheelhouse/`, then rerun R6.1 retry.
 
 Deliverable: deterministic runtime closure proof matrix.
 

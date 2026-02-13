@@ -231,3 +231,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: R6.1 offline wheelhouse fallback policy published and linked to bootstrap/operator/checklist contracts
 
 - [x] 2026-02-13 — governance: P2.4 wave R6.1 retry executed (same 3 repos); no promotions due missing `wheelhouse/` in all targets
+
+- [x] 2026-02-13 — governance: R6.1 retry blocker root-cause recorded (`lam-wheelhouse-py312.tgz` missing before unpack/distribution)
