@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T03:30:52Z
+timestamp: 2026-02-13T03:32:50Z
 
 ## Current pointer
 phase: Phase 4 - Router Core
@@ -32,6 +32,7 @@ constraints:
 - Next target: post-follow-up task selection (sync/push + next phase gate).
 
 ## Recent commits
+- fdefc27 governance(snapshot): normalize post-push state and mirror sync
 - 2fde680 governance(dev-map): acknowledge RADR ASR filename/index fix
 - 202dc08 ssn rstrt(EXPORT): set stop-point after follow-up wave F1-F4 closure
 - 8ca6fc6 governance(p4.follow-up.f4): publish provider metrics contract draft
@@ -43,15 +44,9 @@ constraints:
 - 09f5f3b governance(p4.follow-up): publish backlog contract for cost-quality-policy-v3
 - 842dd84 governance(dev-map): sync RADR ASR record for LAM P4 closure
 - 0e52448 ssn rstrt(EXPORT): set stop-point after P4.1-P4.3 closure
-- 8a95e9e governance(p4.3): publish router operator evidence blocks
 
 ## Git status
 ## phase2/observability...origin/phase2/observability
- M DEV_LOGS.md
- M LAM/default/DEV_LOGS.md
- M LAM/default/ROADMAP.md
- M ROADMAP.md
- M WORKFLOW_SNAPSHOT_STATE.md
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -65,21 +60,3 @@ constraints:
 - P4_FOLLOWUP_F4_PROVIDER_METRICS_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
-
-## New Chat Init
-ssn rstrt
-IMPORT:
-1) Read WORKFLOW_SNAPSHOT_STATE.md.
-2) Run read-only sync:
-   - pwd
-   - git status -sb
-   - git log -n 12 --oneline
-3) Continue from declared pointer:
-   - phase: Phase 4 - Router Core
-   - stage: stop-point after follow-up wave F1-F4 closure
-4) Constraints remain strict:
-   - contracts-first
-   - observability-first
-   - derivation-only
-   - NO runtime logic
-   - NO execution-path impact
