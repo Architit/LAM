@@ -49,3 +49,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - Snapshot consistency refresh completed in root governance state; `WORKFLOW_SNAPSHOT_STATE.md` now reflects clean sync with origin.
 - Phase 5 prep activated in root roadmap/maps (governance-only); `P5_PREP_BACKLOG_CONTRACT.md` published with ordered queue `P5.T1/P5.T2/P5.T3`.
 - P5.T1 timestamp UTC contract published in root roadmap/maps (`P5_T1_TIMESTAMP_UTC_CONTRACT.md`); next target moved to P5.T2 retrieval boundary.
+- P5.T2 retrieval boundary contract published in root roadmap/maps (`P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md`); next target moved to P5.T3 domain partitioning.

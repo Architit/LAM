@@ -70,3 +70,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - Snapshot consistency refreshed after closure pushes; root `WORKFLOW_SNAPSHOT_STATE.md` normalized to clean git state (`phase2/observability` in sync with origin).
 - Phase 5 prep activated (governance-only); `P5_PREP_BACKLOG_CONTRACT.md` published and queue `P5.T1/P5.T2/P5.T3` fixed in root docs.
 - P5.T1 completed (governance-only); `P5_T1_TIMESTAMP_UTC_CONTRACT.md` published and next target moved to P5.T2 retrieval boundary draft.
+- P5.T2 completed (governance-only); `P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md` published and next target moved to P5.T3 domain partitioning draft.

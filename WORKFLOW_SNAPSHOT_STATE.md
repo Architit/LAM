@@ -3,17 +3,17 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T03:40:56Z
+timestamp: 2026-02-13T03:42:35Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge Prep
-stage: P5.T1 timestamp UTC contract completed (governance-only)
+stage: P5.T2 retrieval boundary contract completed (governance-only)
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
-- preserve P5 prep continuity after T1 completion
+- preserve P5 prep continuity after T2 completion
 - keep P2.4 runtime closure and P4 follow-up closure immutable
-- prepare deterministic stop-point for P5.T2 start
+- prepare deterministic stop-point for P5.T3 start
 constraints:
 - contracts-first
 - observability-first
@@ -25,10 +25,12 @@ constraints:
 - P4 follow-up closure remains fixed: F1 DONE, F2 DONE, F3 DONE, F4 DONE.
 - P5 prep backlog contract published: P5_PREP_BACKLOG_CONTRACT.md
 - P5.T1 contract published: P5_T1_TIMESTAMP_UTC_CONTRACT.md
-- P5 queue state: T1 DONE, T2 TODO, T3 TODO.
-- Next target: P5.T2 retrieval routing boundary contract draft (governance-only).
+- P5.T2 contract published: P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md
+- P5 queue state: T1 DONE, T2 DONE, T3 TODO.
+- Next target: P5.T3 domain memory partitioning contract draft (governance-only).
 
 ## Recent commits
+- dfd65f7 governance(p5.t1): publish timestamp UTC contract draft
 - 92c4e53 governance(snapshot): align P5 prep snapshot with branch head
 - 7b8660b governance(snapshot): refresh P5 prep state after commit
 - dc4df5c governance(p5.prep): activate backlog contract and phase pointer
@@ -40,18 +42,15 @@ constraints:
 - 9460445 governance(p4.follow-up.f3): publish policy-v3 config contract draft
 - cfeccf9 governance(p4.follow-up.f2): publish quality-aware contract draft
 - af5ada7 governance(dev-map): sync RADR ASR record for LAM follow-up F1
-- 5eec53d governance(p4.follow-up.f1): publish cost-aware contract draft
 
 ## Git status
 ## phase2/observability...origin/phase2/observability
-M  DEV_LOGS.md
-M  DEV_MAP.md
-M  LAM/default/DEV_LOGS.md
-M  LAM/default/ROADMAP.md
-M  NEW_CHAT_INIT_MESSAGE
-A  P5_T1_TIMESTAMP_UTC_CONTRACT.md
-M  ROADMAP.md
- M WORKFLOW_SNAPSHOT_STATE.md
+ M DEV_LOGS.md
+ M DEV_MAP.md
+ M LAM/default/DEV_LOGS.md
+ M LAM/default/ROADMAP.md
+ M ROADMAP.md
+?? P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md
 
 ## References
 - INTERACTION_PROTOCOL.md
@@ -60,6 +59,7 @@ M  ROADMAP.md
 - DEV_MAP.md
 - P5_PREP_BACKLOG_CONTRACT.md
 - P5_T1_TIMESTAMP_UTC_CONTRACT.md
+- P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md
 - P4_FOLLOWUP_BACKLOG_CONTRACT.md
 - P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md
 - P4_FOLLOWUP_F2_QUALITY_AWARE_CONTRACT.md

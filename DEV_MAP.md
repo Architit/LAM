@@ -154,7 +154,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P5.T2 retrieval routing boundary contract draft (governance-only).
+- Next target: P5.T3 domain memory partitioning contract draft (governance-only).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -259,12 +259,13 @@ Deliverable: controlled start of Router Core execution with explicit gates and e
 
 ### P5) Memory & Knowledge Prep Phase (ACTIVE, governance-only)
 P5.T1 Timestamp normalization policy contract draft (timezone-aware UTC boundaries, docs/events semantics). (DONE)
-P5.T2 Retrieval routing boundary contract draft (memory/search before LLM, non-goals fixed).
+P5.T2 Retrieval routing boundary contract draft (memory/search before LLM, non-goals fixed). (DONE)
 P5.T3 Domain memory partitioning contract draft (RADRILONIUMA/TRIANIUMA boundaries and traceability).
 
 P5 prep package:
 - Backlog contract published: `P5_PREP_BACKLOG_CONTRACT.md`.
 - P5.T1 contract published: `P5_T1_TIMESTAMP_UTC_CONTRACT.md`.
+- P5.T2 contract published: `P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md`.
 - Runtime impact: none (contracts-only, derivation-only).
 
 P5 prep DoD:
@@ -295,6 +296,7 @@ P5 prep DoD:
 - P4_FOLLOWUP_F4_PROVIDER_METRICS_CONTRACT.md
 - P5_PREP_BACKLOG_CONTRACT.md
 - P5_T1_TIMESTAMP_UTC_CONTRACT.md
+- P5_T2_RETRIEVAL_BOUNDARY_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md
