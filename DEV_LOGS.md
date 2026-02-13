@@ -51,3 +51,4 @@
 2026-02-13 00:31 UTC — Governance: published offline fallback for R6.1 (`RUNTIME_PROOF_OFFLINE_WHEELHOUSE_POLICY.md`) and updated bootstrap/operator/checklist contracts with wheelhouse flow (`--no-index --find-links`).
 2026-02-13 00:36 UTC — Governance: P2.4 wave R6.1 retry executed for same 3 repos via wheelhouse path; no promotions (DONE=1, PENDING=14). Blocker: `wheelhouse/` missing in all three repos.
 2026-02-13 00:40 UTC — Governance: clarified R6.1 retry blocker root cause — archive `/home/architit/work/lam-wheelhouse-py312.tgz` absent, so `lam-wheelhouse/` could not be unpacked/distributed to targets.
+2026-02-13 00:44 UTC — Governance: host-role contract made explicit in runtime-proof policies: builder host allows internet for vendoring; runner host is offline and must install via `--no-index --find-links` (absolute wheelhouse path in operator block).

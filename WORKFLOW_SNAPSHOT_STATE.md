@@ -3,11 +3,11 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T00:40:00Z
+timestamp: 2026-02-13T00:44:00Z
 
 ## Current pointer
 phase: Phase 2 - Observability
-stage: governance coverage closed (15/15); runtime proof matrix active (P2.4), R6.1 retry root-cause recorded
+stage: governance coverage closed (15/15); runtime proof matrix active (P2.4), host-role contract fixed for offline runner
 protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
@@ -29,13 +29,14 @@ constraints:
 - R6.1 retry result: no promotions; blocker `wheelhouse-missing` on first 3 repos
 - R6.1 retry root-cause: missing archive `/home/architit/work/lam-wheelhouse-py312.tgz`
 - R6.1 offline fallback policy published: RUNTIME_PROOF_OFFLINE_WHEELHOUSE_POLICY.md
+- Host role contract: builder host may use internet for vendoring; runner host is offline and must use `--no-index --find-links`
 - Next prerequisite: deliver `lam-wheelhouse-py312.tgz`, unpack `lam-wheelhouse/`, then distribute to target repos
 - SoT DEVMAP reference: commit e8a82fb, sha256 fdef6e4b581b6dfafe65054b4163a047221706f29ab2989f36ad8ce804a59cbf
 - LAM DEVMAP sha256: 87c06e19e48027ea5d5456ffb585f3c051e15d0cefda5e8554e50c87178100ed (derived/local)
 - Patcher hash: LAM=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7, SoT=21ed9cddd32a60c8521a6b76edfd98652e00d3f26301578b8dae4402b6c8efc7 (equal)
 - Workflow snapshot contract hash: LAM=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db, SoT=f0ea91cf5f12f6bcba73e942e23c34d9198a8e1cdee99b39b845b5453fbe14db (equal)
 - System state contract hash: LAM=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247, SoT=e154be15f9dbc88f2b066090304e53f2c460cce16326b3862992e744ecc5a247 (equal)
-- Next target: retry R6.1 wave-1 after archive delivery and unpack preflight checks
+- Next target: retry R6.1 wave-1 after archive delivery and unpack preflight checks (using absolute wheelhouse path)
 
 ## Recent commits
 - 1547f32 governance(runtime-proof): add offline wheelhouse fallback for R6.1

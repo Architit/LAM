@@ -15,6 +15,10 @@ Hard constraints:
 This policy applies to verification evidence for `runtime_proof` promotion.
 It does not alter product runtime behavior.
 
+## Host Role Contract
+- Builder host: internet allowed for dependency vendoring (wheelhouse).
+- Runner host: internet denied; installs must be `--no-index --find-links`.
+
 ## Offline Wheelhouse Contract
 1. Prepare wheelhouse on a network-enabled host:
    - `python3 -m pip download --only-binary=:all: -d wheelhouse pytest`

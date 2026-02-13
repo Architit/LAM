@@ -1,6 +1,6 @@
 # DEV_MAP (Mirror)
 
-Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 00:40 UTC.
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 00:44 UTC.
 Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
 
 Scope marker:
@@ -30,3 +30,4 @@ R5 publication note:
 - R6.1 offline wheelhouse fallback policy published.
 - R6.1 retry executed; no promotions due missing `wheelhouse/`.
 - R6.1 retry root-cause: missing archive `lam-wheelhouse-py312.tgz`.
+- Host role contract fixed: builder online vendoring, runner offline install via `--no-index --find-links`.

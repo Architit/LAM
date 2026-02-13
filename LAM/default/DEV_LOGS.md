@@ -1,6 +1,6 @@
 # DEV_LOGS
 
-Synced with root `DEV_LOGS.md` on 2026-02-13 00:40 UTC.
+Synced with root `DEV_LOGS.md` on 2026-02-13 00:44 UTC.
 Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 
 ## 2026-02-10
@@ -42,3 +42,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - R6.1 offline wheelhouse fallback policy published and connected to operator/bootstrap/checklist flow.
 - P2.4 wave R6.1 retry (same 3 repos) executed; no promotions due missing `wheelhouse/`.
 - R6.1 retry root-cause recorded: missing `/home/architit/work/lam-wheelhouse-py312.tgz`.
+- Host-role contract fixed in policies: builder online vendoring, runner offline `--no-index --find-links`.

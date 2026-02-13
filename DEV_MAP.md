@@ -140,6 +140,9 @@ Wave-runtime start set:
 - Wave R6.1 target repos: Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent.
 - Wave R6.1 result: no status promotion (DONE=1, PENDING=14); common blocker `pytest-install-failed-offline` (PyPI/DNS unavailable) for all 3 repos.
 - R6.1 fallback policy published: `RUNTIME_PROOF_OFFLINE_WHEELHOUSE_POLICY.md`.
+- Host role contract fixed in runtime-proof contracts:
+  - Builder host: internet allowed for dependency vendoring (wheelhouse)
+  - Runner host: internet denied; installs must be `--no-index --find-links`
 - Wave R6.1 retry result: no status promotion (DONE=1, PENDING=14); common blocker `wheelhouse-artifact-missing` (`/home/architit/work/lam-wheelhouse-py312.tgz`) in all 3 repos.
 - Next target: deliver wheelhouse archive, unpack to `lam-wheelhouse/`, then rerun R6.1 retry.
 

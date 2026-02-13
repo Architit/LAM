@@ -15,6 +15,10 @@ Hard constraints:
 This policy is governance-only. It does not enforce automation and does not
 modify runtime code paths.
 
+Host role contract:
+- Builder host: internet allowed for dependency vendoring (wheelhouse).
+- Runner host: internet denied; installs must be `--no-index --find-links`.
+
 Interpretation:
 - Python is the supported verification layer for runtime-proof evidence.
 - Requirements below apply to CI/verification only.

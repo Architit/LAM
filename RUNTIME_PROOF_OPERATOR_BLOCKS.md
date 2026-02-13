@@ -27,8 +27,8 @@ python3 -m venv .venv
 python3 --version
 python3 -m venv .venv
 .venv/bin/python -m pip --version
-test -d wheelhouse || { echo "wheelhouse missing"; exit 1; }
-.venv/bin/python -m pip install --no-index --find-links=wheelhouse pytest
+test -d /home/architit/work/lam-wheelhouse || { echo "wheelhouse missing"; exit 1; }
+.venv/bin/python -m pip install --no-index --find-links="/home/architit/work/lam-wheelhouse" pytest
 .venv/bin/python -m pytest --version
 ```
 
