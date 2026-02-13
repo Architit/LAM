@@ -156,7 +156,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P5.G2 risk boundary register draft (governance-only).
+- Next target: P5.G3 operator decision checklist draft (governance-only).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -278,12 +278,13 @@ P5 prep DoD:
 
 ### P5.EXEC) Phase 5 Execution Gate (ACTIVE, governance-only)
 P5.G1 Evidence profile for memory/retrieval operations. (DONE)
-P5.G2 Risk boundary register for memory/retrieval changes.
+P5.G2 Risk boundary register for memory/retrieval changes. (DONE)
 P5.G3 Operator decision checklist before runtime-facing phase5 tasks.
 
 P5.EXEC package:
 - Gate contract published: `P5_EXECUTION_GATE_CONTRACT.md`.
 - P5.G1 contract published: `P5_G1_EVIDENCE_PROFILE_CONTRACT.md`.
+- P5.G2 contract published: `P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`.
 - Runtime impact: none (contracts-only, derivation-only).
 
 ## Gate Criteria
@@ -313,6 +314,7 @@ P5.EXEC package:
 - P5_T3_DOMAIN_PARTITIONING_CONTRACT.md
 - P5_EXECUTION_GATE_CONTRACT.md
 - P5_G1_EVIDENCE_PROFILE_CONTRACT.md
+- P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md
 - /home/architit/work/RADRILONIUMA-PROJECT/DEV_MAP.md

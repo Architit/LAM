@@ -170,7 +170,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] P5.T3: Контракт доменной сегментации памяти (RADRILONIUMA/TRIANIUMA) (`P5_T3_DOMAIN_PARTITIONING_CONTRACT.md`)
 - [x] Открыть execution gate контракт (governance-only): `P5_EXECUTION_GATE_CONTRACT.md`
 - [x] P5.G1: Evidence profile для memory/retrieval операций (`P5_G1_EVIDENCE_PROFILE_CONTRACT.md`)
-- [ ] P5.G2: Risk boundary register для phase5 изменений
+- [x] P5.G2: Risk boundary register для phase5 изменений (`P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`)
 - [ ] P5.G3: Operator decision checklist перед runtime-facing шагами
 
 ---
@@ -326,3 +326,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P5 execution gate activated (governance-only); `P5_EXECUTION_GATE_CONTRACT.md` published with queue `P5.G1/P5.G2/P5.G3`
 
 - [x] 2026-02-13 — governance: P5.G1 evidence profile contract published (`P5_G1_EVIDENCE_PROFILE_CONTRACT.md`); next target moved to P5.G2 risk boundary register draft
+
+- [x] 2026-02-13 — governance: P5.G2 risk boundary register contract published (`P5_G2_RISK_BOUNDARY_REGISTER_CONTRACT.md`); next target moved to P5.G3 operator checklist draft
