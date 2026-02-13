@@ -293,3 +293,6 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: F1 cost-aware contract draft published (`P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`), next target moved to F2 quality-aware contract wave
 
 - [x] 2026-02-13 — governance: ASR record synced for LAM P4 follow-up backlog (`8f5bcb4`, `gov-radr-asr-phase5b-lam-p4-followup-v1.0.0`).
+
+- [x] 2026-02-13 — governance: ASR record synced for LAM follow-up F1 closure
+(`0a5a8e6`, `gov-radr-asr-phase5b-lam-followup-f1-v1.0.0`).
