@@ -1,6 +1,6 @@
 # DEV_MAP - LAM Development Map (Derived)
 
-## Execution Status (2026-02-13 04:52 UTC)
+## Execution Status (2026-02-13 04:54 UTC)
 - Status: ACTIVE
 - Repository: LAM
 - Branch: phase2/observability
@@ -162,7 +162,7 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: P6.T2 health/telemetry panel profile draft (governance-only).
+- Next target: P6.T3 operator action boundary checklist (governance-only).
 
 Deliverable: deterministic runtime closure proof matrix.
 
@@ -332,12 +332,13 @@ P5.POST package:
 
 ### P6.PREP) Control Plane Prep Package (ACTIVE, governance-only)
 P6.T1 Control plane surface inventory. (DONE)
-P6.T2 Health/telemetry panel profile draft.
+P6.T2 Health/telemetry panel profile draft. (DONE)
 P6.T3 Operator action boundary checklist.
 
 P6.PREP package:
 - Contract published: `P6_PREP_CONTROL_PLANE_BACKLOG_CONTRACT.md`.
 - P6.T1 contract published: `P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md`.
+- P6.T2 contract published: `P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md`.
 - Runtime impact: none (contracts-only, derivation-only).
 
 ## Gate Criteria
@@ -383,6 +384,7 @@ P6.PREP package:
 - P5_POST3_NEXT_PACKAGE_START_RECOMMENDATION_CONTRACT.md
 - P6_PREP_CONTROL_PLANE_BACKLOG_CONTRACT.md
 - P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md
+- P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md
 - INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md
 - WORKFLOW_SNAPSHOT_CONTRACT.md
 - WORKFLOW_SNAPSHOT_STATE.md

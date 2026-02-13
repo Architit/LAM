@@ -7,7 +7,7 @@ IMPORT:
    - git log -n 12 --oneline
 3) Continue from declared pointer:
    - phase: Phase 6 - Control Plane and UI
-   - stage: control plane surface inventory closure (governance-only)
+   - stage: health telemetry profile draft closure (governance-only)
 4) Constraints remain strict:
    - contracts-first
    - observability-first

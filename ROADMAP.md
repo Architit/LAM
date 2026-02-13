@@ -201,7 +201,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 ### Задачи
 - [x] Открыть P6 prep backlog контракт (governance-only): `P6_PREP_CONTROL_PLANE_BACKLOG_CONTRACT.md`
 - [x] P6.T1: Control plane surface inventory (`P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md`)
-- [ ] P6.T2: Health/telemetry panel profile draft
+- [x] P6.T2: Health/telemetry panel profile draft (`P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md`)
 - [ ] P6.T3: Operator action boundary checklist
 
 ---
@@ -384,3 +384,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: Phase 6 prep activated (`P6_PREP_CONTROL_PLANE_BACKLOG_CONTRACT.md`); queue `P6.T1/P6.T2/P6.T3` fixed; next target moved to P6.T1 surface inventory
 
 - [x] 2026-02-13 — governance: P6.T1 control plane surface inventory contract published (`P6_T1_CONTROL_PLANE_SURFACE_INVENTORY_CONTRACT.md`); next target moved to P6.T2 profile draft
+
+- [x] 2026-02-13 — governance: P6.T2 health/telemetry profile draft contract published (`P6_T2_HEALTH_TELEMETRY_PROFILE_DRAFT_CONTRACT.md`); next target moved to P6.T3 boundary checklist
