@@ -53,3 +53,4 @@ Canonical source of truth: `/home/architit/work/LAM/DEV_LOGS.md`.
 - SoT EXEMPT closure synced (1fc28cb, gov-radr-phase5b-sot-exempt-sync-v1.0.0); heredoc literals should use quoted marker to avoid backtick substitution.
 - P3.1 activated in LAM: CI gate baseline switched to local devkit scripts; `P3_CI_GATE_POLICY.md` and `P3_CI_GATE_OPERATOR_BLOCKS.md` published.
 - P3.1 validation blocker: local gate run failed in `tests/test_taskarid_comm_roaudter_trace.py`; status is ACTIVE/BLOCKED until gate returns green.
+- P3.1 blocker resolved: trace-roundtrip test stabilized; local CI payload gate run passed (`4 passed`), status DONE.

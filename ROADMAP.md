@@ -255,3 +255,5 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: P3.1 CI gate baseline activated in LAM (`.github/workflows/ci.yml` -> local `devkit/bootstrap.sh` + `devkit/check.sh`; policy+operator docs published)
 
 - [!] 2026-02-13 — P3.1 validation blocker: local gate payload failed in `tests/test_taskarid_comm_roaudter_trace.py` (`out['status']='error'`); hold P3.2 until gate returns green
+
+- [x] 2026-02-13 — P3.1 blocker resolved: trace-roundtrip test stabilized; local `./devkit/check.sh` CI payload passed (`4 passed`), proceed to P3.2

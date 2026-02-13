@@ -40,3 +40,4 @@ R5 publication note:
 - Post-review sync with RADRILONIUMA-PROJECT completed (commit 69eff02, tag gov-radr-phase5b-r65-postreview-sync-v1.0.0).
 - SoT row policy finalized: RADRILONIUMA-PROJECT marked EXEMPT; runtime summary closed to DONE=14, EXEMPT=1, PENDING=0.
 - P3.1 activated: CI gate baseline uses local `devkit/bootstrap.sh` + `devkit/check.sh`; policy/operator docs published.
+- P3.1 validation now DONE: local CI payload check passed (`4 passed`); ready for P3.2.

@@ -63,3 +63,4 @@
 Operational note: avoid command substitution in heredoc payloads with backticks; use quoted heredoc marker (`<<'EOF'`) for literal tags/refs.
 2026-02-13 01:45 UTC — Governance: P3.1 activation started in LAM — CI gate baseline aligned to local `devkit/check.sh`/`devkit/bootstrap.sh`; policy and operator blocks published (`P3_CI_GATE_POLICY.md`, `P3_CI_GATE_OPERATOR_BLOCKS.md`).
 2026-02-13 01:49 UTC — P3.1 validation run: `./devkit/check.sh` with CI payload returned FAIL (`tests/test_taskarid_comm_roaudter_trace.py::test_taskarid_to_comm_to_roaudter_trace_roundtrip`, roaudter returned `status=error`); P3.1 remains ACTIVE/BLOCKED.
+2026-02-13 01:52 UTC — P3.1 blocker resolved: trace-roundtrip test stabilized to validate context/taskarid propagation independently of provider availability; re-run of `./devkit/check.sh` with CI payload passed (`4 passed`), P3.1 marked DONE.

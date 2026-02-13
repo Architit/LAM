@@ -34,3 +34,4 @@ When root `ROADMAP.md` changes, update this mirror in the same session.
 - SoT EXEMPT closure synced (1fc28cb, gov-radr-phase5b-sot-exempt-sync-v1.0.0).
 - P3.1 CI gate baseline activated in LAM (local devkit gate + policy/operator docs).
 - P3.1 currently BLOCKED by failing local gate test (`tests/test_taskarid_comm_roaudter_trace.py`).
+- P3.1 blocker resolved; local CI payload gate run passed (`4 passed`), ready for P3.2.

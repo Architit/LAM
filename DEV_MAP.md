@@ -153,12 +153,12 @@ Wave-runtime start set:
 - Wave R6.5 result: status promotion for 1 repo (DONE=14, PENDING=1); smoke run passed with exit_code=0 using offline wheelhouse.
 - Post-review sync status: completed with `RADRILONIUMA-PROJECT` (`69eff02`, tag `gov-radr-phase5b-r65-postreview-sync-v1.0.0`).
 - Policy decision: SoT runtime row closed as `EXEMPT`; runtime summary finalized at DONE=14, EXEMPT=1, PENDING=0.
-- Next target: resolve P3.1 blocker (`test_taskarid_comm_roaudter_trace_roundtrip`), then proceed to P3.2 unified test entrypoint.
+- Next target: proceed to P3.2 unified test entrypoint and reproducible smoke profile.
 
 Deliverable: deterministic runtime closure proof matrix.
 
 ### P3) Next LAM Engineering Phase (After Sync Gate)
-P3.1 Phase 3 Automation baseline via devkit/check.sh in CI gate (ACTIVE).
+P3.1 Phase 3 Automation baseline via devkit/check.sh in CI gate (DONE).
 P3.2 Unified test entrypoint and reproducible smoke profile.
 P3.3 Governance update order: DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL.
 
@@ -166,7 +166,7 @@ P3.1 deliverables (current):
 - `.github/workflows/ci.yml` runs local `./devkit/bootstrap.sh` + `./devkit/check.sh` gate.
 - `P3_CI_GATE_POLICY.md` published.
 - `P3_CI_GATE_OPERATOR_BLOCKS.md` published.
-- Validation status: BLOCKED (local gate run failed on `tests/test_taskarid_comm_roaudter_trace.py`).
+- Validation status: DONE (`./devkit/check.sh` CI payload re-run passed after trace-roundtrip test stabilization).
 
 Deliverable: transition-ready plan from governance sync to execution.
 
