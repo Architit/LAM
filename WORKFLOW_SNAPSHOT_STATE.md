@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T04:19:46Z
+timestamp: 2026-02-13T04:20:10Z
 
 ## Current pointer
 phase: Phase 5 - Memory and Knowledge
@@ -28,6 +28,7 @@ constraints:
 - Next target: P5.RT1 runtime-facing task candidate definition (governance-only).
 
 ## Recent commits
+- 18a8c5b governance(p5.rt): activate runtime task wave planning package
 - 257dacc governance(protocol): add interaction update template and align flow
 - 5ddd019 ssn rstrt(EXPORT): set stop-point after runtime-facing gate decision closure
 - d4bfac3 governance(p5.rg3): publish start-approval evidence contract draft
@@ -39,16 +40,9 @@ constraints:
 - 0e36e25 governance(snapshot): align P5 execution-gate closure snapshot with head
 - 76853dd governance(p5.g3): publish operator checklist contract draft
 - b6df697 governance(p5.g2): publish risk boundary register contract draft
-- 9f52cb6 governance(p5.g1): publish evidence profile contract draft
 
 ## Git status
-## phase2/observability...origin/phase2/observability
- M DEV_LOGS.md
- M DEV_MAP.md
- M LAM/default/DEV_LOGS.md
- M LAM/default/ROADMAP.md
- M ROADMAP.md
-?? P5_RUNTIME_TASK_WAVE_CONTRACT.md
+## phase2/observability...origin/phase2/observability [ahead 1]
 
 ## References
 - INTERACTION_PROTOCOL.md
