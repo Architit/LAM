@@ -1,0 +1,16 @@
+ssn rstrt
+IMPORT:
+1) Read `WORKFLOW_SNAPSHOT_STATE.md`.
+2) Run read-only sync:
+   - `pwd`
+   - `git status -sb`
+   - `git log -n 12 --oneline`
+3) Continue from declared pointer:
+   - phase: Phase 4 - Router Core
+   - stage: P4 activation gate completed (DoD fixed, task queue fixed)
+4) Constraints remain strict:
+   - contracts-first
+   - observability-first
+   - derivation-only
+   - NO runtime logic
+   - NO execution-path impact
