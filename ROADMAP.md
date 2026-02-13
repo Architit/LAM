@@ -150,7 +150,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 
 ### Следующее 🔜
 - [x] Cost-aware routing contract draft (governance-only): `P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`
-- [ ] Quality-aware routing (профили по intent)
+- [x] Quality-aware routing contract draft (governance-only): `P4_FOLLOWUP_F2_QUALITY_AWARE_CONTRACT.md`
 - [ ] Policy v3: конфиг-профили (yaml/json), без хардкода
 - [ ] Метрики по провайдерам (успех/ошибки/латентность/токены)
 - [x] Follow-up backlog contract published: `P4_FOLLOWUP_BACKLOG_CONTRACT.md` (F1-F4 wave plan, governance-only)
@@ -293,6 +293,8 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: F1 cost-aware contract draft published (`P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`), next target moved to F2 quality-aware contract wave
 
 - [x] 2026-02-13 — governance: ASR record synced for LAM P4 follow-up backlog (`8f5bcb4`, `gov-radr-asr-phase5b-lam-p4-followup-v1.0.0`).
+
+- [x] 2026-02-13 — governance: F2 quality-aware contract draft published (`P4_FOLLOWUP_F2_QUALITY_AWARE_CONTRACT.md`), next target moved to F3 policy-v3 contract wave
 
 - [x] 2026-02-13 — governance: ASR record synced for LAM follow-up F1 closure
 (`0a5a8e6`, `gov-radr-asr-phase5b-lam-followup-f1-v1.0.0`).

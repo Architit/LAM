@@ -7,7 +7,7 @@ IMPORT:
    - `git log -n 12 --oneline`
 3) Continue from declared pointer:
    - phase: Phase 4 - Router Core
-   - stage: follow-up wave F1 cost-aware contract completed
+   - stage: follow-up wave F2 quality-aware contract completed
 4) Constraints remain strict:
    - contracts-first
    - observability-first

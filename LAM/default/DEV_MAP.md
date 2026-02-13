@@ -1,6 +1,6 @@
 # DEV_MAP (Mirror)
 
-Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 02:55 UTC.
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 03:00 UTC.
 Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
 
 Scope marker:
@@ -49,3 +49,4 @@ R5 publication note:
 - P4.T3 completed: operator evidence blocks published (`P4_ROUTER_OPERATOR_BLOCKS.md`); next target shifted to post-P4.3 task selection.
 - P4 follow-up backlog contract published (`P4_FOLLOWUP_BACKLOG_CONTRACT.md`); next target shifted to F1 cost-aware contract draft.
 - F1 cost-aware contract draft published (`P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`); next target shifted to F2 quality-aware contract draft.
+- F2 quality-aware contract draft published (`P4_FOLLOWUP_F2_QUALITY_AWARE_CONTRACT.md`); next target shifted to F3 policy-v3 contract draft.
