@@ -3,7 +3,7 @@
 ## Identity
 repo: LAM
 branch: phase2/observability
-timestamp: 2026-02-13T04:56:13Z
+timestamp: 2026-02-13T04:57:41Z
 
 ## Current pointer
 phase: Phase 6 - Control Plane and UI
@@ -12,7 +12,7 @@ protocol_scale: 0
 protocol_semantic_en: neutral
 goal:
 - preserve closed Phase 5 packages (`RG`, `RT`, `POST`)
-- close Phase 6 prep package in governance-only mode
+- preserve closed Phase 6 prep package (`T1/T2/T3`)
 - set deterministic stop-point before post-P6 selection
 constraints:
 - contracts-first
@@ -30,6 +30,7 @@ constraints:
 - Next target: post-P6.PREP package selection (governance-only).
 
 ## Recent commits
+- ec6b0ad governance(p6.t3): publish operator action boundary checklist contract
 - c648ea4 governance(p6.t2): publish health telemetry profile draft contract
 - e615c44 governance(p6.t1): publish control plane surface inventory contract
 - 3dd9373 governance(p6.prep): activate control plane prep package
@@ -41,10 +42,9 @@ constraints:
 - edd8f04 governance(protocol): harden autopilot confirmation gate via template
 - 8e70acb governance(p5.post): activate post-runtime-task package
 - 3929fda ssn rstrt(EXPORT): refresh stop-point after p5 rt-wave closure
-- 7cd05bc governance(p5.rt3): publish runtime start decision record contract
 
 ## Git status
-## phase2/observability...origin/phase2/observability [ahead 3]
+## phase2/observability...origin/phase2/observability [ahead 4]
 
 ## References
 - INTERACTION_PROTOCOL.md
