@@ -248,14 +248,14 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] EXEC.W1.T2: smoke/observability verification record published (`Z_RUNTIME_EXEC_W1_T2_VERIFICATION_RECORD.md`)
 
 ### Phase 4 Review Findings (pre-4.3)
-- [ ] R1: Spec drift — derivation mentions non-existent fields:
+- [x] R1: Spec drift — derivation mentions non-existent fields:
   - ReflectionSnapshot.snapshot_id references `input_fingerprints` (field missing)
   - LearningSignal.signal_id references `source_fingerprints` (field missing)
-- [ ] R2: PolicyConstraint.condition.predicates underspecified (op set, field-path format, AND/OR, missing-field semantics)
-- [ ] R3: Policy vs Learning boundary risk: `freeze_learning` / `rate_limit_adaptation` + learning proxies/attribution weights can be misread as runtime bridge
-- [ ] R4: PolicyConstraint wording: deterministic derivation/representation vs governance-defined semantics/effect needs explicit separation
-- [ ] R5: PolicyConstraint lacks explicit Non-Goals (no enforcement / no execution blocking / no conflict resolution), unlike ReflectionSnapshot “proposal-only” guardrails
-- [ ] Recommendation: address findings via **v1.x addenda (contract-only)** before starting Phase 4.3 (Adaptation Proposals)
+- [x] R2: PolicyConstraint.condition.predicates underspecified (op set, field-path format, AND/OR, missing-field semantics)
+- [x] R3: Policy vs Learning boundary risk: `freeze_learning` / `rate_limit_adaptation` + learning proxies/attribution weights can be misread as runtime bridge
+- [x] R4: PolicyConstraint wording: deterministic derivation/representation vs governance-defined semantics/effect needs explicit separation
+- [x] R5: PolicyConstraint lacks explicit Non-Goals (no enforcement / no execution blocking / no conflict resolution), unlike ReflectionSnapshot “proposal-only” guardrails
+- [x] Recommendation: addressed via **v1.x addenda (contract-only)** before Phase 4.3 (`P4_PRE43_REVIEW_FINDINGS_ADDENDA_CONTRACT.md`)
 
 
 - [x] 2026-02-12 — governance: P2 remediation wave-1 validated (Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent, Operator_Agent) -> DONE=6, BLOCKED=0, PENDING=9
