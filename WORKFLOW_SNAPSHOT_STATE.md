@@ -175,3 +175,11 @@ constraints:
 - phase43_next_gate_review_prep_state: READY_FOR_CONTROLLED_GATE_REVIEW
 - branch: phase2/observability
 - git_status: ## phase2/observability...origin/phase2/observability
+
+## Governance Sync
+- 2026-02-16 23:58 UTC — s9-controlled-gate-review-decision-open-review-v1
+- protocol_source: RADRILONIUMA-PROJECT
+- pointer_ref: `P4_PHASE43_CONTROLLED_GATE_REVIEW_DECISION_CONTRACT.md`
+- phase43_controlled_gate_review_decision: OPEN_REVIEW
+- branch: phase2/observability
+- git_status: ## phase2/observability...origin/phase2/observability

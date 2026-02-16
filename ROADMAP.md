@@ -271,6 +271,7 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] N1: Review package assembly (`P4_PHASE43_N1_REVIEW_PACKAGE_ASSEMBLY_CONTRACT.md`)
 - [x] N2: Boundary revalidation checklist (`P4_PHASE43_N2_BOUNDARY_REVALIDATION_CHECKLIST_CONTRACT.md`)
 - [x] N3: Controlled gate-open recommendation draft (`P4_PHASE43_N3_CONTROLLED_GATE_OPEN_RECOMMENDATION_DRAFT_CONTRACT.md`)
+- [x] S9 controlled gate review decision: `OPEN_REVIEW` (`P4_PHASE43_CONTROLLED_GATE_REVIEW_DECISION_CONTRACT.md`)
 
 
 - [x] 2026-02-12 — governance: P2 remediation wave-1 validated (Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent, Operator_Agent) -> DONE=6, BLOCKED=0, PENDING=9

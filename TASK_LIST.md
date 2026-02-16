@@ -11,7 +11,8 @@
 - [x] S6 follow-up: execute A4/A5/A6 governance contracts for Phase 4.3 continuation
 - [x] S7 follow-up: prepare post-A6 decision checkpoint and next-phase pointer
 - [x] S8 follow-up: prepare PHASE43_NEXT_GATE_REVIEW_PREP wave (`n1/n2/n3`)
-- [ ] S9 follow-up: controlled gate review decision (OPEN_REVIEW vs HOLD_REVIEW)
+- [x] S9 follow-up: controlled gate review decision (OPEN_REVIEW vs HOLD_REVIEW)
+- [ ] S10 follow-up: execute controlled gate review stage after `OPEN_REVIEW`
 
 ## Backlog
 - [ ] Contracts v2 (metrics normalization)
