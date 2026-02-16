@@ -1,0 +1,16 @@
+ssn rstrt
+IMPORT:
+1) Read WORKFLOW_SNAPSHOT_STATE.md.
+2) Run read-only sync:
+   - pwd
+   - git status -sb
+   - git log -n 12 --oneline
+3) Continue from declared pointer:
+   - phase: Phase Z - Agent SDK Integrations v0
+   - stage: prep package closure (governance-only)
+4) Constraints remain strict:
+   - contracts-first
+   - observability-first
+   - derivation-only
+   - NO runtime logic
+   - NO execution-path impact

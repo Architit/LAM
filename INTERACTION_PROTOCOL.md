@@ -2,6 +2,14 @@
 
 # INTERACTION_PROTOCOL.md
 
+## Protocol Sync Header
+
+- protocol_source: RADRILONIUMA-PROJECT
+- protocol_version: v1.0.0
+- last_sync_commit: 7eadfe9
+
+---
+
 ## 1. Роль и Цель
 
 **Роль:** Ведущий Инженер (Lead Engineer) + Системный Координатор (Win 11 / WSL).
@@ -19,10 +27,47 @@
 3. **Safety Check:** Проверка `git diff` перед любым изменением состояния репозитория.
 4. **Verification:** Запуск Smoke-tests.
 5. **Governance:** Обновление документации (Roadmap/Logs).
+6. **Post-Task Review (mandatory):** Автоматически перечитать `DEV_MAP.md`, `ROADMAP.md`, `INTERACTION_PROTOCOL.md`, `DEV_LOGS.md` после завершения задачи и сверить статус/ограничения.
+7. **User Confirmation Gate (mandatory):** После post-task review выдать нумерованный список следующих задач и запросить явное подтверждение пользователя на старт выбранной задачи.
+8. **Autopilot Boundary (mandatory):** Запрещен автостарт следующей задачи без явного выбора пользователя (`1/2/3...`) после п.7.
+
+Governance update order (mandatory):
+- `DEV_LOGS.md` -> `ROADMAP.md` -> `INTERACTION_PROTOCOL.md`
+- then refresh `WORKFLOW_SNAPSHOT_STATE.md`
+- protocol updates SHOULD use `INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md` for deterministic change records
 
 ---
 
+## 2.1. Restart Signals (Session / Cold Restart)
+
+Используются каноничные сигналы восстановления контекста:
+
+- **`ssn rstrt` (Session Restart)**
+  - ACTIVE chat: **Phase 1 (EXPORT-only)**.
+  - NEW chat: **Phase 2 (IMPORT)**.
+
+- **`cld rstrt` (Cold Restart)**
+  - ACTIVE chat: **Phase 1 (EXPORT-only)**.
+  - NEW chat: **Phase 2 (IMPORT) + minimal environment sync** (`pwd`, `git status -sb`, `git log -n 12 --oneline`).
+
+Источник канона: RADRILONIUMA DevKit.
+LAM применяет правила derivation-only.
+
+Hard constraint: перед закрытием фазы рабочее дерево MUST be clean.
+
+---
+
+
 ## 3. Стандарты Взаимодействия
+
+### 3.3. Анализ репозитория (карта rollout)
+
+**Когда пользователь просит анализ карты репозиториев / Phase rollout:** агент обязан собрать факты командами и выдать:
+
+- таблицу репозиториев/агентов со статусами: `DONE` / `PENDING` / `BLOCKED`
+- план Phase (порядок, шаги, DoD для каждого)
+
+**Правило:** статусы ставятся только по фактам из репо (код/тесты/доки/теги).
 
 ### 3.1. Формат Сообщений
 
@@ -68,7 +113,24 @@
 
 
 3. **Commit:** Атомарные коммиты с понятными сообщениями: `git commit -m "feat: <description>"`.
-4. **Merge:** Предпочтительно `--ff-only` (fast-forward) для линейной истории.
+4. **Merge:** По умолчанию `--ff-only` (fast-forward) для линейной истории. Для интеграции фаз/релизов допускается `git merge --no-ff <branch>` (с явным merge-commit) + обязательный tag.
+
+**Governance tagging (required):**
+- Any governance change (protocol/devkit policy/contracts) MUST include an annotated semantic governance tag.
+- Tag format (recommended): `gov-lam-<topic>-v<semver>` (e.g., `gov-lam-protocol-v1.0.0`).
+- Version authority: DevKit (RADRILONIUMA-PROJECT). LAM adopts governance rules derivation-only.
+
+
+### 4.2.1. Patch-инструменты (WSL/CI-совместимость)
+
+**Запрещено (не стандартно, не воспроизводимо):**
+- `apply_patch`
+- `applypatch`
+- `apply-patch`
+
+**Канонично (всегда доступно):**
+- `devkit/patch.sh` (предпочтительно, применяет patch и стейджит изменения)
+- `git apply --index` (прямой режим, staged diff — канонический)
 
 ### 4.3. Smoke-Tests
 
@@ -81,6 +143,19 @@
 ## 5. Управление Проектом (Governance)
 
 **Ни один этап не считается завершенным без обновления документации.**
+
+### 5.0. Обязательный Порядок Обновлений (Hard Rule)
+
+После каждого завершенного action-блока документация обновляется строго в порядке:
+
+1. `DEV_LOGS.md` (факт выполнения/блокер/результат)
+2. `ROADMAP.md` (статус задачи и фазовый маркер)
+3. `INTERACTION_PROTOCOL.md` (если менялись правила/процедуры)
+4. `WORKFLOW_SNAPSHOT_STATE.md` (экспорт актуального состояния)
+
+Запрещено:
+- обновлять `ROADMAP.md` раньше `DEV_LOGS.md`;
+- фиксировать изменение протокола без записи в `DEV_LOGS.md` и `ROADMAP.md`.
 
 ### 5.1. ROADMAP.md
 
@@ -95,6 +170,27 @@
 
 * Записывать краткий итог сессии: "Реализовано X, обнаружен баг Y, исправлено".
 * Это позволяет быстро восстановить контекст при следующем запуске.
+
+### 5.3. INTERACTION_PROTOCOL.md
+
+При любом изменении процедур/жестких правил:
+
+1. Использовать шаблон `INTERACTION_PROTOCOL_UPDATE_TEMPLATE.md`.
+2. Заполнить обязательные assertions и evidence-ссылки.
+3. Зафиксировать запись в `DEV_LOGS.md` и `ROADMAP.md` до правки протокола.
+
+Template-backed hard rule (mandatory for `hard-rule`/`procedure` updates):
+- `update_id`, `timestamp_utc`, `reason`, `section_targets`, `change_type` MUST be explicitly recorded.
+- Evidence refs MUST be non-empty: `dev_logs_ref`, `roadmap_ref`, `protocol_ref`, `snapshot_ref`, `confirmation_ref`.
+- Assertions checklist in template MUST be fully resolved before closure (`passed` or `needs-fix` with follow-up).
+
+### 5.4. ASR Data Sync for Protocol Updates
+
+Для протокольных governance-изменений (особенно `hard-rule`/`procedure`) требуется ASR data sync:
+
+1. Зафиксировать session record в SoT: `RADRILONIUMA-PROJECT/gov/asr/sessions/*`.
+2. Обновить `gov/asr/INDEX.md` в SoT.
+3. Сослаться на ASR commit/session в `DEV_LOGS.md` (и при необходимости в `ROADMAP.md`).
 
 ---
 
@@ -140,3 +236,46 @@
 2. **ROLLBACK:** Предложить команду `git restore .` или `git checkout main`.
 3. **ANALYZE:** Запросить лог ошибки (`cat logs/error.log`).
 4. **PLAN:** Предложить *один* шаг для диагностики, а не исправления.
+
+---
+
+## 8. Global Final Publish Step (mandatory)
+
+Независимо от количества шагов, фаз и задач (до/после текущей версии),
+последний обязательный шаг закрытия потока:
+
+- `git push origin main`
+
+Правила:
+1. Статус `COMPLETE` допускается только при наличии evidence о final push.
+2. Если final push невозможен, close-gate фиксируется как `BLOCKED` с явной причиной.
+
+---
+
+## 9. Operator Manual Intervention Fallback (mandatory)
+
+В ситуациях, где автопилот не может безопасно завершить шаг (например: network/DNS сбой, повторяющаяся tool-ошибка, блокирующий gate, недоступный remote),
+агент обязан перейти в режим ручного сопровождения оператора.
+
+Обязательные действия:
+1. Подготовить `copy/paste` Action Blocks для оператора (диагностика, безопасное действие, проверка результата).
+2. Явно пометить, что требуется ручное вмешательство: `operator_intervention_required = true`.
+3. Зафиксировать подтверждение уведомления оператора: `operator_notified = true`.
+4. Если активен автопилот, перевести поток в удержание до подтверждения оператора: `autopilot_state = HOLD_FOR_OPERATOR`.
+5. После ручного шага запросить и зафиксировать подтверждение: `operator_acknowledged = true`.
+
+Минимальный формат Action Blocks (обязательный):
+- `ACTION_BLOCK_1_DIAGNOSE`
+- `ACTION_BLOCK_2_APPLY_SAFE_COMMAND`
+- `ACTION_BLOCK_3_VERIFY`
+- `ACTION_BLOCK_4_PUBLISH_OR_BLOCK_REASON`
+
+Правило закрытия:
+- без `operator_notified = true` и `operator_acknowledged = true` закрытие `COMPLETE` недопустимо.
+
+
+Execution hard-rule (mandatory):
+1) Агент не выдаёт пакет из нескольких command-блоков к одновременному исполнению оператором.
+2) Разрешён только один action-block за итерацию: `ONE_BLOCK_PER_OPERATOR_TURN`.
+3) Следующий блок допускается только после явного результата предыдущего шага от оператора.
+4) Нарушение этого правила классифицируется как `protocol_violation`.

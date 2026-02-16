@@ -1,0 +1,64 @@
+# DEV_MAP (Mirror)
+
+Synced with root /home/architit/work/LAM/DEV_MAP.md on 2026-02-13 06:01 UTC.
+Canonical source of truth: /home/architit/work/LAM/DEV_MAP.md.
+
+Scope marker:
+- governance coverage completed for 15/15 repos.
+- runtime closure proof matrix finalized in governance state (DONE=14, EXEMPT=1, PENDING=0).
+
+P2 governance summary:
+- DONE: 15
+- BLOCKED: 0
+- PENDING: 0
+
+P2.4 runtime summary:
+- DONE: 14
+- EXEMPT: 1
+- PENDING: 0
+
+R1/R2/R3/R4 note:
+- All runtime waves executed; no promotions due missing pytest/tests in target repos.
+
+R5 plan note:
+- Unblock package planned (policy-only): pytest bootstrap policy + runtime smoke template + promotion evidence checklist.
+
+R5 publication note:
+- Unblock package published in LAM; Wave R6 validation is queued.
+- R6 strict gate: `python3 >= 3.10` and mandatory `.venv/bin/python` runner.
+- R6 readiness audit: READY=0, BLOCKED=14 (missing `.venv/bin/python` and smoke template).
+- R6.1 wave-1 executed; no promotions due offline pytest bootstrap failure.
+- R6.1 offline wheelhouse fallback policy published.
+- R6.1 retry executed; no promotions due missing `wheelhouse/`.
+- R6.1 retry root-cause: missing archive `lam-wheelhouse-py312.tgz`.
+- Host role contract fixed: builder online vendoring, runner offline install via `--no-index --find-links`.
+- R6.1 host-split retry succeeded for first 3 repos.
+- R6.2 host-split retry succeeded for next 3 repos; runtime summary now DONE=7, PENDING=8.
+- R6.3 host-split retry succeeded for next 3 repos; runtime summary now DONE=10, PENDING=5.
+- R6.4 host-split retry succeeded for next 3 repos; runtime summary now DONE=13, PENDING=2.
+- R6.5 host-split retry succeeded for Trianiuma_MEM_CORE; runtime summary now DONE=14, PENDING=1.
+- Post-review sync with RADRILONIUMA-PROJECT completed (commit 69eff02, tag gov-radr-phase5b-r65-postreview-sync-v1.0.0).
+- SoT row policy finalized: RADRILONIUMA-PROJECT marked EXEMPT; runtime summary closed to DONE=14, EXEMPT=1, PENDING=0.
+- P3.1 activated: CI gate baseline uses local `devkit/bootstrap.sh` + `devkit/check.sh`; policy/operator docs published.
+- P3.1 validation now DONE: local CI payload check passed (`4 passed`); ready for P3.2.
+- P3.2 completed: unified entrypoint via `scripts/test_entrypoint.sh` with profiles (`ci/smoke/full`), CI aligned to `--profile ci`, local `ci+smoke` green.
+- P3.3 completed: update-order governance rule codified (`DEV_LOGS -> ROADMAP -> INTERACTION_PROTOCOL -> WORKFLOW_SNAPSHOT_STATE`).
+- P4 activated: router-core phase switched to ACTIVE with DoD (`D1-D4`) and ordered start queue (`T1-T3`).
+- P4.T1 completed: router-core inventory captured (entrypoints/provider-chain/health-fallback); next target shifted to P4.T2.
+- P4.T2 completed: deterministic policy profile draft published (`P4_ROUTER_POLICY_PROFILE_DRAFT.md`); next target shifted to P4.T3.
+- P4.T3 completed: operator evidence blocks published (`P4_ROUTER_OPERATOR_BLOCKS.md`); next target shifted to post-P4.3 task selection.
+- P4 follow-up backlog contract published (`P4_FOLLOWUP_BACKLOG_CONTRACT.md`); next target shifted to F1 cost-aware contract draft.
+- F1 cost-aware contract draft published (`P4_FOLLOWUP_F1_COST_AWARE_CONTRACT.md`); next target shifted to F2 quality-aware contract draft.
+- F2 quality-aware contract draft published (`P4_FOLLOWUP_F2_QUALITY_AWARE_CONTRACT.md`); next target shifted to F3 policy-v3 contract draft.
+- F3 policy-v3 config contract draft published (`P4_FOLLOWUP_F3_POLICY_V3_CONFIG_CONTRACT.md`); next target shifted to F4 provider metrics contract draft.
+- F4 provider metrics contract draft published (`P4_FOLLOWUP_F4_PROVIDER_METRICS_CONTRACT.md`); follow-up wave F1-F4 marked complete.
+- Z.POST package selected and closed in-order (governance-only): `Z.POST1` protocol compliance sweep PASS, `Z.POST2` root/default mirror sync gate PASS, `Z.POST3` ASR continuity sync recorded.
+- Z.POST package contracts published in root: `Z_POST_SELECTION_GATE_CONTRACT.md`, `Z_POST1_PROTOCOL_COMPLIANCE_SWEEP_CONTRACT.md`, `Z_POST2_MIRROR_SYNC_GATE_CONTRACT.md`.
+- RADR ASR continuity sync confirmed for Z.POST closure (`a5c5dd5`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zpost-selection-sweep-sync.md`).
+- Gov subtree coverage (maps/protocols/logs) published in root: `GOV_SUBTREE_COVERAGE_CONTRACT.md`; RADR ASR sync confirmed (`243e50b`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-gov-subtree-coverage-sync.md`).
+- Z.RUNTIME.PREP package (risk/ops/start gate) published and closed in root; RADR ASR sync confirmed (`33cc47f`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-prep-risk-ops-sync.md`).
+- Z.RUNTIME.T1/T2/T3 package published and closed in root; RADR ASR sync confirmed (`11cffa8`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-t1t2t3-sync.md`).
+- Z.RUNTIME.START decision record published in root (`Z_RUNTIME_START_DECISION_RECORD.md` => approved); RADR ASR sync confirmed (`a04b47a`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-start-decision-sync.md`).
+- Z.RUNTIME.EXEC.W1 opened in root (`Z_RUNTIME_EXEC_WAVE_CONTRACT.md`), queue `EXEC.W1.T1/T2/T3` fixed; RADR ASR sync confirmed (`dfe8f4f`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-wave-open-sync.md`).
+- EXEC.W1.T1 record published in root (`Z_RUNTIME_EXEC_W1_T1_IMPLEMENTATION_RECORD.md`); RADR ASR sync confirmed (`1e7b999`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-w1-t1-sync.md`).
+- EXEC.W1.T2 verification published in root (`Z_RUNTIME_EXEC_W1_T2_VERIFICATION_RECORD.md`) and marked PASS; RADR ASR sync confirmed (`9a53b2c`, `gov/asr/sessions/2026-02-13__ASR__phasez-lam-zruntime-exec-w1-t2-sync.md`).
