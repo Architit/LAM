@@ -308,6 +308,16 @@ Wave-1 concrete engineering targets:
 Deadloop release rule:
 - no return to `S27` gate sequence until DL2 is PASS.
 
+Guard/Deadloop root-cause controls:
+- RC1 scope mismatch (`M21/M29` ecosystem guard vs local delivery gate)
+  - mitigation: `DEADLOOP_PREFLIGHT_GATE` before every `S*`
+- RC2 missing delivery invariants
+  - mitigation: mandatory resume tuple (`code_delta_refs`, `test_delta_refs`, `validation_*`)
+- RC3 synthetic progress by numbering
+  - mitigation: hard block when `governance_only_streak >= 3` and code/test delta is absent
+- RC4 weak map-to-execution bridge
+  - mitigation: `DL1` fixed to concrete `E1/E2/E3` and `DL3` implementation wave
+
 ### P5) Memory & Knowledge Prep Phase (ACTIVE, governance-only)
 P5.T1 Timestamp normalization policy contract draft (timezone-aware UTC boundaries, docs/events semantics). (DONE)
 P5.T2 Retrieval routing boundary contract draft (memory/search before LLM, non-goals fixed). (DONE)

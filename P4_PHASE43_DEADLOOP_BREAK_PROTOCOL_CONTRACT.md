@@ -42,6 +42,28 @@ Deadloop break can be released only when all are true:
 - no reopening of `S27+` gate chain while HOLD is active
 - all resume decisions require explicit evidence refs
 
+## Root Causes (Current Incident)
+- ecosystem deadloop controls (`M21/M29`) monitored cadence/desync, but not local phase delivery delta
+- no mandatory pre-step deadloop/delivery preflight before each `S*`
+- numbering continuity was treated as progress without enforcing code/test evidence
+
+## Protocol Update v2 (Mandatory)
+Before any next `S*` gate:
+1) execute `DEADLOOP_PREFLIGHT_GATE`
+2) compute and record:
+   - `governance_only_streak`
+   - `non_doc_code_delta_count`
+   - `test_delta_count`
+   - `engineering_evidence_state`
+3) enforce:
+   - if `governance_only_streak >= 3` and (`non_doc_code_delta_count == 0` or `test_delta_count == 0`) -> `HOLD_BY_DEADLOOP_BREAK_PROTOCOL`
+
+Mandatory resume tuple:
+- `code_delta_refs`
+- `test_delta_refs`
+- `validation_command`
+- `validation_result`
+
 ## DoD
 - protocol contract published
 - next gate step placed on HOLD

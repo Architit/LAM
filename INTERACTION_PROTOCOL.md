@@ -291,6 +291,22 @@ Template-backed hard rule (mandatory for `hard-rule`/`procedure` updates):
 Правило возобновления:
 - Возврат к следующему `S*` gate разрешен только после `MAP_EXECUTION_WAVE_1 = DONE` и `CODE_TEST_DELTA_GATE = PASS`.
 
+DEADLOOP_PREFLIGHT_GATE (mandatory before each `S*`):
+1) Вычислить метрики окна текущей цепочки:
+   - `governance_only_streak`
+   - `non_doc_code_delta_count`
+   - `test_delta_count`
+   - `engineering_evidence_state`
+2) Записать метрики в `DEV_LOGS.md` и `WORKFLOW_SNAPSHOT_STATE.md`.
+3) Правило блокировки:
+   - если `governance_only_streak >= 3` и (`non_doc_code_delta_count == 0` или `test_delta_count == 0`) -> установить `HOLD_BY_DEADLOOP_BREAK_PROTOCOL`.
+
+Mandatory resume evidence tuple:
+- `code_delta_refs`
+- `test_delta_refs`
+- `validation_command`
+- `validation_result`
+
 Canonical contract:
 - `P4_PHASE43_DEADLOOP_BREAK_PROTOCOL_CONTRACT.md`
 
