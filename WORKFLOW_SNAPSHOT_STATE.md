@@ -158,3 +158,12 @@ constraints:
 - phase43_wave_state: A4_A5_A6_COMPLETE
 - branch: phase2/observability
 - git_status: ## phase2/observability...origin/phase2/observability
+
+## Governance Sync
+- 2026-02-16 23:39 UTC — s7-post-a6-decision-checkpoint-and-next-pointer-v1
+- protocol_source: RADRILONIUMA-PROJECT
+- pointer_ref: `P4_PHASE43_POST_A6_DECISION_CHECKPOINT_CONTRACT.md` + `P4_PHASE43_NEXT_PHASE_POINTER_DECLARATION_CONTRACT.md`
+- phase43_checkpoint_state: COMPLETE
+- next_phase_pointer: PHASE43_NEXT_GATE_REVIEW_PREP
+- branch: phase2/observability
+- git_status: ## phase2/observability...origin/phase2/observability

@@ -266,6 +266,8 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] A4: Proposal Evidence Consolidation Contract (`P4_PHASE43_A4_PROPOSAL_EVIDENCE_CONSOLIDATION_CONTRACT.md`)
 - [x] A5: Proposal Risk Stratification Contract (`P4_PHASE43_A5_PROPOSAL_RISK_STRATIFICATION_CONTRACT.md`)
 - [x] A6: Next-Gate Recommendation Contract (`P4_PHASE43_A6_NEXT_GATE_RECOMMENDATION_CONTRACT.md`)
+- [x] Post-A6 decision checkpoint (`P4_PHASE43_POST_A6_DECISION_CHECKPOINT_CONTRACT.md`)
+- [x] Next-phase pointer declaration (`P4_PHASE43_NEXT_PHASE_POINTER_DECLARATION_CONTRACT.md`)
 
 
 - [x] 2026-02-12 — governance: P2 remediation wave-1 validated (Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent, Operator_Agent) -> DONE=6, BLOCKED=0, PENDING=9
