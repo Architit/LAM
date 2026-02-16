@@ -27,7 +27,8 @@
 - [x] S22 follow-up: execute final alignment gate stage after `OPEN_PHASE43_FINAL_ALIGNMENT_GATE`
 - [x] S23 follow-up: prepare `PHASE43_CLOSURE_PREP` wave
 - [x] S24 follow-up: closure gate decision (`OPEN_PHASE43_CLOSURE_GATE` vs `HOLD_PHASE43_CLOSURE_GATE`)
-- [ ] S25 follow-up: execute closure gate stage after `OPEN_PHASE43_CLOSURE_GATE`
+- [x] S25 follow-up: execute closure gate stage after `OPEN_PHASE43_CLOSURE_GATE`
+- [ ] S26 follow-up: prepare `PHASE43_CLOSURE_FINALIZATION_PREP` wave
 
 ## Backlog
 - [ ] Contracts v2 (metrics normalization)
