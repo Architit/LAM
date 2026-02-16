@@ -259,9 +259,9 @@ LAM — “позвоночник” экосистемы: единый runtime,
 
 ### Phase 4.3 Adaptation Proposals (start gate)
 - [x] Start gate OPEN (contract-only): `P4_PHASE43_ADAPTATION_PROPOSALS_START_GATE_CONTRACT.md`
-- [ ] A1: Adaptation Proposal Schema v1
-- [ ] A2: Adaptation Evaluation Matrix v1
-- [ ] A3: Adaptation Review Decision Record v1
+- [x] A1: Adaptation Proposal Schema v1 (`P4_PHASE43_A1_ADAPTATION_PROPOSAL_SCHEMA_CONTRACT.md`)
+- [x] A2: Adaptation Evaluation Matrix v1 (`P4_PHASE43_A2_ADAPTATION_EVALUATION_MATRIX_CONTRACT.md`)
+- [x] A3: Adaptation Review Decision Record v1 (`P4_PHASE43_A3_ADAPTATION_REVIEW_DECISION_RECORD_CONTRACT.md`)
 
 
 - [x] 2026-02-12 — governance: P2 remediation wave-1 validated (Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent, Operator_Agent) -> DONE=6, BLOCKED=0, PENDING=9
