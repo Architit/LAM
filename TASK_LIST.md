@@ -19,7 +19,8 @@
 - [x] S14 follow-up: prepare `PHASE43_NEXT_CONTROLLED_GATE_PREP` wave
 - [x] S15 follow-up: next controlled gate decision (`OPEN_NEXT_CONTROLLED_GATE` vs `HOLD_NEXT_CONTROLLED_GATE`)
 - [x] S16 follow-up: execute next-controlled gate stage after `OPEN_NEXT_CONTROLLED_GATE`
-- [ ] S17 follow-up: prepare `PHASE43_TRANSITION_GATE_PREP` wave after next-controlled execution
+- [x] S17 follow-up: prepare `PHASE43_TRANSITION_GATE_PREP` wave after next-controlled execution
+- [ ] S18 follow-up: transition gate decision (`OPEN_PHASE43_TRANSITION_GATE` vs `HOLD_PHASE43_TRANSITION_GATE`)
 
 ## Backlog
 - [ ] Contracts v2 (metrics normalization)
