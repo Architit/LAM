@@ -142,3 +142,11 @@ constraints:
 - phase43_wave_state: A1_A2_A3_COMPLETE
 - branch: phase2/observability
 - git_status: ## phase2/observability...origin/phase2/observability
+
+## Governance Sync
+- 2026-02-16 23:16 UTC — s5-phase43-post-wave-transition-gate-v1
+- protocol_source: RADRILONIUMA-PROJECT
+- pointer_ref: P4_PHASE43_POST_A1A2A3_TRANSITION_GATE_CONTRACT.md (`A4/A5/A6` declared)
+- phase43_transition_gate_state: OPEN
+- branch: phase2/observability
+- git_status: ## phase2/observability...origin/phase2/observability

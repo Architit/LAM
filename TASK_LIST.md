@@ -7,7 +7,8 @@
 - [ ] S2 follow-up: recurring heartbeat/pointer compliance review against SoT (`GOV_STATUS.md`)
 - [x] S3 follow-up: Phase 4.3 adaptation proposals start gate (after R1-R5 closure addenda)
 - [x] S4 follow-up: execute A1/A2/A3 contracts for Phase 4.3 adaptation proposals
-- [ ] S5 follow-up: prepare next governance gate after A1/A2/A3 review closure
+- [x] S5 follow-up: prepare next governance gate after A1/A2/A3 review closure
+- [ ] S6 follow-up: execute A4/A5/A6 governance contracts for Phase 4.3 continuation
 
 ## Backlog
 - [ ] Contracts v2 (metrics normalization)
