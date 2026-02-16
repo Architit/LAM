@@ -23,7 +23,8 @@
 - [x] S18 follow-up: transition gate decision (`OPEN_PHASE43_TRANSITION_GATE` vs `HOLD_PHASE43_TRANSITION_GATE`)
 - [x] S19 follow-up: execute transition gate stage after `OPEN_PHASE43_TRANSITION_GATE`
 - [x] S20 follow-up: prepare `PHASE43_FINAL_ALIGNMENT_PREP` wave
-- [ ] S21 follow-up: final alignment gate decision (`OPEN_PHASE43_FINAL_ALIGNMENT_GATE` vs `HOLD_PHASE43_FINAL_ALIGNMENT_GATE`)
+- [x] S21 follow-up: final alignment gate decision (`OPEN_PHASE43_FINAL_ALIGNMENT_GATE` vs `HOLD_PHASE43_FINAL_ALIGNMENT_GATE`)
+- [ ] S22 follow-up: execute final alignment gate stage after `OPEN_PHASE43_FINAL_ALIGNMENT_GATE`
 
 ## Backlog
 - [ ] Contracts v2 (metrics normalization)

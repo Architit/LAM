@@ -275,3 +275,11 @@ constraints:
 - phase43_final_alignment_prep_state: READY_FOR_PHASE43_FINAL_ALIGNMENT_GATE_DECISION
 - branch: phase2/observability
 - git_status: ## phase2/observability...origin/phase2/observability
+
+## Governance Sync
+- 2026-02-17 02:22 UTC — s21-phase43-final-alignment-gate-decision-open-v1
+- protocol_source: RADRILONIUMA-PROJECT
+- pointer_ref: `P4_PHASE43_FINAL_ALIGNMENT_GATE_DECISION_CONTRACT.md`
+- phase43_final_alignment_gate_decision: OPEN_PHASE43_FINAL_ALIGNMENT_GATE
+- branch: phase2/observability
+- git_status: ## phase2/observability...origin/phase2/observability
