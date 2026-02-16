@@ -280,6 +280,9 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] S12 post-review gate decision: `OPEN_POST_REVIEW_GATE` (`P4_PHASE43_POST_REVIEW_GATE_DECISION_CONTRACT.md`)
 - [x] S13 post-review gate execution (`P4_PHASE43_POST_REVIEW_GATE_EXECUTION_CONTRACT.md`)
 - [x] Post-review execution pointer update (`P4_PHASE43_POST_REVIEW_EXECUTION_POINTER_UPDATE_CONTRACT.md`)
+- [x] NCG N1: Next controlled package consolidation (`P4_PHASE43_NCG_N1_NEXT_CONTROLLED_PACKAGE_CONSOLIDATION_CONTRACT.md`)
+- [x] NCG N2: Controlled boundary revalidation (`P4_PHASE43_NCG_N2_CONTROLLED_BOUNDARY_REVALIDATION_CONTRACT.md`)
+- [x] NCG N3: Next controlled gate recommendation draft (`P4_PHASE43_NCG_N3_NEXT_CONTROLLED_GATE_RECOMMENDATION_DRAFT_CONTRACT.md`)
 
 
 - [x] 2026-02-12 — governance: P2 remediation wave-1 validated (Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent, Operator_Agent) -> DONE=6, BLOCKED=0, PENDING=9

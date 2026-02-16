@@ -217,3 +217,11 @@ constraints:
 - next_phase_pointer: PHASE43_NEXT_CONTROLLED_GATE_PREP
 - branch: phase2/observability
 - git_status: ## phase2/observability...origin/phase2/observability
+
+## Governance Sync
+- 2026-02-17 00:58 UTC — s14-phase43-next-controlled-gate-prep-wave-complete-v1
+- protocol_source: RADRILONIUMA-PROJECT
+- pointer_ref: `P4_PHASE43_NCG_N1_NEXT_CONTROLLED_PACKAGE_CONSOLIDATION_CONTRACT.md` + `P4_PHASE43_NCG_N2_CONTROLLED_BOUNDARY_REVALIDATION_CONTRACT.md` + `P4_PHASE43_NCG_N3_NEXT_CONTROLLED_GATE_RECOMMENDATION_DRAFT_CONTRACT.md`
+- phase43_next_controlled_gate_prep_state: READY_FOR_NEXT_CONTROLLED_GATE_DECISION
+- branch: phase2/observability
+- git_status: ## phase2/observability...origin/phase2/observability
