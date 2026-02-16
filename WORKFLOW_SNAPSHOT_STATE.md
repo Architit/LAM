@@ -300,3 +300,11 @@ constraints:
 - phase43_closure_prep_state: READY_FOR_PHASE43_CLOSURE_GATE_DECISION
 - branch: phase2/observability
 - git_status: ## phase2/observability...origin/phase2/observability
+
+## Governance Sync
+- 2026-02-17 02:58 UTC — s24-phase43-closure-gate-decision-open-v1
+- protocol_source: RADRILONIUMA-PROJECT
+- pointer_ref: `P4_PHASE43_CLOSURE_GATE_DECISION_CONTRACT.md`
+- phase43_closure_gate_decision: OPEN_PHASE43_CLOSURE_GATE
+- branch: phase2/observability
+- git_status: ## phase2/observability...origin/phase2/observability
