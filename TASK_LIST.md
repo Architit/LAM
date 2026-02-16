@@ -29,7 +29,9 @@
 - [x] S24 follow-up: closure gate decision (`OPEN_PHASE43_CLOSURE_GATE` vs `HOLD_PHASE43_CLOSURE_GATE`)
 - [x] S25 follow-up: execute closure gate stage after `OPEN_PHASE43_CLOSURE_GATE`
 - [x] S26 follow-up: prepare `PHASE43_CLOSURE_FINALIZATION_PREP` wave
-- [ ] S27 follow-up: closure-finalization gate decision (`OPEN_PHASE43_CLOSURE_FINALIZATION_GATE` vs `HOLD_PHASE43_CLOSURE_FINALIZATION_GATE`)
+- [ ] S27 follow-up: closure-finalization gate decision (`OPEN_PHASE43_CLOSURE_FINALIZATION_GATE` vs `HOLD_PHASE43_CLOSURE_FINALIZATION_GATE`) [HOLD_BY_DEADLOOP_BREAK_PROTOCOL]
+- [ ] DL1 follow-up: `MAP_EXECUTION_WAVE_1` (update `DEV_MAP.md` + `ROADMAP.md` with concrete engineering deliverables)
+- [ ] DL2 follow-up: `CODE_TEST_DELTA_GATE` (>=1 non-doc code change + >=1 test change + validation evidence)
 
 ## Backlog
 - [ ] Contracts v2 (metrics normalization)

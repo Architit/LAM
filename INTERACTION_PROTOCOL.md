@@ -273,6 +273,27 @@ Template-backed hard rule (mandatory for `hard-rule`/`procedure` updates):
 Правило закрытия:
 - без `operator_notified = true` и `operator_acknowledged = true` закрытие `COMPLETE` недопустимо.
 
+---
+
+## 10. Phase43 Deadloop Break (mandatory)
+
+Для цепочек governance-only в `P4_PHASE43_*` обязателен anti-deadloop разрыв, если прогресс идет только по нумерации шагов без инженерного дельта-результата.
+
+Триггер активации:
+1) `consecutive_governance_only_steps >= 3` в одной фазовой цепочке.
+2) В окне шагов нет изменений non-doc кода и тестов.
+
+Обязательный протокол `1+2+3+`:
+1) `BREAK`: заморозить следующий governance gate (`HOLD_BY_DEADLOOP_BREAK_PROTOCOL`).
+2) `MAP_EXECUTION_WAVE_1`: обновить `DEV_MAP.md` и `ROADMAP.md` с конкретными engineering deliverables.
+3) `CODE_TEST_DELTA_GATE`: зафиксировать минимум 1 non-doc code change + 1 test change и валидацию.
+
+Правило возобновления:
+- Возврат к следующему `S*` gate разрешен только после `MAP_EXECUTION_WAVE_1 = DONE` и `CODE_TEST_DELTA_GATE = PASS`.
+
+Canonical contract:
+- `P4_PHASE43_DEADLOOP_BREAK_PROTOCOL_CONTRACT.md`
+
 
 Execution hard-rule (mandatory):
 1) Агент не выдаёт пакет из нескольких command-блоков к одновременному исполнению оператором.
