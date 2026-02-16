@@ -225,3 +225,11 @@ constraints:
 - phase43_next_controlled_gate_prep_state: READY_FOR_NEXT_CONTROLLED_GATE_DECISION
 - branch: phase2/observability
 - git_status: ## phase2/observability...origin/phase2/observability
+
+## Governance Sync
+- 2026-02-17 01:10 UTC — s15-next-controlled-gate-decision-open-v1
+- protocol_source: RADRILONIUMA-PROJECT
+- pointer_ref: `P4_PHASE43_NEXT_CONTROLLED_GATE_DECISION_CONTRACT.md`
+- phase43_next_controlled_gate_decision: OPEN_NEXT_CONTROLLED_GATE
+- branch: phase2/observability
+- git_status: ## phase2/observability...origin/phase2/observability
