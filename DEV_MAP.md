@@ -289,6 +289,25 @@ P4 follow-up F4 (governance-only):
 
 Deliverable: controlled start of Router Core execution with explicit gates and evidence loop.
 
+### P4.3 Deadloop Break Bridge (DL1 -> DL2)
+Status:
+- DL1 MAP_EXECUTION_WAVE_1: DONE (`P4_PHASE43_DL1_MAP_EXECUTION_WAVE_1_CONTRACT.md`)
+- DL2 CODE_TEST_DELTA_GATE: ACTIVE (pending)
+
+Wave-1 concrete engineering targets:
+- E1_ROUTER_POLICY_V3_RUNTIME_PROFILE
+  - implementation surfaces: router policy/profile runtime path
+  - required delta: non-doc code change + profile contract/docs alignment
+- E2_TRACE_CONTEXT_END_TO_END
+  - implementation surfaces: comm->router->memory trace propagation
+  - required delta: runtime trace continuity evidence (`task_id/trace_id`)
+- E3_VALIDATION_TEST_WAVE
+  - required delta: test change(s) proving E1/E2 behavior
+  - required evidence: passing run in `ci` and/or `smoke` profile
+
+Deadloop release rule:
+- no return to `S27` gate sequence until DL2 is PASS.
+
 ### P5) Memory & Knowledge Prep Phase (ACTIVE, governance-only)
 P5.T1 Timestamp normalization policy contract draft (timezone-aware UTC boundaries, docs/events semantics). (DONE)
 P5.T2 Retrieval routing boundary contract draft (memory/search before LLM, non-goals fixed). (DONE)
