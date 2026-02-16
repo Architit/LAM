@@ -257,6 +257,12 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] R5: PolicyConstraint lacks explicit Non-Goals (no enforcement / no execution blocking / no conflict resolution), unlike ReflectionSnapshot “proposal-only” guardrails
 - [x] Recommendation: addressed via **v1.x addenda (contract-only)** before Phase 4.3 (`P4_PRE43_REVIEW_FINDINGS_ADDENDA_CONTRACT.md`)
 
+### Phase 4.3 Adaptation Proposals (start gate)
+- [x] Start gate OPEN (contract-only): `P4_PHASE43_ADAPTATION_PROPOSALS_START_GATE_CONTRACT.md`
+- [ ] A1: Adaptation Proposal Schema v1
+- [ ] A2: Adaptation Evaluation Matrix v1
+- [ ] A3: Adaptation Review Decision Record v1
+
 
 - [x] 2026-02-12 — governance: P2 remediation wave-1 validated (Roaudter-agent, LAM-Codex_Agent, LAM_Comunication_Agent, Operator_Agent) -> DONE=6, BLOCKED=0, PENDING=9
 

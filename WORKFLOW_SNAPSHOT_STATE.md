@@ -126,3 +126,11 @@ constraints:
 - canonical_heartbeat_asr: gov/asr/sessions/2026-02-16__ASR__atplt-strict-arckhangel-guarddog-recovery-wave-cycle21.md
 - branch: phase2/observability
 - git_status: ## phase2/observability...origin/phase2/observability
+
+## Governance Sync
+- 2026-02-16 22:53 UTC — s3-followup-phase43-start-gate-v1
+- protocol_source: RADRILONIUMA-PROJECT
+- pointer_ref: P4_PHASE43_ADAPTATION_PROPOSALS_START_GATE_CONTRACT.md (`A1/A2/A3` declared)
+- phase43_gate_state: OPEN_CONTRACT_ONLY
+- branch: phase2/observability
+- git_status: ## phase2/observability...origin/phase2/observability

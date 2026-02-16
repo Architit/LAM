@@ -5,7 +5,8 @@
 - [ ] Phase 1: ResultEnvelope rollout across agents
 - [x] S1 cross-repo sync follow-up: pin single heartbeat pointer and sync mirror states with RADRILONIUMA-PROJECT SoT
 - [ ] S2 follow-up: recurring heartbeat/pointer compliance review against SoT (`GOV_STATUS.md`)
-- [ ] S3 follow-up: Phase 4.3 adaptation proposals start gate (after R1-R5 closure addenda)
+- [x] S3 follow-up: Phase 4.3 adaptation proposals start gate (after R1-R5 closure addenda)
+- [ ] S4 follow-up: execute A1/A2/A3 contracts for Phase 4.3 adaptation proposals
 
 ## Backlog
 - [ ] Contracts v2 (metrics normalization)
