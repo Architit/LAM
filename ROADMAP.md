@@ -476,3 +476,4 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-13 — governance: restart semantics normalized (ACTIVE -> Phase 1 EXPORT, NEW -> Phase 2 IMPORT)
 - [x] 2026-02-13 — governance: protocol sync header aligned to RADRILONIUMA-PROJECT/v1.0.0@7eadfe9 [protocol-sync-header-v1]
 - [x] 2026-02-16 — governance: S1 cross-repo sync checkpoint aligned to RADRILONIUMA-PROJECT SoT (`t7 ACTIVE long-running`, `t68 ACTIVE hygiene wave`, `phase8.0 readiness queue`)
+- [x] 2026-02-17 — governance: S16 next-controlled gate execution completed (`P4_PHASE43_NEXT_CONTROLLED_GATE_EXECUTION_CONTRACT.md`) and execution pointer updated (`P4_PHASE43_NEXT_CONTROLLED_GATE_EXECUTION_POINTER_UPDATE_CONTRACT.md`); state moved to `PHASE43_NEXT_CONTROLLED_GATE_EXECUTION_COMPLETE` with next pointer `PHASE43_TRANSITION_GATE_PREP`.

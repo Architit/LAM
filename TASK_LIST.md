@@ -18,7 +18,8 @@
 - [x] S13 follow-up: execute post-review gate stage after `OPEN_POST_REVIEW_GATE`
 - [x] S14 follow-up: prepare `PHASE43_NEXT_CONTROLLED_GATE_PREP` wave
 - [x] S15 follow-up: next controlled gate decision (`OPEN_NEXT_CONTROLLED_GATE` vs `HOLD_NEXT_CONTROLLED_GATE`)
-- [ ] S16 follow-up: execute next-controlled gate stage after `OPEN_NEXT_CONTROLLED_GATE`
+- [x] S16 follow-up: execute next-controlled gate stage after `OPEN_NEXT_CONTROLLED_GATE`
+- [ ] S17 follow-up: prepare `PHASE43_TRANSITION_GATE_PREP` wave after next-controlled execution
 
 ## Backlog
 - [ ] Contracts v2 (metrics normalization)
