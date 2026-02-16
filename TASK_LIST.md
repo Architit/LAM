@@ -28,7 +28,8 @@
 - [x] S23 follow-up: prepare `PHASE43_CLOSURE_PREP` wave
 - [x] S24 follow-up: closure gate decision (`OPEN_PHASE43_CLOSURE_GATE` vs `HOLD_PHASE43_CLOSURE_GATE`)
 - [x] S25 follow-up: execute closure gate stage after `OPEN_PHASE43_CLOSURE_GATE`
-- [ ] S26 follow-up: prepare `PHASE43_CLOSURE_FINALIZATION_PREP` wave
+- [x] S26 follow-up: prepare `PHASE43_CLOSURE_FINALIZATION_PREP` wave
+- [ ] S27 follow-up: closure-finalization gate decision (`OPEN_PHASE43_CLOSURE_FINALIZATION_GATE` vs `HOLD_PHASE43_CLOSURE_FINALIZATION_GATE`)
 
 ## Backlog
 - [ ] Contracts v2 (metrics normalization)
