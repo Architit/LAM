@@ -236,3 +236,16 @@ Template-backed hard rule (mandatory for `hard-rule`/`procedure` updates):
 2. **ROLLBACK:** Предложить команду `git restore .` или `git checkout main`.
 3. **ANALYZE:** Запросить лог ошибки (`cat logs/error.log`).
 4. **PLAN:** Предложить *один* шаг для диагностики, а не исправления.
+
+---
+
+## 8. Global Final Publish Step (mandatory)
+
+Независимо от количества шагов, фаз и задач (до/после текущей версии),
+последний обязательный шаг закрытия потока:
+
+- `git push origin main`
+
+Правила:
+1. Статус `COMPLETE` допускается только при наличии evidence о final push.
+2. Если final push невозможен, close-gate фиксируется как `BLOCKED` с явной причиной.
