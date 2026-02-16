@@ -118,3 +118,11 @@ constraints:
 - last_sync_commit: 7eadfe9
 - branch: phase2/observability
 - git_status: ## phase2/observability...origin/phase2/observability
+
+## Governance Sync
+- 2026-02-16 22:31 UTC — s2-canonical-heartbeat-pointer-sync-v1
+- protocol_source: RADRILONIUMA-PROJECT
+- pointer_ref: GOV_STATUS.md canonical heartbeat pointer (`2026-02-16 02:54 UTC`)
+- canonical_heartbeat_asr: gov/asr/sessions/2026-02-16__ASR__atplt-strict-arckhangel-guarddog-recovery-wave-cycle21.md
+- branch: phase2/observability
+- git_status: ## phase2/observability...origin/phase2/observability
