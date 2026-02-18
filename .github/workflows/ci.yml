@@ -23,20 +23,28 @@ jobs:
       - name: Init required submodules
         run: |
           git submodule sync --recursive
+          ok=0
           for i in 1 2 3; do
             git submodule update --init --recursive \
               LAM/default/agents/comm-agent \
               LAM/default/agents/codex-agent \
-              LAM/default/agents/roaudter-agent && break
+              LAM/default/agents/roaudter-agent && ok=1 && break
             echo "submodule update attempt ${i} failed, retrying..."
             sleep 2
           done
+          if [ "$ok" -ne 1 ]; then
+            echo "failed to initialize required submodules after retries"
+            exit 1
+          fi
 
       - name: Verify required submodules
         run: |
-          git submodule status LAM/default/agents/comm-agent
-          git submodule status LAM/default/agents/codex-agent
-          git submodule status LAM/default/agents/roaudter-agent
+          git submodule status LAM/default/agents/comm-agent | tee /tmp/sub_comm.txt
+          git submodule status LAM/default/agents/codex-agent | tee /tmp/sub_codex.txt
+          git submodule status LAM/default/agents/roaudter-agent | tee /tmp/sub_roaudter.txt
+          ! grep -qE '^-' /tmp/sub_comm.txt
+          ! grep -qE '^-' /tmp/sub_codex.txt
+          ! grep -qE '^-' /tmp/sub_roaudter.txt
 
       - name: Setup Python
         uses: actions/setup-python@v5
