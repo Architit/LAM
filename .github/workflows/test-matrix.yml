@@ -8,15 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python: ["3.10", "3.11"]
+        python: ["3.12"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-      - name: Install
-        run: pip install -e .
-      - name: Trigger tests
-        run: tma trigger --matrix ${{ matrix.python }}
-      - name: Show metrics
-        run: tma status
+          cache: "pip"
+      - name: Install deps
+        run: |
+          python -m pip install -U pip
+          pip install -e . -r requirements-dev.txt
+      - name: Run tests
+        run: |
+          ./devkit/check.sh --profile ci

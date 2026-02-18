@@ -8,6 +8,8 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,12 +24,12 @@ jobs:
         run: |
           git submodule update --init --recursive
 
-      - name: Update data_repo
+      - name: Update data-src submodule
         run: |
-          git submodule update --remote data_repo
+          git submodule update --remote LAM/default/agents/data-src
 
       - name: Commit and push changes
         run: |
-          git add data_repo
-          git commit -m "Auto-update data_repo from LAM_DATA_Src" || echo "No changes to commit"
+          git add LAM/default/agents/data-src
+          git commit -m "Auto-update data-src from LAM_DATA_Src" || echo "No changes to commit"
           git push origin main
