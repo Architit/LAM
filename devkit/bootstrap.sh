@@ -2,8 +2,14 @@
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
-python -m venv .venv
+PYBIN="${PYBIN:-python}"
+if ! command -v "$PYBIN" >/dev/null 2>&1; then
+  PYBIN="python3"
+fi
+
+"$PYBIN" -m venv .venv
 source .venv/bin/activate
-python -m pip install -U pip
-python -m pip install -e ".[dev,tests]"
+"$PYBIN" -m pip install -U pip
+"$PYBIN" -m pip install -e .
+"$PYBIN" -m pip install -r requirements-dev.txt
 echo "bootstrap:ok"
