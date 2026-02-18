@@ -14,13 +14,23 @@ jobs:
         with:
           token: ${{ secrets.LAM_SUBMODULE_ACCESS_TOKEN || secrets.LAM_Submodule_Acces || github.token }}
 
+      - name: Configure GitHub auth for submodules
+        env:
+          SUBMODULE_TOKEN: ${{ secrets.LAM_SUBMODULE_ACCESS_TOKEN || secrets.LAM_Submodule_Acces || github.token }}
+        run: |
+          git config --global url."https://x-access-token:${SUBMODULE_TOKEN}@github.com/".insteadOf "https://github.com/"
+
       - name: Init required submodules
         run: |
           git submodule sync --recursive
-          git submodule update --init --recursive \
-            LAM/default/agents/comm-agent \
-            LAM/default/agents/codex-agent \
-            LAM/default/agents/roaudter-agent
+          for i in 1 2 3; do
+            git submodule update --init --recursive \
+              LAM/default/agents/comm-agent \
+              LAM/default/agents/codex-agent \
+              LAM/default/agents/roaudter-agent && break
+            echo "submodule update attempt ${i} failed, retrying..."
+            sleep 2
+          done
 
       - name: Verify required submodules
         run: |
