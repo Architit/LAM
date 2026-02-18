@@ -29,11 +29,17 @@ Define the Phase 3.1 automation baseline for LAM CI using local DevKit gate comm
   3. push `LAM` branch.
 - If any required submodule commit is unreachable, CI must fail in submodule init stage (fail-fast), not during test collection.
 
+## License Integrity Rule (mandatory)
+- Every ecosystem agent repository must include a root-level `LICENSE`.
+- Missing `LICENSE` is a legal blocker (`LEGAL_BLOCKED`) and forbids rollout promotion until fixed.
+- Required remediation targets now include: `LAM_Test_Agent`, `TRIANIUMA_DATA_BASE`, `J.A.R.V.I.S` (a.k.a. jarvis), even when managed outside the current mono-repo tree.
+
 ## Acceptance Criteria (DoD)
 - `.github/workflows/ci.yml` uses local `devkit/bootstrap.sh` and local `devkit/check.sh`.
 - Gate run is deterministic from repository content (no remote DevKit fetch in CI job).
 - Required submodules are verified as initialized before test stage.
 - `pytest` is available after bootstrap in CI runtime.
+- Agent repo under promotion has root `LICENSE` present.
 - Policy reflected in governance docs:
   - `DEV_MAP.md`
   - `DEV_LOGS.md`

@@ -162,6 +162,12 @@ Hard constraint: перед закрытием фазы рабочее дере�
 - Использование `.[dev,tests]` допускается только при явном объявлении таких extras в `pyproject.toml`.
 - Отсутствие `pytest` после bootstrap классифицируется как bootstrap policy failure.
 
+5. **Repository license baseline**
+- Каждый агент-репозиторий в экосистеме MUST содержать файл `LICENSE` в корне.
+- Отсутствие `LICENSE` переводит репозиторий в статус `LEGAL_BLOCKED` до устранения.
+- Перед promotion в интеграционный контур (`ACTIVE`/submodule pointer update) лицензия обязательна.
+- Текущий обязательный remediation-list по лицензиям: `LAM_Test_Agent`, `TRIANIUMA_DATA_BASE`, `J.A.R.V.I.S`.
+
 ---
 
 ## 5. Управление Проектом (Governance)
