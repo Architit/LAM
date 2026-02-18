@@ -292,7 +292,8 @@ Deliverable: controlled start of Router Core execution with explicit gates and e
 ### P4.3 Deadloop Break Bridge (DL1 -> DL2)
 Status:
 - DL1 MAP_EXECUTION_WAVE_1: DONE (`P4_PHASE43_DL1_MAP_EXECUTION_WAVE_1_CONTRACT.md`)
-- DL2 CODE_TEST_DELTA_GATE: ACTIVE (pending)
+- DL2 CODE_TEST_DELTA_GATE: DONE (PASS tuple published)
+- DL3 ENGINEERING_EXECUTION_WAVE_1: DONE (E1/E2 implemented, E3 validated)
 
 Wave-1 concrete engineering targets:
 - E1_ROUTER_POLICY_V3_RUNTIME_PROFILE

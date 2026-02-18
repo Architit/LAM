@@ -29,12 +29,13 @@
 - [x] S24 follow-up: closure gate decision (`OPEN_PHASE43_CLOSURE_GATE` vs `HOLD_PHASE43_CLOSURE_GATE`)
 - [x] S25 follow-up: execute closure gate stage after `OPEN_PHASE43_CLOSURE_GATE`
 - [x] S26 follow-up: prepare `PHASE43_CLOSURE_FINALIZATION_PREP` wave
-- [ ] S27 follow-up: closure-finalization gate decision (`OPEN_PHASE43_CLOSURE_FINALIZATION_GATE` vs `HOLD_PHASE43_CLOSURE_FINALIZATION_GATE`) [HOLD_BY_DEADLOOP_BREAK_PROTOCOL]
+- [x] S27 follow-up: closure-finalization gate decision (`OPEN_PHASE43_CLOSURE_FINALIZATION_GATE` vs `HOLD_PHASE43_CLOSURE_FINALIZATION_GATE`) [`OPEN_PHASE43_CLOSURE_FINALIZATION_GATE` via guard PASS]
+- [ ] S28 follow-up: execute closure-finalization gate stage after `OPEN_PHASE43_CLOSURE_FINALIZATION_GATE`
 - [x] DL1 follow-up: `MAP_EXECUTION_WAVE_1` (update `DEV_MAP.md` + `ROADMAP.md` with concrete engineering deliverables)
-- [ ] DL2 follow-up: `CODE_TEST_DELTA_GATE` (>=1 non-doc code change + >=1 test change + validation evidence)
-- [ ] DL3 follow-up: `ENGINEERING_EXECUTION_WAVE_1` (implement E1/E2 and prove E3 tests)
-- [ ] DL2.A follow-up: implement `DEADLOOP_PREFLIGHT_GATE` evidence tuple in logs/snapshot before next `S*`
-- [ ] DL2.B follow-up: publish first PASS tuple (`code_delta_refs`, `test_delta_refs`, `validation_command`, `validation_result`)
+- [x] DL2 follow-up: `CODE_TEST_DELTA_GATE` (>=1 non-doc code change + >=1 test change + validation evidence)
+- [x] DL3 follow-up: `ENGINEERING_EXECUTION_WAVE_1` (implement E1/E2 and prove E3 tests)
+- [x] DL2.A follow-up: implement `DEADLOOP_PREFLIGHT_GATE` evidence tuple in logs/snapshot before next `S*`
+- [x] DL2.B follow-up: publish first PASS tuple (`code_delta_refs`, `test_delta_refs`, `validation_command`, `validation_result`)
 
 ## Backlog
 - [ ] Contracts v2 (metrics normalization)
