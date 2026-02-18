@@ -7,7 +7,8 @@ import json
 import hashlib
 import os
 import unicodedata
-from datetime import datetime
+import logging
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict
 
@@ -124,8 +125,11 @@ class EthicsSecurityModule:
             try:
                 resp = self._openai.Moderation.create(input=text)
                 return not resp["results"][0]["flagged"]
-            except Exception:
-                pass
+            except Exception as exc:
+                logging.getLogger(__name__).warning(
+                    "moderation_unavailable_fallback_heuristic",
+                    extra={"error": str(exc)},
+                )
         return self._heuristic(text)
 
     def audit_interaction(self, interaction_data: Dict[str, Any]) -> None:
@@ -133,7 +137,7 @@ class EthicsSecurityModule:
         if not self.is_action_ethical(interaction_data):
             raise ValueError("Unethical action detected")
         record = {
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "data": interaction_data,
             "prev_hash": self._last_hash,
         }

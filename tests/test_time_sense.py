@@ -1,5 +1,5 @@
 import unittest
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from src.time_sense import TimeSense
 
@@ -41,6 +41,11 @@ class TimeSenseTest(unittest.TestCase):
     def test_humanize(self):
         delta = timedelta(hours=-3)
         self.assertEqual(self.ts.humanize(delta), "3 hours ago")
+
+    def test_humanize_aware_datetime(self):
+        now = datetime.now(timezone.utc)
+        future = now + timedelta(minutes=5)
+        self.assertEqual(self.ts.humanize(future, reference=now), "in 5 minutes")
 
 
 if __name__ == "__main__":

@@ -18,6 +18,29 @@ from .logging_utils import get_json_logger
 
 logger = get_json_logger(__name__)
 tracer = trace.get_tracer(__name__)  # type: ignore[attr-defined]
+_SENSITIVE_KEYS = {
+    "authorization",
+    "api_key",
+    "token",
+    "password",
+    "secret",
+    "access_token",
+    "refresh_token",
+}
+
+
+def _sanitize(obj: Any) -> Any:
+    if isinstance(obj, dict):
+        out: Dict[str, Any] = {}
+        for key, value in obj.items():
+            if isinstance(key, str) and key.lower() in _SENSITIVE_KEYS:
+                out[key] = "***"
+            else:
+                out[key] = _sanitize(value)
+        return out
+    if isinstance(obj, list):
+        return [_sanitize(item) for item in obj]
+    return obj
 
 
 class CommunicationLayer:
@@ -70,7 +93,10 @@ class CommunicationLayer:
             )
         with tracer.start_as_current_span("send_request") as span:
             span.set_attribute("service", service)
-            logger.info("http_request", extra={"service": service, "payload": payload})
+            logger.info(
+                "http_request",
+                extra={"service": service, "payload": _sanitize(payload)},
+            )
             async with self._session.post(
                 service, json=payload, timeout=10
             ) as response:

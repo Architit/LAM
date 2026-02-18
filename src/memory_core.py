@@ -42,6 +42,13 @@ except Exception:  # pragma: no cover - optional dependency
 DEFAULT_MEMORY_PATH = REPO_ROOT / "memory"
 
 
+def _to_utc(dt: datetime) -> datetime:
+    """Normalize datetime to timezone-aware UTC."""
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+
 def _update_paths(base: Path) -> Dict[str, Path]:
     """Return file paths for the given base path."""
 
@@ -327,7 +334,7 @@ class MemoryCore:
                 ts = datetime.fromisoformat(mem.timestamp.replace("≈", ""))
             except ValueError:
                 continue
-            age_days = (now - ts).days
+            age_days = (now - _to_utc(ts)).days
             decay = age_days / 365
             access_factor = min(mem.access_count / 10, 1)
             mem.importance = max(
@@ -351,7 +358,7 @@ class MemoryCore:
             if max_age:
                 try:
                     ts = datetime.fromisoformat(mem.timestamp.replace("≈", ""))
-                    age_days = (now - ts).days
+                    age_days = (now - _to_utc(ts)).days
                     if age_days > int(max_age):
                         continue
                 except ValueError:

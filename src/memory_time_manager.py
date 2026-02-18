@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List, Optional
 
 from .memory_core import MemoryCore
@@ -24,7 +24,9 @@ class MemoryTimeManager:
 
     def add_event_memory(self, event_data: Dict[str, Any]) -> None:
         """Store an event in memory."""
-        timestamp = event_data.get("timestamp", datetime.utcnow().isoformat())
+        timestamp = event_data.get("timestamp")
+        if not timestamp:
+            timestamp = datetime.now(timezone.utc).isoformat()
         entry = {
             "name": event_data.get("name", "event"),
             "timestamp": timestamp,
@@ -45,7 +47,7 @@ class MemoryTimeManager:
         The ``interval`` string accepts formats like ``"60m"`` or ``"1d"`` for
         minutes or days respectively.
         """
-        now = datetime.utcnow()
+        now = datetime.now(timezone.utc)
         if interval.endswith("m"):
             start = now - timedelta(minutes=int(interval[:-1]))
         elif interval.endswith("d"):
@@ -66,6 +68,11 @@ class MemoryTimeManager:
                     )
                 except ValueError:
                     pass
+            if base:
+                if base.tzinfo is None:
+                    base = base.replace(tzinfo=timezone.utc)
+                else:
+                    base = base.astimezone(timezone.utc)
             if base and base >= start:
                 results.append(mem.to_dict())
         return results

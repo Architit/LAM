@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Optional
 
 
@@ -155,7 +155,15 @@ class TimeSense:
     ) -> str:
         """Return human-friendly phrase for a time delta."""
         if isinstance(value, datetime):
-            reference = reference or datetime.utcnow()
+            if value.tzinfo is None:
+                value = value.replace(tzinfo=timezone.utc)
+            else:
+                value = value.astimezone(timezone.utc)
+            reference = reference or datetime.now(timezone.utc)
+            if reference.tzinfo is None:
+                reference = reference.replace(tzinfo=timezone.utc)
+            else:
+                reference = reference.astimezone(timezone.utc)
             delta = value - reference
         else:
             delta = value

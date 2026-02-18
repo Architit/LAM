@@ -17,6 +17,10 @@ readme = "README.md"
 license = { text = "MIT" }
 keywords = ["lam", "agents", "ai"]
 
+[project.scripts]
+lam = "lam_cli:main"
+tma = "tma.cli:main"
+
 # ── форматирование ──────────────────────────
 [tool.black]
 line-length = 100

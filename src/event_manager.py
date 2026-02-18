@@ -16,6 +16,29 @@ from .logging_utils import get_json_logger
 from .lam_logging import log as lam_log
 
 logger = get_json_logger(__name__)
+_SENSITIVE_KEYS = {
+    "authorization",
+    "api_key",
+    "token",
+    "password",
+    "secret",
+    "access_token",
+    "refresh_token",
+}
+
+
+def _sanitize(obj: Any) -> Any:
+    if isinstance(obj, dict):
+        out: Dict[str, Any] = {}
+        for key, value in obj.items():
+            if isinstance(key, str) and key.lower() in _SENSITIVE_KEYS:
+                out[key] = "***"
+            else:
+                out[key] = _sanitize(value)
+        return out
+    if isinstance(obj, list):
+        return [_sanitize(item) for item in obj]
+    return obj
 
 EventHandler = Callable[[Dict[str, Any]], Awaitable[None] | None]
 
@@ -37,7 +60,10 @@ class EventManager:
 
     def emit_event(self, event_type: str, data: Dict[str, Any]) -> None:
         """Place a new event into the processing queue."""
-        logger.info("event_emitted", extra={"event_type": event_type, "data": data})
+        logger.info(
+            "event_emitted",
+            extra={"event_type": event_type, "data": _sanitize(data)},
+        )
         lam_log(
             "info",
             "evt.emit",
@@ -55,21 +81,36 @@ class EventManager:
 
         while True:
             event_type, data = await self._queue.get()
-            logger.info("event_dispatch", extra={"event_type": event_type})
-            lam_log(
-                "info",
-                "evt.dispatch",
-                "dispatch",
-                event_type=event_type,
-                listeners_count=len(self._listeners.get(event_type, [])),
-                queue_size=self._queue.qsize(),
-            )
-            for handler in self._listeners.get(event_type, []):
-                if asyncio.iscoroutinefunction(handler):
-                    await handler(data)
-                else:
-                    handler(data)
-            self._queue.task_done()
+            try:
+                logger.info("event_dispatch", extra={"event_type": event_type})
+                lam_log(
+                    "info",
+                    "evt.dispatch",
+                    "dispatch",
+                    event_type=event_type,
+                    listeners_count=len(self._listeners.get(event_type, [])),
+                    queue_size=self._queue.qsize(),
+                )
+                for handler in self._listeners.get(event_type, []):
+                    try:
+                        if asyncio.iscoroutinefunction(handler):
+                            await handler(data)
+                        else:
+                            handler(data)
+                    except Exception as exc:
+                        logger.exception(
+                            "handler_error",
+                            extra={"event_type": event_type, "error": str(exc)},
+                        )
+                        lam_log(
+                            "error",
+                            "evt.handler_error",
+                            "listener_failed",
+                            event_type=event_type,
+                            error=str(exc),
+                        )
+            finally:
+                self._queue.task_done()
             if self._queue.empty():
                 break
         logger.info("dispatch_done")
