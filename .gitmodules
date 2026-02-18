@@ -10,3 +10,6 @@
 [submodule "LAM/default/agents/roaudter-agent"]
 	path = LAM/default/agents/roaudter-agent
 	url = https://github.com/Architit/Roaudter-agent.git
+[submodule "LAM/default/agents/operator-agent"]
+	path = LAM/default/agents/operator-agent
+	url = https://github.com/Architit/Operator_Agent.git
