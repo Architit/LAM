@@ -1,0 +1,90 @@
+name: Reusable Submodule Gate
+
+on:
+  workflow_call:
+    inputs:
+      python_version:
+        description: Python version for the test runtime.
+        required: false
+        default: "3.12"
+        type: string
+      submodule_paths:
+        description: Newline-delimited list of required submodule paths.
+        required: true
+        type: string
+      test_command:
+        description: Command to execute after submodule/bootstrap gate.
+        required: true
+        type: string
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.LAM_SUBMODULE_ACCESS_TOKEN || secrets.LAM_Submodule_Acces || github.token }}
+
+      - name: Configure GitHub auth for submodules
+        env:
+          SUBMODULE_TOKEN: ${{ secrets.LAM_SUBMODULE_ACCESS_TOKEN || secrets.LAM_Submodule_Acces || github.token }}
+        run: |
+          git config --global url."https://x-access-token:${SUBMODULE_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Init required submodules
+        env:
+          REQUIRED_SUBMODULES: ${{ inputs.submodule_paths }}
+        run: |
+          mapfile -t paths < <(printf '%s\n' "$REQUIRED_SUBMODULES" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' | sed '/^$/d')
+          if [ "${#paths[@]}" -eq 0 ]; then
+            echo "no required submodules defined"
+            exit 1
+          fi
+
+          git submodule sync --recursive
+          ok=0
+          for i in 1 2 3; do
+            git submodule update --init --recursive "${paths[@]}" && ok=1 && break
+            echo "submodule update attempt ${i} failed, retrying..."
+            sleep 2
+          done
+          if [ "$ok" -ne 1 ]; then
+            echo "pinned submodule refs unavailable, falling back to remote heads"
+            git submodule update --init --recursive --remote "${paths[@]}" && ok=1
+          fi
+          if [ "$ok" -ne 1 ]; then
+            echo "failed to initialize required submodules after retries"
+            exit 1
+          fi
+
+      - name: Verify required submodules
+        env:
+          REQUIRED_SUBMODULES: ${{ inputs.submodule_paths }}
+        run: |
+          mapfile -t paths < <(printf '%s\n' "$REQUIRED_SUBMODULES" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' | sed '/^$/d')
+          for p in "${paths[@]}"; do
+            f="/tmp/sub_$(echo "$p" | tr '/.-' '___').txt"
+            git submodule status "$p" | tee "$f"
+            ! grep -qE '^-' "$f"
+          done
+          git submodule status --recursive | tee /tmp/sub_recursive.txt
+          ! grep -qE '^-' /tmp/sub_recursive.txt
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ inputs.python_version }}
+          cache: "pip"
+
+      - name: Bootstrap venv + deps
+        run: |
+          ./devkit/bootstrap.sh
+
+      - name: Run test command
+        env:
+          TMPDIR: /tmp
+          TEMP: /tmp
+          TMP: /tmp
+        run: |
+          ${{ inputs.test_command }}

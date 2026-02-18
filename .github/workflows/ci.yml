@@ -6,77 +6,14 @@ on:
 
 jobs:
   lam:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.LAM_SUBMODULE_ACCESS_TOKEN || secrets.LAM_Submodule_Acces || github.token }}
-
-      - name: Configure GitHub auth for submodules
-        env:
-          SUBMODULE_TOKEN: ${{ secrets.LAM_SUBMODULE_ACCESS_TOKEN || secrets.LAM_Submodule_Acces || github.token }}
-        run: |
-          git config --global url."https://x-access-token:${SUBMODULE_TOKEN}@github.com/".insteadOf "https://github.com/"
-
-      - name: Init required submodules
-        run: |
-          git submodule sync --recursive
-          ok=0
-          for i in 1 2 3; do
-            git submodule update --init --recursive \
-              LAM/default/agents/comm-agent \
-              LAM/default/agents/codex-agent \
-              LAM/default/agents/roaudter-agent \
-              LAM/default/agents/operator-agent \
-              LAM/default/agents/test-agent && ok=1 && break
-            echo "submodule update attempt ${i} failed, retrying..."
-            sleep 2
-          done
-          if [ "$ok" -ne 1 ]; then
-            echo "pinned submodule refs unavailable, falling back to remote heads"
-            git submodule update --init --recursive --remote \
-              LAM/default/agents/comm-agent \
-              LAM/default/agents/codex-agent \
-              LAM/default/agents/roaudter-agent \
-              LAM/default/agents/operator-agent \
-              LAM/default/agents/test-agent && ok=1
-          fi
-          if [ "$ok" -ne 1 ]; then
-            echo "failed to initialize required submodules after retries"
-            exit 1
-          fi
-
-      - name: Verify required submodules
-        run: |
-          git submodule status LAM/default/agents/comm-agent | tee /tmp/sub_comm.txt
-          git submodule status LAM/default/agents/codex-agent | tee /tmp/sub_codex.txt
-          git submodule status LAM/default/agents/roaudter-agent | tee /tmp/sub_roaudter.txt
-          git submodule status LAM/default/agents/operator-agent | tee /tmp/sub_operator.txt
-          git submodule status LAM/default/agents/test-agent | tee /tmp/sub_test.txt
-          git submodule status --recursive | tee /tmp/sub_recursive.txt
-          ! grep -qE '^-' /tmp/sub_comm.txt
-          ! grep -qE '^-' /tmp/sub_codex.txt
-          ! grep -qE '^-' /tmp/sub_roaudter.txt
-          ! grep -qE '^-' /tmp/sub_operator.txt
-          ! grep -qE '^-' /tmp/sub_test.txt
-          ! grep -qE '^-' /tmp/sub_recursive.txt
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: "pip"
-
-      - name: Bootstrap venv + deps
-        run: |
-          ./devkit/bootstrap.sh
-
-      - name: CI Gate via devkit/check.sh
-        env:
-          TMPDIR: /tmp
-          TEMP: /tmp
-          TMP: /tmp
-        run: |
-          ./devkit/check.sh --profile ci
+    uses: ./.github/workflows/submodule-gate.yml
+    with:
+      python_version: "3.12"
+      submodule_paths: |
+        LAM/default/agents/comm-agent
+        LAM/default/agents/codex-agent
+        LAM/default/agents/roaudter-agent
+        LAM/default/agents/operator-agent
+        LAM/default/agents/test-agent
+      test_command: ./devkit/check.sh --profile ci
+    secrets: inherit
