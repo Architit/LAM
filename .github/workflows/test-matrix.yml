@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         python: ["3.12"]
-    uses: ./.github/workflows/submodule-gate.yml
+    uses: Architit/RADRILONIUMA-PROJECT/.github/workflows/submodule-gate.yml@main
     with:
       python_version: ${{ matrix.python }}
       submodule_paths: |
@@ -18,5 +18,6 @@ jobs:
         LAM/default/agents/roaudter-agent
         LAM/default/agents/operator-agent
         LAM/default/agents/test-agent
+      install_command: ./devkit/bootstrap.sh
       test_command: ./devkit/check.sh --profile ci
     secrets: inherit
