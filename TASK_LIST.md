@@ -36,7 +36,7 @@
 - [x] DL3 follow-up: `ENGINEERING_EXECUTION_WAVE_1` (implement E1/E2 and prove E3 tests)
 - [x] DL2.A follow-up: implement `DEADLOOP_PREFLIGHT_GATE` evidence tuple in logs/snapshot before next `S*`
 - [x] DL2.B follow-up: publish first PASS tuple (`code_delta_refs`, `test_delta_refs`, `validation_command`, `validation_result`)
-- [ ] LEGAL.L1: license remediation wave for `LAM_Test_Agent`, `TRIANIUMA_DATA_BASE`, `J.A.R.V.I.S` (add root `LICENSE` + clear `LEGAL_BLOCKED`)
+- [x] LEGAL.L1: license remediation wave for `LAM_Test_Agent`, `TRIANIUMA_DATA_BASE`, `J.A.R.V.I.S` (add root `LICENSE` + clear `LEGAL_BLOCKED`)
 
 ## Backlog
 - [ ] Contracts v2 (metrics normalization)
