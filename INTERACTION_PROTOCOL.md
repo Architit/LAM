@@ -138,6 +138,30 @@ Hard constraint: перед закрытием фазы рабочее дере�
 * Запускать **после каждого** изменения логики.
 * Алгоритм при ошибке: Reproduce (воспроизвести) → Minimal Fix (исправить) → Verify (проверить).
 
+### 4.4. CI Submodule & Dependency Hard-Rule (mandatory)
+
+Для стабильного GitHub Actions CI вводятся обязательные инварианты:
+
+1. **Submodule pointer publish-before-pointer**
+- Перед обновлением pointer в корневом репозитории соответствующий commit сабмодуля MUST быть опубликован в remote сабмодуля.
+- Запрещено пушить pointer на локальный/недостижимый hash (`not our ref` class).
+
+2. **Required submodules only**
+- В CI разрешена инициализация только runtime-required сабмодулей:
+  - `LAM/default/agents/comm-agent`
+  - `LAM/default/agents/codex-agent`
+  - `LAM/default/agents/roaudter-agent`
+- `data-src` не является обязательным для тестового gate и не должен блокировать `lam` job.
+
+3. **Fail-fast submodule gate**
+- Если required submodules не инициализированы после retry-цикла, job MUST завершаться с ошибкой до запуска тестов.
+- Продолжение выполнения при неинициализированных сабмодулях считается protocol violation.
+
+4. **Bootstrap dependency boundary**
+- `devkit/bootstrap.sh` MUST устанавливать test/dev зависимости из `requirements-dev.txt`.
+- Использование `.[dev,tests]` допускается только при явном объявлении таких extras в `pyproject.toml`.
+- Отсутствие `pytest` после bootstrap классифицируется как bootstrap policy failure.
+
 ---
 
 ## 5. Управление Проектом (Governance)

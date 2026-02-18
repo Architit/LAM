@@ -16,9 +16,17 @@ git log -n 5 --oneline
 ## Block 2: Local bootstrap
 ```bash
 ./devkit/bootstrap.sh
+.venv/bin/python -m pytest --version
 ```
 
-## Block 3: Run CI gate payload locally
+## Block 3: Verify required submodules are reachable
+```bash
+git submodule status LAM/default/agents/comm-agent
+git submodule status LAM/default/agents/codex-agent
+git submodule status LAM/default/agents/roaudter-agent
+```
+
+## Block 4: Run CI gate payload locally
 ```bash
 ./devkit/check.sh \
   tests/test_envelope_standard.py \
@@ -27,7 +35,7 @@ git log -n 5 --oneline
 echo "exit_code=$?"
 ```
 
-## Block 4: Evidence line
+## Block 5: Evidence line
 ```bash
 TS="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 BR="$(git rev-parse --abbrev-ref HEAD)"
