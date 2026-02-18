@@ -38,4 +38,4 @@ jobs:
         run: |
           git add LAM/default/agents/data-src
           git commit -m "Auto-update data-src from LAM_DATA_Src" || echo "No changes to commit"
-          git push origin main
+          git push origin "HEAD:${GITHUB_REF_NAME:-main}"

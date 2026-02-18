@@ -55,11 +55,13 @@ jobs:
           git submodule status LAM/default/agents/roaudter-agent | tee /tmp/sub_roaudter.txt
           git submodule status LAM/default/agents/operator-agent | tee /tmp/sub_operator.txt
           git submodule status LAM/default/agents/test-agent | tee /tmp/sub_test.txt
+          git submodule status --recursive | tee /tmp/sub_recursive.txt
           ! grep -qE '^-' /tmp/sub_comm.txt
           ! grep -qE '^-' /tmp/sub_codex.txt
           ! grep -qE '^-' /tmp/sub_roaudter.txt
           ! grep -qE '^-' /tmp/sub_operator.txt
           ! grep -qE '^-' /tmp/sub_test.txt
+          ! grep -qE '^-' /tmp/sub_recursive.txt
 
       - name: Setup Python
         uses: actions/setup-python@v5

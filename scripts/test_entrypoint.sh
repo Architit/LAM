@@ -75,7 +75,8 @@ case "${profile}" in
     bash scripts/lam_env.sh python -m pytest -q -p no:cacheprovider \
       tests/test_envelope_standard.py \
       tests/test_taskarid_comm_roaudter_trace.py \
-      tests/test_comm_agent_envelope_enforcement.py
+      tests/test_comm_agent_envelope_enforcement.py \
+      tests/test_roaudter_roundtrip.py
     ;;
   smoke)
     bash scripts/lam_env.sh python -m pytest -q -p no:cacheprovider \
