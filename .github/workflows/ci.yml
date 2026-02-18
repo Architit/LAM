@@ -9,14 +9,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout (with submodules)
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.LAM_SUBMODULE_ACCESS_TOKEN || secrets.LAM_Submodule_Acces || github.token }}
 
-      - name: Verify submodule checkout
-        run: git submodule status --recursive
+      - name: Init required submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive \
+            LAM/default/agents/comm-agent \
+            LAM/default/agents/codex-agent \
+            LAM/default/agents/roaudter-agent
+
+      - name: Verify required submodules
+        run: |
+          git submodule status LAM/default/agents/comm-agent
+          git submodule status LAM/default/agents/codex-agent
+          git submodule status LAM/default/agents/roaudter-agent
 
       - name: Setup Python
         uses: actions/setup-python@v5
