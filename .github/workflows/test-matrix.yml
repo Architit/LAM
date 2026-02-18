@@ -27,7 +27,8 @@ jobs:
               LAM/default/agents/comm-agent \
               LAM/default/agents/codex-agent \
               LAM/default/agents/roaudter-agent \
-              LAM/default/agents/operator-agent && ok=1 && break
+              LAM/default/agents/operator-agent \
+              LAM/default/agents/test-agent && ok=1 && break
             echo "submodule update attempt ${i} failed, retrying..."
             sleep 2
           done
@@ -37,7 +38,8 @@ jobs:
               LAM/default/agents/comm-agent \
               LAM/default/agents/codex-agent \
               LAM/default/agents/roaudter-agent \
-              LAM/default/agents/operator-agent && ok=1
+              LAM/default/agents/operator-agent \
+              LAM/default/agents/test-agent && ok=1
           fi
           if [ "$ok" -ne 1 ]; then
             echo "failed to initialize required submodules after retries"

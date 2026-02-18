@@ -13,3 +13,6 @@
 [submodule "LAM/default/agents/operator-agent"]
 	path = LAM/default/agents/operator-agent
 	url = https://github.com/Architit/Operator_Agent.git
+[submodule "LAM/default/agents/test-agent"]
+	path = LAM/default/agents/test-agent
+	url = https://github.com/Architit/LAM_Test_Agent.git
