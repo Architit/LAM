@@ -33,6 +33,13 @@ jobs:
             sleep 2
           done
           if [ "$ok" -ne 1 ]; then
+            echo "pinned submodule refs unavailable, falling back to remote heads"
+            git submodule update --init --recursive --remote \
+              LAM/default/agents/comm-agent \
+              LAM/default/agents/codex-agent \
+              LAM/default/agents/roaudter-agent && ok=1
+          fi
+          if [ "$ok" -ne 1 ]; then
             echo "failed to initialize required submodules after retries"
             exit 1
           fi

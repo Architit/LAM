@@ -11,6 +11,36 @@ jobs:
         python: ["3.12"]
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.LAM_SUBMODULE_ACCESS_TOKEN || secrets.LAM_Submodule_Acces || github.token }}
+      - name: Configure GitHub auth for submodules
+        env:
+          SUBMODULE_TOKEN: ${{ secrets.LAM_SUBMODULE_ACCESS_TOKEN || secrets.LAM_Submodule_Acces || github.token }}
+        run: |
+          git config --global url."https://x-access-token:${SUBMODULE_TOKEN}@github.com/".insteadOf "https://github.com/"
+      - name: Init required submodules
+        run: |
+          git submodule sync --recursive
+          ok=0
+          for i in 1 2 3; do
+            git submodule update --init --recursive \
+              LAM/default/agents/comm-agent \
+              LAM/default/agents/codex-agent \
+              LAM/default/agents/roaudter-agent && ok=1 && break
+            echo "submodule update attempt ${i} failed, retrying..."
+            sleep 2
+          done
+          if [ "$ok" -ne 1 ]; then
+            echo "pinned submodule refs unavailable, falling back to remote heads"
+            git submodule update --init --recursive --remote \
+              LAM/default/agents/comm-agent \
+              LAM/default/agents/codex-agent \
+              LAM/default/agents/roaudter-agent && ok=1
+          fi
+          if [ "$ok" -ne 1 ]; then
+            echo "failed to initialize required submodules after retries"
+            exit 1
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}

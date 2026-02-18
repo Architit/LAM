@@ -13,7 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true
+          token: ${{ secrets.LAM_SUBMODULE_ACCESS_TOKEN || secrets.LAM_Submodule_Acces || github.token }}
+      - name: Configure GitHub auth for submodules
+        env:
+          SUBMODULE_TOKEN: ${{ secrets.LAM_SUBMODULE_ACCESS_TOKEN || secrets.LAM_Submodule_Acces || github.token }}
+        run: |
+          git config --global url."https://x-access-token:${SUBMODULE_TOKEN}@github.com/".insteadOf "https://github.com/"
 
       - name: Configure Git
         run: |
@@ -22,7 +27,8 @@ jobs:
 
       - name: Initialize submodule
         run: |
-          git submodule update --init --recursive
+          git submodule sync --recursive
+          git submodule update --init --recursive LAM/default/agents/data-src
 
       - name: Update data-src submodule
         run: |
