@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 COMM_SRC = ROOT / "LAM/default/agents/comm-agent/src"
 sys.path.extend([str(COMM_SRC)])
 
-from interfaces.com_agent_interface import ComAgent  # type: ignore
+from interfaces.com_agent_interface import ComAgent  # type: ignore  # noqa: E402
 
 
 # comm-agent is a submodule; import path stays stable in repo layout

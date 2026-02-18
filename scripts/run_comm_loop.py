@@ -10,8 +10,8 @@ COMM_SRC = ROOT / "LAM/default/agents/comm-agent/src"
 ROAUDTER_SRC = ROOT / "LAM/default/agents/roaudter-agent/src"
 sys.path.extend([str(COMM_SRC), str(ROAUDTER_SRC)])
 
-from interfaces.com_agent_interface import ComAgent  # type: ignore
-from roaudter_agent import RoaudterComAgent
+from interfaces.com_agent_interface import ComAgent  # type: ignore  # noqa: E402
+from roaudter_agent import RoaudterComAgent  # noqa: E402
 
 
 class Sink:

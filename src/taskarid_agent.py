@@ -37,7 +37,7 @@ class TaskaridAgent:
     def answer(self, payload: Dict[str, Any]) -> Dict[str, Any]:
         payload = _ensure_context(payload)
         ctx = payload["context"]
-        if set_context:
+        if set_context is not None:
             set_context(**ctx)
 
         goal = payload.get("goal") or payload.get("mission") or payload.get("msg") or ""

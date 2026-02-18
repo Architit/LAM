@@ -18,7 +18,6 @@ def test_taskarid_to_comm_to_roaudter_trace_roundtrip() -> None:
     plan_out = taskarid.answer({"goal": "Say only: pong", "intent": "chat", "provider_hint": "ollama"})
     assert plan_out["status"] == "ok"
     trace_id = plan_out["context"]["trace_id"]
-    task_id = plan_out["context"]["task_id"]
 
     task = plan_out["plan"][0]
     expected_task_id = task["context"]["task_id"]

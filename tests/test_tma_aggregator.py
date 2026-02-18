@@ -43,6 +43,19 @@ class AggregatorMatrixTest(unittest.TestCase):
                 os.chdir(cwd)
                 os.environ.pop('TMA_REPORTS_DIR')
 
+    def test_raises_when_pytest_missing(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            cwd = os.getcwd()
+            os.chdir(tmpdir)
+            os.environ['TMA_REPORTS_DIR'] = 'out/nested/reports'
+            try:
+                with patch('subprocess.run', side_effect=FileNotFoundError("pytest")):
+                    with self.assertRaises(RuntimeError):
+                        aggregator.aggregate_results(['a'])
+            finally:
+                os.chdir(cwd)
+                os.environ.pop('TMA_REPORTS_DIR')
+
 
 if __name__ == '__main__':
     unittest.main()

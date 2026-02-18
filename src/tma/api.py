@@ -11,8 +11,15 @@ from .storage import MetricsStore
 
 
 async def trigger_handler(request: web.Request) -> web.Response:
-    matrix = await request.json()
-    schedule(matrix.get("matrix", []))
+    payload = await request.json()
+    if not isinstance(payload, dict):
+        raise web.HTTPBadRequest(reason="JSON body must be an object")
+
+    matrix = payload.get("matrix", [])
+    if not isinstance(matrix, list) or not all(isinstance(item, str) for item in matrix):
+        raise web.HTTPBadRequest(reason="'matrix' must be a list of strings")
+
+    schedule(matrix)
     return web.json_response({"status": "scheduled"})
 
 

@@ -13,6 +13,7 @@ ROAUDTER_SRC="$ROOT/LAM/default/agents/roaudter-agent/src"
 
 # Source of truth for imports: repo root + src + agent src
 export PYTHONPATH="$ROOT:$LAM_SRC:$COMM_SRC:$CODEX_SRC:$ROAUDTER_SRC${PYTHONPATH:+:$PYTHONPATH}"
+export TMA_CONFIG="${TMA_CONFIG:-$ROOT/tma.yaml}"
 
 if (( $# )); then
   exec "$@"

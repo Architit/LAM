@@ -1,7 +1,6 @@
 # ruff: noqa: E402
 from pathlib import Path
 import sys
-import os
 
 ROOT = Path(__file__).resolve().parents[1]  # …/LAM
 COMM_SRC = ROOT / "LAM/default/agents/comm-agent/src"

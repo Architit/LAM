@@ -30,6 +30,24 @@ class EventManagerTest(unittest.IsolatedAsyncioTestCase):
         await manager.dispatch()
         self.assertEqual(events, [1, 2])
 
+    async def test_handler_error_does_not_stop_dispatch(self):
+        manager = EventManager()
+        events = []
+
+        def bad_handler(_):
+            raise RuntimeError("boom")
+
+        def good_handler(data):
+            events.append(data["value"])
+
+        manager.register_listener("test", bad_handler)
+        manager.register_listener("test", good_handler)
+        manager.emit_event("test", {"value": 1})
+        manager.emit_event("test", {"value": 2})
+
+        await manager.dispatch()
+        self.assertEqual(events, [1, 2])
+
 
 if __name__ == "__main__":
     unittest.main()

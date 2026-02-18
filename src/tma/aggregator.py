@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import subprocess
+import sys
 from pathlib import Path
 from typing import Any, Dict
 from xml.etree import ElementTree as ET
@@ -26,15 +27,27 @@ def aggregate_results(matrix: list[str]) -> Dict[str, Any]:
     xml_path = report_dir / "results.xml"
     html_path = report_dir / "results.html"
 
-    cmd = ["pytest", "-q", f"--junitxml={xml_path}"]
+    cmd = [sys.executable, "-m", "pytest", "-q", f"--junitxml={xml_path}"]
     if matrix:
         expr = " and ".join(matrix)
         cmd += ["-k", expr]
     env = {**os.environ, **{f"MATRIX_{i}": v for i, v in enumerate(matrix)}}
 
-    subprocess.run(cmd, check=False, env=env)
+    try:
+        proc = subprocess.run(cmd, check=False, env=env)
+    except FileNotFoundError as exc:
+        raise RuntimeError("pytest executable is not available") from exc
 
-    tree = ET.parse(xml_path)
+    if not xml_path.exists():
+        raise RuntimeError(
+            f"pytest did not produce JUnit XML report at {xml_path} "
+            f"(exit_code={proc.returncode})"
+        )
+
+    try:
+        tree = ET.parse(xml_path)
+    except ET.ParseError as exc:
+        raise RuntimeError(f"failed to parse JUnit XML report: {xml_path}") from exc
     root = tree.getroot()
     tests = int(root.attrib.get("tests", 0))
     failures = int(root.attrib.get("failures", 0))
