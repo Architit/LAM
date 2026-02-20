@@ -69,7 +69,10 @@ do_import() {
   mkdir -p "$GATEWAY_IMPORT_DIR" "$GATEWAY_STAGE_DIR"
   cp -f "$archive" "$GATEWAY_IMPORT_DIR/"
   rm -rf "$GATEWAY_STAGE_DIR"/*
-  tar -xzf "$archive" -C "$GATEWAY_STAGE_DIR"
+  if ! tar -xzf "$archive" -C "$GATEWAY_STAGE_DIR" 2>/dev/null; then
+    log "import:fail unsafe_path_detected archive=$(basename "$archive")"
+    return 1
+  fi
   log "import:ok staged_at=$GATEWAY_STAGE_DIR archive=$(basename "$archive")"
 }
 
