@@ -188,3 +188,6 @@ normalized.
 2026-02-17 22:16 UTC — Governance: semantic-selection: ARGD canonical activation decision recorded (SEMANTIC_SELECTION_ARGD_ACTIVATION_DECISION_CONTRACT.md); lifecycle HOLD -> ACTIVE, naming PENDING_TRIPLET_GOVERNANCE -> CANONICAL, activation gate CLOSED_UNTIL_NAMING_CONTRACT -> OPEN.
 2026-02-18 00:00 UTC — Governance: legal integrity hardening extended from protocol into execution queue — `LEGAL.L1` opened for missing root `LICENSE` in `LAM_Test_Agent`, `TRIANIUMA_DATA_BASE`, and `J.A.R.V.I.S` (jarvis); all three marked `LEGAL_BLOCKED` for promotion until remediation.
 2026-02-18 00:35 UTC — Governance: `LEGAL.L1` remediation closed — root `LICENSE` landed and pushed in `LAM_Test_Agent` (`d53c6a8`), `TRIANIUMA_DATA_BASE` (`7b268c7`), `J.A.R.V.I.S` (`a8d099b`); promotion legal-blockers cleared.
+2026-02-22T23:58:34Z CRITICAL: SYSTEM MOVED TO TOTAL QUARANTINE. CONTEXT FILES ARCHIVED.
+2026-02-22T23:59:38Z — Restoration: LAM_RESTORATION_REPORT_ARGD_2026-02-23.md created; Arrierguard agent (ARGD) requested to initiate ecosystem restoration.
+2026-02-23T00:16:41Z — Global: GLOBAL_TERMINAL_DIAGNOSTIC_REPORT_2026-02-23.md created; Requesting global scan and diagnostics from the Global Management Terminal (RADRILONIUMA-PROJECT).

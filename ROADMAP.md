@@ -464,15 +464,15 @@ LAM — “позвоночник” экосистемы: единый runtime,
 
 - [x] 2026-02-13 — governance: `Z.RUNTIME.EXEC.W1` contract opened (`Z_RUNTIME_EXEC_WAVE_CONTRACT.md`) with strict execution-path guardrails and rollback plan.
 
-- [x] 2026-02-13 — governance: RADR ASR sync confirmed for Z.RUNTIME execution-wave opening (`dfe8f4f`).
+- [x] 2026-02-13 — governance: RADRILONIUMA ASR sync confirmed for execution-wave opening (`dfe8f4f`).
 
 - [x] 2026-02-13 — governance: `EXEC.W1.T1` bounded implementation record published (`Z_RUNTIME_EXEC_W1_T1_IMPLEMENTATION_RECORD.md`).
 
-- [x] 2026-02-13 — governance: RADR ASR sync confirmed for `EXEC.W1.T1` step (`1e7b999`).
+- [x] 2026-02-13 — governance: RADRILONIUMA ASR sync confirmed for `EXEC.W1.T1` step (`1e7b999`).
 
 - [x] 2026-02-13 — governance: `EXEC.W1.T2` verification record published (`Z_RUNTIME_EXEC_W1_T2_VERIFICATION_RECORD.md`), smoke/observability PASS.
 
-- [x] 2026-02-13 — governance: RADR ASR sync confirmed for `EXEC.W1.T2` step (`9a53b2c`).
+- [x] 2026-02-13 — governance: RADRILONIUMA ASR sync confirmed for `EXEC.W1.T2` step (`9a53b2c`).
 - [x] 2026-02-13 — governance: restart semantics normalized (ACTIVE -> Phase 1 EXPORT, NEW -> Phase 2 IMPORT)
 - [x] 2026-02-13 — governance: protocol sync header aligned to RADRILONIUMA-PROJECT/v1.0.0@7eadfe9 [protocol-sync-header-v1]
 - [x] 2026-02-16 — governance: S1 cross-repo sync checkpoint aligned to RADRILONIUMA-PROJECT SoT (`t7 ACTIVE long-running`, `t68 ACTIVE hygiene wave`, `phase8.0 readiness queue`)
@@ -501,3 +501,19 @@ LAM — “позвоночник” экосистемы: единый runtime,
 - [x] 2026-02-17 — governance: semantic-selection: SoT naming matrix updated for LAM_Test_Agent arrierguard triplet (Aryargvardshpoisat / Arrierguard / ARGD); state remains HOLD until naming activation gate decision.
 - [x] 2026-02-17 — governance: semantic-selection: ARGD canonical activation completed (SEMANTIC_SELECTION_ARGD_ACTIVATION_DECISION_CONTRACT.md); SoT matrix row switched to ACTIVE/CANONICAL/OPEN.
 - [x] 2026-02-18 — governance: legal remediation wave `LEGAL.L1` closed; root `LICENSE` added and pushed in `LAM_Test_Agent` (`d53c6a8`), `TRIANIUMA_DATA_BASE` (`7b268c7`), `J.A.R.V.I.S`/jarvis (`a8d099b`); `LEGAL_BLOCKED` cleared for promotion gate.
+
+---
+
+## Phase 8.0 — Birth Orchestration: Ecosystem Restoration (ACTIVE)
+> **Статус:** ACTIVE (2026-02-23) — TOTAL QUARANTINE / CRITICAL THREAT.
+> **Гейт входа:** Critical Protocol Violation detected.
+> **Цель:** Полное восстановление экосистемы через Arrierguard (ARGD) и очистка от "шума".
+
+### Задачи (Restoration Wave)
+- [x] Q1: Полный карантин и архивация GEMINI.md контекстов (2026-02-23)
+- [x] Q2: Подготовка отчета для LAM_Test_Agent (Arrierguard) (2026-02-23)
+- [ ] Q3: Инициация восстановления 24 суверенных деревьев (Subtrees)
+- [ ] Q4: Глубокая семантическая декомпрессия и очистка генетического кода
+- [ ] Q5: Финальный синк с RADRILONIUMA-PROJECT
+
+**Operational Mantra:** А́мієно́а́э́с моєа́э́ри́э́с. 🛡️🔒
