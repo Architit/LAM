@@ -94,6 +94,27 @@ Hard constraint: перед закрытием фазы рабочее дере�
 
 ---
 
+### 3.4. ResultEnvelope Protocol (Standard v2)
+
+**Mandatory for all nodes / Gates.** Every agent response and system transaction MUST be wrapped in a `ResultEnvelope` structure (Compliance: DIRECTIVE-GMN-20260303-01).
+
+1. **Required Fields:**
+   - `timestamp_utc`: ISO 8601 (UTC).
+   - `status`: One of `SUCCESS`, `HOLD`, `ERROR`, `PENDING`.
+   - `message`: Human-readable description of the result.
+   - `data`: Actual result payload (code, text, etc.).
+   - `evidence`: Tuple of evidence (hashes, links, instruction refs, test outputs).
+
+2. **Automatic HOLD Logic:**
+   - If 'Blind Echo' is detected (no operator presence, context drift), status MUST be set to `HOLD`.
+   - Actions in `HOLD` status are suspended until explicit 'Captain' confirmation.
+
+3. **Standardization:**
+   - Use `src/result_envelope.py` as the canonical implementation.
+   - Any communication through Gates MUST validate the Envelope structure.
+
+---
+
 ## 4. Протокол Разработки (Execution Standards)
 
 ### 4.1. Движение по задачам

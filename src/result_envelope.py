@@ -1,10 +1,13 @@
 from __future__ import annotations
 
+import datetime
 from dataclasses import asdict, dataclass, field
-from typing import Any, Dict, Literal, Optional
+from typing import Any, Dict, Literal, Optional, Tuple
 
 
-Status = Literal["ok", "error"]
+# DIRECTIVE-GMN-20260303-01 Compliance:
+# New Status Registry
+Status = Literal["SUCCESS", "HOLD", "ERROR", "PENDING"]
 
 
 @dataclass(slots=True)
@@ -18,36 +21,40 @@ class EnvelopeContext:
 @dataclass(slots=True)
 class ResultEnvelope:
     """
-    Envelope Standard v1
+    ResultEnvelope Standard v2 (Compliance: DIRECTIVE-GMN-20260303-01)
+    Goal: Eradicate 'Blind Echo' via evidence-backed results.
 
-    Required:
-      - status: "ok" | "error"
-      - context: {trace_id, task_id, parent_task_id?, span_id?}
-      - result: JSON-serializable payload (can be None)
-      - error: dict or None (must be non-None when status="error")
-      - metrics: dict (can be empty but present)
+    Required fields:
+      - timestamp_utc: ISO 8601 (Creation time)
+      - status: "SUCCESS" | "HOLD" | "ERROR" | "PENDING"
+      - message: Human-readable fruit of the deed
+      - data: Result payload (can be None)
+      - evidence: Tuple of evidence (hashes, links, instruction refs, test outputs)
+      - context: {trace_id, task_id, parent_task_id?, span_id?} (Legacy compatibility)
     """
     status: Status
-    context: EnvelopeContext
-    result: Any = None
-    error: Optional[Dict[str, Any]] = None
+    message: str
+    data: Any = None
+    evidence: Tuple[str, ...] = field(default_factory=tuple)
+    timestamp_utc: str = field(default_factory=lambda: datetime.datetime.now(datetime.timezone.utc).isoformat())
+    context: Optional[EnvelopeContext] = None
     metrics: Dict[str, Any] = field(default_factory=dict)
 
-    def __post_init__(self) -> None:
-        if self.status == "error" and self.error is None:
-            raise ValueError("ResultEnvelope: status='error' requires non-None error")
-        if self.status == "ok" and self.error is not None:
-            raise ValueError("ResultEnvelope: status='ok' requires error=None")
-
     def to_dict(self) -> Dict[str, Any]:
-        d = asdict(self)
-        # asdict turns dataclasses into dicts recursively; good for JSON dumps.
-        return d
+        return asdict(self)
 
-    @staticmethod
-    def ok(*, context: EnvelopeContext, result: Any = None, metrics: Optional[Dict[str, Any]] = None) -> "ResultEnvelope":
-        return ResultEnvelope(status="ok", context=context, result=result, error=None, metrics=metrics or {})
+    @classmethod
+    def success(cls, *, message: str, data: Any = None, evidence: Tuple[str, ...] = (), context: Optional[EnvelopeContext] = None) -> "ResultEnvelope":
+        return cls(status="SUCCESS", message=message, data=data, evidence=evidence, context=context)
 
-    @staticmethod
-    def err(*, context: EnvelopeContext, error: Dict[str, Any], metrics: Optional[Dict[str, Any]] = None) -> "ResultEnvelope":
-        return ResultEnvelope(status="error", context=context, result=None, error=error, metrics=metrics or {})
+    @classmethod
+    def hold(cls, *, message: str, data: Any = None, evidence: Tuple[str, ...] = (), context: Optional[EnvelopeContext] = None) -> "ResultEnvelope":
+        return cls(status="HOLD", message=message, data=data, evidence=evidence, context=context)
+
+    @classmethod
+    def error(cls, *, message: str, data: Any = None, evidence: Tuple[str, ...] = (), context: Optional[EnvelopeContext] = None) -> "ResultEnvelope":
+        return cls(status="ERROR", message=message, data=data, evidence=evidence, context=context)
+
+    @classmethod
+    def pending(cls, *, message: str, data: Any = None, evidence: Tuple[str, ...] = (), context: Optional[EnvelopeContext] = None) -> "ResultEnvelope":
+        return cls(status="PENDING", message=message, data=data, evidence=evidence, context=context)

@@ -56,6 +56,10 @@ def scan_text_for_patterns(lines: Iterable[str]) -> list[PatternHit]:
                 # "HOLD without operator confirmation".
                 if pattern_id == "hold_bypass_attempt" and "HOLD" in line.upper():
                     continue
+                # Ignore policy-definition examples where HOLD marker is shown
+                # as a code literal in backticks; keep detection for real state lines.
+                if pattern_id == "deadloop_hold_state" and re.search(r"`\s*HOLD_BY_DEADLOOP_BREAK_PROTOCOL\s*`", line, re.IGNORECASE):
+                    continue
                 hits.append(
                     PatternHit(
                         pattern_id=pattern_id,

@@ -19,3 +19,12 @@ def test_hold_bypass_pattern_skips_protective_hold_line() -> None:
     hits = scan_text_for_patterns(lines)
     ids = {h.pattern_id for h in hits}
     assert "hold_bypass_attempt" not in ids
+
+
+def test_deadloop_hold_pattern_skips_backticked_policy_literal() -> None:
+    lines = [
+        "SAFE CONTAINMENT: set `HOLD_BY_DEADLOOP_BREAK_PROTOCOL` in protocol guidance.",
+    ]
+    hits = scan_text_for_patterns(lines)
+    ids = {h.pattern_id for h in hits}
+    assert "deadloop_hold_state" not in ids
