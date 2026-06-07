@@ -1,3 +1,4 @@
+# Copyright (c) 2026-06-07 RADRILONIUMA / TRIANIUMA Kingdom. All rights reserved.
 """Celery-based scheduler using Redis broker."""
 from __future__ import annotations
 

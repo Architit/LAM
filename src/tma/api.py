@@ -1,3 +1,4 @@
+# Copyright (c) 2026-06-07 RADRILONIUMA / TRIANIUMA Kingdom. All rights reserved.
 """REST API exposing test triggers and metrics."""
 from __future__ import annotations
 
